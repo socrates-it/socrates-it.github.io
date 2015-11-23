@@ -15,7 +15,7 @@ highlighter: pygments
 
 
 ### content configuration ###
-title:       "SoCraTes Italy 2015"
+title:       "SoCraTes Italy 2016"
 keywords:    "openspace, unconference, SoCraTes, software, craftsmanship, testing, italy, international"
 description: "1st International Software Craftsmanship and Testing Conference in Italy"
 source_link: "https://socrates-it.github.io"
@@ -26,15 +26,16 @@ google_analytics_key: UA-49607422-1 ## put YOUR key here to enable tracking! (bl
 
 ### template colors, used site-wide via css ###
 colors:
-  black:     '#111111'
-  white:     '#F1F2F1'
-  blue:      '#49a7e9'
-  green:     '#009246'
-  purple:    '#c869bf'
-  orange:    '#fab125'
-  turquoise: '#0fbfcf'
-  red:       '#CE2B37'
-  gray:      '#DDDDDD'
+  black:          '#111111'
+  white:          '#F1F2F1'
+  blue:           '#49a7e9'
+  green:          '#009246'
+  purple:         '#c869bf'
+  orange:         '#fab125'
+  turquoise:      '#0fbfcf'
+  red:            '#CE2B37'
+  gray:           '#DDDDDD'
+  socratesblue:   '#3771C8'
 
 kramdown:
   auto_ids:  false
