@@ -13,7 +13,7 @@ The cost will be:
 |:-------------------------|-------------------------------------------:|
 | Double for single use    | 240&euro; + conference services + city tax |
 | Double room              | 190&euro; + conference services + city tax |
-| Conference only (no room)| 38&euro;  + conference sercices + city tax |
+| Conference only (no room)| 76&euro;  + conference sercices            |
 
 
 A quota will be charged (40&euro;) for conference services (meeting rooms, projectors etc.)
