@@ -1,5 +1,5 @@
 ---
-title: "Waiting-List"
+title: "Registration"
 bg: socratesblue
 color: white
 fa-icon: edit
