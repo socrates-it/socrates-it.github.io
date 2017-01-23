@@ -18,6 +18,7 @@ The cost will be:
 Total quota to be divided for conferences' service is 2.928,00 &euro;.
 
 Some examples: 
+
 * if we'll be sold out (60 participants), quota will be 48.80&euro;
 * if we'll be in 40 we'll pay 73,20&euro;
 
