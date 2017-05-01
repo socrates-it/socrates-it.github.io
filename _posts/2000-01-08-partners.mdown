@@ -4,6 +4,7 @@ bg: black
 color: white
 fa-icon: globe
 ---
+
 Enjoy also:
 
 - [CodeFreeze](http://www.codefreeze.fi/) 15 - 19 Jan 2017 , Kiilopää, Finland
