@@ -4,45 +4,35 @@ bg: black
 color: white
 fa-icon: globe
 ---
-CodeFreeze
+- CodeFreeze
 15 - 19 Jan 2017 , Kiilopää, Finland
 
-
-SoCraTes Conference Switzerland
+- SoCraTes Conference Switzerland
 9 - 12 Mar 2017, Ftan, Switzerland
 
-
-SoCraTes Canaries
+- SoCraTes Canaries
 6 - 9 Apr 2017, Gran Canaria, Spain
 
-
-I T.A.K.E. Unconference
+- I T.A.K.E. Unconference
 11 - 12 May 2017, Bucharest, Romania
 
-
-SoCraTes UK
+- SoCraTes UK
 15 - 18 June 2017, Dorking, England
 
-
-SoCraTes Chile
+- SoCraTes Chile
 1 July 2016, Santiago de Chile
 
-
-SoCraTes Day Switzerland
+- SoCraTes Day Switzerland
 September 2017, Zurich, Switzerland
 
-
-SoCraTes BE
+- SoCraTes BE
 9 - 12 Nov 2017, La Roche-en-Ardenne, Belgium
 
-
-JS CraftCamp
+- JS CraftCamp
 21 - 22 July 2017, Munich, Germany
 
-
-SoCraTes France
+- SoCraTes France
 26 - 29 Oct 2017, Rochegude, France
 
-
-SoCraTes Days Linz
+- SoCraTes Days Linz
 20-21 Oct 2017, Linz, Austria
