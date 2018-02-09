@@ -23,5 +23,5 @@ Some examples:
 * if we'll be in 40 we'll pay 73,20&euro;
 
 **You will be asked to pay your quota at the checkout.**
- 
-<iframe src="https://docs.google.com/forms/d/1PSbzcILFzQX1fqIWtaM5o9Cq1hIKOAGEPQwJE5t7Qjk/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeqCrRcvcqZUZPL57OV4Zq5R_G-Ol8Z2oyILuSjy7M285a_PA/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
