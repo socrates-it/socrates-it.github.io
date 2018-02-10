@@ -24,4 +24,4 @@ Some examples:
 
 **You will be asked to pay your quota at the checkout.**
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeqCrRcvcqZUZPL57OV4Zq5R_G-Ol8Z2oyILuSjy7M285a_PA/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeqCrRcvcqZUZPL57OV4Zq5R_G-Ol8Z2oyILuSjy7M285a_PA/viewform?embedded=true" width="960" height="750" frameborder="0" marginheight="0" marginwidth="20">Loading...</iframe>

@@ -15,9 +15,9 @@ highlighter: rouge
 
 
 ### content configuration ###
-title:       "SoCraTes Italy 2017"
+title:       "SoCraTes IT 2018"
 keywords:    "openspace, unconference, SoCraTes, software, craftsmanship, testing, italy, international"
-description: "2nd International Software Craftsmanship and Testing Conference in Italy"
+description: "3rd International Software Craftsmanship and Testing Conference in Italy"
 source_link: "https://socrates-it.github.io"
 favicon:     "img/favicon.ico"
 touch_icon:  "img/apple-touch-icon.png"
@@ -35,7 +35,7 @@ colors:
   turquoise:      '#0fbfcf'
   red:            '#CE2B37'
   gray:           '#DDDDDD'
-  socratesblue:   '#3771C8'
+  socratesblue:   '#3F51B5'
 
 kramdown:
   auto_ids:  false
