@@ -1,67 +1,818 @@
----
----
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.title }}</title>
-	<meta name="keywords" content="{{ site.keywords }}">
-	<meta name="description" content="{{ site.description }}">
-  <link rel="stylesheet" href="combo.css">
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <!-- {% if site.favicon %}<link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">{% endif %} -->
-	<link rel="apple-touch-icon" href="/img/apple-touch-icon-60x60-precomposed.png">
-  <link rel="apple-touch-icon" href="/img/apple-touch-icon-76x76-precomposed.png">
-  <link rel="apple-touch-icon" href="/img/apple-touch-icon-120x120-precomposed.png">
-  <link rel="apple-touch-icon" href="/img/apple-touch-icon-152x152-precomposed.png">
-</head>
-<body>
-  <div id="main">
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="International Software Craftsmanship and Testing Conference">
+<meta name="author" content="SoCraTes IT">
+<meta name="generator" content="Hugo 0.54.0" />
+<title>SoCraTes-IT</title>
+<!-- Bootstrap Core CSS -->
+<link href="https://socrates-it-test.github.io/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="https://socrates-it-test.github.io/css/agency.css" rel="stylesheet">
+<link href="https://socrates-it-test.github.io/css/schedule.css" rel="stylesheet">
+<!-- Custom Fonts -->
+<link href="https://socrates-it-test.github.io/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="5ca5fcef-5e0b-4402-b98e-23ae7f4d089f" type="text/javascript" async></script>
 
-    <nav><ul>
-      {% for node in site.posts reversed %}
-        {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
-        <li class="p-{{id}}"><a href="#{{id}}">{{node.title}}</a></li>
-      {% endfor %}
-    </ul></nav>
-
-
-    {% for page in site.posts reversed %}
-      {% capture id %}{{ page.id | remove:'/' | downcase }}{% endcapture %}
-      <div id="{{id}}" class="section p-{{id}}">
-        {% if page.icon %}
-        <div class="subtlecircle sectiondivider imaged">
-          <img src="{{page.icon}}" alt="section icon" />
-          <h5 class="icon-title">{{ page.title }}</h5>
+    </head>
+    <body id="page-top" class="index">
+        <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div>
+               <a class="navbar-brand page-scroll" href="/">SoCraTes IT</a>
+            </div>
         </div>
-        {% elsif page.fa-icon %}
-        <div class="subtlecircle sectiondivider faicon">
-          <span class="fa-stack">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-{{ page.fa-icon }} fa-stack-1x"></i>
-          </span>
-          <h5 class="icon-title">{{ page.title }}</h5>
-        </div>
-        {% endif %}
-        <div class="container {{ page.style }}">
-          {{ page.content }}
-        </div>
-      </div>
-    {% endfor %}
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+
+                
+
+                
+                <li>
+                    <a class="page-scroll" href="#about">About</a>
+                </li>
+                
+
+                
+                <li>
+                    <a class="page-scroll" href="#schedule">Schedule</a>
+                </li>
+                
 
 
-    <div id="footer" class="section text-white">
-      <div class="container">
-        {% capture foottext %} {% include footer.md %} {% endcapture %}
-        {{ foottext | markdownify }}
-      </div>
+                
+
+                
+                <li>
+                    <a class="page-scroll" href="#sponsors">Sponsors</a>
+                </li>
+                
+
+                <li>
+                    <a class="page-scroll highlighted" href="/registration">Register now</a>
+                </li>
+
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
-  </div>
+    <!-- /.container-fluid -->
+</nav>
 
-{% include analytics.html %}
-</body>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="site.js"></script>
+        <!-- Hero -->
+<header>
+    <div class="container">
+        <div class="intro-text">
+
+            <div class="intro-date intro-lead-in"><span class="date">2-4 May 2019</span><span class="location">Rimini</span></div>
+        <div class="intro-title intro-heading">SoCraTes IT</div>
+        <div class="intro-subtitle intro-lead-in">Software Craftsmanship and Testing Conference</div>
+        <a class="btn btn-xl highlighted" href="/registration">Register now</a>
+        </div>
+    </div>
+</header>
+<!-- Services Section -->
+
+
+        
+            <!-- About -->
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">It is about</h2>
+                <h3 class="section-subheading text-muted">This event is about the sustainable creation of useful software in a responsible way.</h3>
+            </div>
+        </div>
+
+        
+        <div class="row text-center">
+            
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-users fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="about-heading">People</h4>
+                <p class="text-muted">Everyone who is concerned with coding, testing, code quality and software craftsmanship. There is no agenda and there are no speakers before the event starts. Proposals are presented during the event itself in the mornings, and voted by the participants right after. Meet us if you want to share your knowledge, experience and expertise!</p>
+            </div>
+            
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-play-circle fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="about-heading">Action</h4>
+                <p class="text-muted">The event will be run as a non-profit, low-cost event. It will be much like a retreat. We will be there for 48 hours to collaborate and share ideas in a self-organized Open Space. There will be hands-on coding sessions, sessions focused on discussion, interactive talks and lots more.</p>
+            </div>
+            
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-plus-circle fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="about-heading">Fun</h4>
+                <p class="text-muted">We will not only spend the days together but also the nights. And – believe it or not – programmers are a great company! There will be be lots of opportunities to spend your time. Starting with simple chilling over hiking and biking, playing games, hanging around, talking and laughing.</p>
+            </div>
+            
+        </div>
+        
+
+    </div>
+</section>
+
+
+<!-- About Grid Section -->
+<section id="portfolio" class="bg-light-gray">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/values-preview.jpg" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Our values</h4>
+                    <p class="text-muted"></p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/open-space-preview.jpg" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Open Space</h4>
+                    <p class="text-muted"></p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/code-of-conduct-preview.jpg" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Code of conduct</h4>
+                    <p class="text-muted"></p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+            <!-- Portfolio Modals -->
+
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Our values</h2>
+                        <p class="item-intro text-muted"></p>
+                        <img class="img-responsive img-centered" src="img/portfolio/values-preview.jpg" alt="">
+                        <p><h3 id="inclusiveness">Inclusiveness</h3>
+
+<p>A primary goal of SoCraTes conference is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds possible.</p>
+
+<h3 id="safe-environment">Safe Environment</h3>
+
+<p>As such, we are committed to providing a friendly, safe and welcoming environment for all, regardless of gender, sexual orientation, programming language, ability, ethnicity, socioeconomic status, and religion (or lack thereof)</p>
+
+<p>And so we invite all those who participate in the SoCraTes conference and the community surrounding the conference to help us create safe and positive experiences for everyone.</p>
+
+<h3 id="be-welcoming-friendly-and-patient">Be welcoming, friendly, and patient</h3>
+
+<p>Be respectful. Not all of us will agree with each other all the time, but disagreement is no excuse for poor behavior and poor manners. We might all experience some frustration now and then, but we cannot allow that frustration to turn into a personal attack.</p>
+
+<p>Be aware of the effect your words may have on others. We are a community of professionals, and we conduct ourselves professionally. Be kind to others. Do not insult or put down other participants. Harassment and other exclusionary behavior aren’t acceptable.</p>
+
+<p><em>Credits</em>: These values are inspired by <a href="https://www.djangoproject.com/conduct/">Django Code of Conduct and Citizenship Code of Conduct</a></p>
+</p>
+
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Open Space</h2>
+                        <p class="item-intro text-muted"></p>
+                        <img class="img-responsive img-centered" src="img/portfolio/open-space.jpg" alt="">
+                        <p><p>SoCraTes IT will be run as a three days <a href="https://agilecoachcamp.org/tiki-index.php?page=OpenSpace">Open Space</a>, facilitated by the outstanding facilitator <a href="https://connexxo.com/">Cecilia Maria Zannini</a>.
+We love working in self-organizing teams - well, Open Space is a simple technique for creating a self-organizing conference!</p>
+
+<p>It runs on &ldquo;four principles and one law&rdquo; and it has been used by thousands of people around the globe since then:</p>
+
+<ul>
+<li>Whoever comes is the right people</li>
+<li>Whenever it starts is the right time</li>
+<li>Whatever happens is the only thing that could have</li>
+<li>When it’s over it’s over</li>
+</ul>
+
+<h3 id="the-law-of-two-feet">The Law Of Two Feet</h3>
+
+<p>&ldquo;If at any time you find that you are neither learning nor contributing, use you two feet and move to some place more to you liking.&rdquo;</p>
+
+<p>Such a place might be another group, or even outside into the sunshine. No matter what, don&rsquo;t sit there feeling miserable. It&rsquo;s your conference, and you&rsquo;re in charge of it.</p>
+
+<p>In OpenSpace there are no leaders, no followers, definitely no talking-heads - only participants. Does this sound strange to you? Come prepared to create the event you need - starting with collaboratively building our agenda, full of topics we have passion for.</p>
+
+<p>Don&rsquo;t worry how this will work - just show up with your passion and Prepare To Be Surprised!</p>
+</p>
+
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Code of conduct</h2>
+                        <p class="item-intro text-muted"></p>
+                        <img class="img-responsive img-centered" src="img/portfolio/code-of-conduct.jpg" alt="">
+                        <p><p>SoCraTes IT follows the Conference Code of Conduct laid out by several conference organisers around the globe. We ask that you read the <a href="http://confcodeofconduct.com/">full version</a> before attending. You are required to cooperate with the code throughout the event to help ensure a safe environment for everybody.</p>
+
+<p>Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, age, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organisers.</p>
+
+<h3 id="scope">Scope</h3>
+
+<p>This code of conduct applies to the SoCraTes conference itself and to all digital spaces that are related to the SoCraTes conference, such as the wiki and mailing list.</p>
+</p>
+
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+
+            <section id="schedule" class="section align-center">
+    <div class="container">
+        <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Schedule</h2>
+        </div>
+        <div class="col-md-10 col-md-offset-1">
+
+            
+            <div class="row schedule schedule-light">
+
+                
+                <ul class="nav nav-schedule">
+                    <li class="active"><a href="#schedule3_day1" data-toggle="tab">Thursday, 2 May</a></li>
+                    <li><a href="#schedule3_day2" data-toggle="tab">Friday, 3 May</a></li>
+                    <li><a href="#schedule3_day3" data-toggle="tab">Saturday, 4 May</a></li>
+                </ul>
+                
+
+                
+                <div class="tab-content">
+
+                    
+                    <div id="schedule3_day1" class="tab-pane fade active in">
+
+                        
+                        <div class="panel-group" id="schedule3_day1_timeline">
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day1_time1" class="schedule-item-toggle">
+                                    <strong class="time highlight">3:00 PM</strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-cutlery"></span></div>
+                                    <h6 class="title">Welcome in!</h6>
+                                </a>
+                                <div id="schedule3_day1_time1" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">We kick off SoCraTes IT 2019 with a good beer and networking activities</p>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day1_time2" class="schedule-item-toggle collapsed">
+                                    <strong class="time highlight">7:30 PM</strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-bars"></div>
+                                        <h6 class="title">Dinner time</h6>
+                                </a>
+                                <div id="schedule3_day1_time2" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">We have a good dinner all together</p>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day1_time3" class="schedule-item-toggle collapsed">
+                                    <strong class="time highlight">9:00 PM - ? </strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-glass"></div>
+                                        <h6 class="title">After-dinner</h6>
+                                </a>
+                                <div id="schedule3_day1_time3" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">We do a team-building game to know each others.</p>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                        
+
+                    </div>
+                    
+
+                    
+                    <div id="schedule3_day2" class="tab-pane fade in">
+
+                        
+                        <div class="panel-group" id="schedule3_day2_timeline">
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day2_time1" class="schedule-item-toggle">
+                                    <strong class="time highlight">8:00 AM</strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-coffee"></span></div>
+                                    <h6 class="title">Wake up, lazy guys!</h6>
+                                </a>
+                                <div id="schedule3_day2_time1" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">Time to have a breakfast</p>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day2_time3" class="schedule-item-toggle collapsed">
+                                    <strong class="time highlight">9:00 AM</strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-bars"></div>
+                                        <h6 class="title">Official opening</h6>
+                                </a>
+                                <div id="schedule3_day2_time3" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">Introduction of Cecilia about the spirit of SoCraTes IT and the Open Space</p>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day2_time4" class="schedule-item-toggle collapsed">
+                                    <strong class="time highlight">09:30 AM</strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-bars"></div>
+                                        <h6 class="title">Marketplace</h6>
+                                </a>
+                                <div id="schedule3_day2_time4" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">Time for everyone to write down their sessions and pick a slot on the market place</p>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day2_time5" class="schedule-item-toggle collapsed">
+                                    <strong class="time highlight">10:00 AM</strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-cutlery"></span></div>
+                                    <h6 class="title">Sessions</h6>
+                                </a>
+                                <div id="schedule3_day2_time5" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">1-hour sessions</p>
+                                </div>
+                            </div>
+                            
+
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day2_time5" class="schedule-item-toggle collapsed">
+                                    <strong class="time highlight">1:00 PM</strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-cutlery"></span></div>
+                                    <h6 class="title">Lunch</h6>
+                                </a>
+                                <div id="schedule3_day2_time5" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">Time to refuel</p>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day2_time6" class="schedule-item-toggle collapsed">
+                                    <strong class="time highlight">2:00 PM</strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-bars"></div>
+                                        <h6 class="title">Sessions</h6>
+                                </a>
+                                <div id="schedule3_day2_time6" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">1-hour sessions</p>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day2_time7" class="schedule-item-toggle collapsed">
+                                    <strong class="time highlight">5:30 PM</strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-bars"></div>
+                                        <h6 class="title">Evening news</h6>
+                                </a>
+                                <div id="schedule3_day2_time7" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">Time to recap the first day and share your impression</p>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day2_time8" class="schedule-item-toggle collapsed">
+                                    <strong class="time highlight">7:30 PM</strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-cutlery"></span></div>
+                                    <h6 class="title">Dinner</h6>
+                                </a>
+                                <div id="schedule3_day2_time8" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">Time to give energy to your brain</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+
+                    </div>
+                    
+
+                    
+                    <div id="schedule3_day3" class="tab-pane fade in">
+
+                        
+                        <div class="panel-group" id="schedule3_day3_timeline">
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day3_time1" class="schedule-item-toggle">
+                                    <strong class="time highlight">8:00 AM</strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-coffee"></span></div>
+                                    <h6 class="title">The early bird gets the worm</h6>
+                                </a>
+                                <div id="schedule3_day3_time1" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">Time to have a breakfast</p>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day3_time3" class="schedule-item-toggle collapsed">
+                                    <strong class="time highlight">9:00 AM</strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-bars"></div>
+                                        <h6 class="title">Marketplace</h6>
+                                </a>
+                                <div id="schedule3_day3_time3" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">Time for everyone to write down their sessions and pick a slot on the market place.</p>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day3_time4" class="schedule-item-toggle collapsed">
+                                    <strong class="time highlight">10:00 AM</strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-bars"></div>
+                                        <h6 class="title">Sessions</h6>
+                                </a>
+                                <div id="schedule3_day3_time4" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">1-hour sessions</p>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day3_time5" class="schedule-item-toggle collapsed">
+                                    <strong class="time highlight">01:00 PM</strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-cutlery"></span></div>
+                                    <h6 class="title">Lunch</h6>
+                                </a>
+                                <div id="schedule3_day3_time5" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">Time to refuel.</p>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day3_time6" class="schedule-item-toggle collapsed">
+                                    <strong class="time highlight">02:00 PM</strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-bars"></div>
+                                        <h6 class="title">Sessions</h6>
+                                </a>
+                                <div id="schedule3_day3_time6" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">1-hour sessions</p>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day3_time7" class="schedule-item-toggle collapsed">
+                                    <strong class="time highlight">04:00 PM</strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-bars"></div>
+                                        <h6 class="title">Official Closing</h6>
+                                </a>
+                                <div id="schedule3_day3_time7" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">We recap all the days and share our impression</p>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="panel schedule-item">
+                                <a data-toggle="collapse" href="#schedule3_day3_time8" class="schedule-item-toggle collapsed">
+                                    <strong class="time highlight">5:00 PM</strong>
+                                    <div class="lecture-icon-wrapper"><span class="fa fa-cutlery"></span></div>
+                                    <h6 class="title">It is time to say goodbye!</h6>
+                                </a>
+                                <div id="schedule3_day3_time8" class="panel-collapse collapse in schedule-item-body">
+                                    <p class="description">Time flies when you're having fun</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+
+                    </div>
+                    
+                </div>
+                
+
+            </div>
+            
+            <div class="intro-text text-center">
+                <a class="btn btn-xl highlighted" href="/registration">Register now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        
+
+        
+
+        
+            <!-- Team Section -->
+<section id="team" class="bg-light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Partners</h2>
+
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-xs-6">
+                <div class="team-member">
+                    <a href="https://www.socrates-ch.org/"> SoCraTes Switzerland</a>
+                </div>
+            </div>
+            
+            <div class="col-xs-6">
+                <div class="team-member">
+                    <a href="http://socrates-day.ch"> SoCraTes Day Switzerland</a>
+                </div>
+            </div>
+            
+            <div class="col-xs-6">
+                <div class="team-member">
+                    <a href="https://socracan.com/"> SoCraTes Canaries</a>
+                </div>
+            </div>
+            
+            <div class="col-xs-6">
+                <div class="team-member">
+                    <a href="http://socratesuk.org"> SoCraTes UK</a>
+                </div>
+            </div>
+            
+            <div class="col-xs-6">
+                <div class="team-member">
+                    <a href="http://socratesbe.org"> SoCraTes BE</a>
+                </div>
+            </div>
+            
+            <div class="col-xs-6">
+                <div class="team-member">
+                    <a href="https://www.socrates-conference.de"> SoCraTes Germany</a>
+                </div>
+            </div>
+            
+            <div class="col-xs-6">
+                <div class="team-member">
+                    <a href="http://www.socrates-conference.cl/"> SoCraTes Chile</a>
+                </div>
+            </div>
+            
+            <div class="col-xs-6">
+                <div class="team-member">
+                    <a href="https://socrates-fr.github.io/"> SoCraTes FR</a>
+                </div>
+            </div>
+            
+            <div class="col-xs-6">
+                <div class="team-member">
+                    <a href="https://socrates-conference.at/"> SoCraTes Austria</a>
+                </div>
+            </div>
+            
+            <div class="col-xs-6">
+                <div class="team-member">
+                    <a href="http://jscraftcamp.org/"> JSCraftCamp</a>
+                </div>
+            </div>
+            
+            <div class="col-xs-6">
+                <div class="team-member">
+                    <a href="http://www.codefreeze.fi"> CodeFreeze</a>
+                </div>
+            </div>
+            
+            <div class="col-xs-6">
+                <div class="team-member">
+                    <a href="http://itakeunconf.com"> I T.A.K.E. Unconference</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+        
+
+        
+            <!-- Sponsors Section -->
+<section id="sponsors">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Sponsors</h2>
+                <h4>Do you want to sponsor the event?</h4>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            
+            <div class="col-lg-12">
+                <div class="team-member">
+                    <a href="http://www.connexxo.com">
+                        <img src="img/logos/connexxo.png" class="img-sponsor" alt="Connexxo">
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-lg-12">
+              
+                <p>It would be great to list your company among our sponsors! Please contact us at <a id="email" href="none">none</a> and we’ll send you the sponsorship prospect.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("email").href = "mailto:socrates-it@googlegroups.com";
+        document.getElementById("email").innerHTML = "socrates-it@googlegroups.com";
+    </script>
+</section>
+
+        
+
+        
+
+        
+
+        
+            <!-- Footer section -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <span class="copyright">Published under the Apache License 2.0.</span>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline social-buttons">
+                    
+                    <li><a href="https://twitter.com/SoCraTes_Italy"><i class="fa fa-twitter"></i></a></li>
+                    
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline quicklinks">
+                    
+                    <li><a href="/cookie-policy">Cookie Policy</a></li>
+                    
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+
+        
+
+        <!-- jQuery -->
+<script src="https://socrates-it-test.github.io/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="https://socrates-it-test.github.io/js/bootstrap.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="https://socrates-it-test.github.io/js/classie.js"></script>
+<script src="https://socrates-it-test.github.io/js/cbpAnimatedHeader.js"></script>
+<!-- Contact Form JavaScript -->
+<script src="https://socrates-it-test.github.io/js/jqBootstrapValidation.js"></script>
+<script src="https://socrates-it-test.github.io/js/contact_me.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="https://socrates-it-test.github.io/js/agency.js"></script>
+
+
+    </body>
 </html>
