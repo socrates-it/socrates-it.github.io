@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on SoCraTes-IT</title>
-    <link>https://socrates-it-test.github.io/categories/</link>
+    <link>https://socrates-conference.it/categories/</link>
     <description>Recent content in Categories on SoCraTes-IT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://socrates-it-test.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://socrates-conference.it/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

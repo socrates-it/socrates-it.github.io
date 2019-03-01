@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SoCraTes-IT</title>
-    <link>https://socrates-it-test.github.io/</link>
+    <link>https://socrates-conference.it/</link>
     <description>Recent content on SoCraTes-IT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://socrates-it-test.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://socrates-conference.it/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Cookie Policy</title>
-      <link>https://socrates-it-test.github.io/cookie-policy/</link>
+      <link>https://socrates-conference.it/cookie-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://socrates-it-test.github.io/cookie-policy/</guid>
+      <guid>https://socrates-conference.it/cookie-policy/</guid>
       <description>Updated February, 26th 2019
 What are cookies? What are cookies and why are they important for user experience? This website uses cookies.
 Cookies are text files containing small amounts of information which are downloaded to your computer or mobile device when you visit a website. Cookies are then sent back to the originating website on each subsequent visit, or to another website that recognizes that cookie. Cookies are useful because they allow a website to recognize a user’s device.</description>
@@ -23,20 +23,20 @@ Cookies are text files containing small amounts of information which are downloa
     
     <item>
       <title>Privacy Policy</title>
-      <link>https://socrates-it-test.github.io/privacy-policy/</link>
+      <link>https://socrates-conference.it/privacy-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://socrates-it-test.github.io/privacy-policy/</guid>
+      <guid>https://socrates-conference.it/privacy-policy/</guid>
       <description>Updated February, 26 2019
 Scope Anna Piera Frascella, Arialdo Martini, Pierluigi Pugliese, Gabriele Tondi and Andrea Vallotti (“we”, “us”, “our”), organizer of “SoCraTes IT” 2019 (a “Conference”), are committed to protecting your personal information. We invite you to read this Privacy Policy, which explains the types of information collected and created in connection with the relevant Conference, how and why we use such information, who we share it with and your legal rights.</description>
     </item>
     
     <item>
       <title>Registration</title>
-      <link>https://socrates-it-test.github.io/registration/</link>
+      <link>https://socrates-conference.it/registration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://socrates-it-test.github.io/registration/</guid>
+      <guid>https://socrates-conference.it/registration/</guid>
       <description>Location We are going to be in the hotel, night and day. That is why, we have chosen the Hotel Continental in Rimini as our location for the unconference.
 Since one of the important aspects of SoCraTes is being close to the “action”, everything will happen within the location: lodging, eating and mingling. As a result, we can only accept as many participants as the number of available beds.</description>
     </item>
