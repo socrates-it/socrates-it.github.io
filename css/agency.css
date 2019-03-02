@@ -1045,3 +1045,9 @@ body {
     position: inherit;
     margin-left: 0px;
 }
+
+.registration-form {
+    border: 2px solid gray;
+    background-color: #eee;
+    border-radius: 5px;
+}
