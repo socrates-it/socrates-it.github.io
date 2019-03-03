@@ -108,15 +108,13 @@
                 
 
 <div class="registration-form" style="text-align: center;">
-  <!--<h4>Please leave your e-mail here to let us know you would like to attend SoCraTes-IT 2019</h4>-->
-  
-  
 <!-- Begin Mailchimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-    #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; }
-</style>
-<style type="text/css">
+    #mc_embed_signup{
+        clear:left; 
+        font:14px Helvetica,Arial,sans-serif; 
+    }
     #mc-embedded-subscribe-form input[type=checkbox]{display: inline; width: auto;margin-right: 10px;}
     #mergeRow-gdpr {margin-top: 20px;}
     #mergeRow-gdpr fieldset label {font-weight: normal;}
@@ -133,32 +131,38 @@
         background-color: red;
         height: auto;
     }
-    
     #mc_embed_signup .button:hover {background-color:green;}
     }
+    #gdpr: {
+        border: 1px solid red;
+    }
 </style>
+
 <div id="mc_embed_signup">
 <form action="https://socrates-conference.us20.list-manage.com/subscribe/post?u=4e24ba7602f7acf9fe79737d3&amp;id=be9dbd9e7a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
     <h2>Secure your seat for SoCraTes IT and register here!</h2>
-<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
 <div class="mc-field-group">
-    <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-</label>
+    <label for="mce-EMAIL">Email Address </label>
     <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group">
+    <label for="mce-FNAME">First Name </label>
+    <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+</div>
+<div class="mc-field-group">
+    <label for="mce-LNAME">Last Name </label>
+    <input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
 </div>
 <div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
     <div class="content__gdpr">
-        <label>GDPR Permissions</label>
-        <p>Please select all the ways you would like to hear from SoCraTes IT:</p>
+        <label>Permissions</label>
+        <p>I wish to receive email communications from SoCraTes IT, including news about our conferences.
+</p>
         <fieldset class="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field">
-        <label class="checkbox subfield" for="gdpr_11381"><input type="checkbox" id="gdpr_11381" name="gdpr[11381]" value="Y" class="av-checkbox gdpr"><span>Email</span> </label>
+        <label class="checkbox subfield" for="gdpr_11381"><input type="checkbox" id="gdpr_11381" name="gdpr[11381]" value="Y" class="av-checkbox gdpr"><span>Yes</span> </label>
         </fieldset>
-        <p>You can unsubscribe at any time by clicking the link in the footer of our emails. 
-In compliance with art.6, 12 and 13 of GDPR – General Data Protection Regulation, Reg. UE 679/2016  I declare to have read and understood SoCraTes IT’s privacy policy.</p>
-    </div>
-    <div class="content__gdprLegal">
-        <p>We use Mailchimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing. <a href="https://mailchimp.com/legal/" target="_blank">Learn more about Mailchimp's privacy practices here.</a></p>
+        <p>I declare to have read and understood SoCraTes IT’s <a href="privacy-policy">Privacy Policy</a>.</p>
     </div>
 </div>
     <div id="mce-responses" class="clear">
@@ -170,7 +174,7 @@ In compliance with art.6, 12 and 13 of GDPR – General Data Protection Regulati
     </div>
 </form>
 </div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <!--End mc_embed_signup-->
 </div>
 
