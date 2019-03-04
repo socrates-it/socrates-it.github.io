@@ -1047,7 +1047,9 @@ body {
 }
 
 .registration-form {
-    border: 2px solid gray;
-    background-color: #eee;
+    border: 2px solid green;
+    background-color: #fff;
     border-radius: 5px;
+    margin-bottom: 5em;
 }
+
