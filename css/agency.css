@@ -769,6 +769,13 @@ section h3.section-subheading {
     text-align: center;
 }
 
+
+.sponsor-member {
+    font-size: 1em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
 .team-member a {
     color: green;
 }
