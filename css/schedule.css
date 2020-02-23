@@ -262,6 +262,7 @@ input.header.header-color .navigation-header .buy-btn,
   padding: 0 35px 11px 0;
   border-bottom: 1px solid #eff1f5;
 }
+
 .schedule .schedule-item .schedule-item-toggle .title .icon {
   -webkit-transition: -webkit-transform 0.3s ease;
   -moz-transition: -moz-transform 0.3s ease;
@@ -410,6 +411,8 @@ input.header.header-color .navigation-header .buy-btn,
   }
 }
 @media (max-width: 767px) {
+  .schedule .schedule-item .price { padding-left: 50px;}   
+
   .schedule .tab-content {
     border: none;
   }
