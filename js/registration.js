@@ -9,5 +9,13 @@
   ftypes[2] = 'text';
   fnames[4] = 'MMERGE4';
   ftypes[4] = 'radio';
+
+  if (typeof InstallTrigger !== 'undefined') {
+    $("#mc-embedded-subscribe").after(`<div>
+      <label class='text text-danger'>
+        Using Firefox you could experience registration issues due to enhanced tracking protection
+      </label>
+    </div>`);
+  }
 }(jQuery));
 var $mcj = jQuery.noConflict(true);
