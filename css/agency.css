@@ -355,6 +355,7 @@ header {
 header .intro-text {
     padding-top: 100px;
     padding-bottom: 50px;
+    color: black;
 }
 
 header .intro-text .intro-lead-in {
@@ -367,6 +368,7 @@ header .intro-text .intro-lead-in {
 header .intro-text .intro-date {
     margin-bottom:0px;
     font-size:16px;
+    color:black;
 }
 header .intro-text .intro-date .location:before {
     content: "\f041";
@@ -394,7 +396,7 @@ header .intro-text .intro-title {
     font-size: 40px;
     font-weight: 700;
     line-height: 75px;
-    color: #fff;
+    color: black;
     font-weight: 700;
     text-shadow: none;
 }
@@ -430,7 +432,7 @@ header .intro-text .intro-heading {
         font-size: 40px;
         font-style: normal;
         line-height: 40px;
-        color: white;
+        color: black;
     }
 
     header .intro-text .intro-date {
