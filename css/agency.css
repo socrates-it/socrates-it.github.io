@@ -429,7 +429,7 @@ header .intro-text .intro-heading {
     header .intro-text .intro-lead-in {
         margin-bottom: 25px;
         font-family: "PT Sans Caption","Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 40px;
+        font-size: 30px;
         font-style: normal;
         line-height: 40px;
         color: black;
@@ -441,7 +441,7 @@ header .intro-text .intro-heading {
     }
 
     header .intro-text .intro-title {
-        font-size: 132px;
+        font-size: 112px;
     }
 
     header .intro-text .intro-subtitle {
