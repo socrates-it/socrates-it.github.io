@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://socrates-conference.it/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://socrates-conference.it/cookie-policy/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://socrates-conference.it/credits/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://socrates-conference.it/privacy-policy/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://socrates-conference.it/registration/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://socrates-conference.it/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://socrates-conference.it/tags/</loc>
   </url>
-  
 </urlset>
