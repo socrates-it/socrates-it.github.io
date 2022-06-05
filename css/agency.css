@@ -175,6 +175,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default {
     border-color: transparent;
     background-color: #fff;
+    border-bottom: 1px solid #ccc;
 }
 
 .logo {
@@ -284,6 +285,7 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default {
         padding: 20px 0;
         border: 0;
+        border-bottom: 1px solid #ccc;
         background-color: #ffffff;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
