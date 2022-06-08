@@ -344,7 +344,7 @@ fieldset[disabled] .btn-xl.active {
 
 header {
     text-align: center;
-    color: white; 
+    color: white;
     background-attachment: scroll;
     background-image: url(../img/header-bg.jpg);
     background-position: center center;
@@ -1059,9 +1059,16 @@ body {
 }
 
 .registration-form {
-    border: 2px solid green;
-    background-color: : #fff;;
+    background-color: #fff;
     border-radius: 5px;
     margin-bottom: 5em;
 }
 
+.registration-form > a.highlighted {
+  border:1px solid red;
+  border-color: red;
+  background-color: red;
+  border-radius: 22.5px;
+  margin-top:0px;
+  color: white;
+}
