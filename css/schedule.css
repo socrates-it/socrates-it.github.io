@@ -10,7 +10,7 @@
 .download-schedule-btn:focus,
 .schedule.schedule-light .nav.nav-schedule,
 .schedule.schedule-light .tab-content {
-  border-color: #4392f1;
+  border-color: #dc493a;
 }
 
 .nav.nav-schedule > li.active,
@@ -39,7 +39,7 @@
 .call-to-action-section > .overlay:before,
 .thumb-wrapper .overlay:before,
 .header .buy-btn {
-    background-color: #4392f1;
+    background-color: #dc493a;
 }
 .schedule .tab-content .nav.nav-schedule > li.active > a:not(:hover):not(:active),
 .schedule .tab-content .nav.nav-schedule > li.active > a:hover,

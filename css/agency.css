@@ -122,14 +122,14 @@ fieldset[disabled] .btn-primary.active {
 
 .btn-xl {
     padding: 20px 40px;
-    border-color: #4392f1;
+    border-color: #dc493a;
     border-radius: 3px;
     text-transform: uppercase;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 18px;
     font-weight: 700;
     color: #fff;
-    background-color: #4392f1;
+    background-color: #dc493a;
 }
 
 .btn-xl:hover,
@@ -312,9 +312,9 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-nav li a.highlighted {
         margin-left: 30px;
-        border:1px solid #4392f1;
-        border-color: #4392f1;
-        background-color: #4392f1;
+        border:1px solid #dc493a;
+        border-color: #dc493a;
+        background-color: #dc493a;
         border-radius: 22.5px;
         margin-top:0px;
         color: white;
