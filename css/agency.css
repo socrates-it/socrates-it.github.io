@@ -1,16 +1,9 @@
-/*!
- * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
 body {
     overflow-x: hidden;
     /*font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;*/
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size:16px;
 }
-
 
 .text-muted {
     color: #777;
@@ -231,9 +224,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .nav li a {
     text-transform: uppercase;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 400;
     letter-spacing: 1px;
-    color: #000000;
     text-align:center;
 }
 
@@ -256,11 +247,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-nav li a.highlighted {
-    border:0;;
-    background-color: transparent;
-    border-radius: 0;
     width: 180px;
-    color: #eeaaaa;
     font-weight: 700;
 }
 
@@ -282,84 +269,32 @@ fieldset[disabled] .btn-xl.active {
 }
 
 
-@media(min-width:768px) {
-    .navbar-default {
-        padding: 20px 0;
-        border: 0;
-        border-bottom: 1px solid #ccc;
-        background-color: #ffffff;
-        -webkit-transition: padding .3s;
-        -moz-transition: padding .3s;
-        transition: padding .3s;
-    }
-
-    .navbar-default .navbar-brand {
-        font-size: 2em;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        transition: all .3s;
-    }
-
-    .navbar-default .navbar-nav>.active>a {
-        border-radius: 3px;
-    }
-
-    .navbar-default.navbar-shrink {
-        padding: 10px 0;
-        background-color: #fff;
-    }
-
-
-    .navbar-nav li a.highlighted {
-        margin-left: 30px;
-        border:1px solid #dc493a;
-        border-color: #dc493a;
-        background-color: #dc493a;
-        border-radius: 22.5px;
-        margin-top:0px;
-        color: white;
-    }
-
-    .navbar-nav li a.highlighted:hover,
-    .navbar-nav li a.highlighted.active {
-        border:1px solid #ee0000;
-        color:white;
-        border-radius: 22.5px;
-        border-color: #306030;
-        background-color: #337733;
-    }
-
-
-    .navbar-default.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
-    }
-
-    .logo {
-        height: 60px;
-        top: -8px;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        transition: all .3s;
-    }
-}
-
 header {
     text-align: center;
     color: white;
     background-attachment: scroll;
     background-image: url(../img/header-bg.jpg);
-    background-position: center center;
+    background-position: top;
     background-repeat: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    height: 700px;
 }
 
 header .intro-text {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    /* padding-top: 500px; */
+    /* padding-bottom: 50px; */
+    margin-bottom:100px;
     color: black;
+}
+
+header .announcement {
+    background: rgba(255, 230, 230, .5);
+
+    margin-top: 450px;
+    padding: 2em;
 }
 
 header .intro-text .intro-lead-in {
@@ -378,7 +313,6 @@ header .intro-text .intro-lead-in a {
 
 header .intro-text .intro-date {
     margin-bottom:0px;
-    font-size:16px;
     color:black;
 }
 header .intro-text .intro-date .location:before {
@@ -386,7 +320,6 @@ header .intro-text .intro-date .location:before {
     font-family: "FontAwesome";
     color: rgb(254, 73, 24);
     box-sizing: border-box;
-    font-kerning: auto;
     letter-spacing: 9.5px;
     padding-left: 20px;
     font-weight: normal;
@@ -397,7 +330,6 @@ header .intro-text .intro-date .date:before {
     font-family: "FontAwesome";
     color: rgb(254, 73, 24);
     box-sizing: border-box;
-    font-kerning: auto;
     letter-spacing: 9.5px;
     font-weight: normal;
 }
@@ -410,24 +342,25 @@ header .intro-text .intro-title {
     color: #2f2f2b;
     font-weight: 700;
     
-    text-shadow: none;
-    text-shadow:
-      -1px -1px 82px whitesmoke,
-      1px -1px 82px whitesmoke,
-      -1px 1px 82px whitesmoke,
-      1px 1px 82px ;
+    /* text-shadow: none; */
+    /* text-shadow: */
+    /*   -1px -1px 82px whitesmoke, */
+    /*   1px -1px 82px whitesmoke, */
+    /*   -1px 1px 82px whitesmoke, */
+    /*   1px 1px 82px ; */
 }
 
 
 header .intro-text .intro-subtitle {
+    display: none;
     margin-bottom: 30px;
     font-size:10px;
     text-shadow: none;
-    /* text-shadow: */
-    /*   -1px -1px 20px whitesmoke, */
-    /*   1px -1px 20px whitesmoke, */
-    /*   -1px 1px 20px whitesmoke, */
-    /*   1px 1px 20px ; */
+    text-shadow:
+      -1px -1px 20px whitesmoke,
+      1px -1px 20px whitesmoke,
+      -1px 1px 20px whitesmoke,
+      1px 1px 20px ;
 }
 
 
@@ -436,41 +369,6 @@ header .intro-text .intro-heading {
     font-family: "PT Sans Caption","Helvetica Neue",Helvetica,Arial,sans-serif;
 
     line-height: 50px;
-}
-
-@media(min-width:768px) {
-    header .intro-text {
-        padding-top: 300px;
-        padding-bottom: 200px;
-        font-family: "PT Sans Caption", Arial, "Helvetica Neue", Helvetica, sans-serif;
-    }
-
-    header .intro-text .intro-heading {
-        margin-bottom: 25px;
-    }
-
-    header .intro-text .intro-lead-in {
-        margin-bottom: 25px;
-        font-family: "PT Sans Caption","Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 30px;
-        font-style: normal;
-        line-height: 40px;
-        color: #2f2f2b;
-    }
-
-    header .intro-text .intro-date {
-        margin-bottom:50px;
-        sfont-size:16px;
-    }
-
-    header .intro-text .intro-title {
-        font-size: 60px;
-    }
-
-    header .intro-text .intro-subtitle {
-        margin-bottom: 50px;
-        font-size: 35px;
-    }
 }
 
 section {
@@ -490,12 +388,6 @@ section h3.section-subheading {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-}
-
-@media(min-width:768px) {
-    section {
-        padding: 150px 0;
-    }
 }
 
 .service-heading {
@@ -580,12 +472,6 @@ section h3.section-subheading {
 
 #portfolio * {
     z-index: 2;
-}
-
-@media(min-width:767px) {
-    #portfolio .portfolio-item {
-        margin: 0 0 30px;
-    }
 }
 
 .timeline {
@@ -699,93 +585,6 @@ section h3.section-subheading {
 .timeline .timeline-body>p,
 .timeline .timeline-body>ul {
     margin-bottom: 0;
-}
-
-@media(min-width:768px) {
-    .timeline:before {
-        left: 50%;
-    }
-
-    .timeline>li {
-        margin-bottom: 100px;
-        min-height: 100px;
-    }
-
-    .timeline>li .timeline-panel {
-        float: left;
-        width: 41%;
-        padding: 0 20px 20px 30px;
-        text-align: right;
-    }
-
-    .timeline>li .timeline-image {
-        left: 50%;
-        width: 100px;
-        height: 100px;
-        margin-left: -50px;
-    }
-
-    .timeline>li .timeline-image h4 {
-        margin-top: 16px;
-        font-size: 13px;
-        line-height: 18px;
-    }
-
-    .timeline>li.timeline-inverted>.timeline-panel {
-        float: right;
-        padding: 0 30px 20px 20px;
-        text-align: left;
-    }
-}
-
-@media(min-width:992px) {
-    .timeline>li {
-        min-height: 150px;
-    }
-
-    .timeline>li .timeline-panel {
-        padding: 0 20px 20px;
-    }
-
-    .timeline>li .timeline-image {
-        width: 150px;
-        height: 150px;
-        margin-left: -75px;
-    }
-
-    .timeline>li .timeline-image h4 {
-        margin-top: 30px;
-        font-size: 18px;
-        line-height: 26px;
-    }
-
-    .timeline>li.timeline-inverted>.timeline-panel {
-        padding: 0 20px 20px;
-    }
-}
-
-@media(min-width:1200px) {
-    .timeline>li {
-        min-height: 170px;
-    }
-
-    .timeline>li .timeline-panel {
-        padding: 0 20px 20px 100px;
-    }
-
-    .timeline>li .timeline-image {
-        width: 170px;
-        height: 170px;
-        margin-left: -85px;
-    }
-
-    .timeline>li .timeline-image h4 {
-        margin-top: 40px;
-    }
-
-    .timeline>li.timeline-inverted>.timeline-panel {
-        padding: 0 100px 20px 20px;
-    }
 }
 
 .team-member {
