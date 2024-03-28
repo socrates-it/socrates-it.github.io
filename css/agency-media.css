@@ -1,4 +1,9 @@
 @media(min-width:768px) {
+
+    .img-sponsor {
+        width: 30%;
+    }
+
     .navbar-default {
         padding: 20px 0;
         border: 0;
