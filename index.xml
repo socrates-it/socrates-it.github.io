@@ -4,7 +4,7 @@
     <title>SoCraTes-IT</title>
     <link>https://socrates-conference.it/</link>
     <description>Recent content on SoCraTes-IT</description>
-    <generator>Hugo 0.125.2</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="https://socrates-conference.it/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -27,13 +27,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://socrates-conference.it/privacy-policy/</guid>
       <description>Updated April, 30th 2024&#xA;Scope Andrea Vallotti, Anna Piera Frascella, Arialdo Martini, Gianni Bossini and Pierluigi Pugliese (“we”, “us”, “our”), organizers of “SoCraTes IT” 2024 (a “Conference”), are committed to protecting your personal information. We invite you to read this Privacy Policy, which explains the types of information collected and created in connection with the relevant Conference, how and why we use such information, who we share it with and your legal rights.</description>
-    </item>
-    <item>
-      <title>Registration</title>
-      <link>https://socrates-conference.it/registration/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://socrates-conference.it/registration/</guid>
-      <description>Register Subscribe to SoCraTes IT 2024 Fill the form and subscribe to SoCraTes IT. You will receive an email with the hotel registration form. * indicates required Email Address * First Name Last Name Permissions I wish to receive email communications from SoCraTes IT, including news about our conferences. We use Mailchimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing.</description>
     </item>
   </channel>
 </rss>
