@@ -55,6 +55,7 @@
     --font-serif: var(--aw-font-serif, ui-serif);
     --font-heading: var(--aw-font-heading, ui-sans-serif);
     --animate-fade: fade-in-up 1s both;
+    --animate-fade-out: fade-out 1s both; /* Define the fade-out animation */
 
     @keyframes fade-in-up {
         0% {
@@ -64,6 +65,16 @@
         100% {
             opacity: 1;
             transform: translateY(0);
+        }
+    }
+
+    @keyframes fade-out {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(2rem); /* Optional: add a slight downward movement for a fade-out effect */
         }
     }
 }

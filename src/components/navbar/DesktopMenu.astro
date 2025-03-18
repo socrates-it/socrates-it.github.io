@@ -1,0 +1,28 @@
+---
+import type { MenuItem } from "./menu-items"
+import MenuLink from "./MenuLink"
+import { cn } from "../../common/css"
+
+interface Props {
+    items: MenuItem[]
+}
+
+const { items } = Astro.props
+---
+
+<ul
+    class={cn(
+        "flex flex-wrap items-center justify-end",
+        "md:gap-x-4 md:gap-y-4",
+        "lg:gap-x-8 lg:gap-y-4",
+        "xl:gap-14 2xl:gap-16",
+    )}
+>
+    {
+        items.map((x) => (
+            <li>
+                <MenuLink client:load item={x} />
+            </li>
+        ))
+    }
+</ul>
