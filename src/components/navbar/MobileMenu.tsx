@@ -11,17 +11,22 @@ type HProps = {
 }
 const Hamburger: FC<HProps> = ({ isOpen, onClose, onOpen }) => {
     return (
-        <div>
-            {!isOpen && <div className="xp-4 space-y-1.5 cursor-pointer bg-red-500 w-6 h-6 animate-spin duration-150" onClick={onOpen}>
-                <span className="block w-6 h-0.5 bg-gray-400"></span>
-                <span className="block w-4 h-0.5 bg-gray-400"></span>
-                <span className="block w-6 h-0.5 bg-gray-400"></span>
-            </div>}
-            {isOpen && (<div className="xp-4 space-y-1.5 cursor-pointer bg-red-500 w-6 h-6 animate-spin duration-150" onClick={onClose}>
-                    <span className="block w-6 h-0.5 bg-gray-400 transform rotate-45 absolute top-8"></span>
-                    <span className="block w-6 h-0.5 bg-gray-400 transform -rotate-45 absolute top-8"></span>
-                </div>
-            )}
+        <div className="xp-4 space-y-1.5 cursor-pointer w-6 h-6" onClick={isOpen ? onClose : onOpen}>
+            <span
+                className={`block w-6 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out ${
+                    isOpen ? 'opacity-0' : ''
+                }`}
+            ></span>
+            <span
+                className={`block w-4 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out ${
+                    isOpen ?  'transform rotate-45 absolute w-6' : 'animate-spin'
+                }`}
+            ></span>
+            <span
+                className={`block w-6 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out ${
+                    isOpen ? 'transform -rotate-45 absolute' : ''
+                }`}
+            ></span>
         </div>
     )
 }
