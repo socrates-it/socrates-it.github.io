@@ -1,19 +1,14 @@
 ---
 import Carousel from './Carousel.tsx';
-import { Picture } from 'astro:assets';
-import canyon from '../../assets/images/canyon.jpg';
-import fiori from '../../assets/images/fiori.jpg';
-import foresta from '../../assets/images/foresta.jpg';
 
-const heroImages = [
-    { src: '../../assets/images/canyon.png', alt: 'Canyon' },
-    { src: '../../assets/images/fiori.png', alt: 'Fiori' },
-    { src: '../../assets/images/foresta.png', alt: 'Foresta' }
-];
+const images = await Astro.glob("/src/assets/images/*").then(files => {
+    return files.map(file => file.default);
+});
 
 import type { Hero as Props } from '~/types';
 ---
 
-<section class="relative md:-mt-[76px] not-prose bg-red-500">
-    <Carousel images={heroImages} />
+<section class="relative not-prose bg-red-500">
+    <!--class="relative md:-mt-[76px] not-prose bg-red-500" maybe useful for scrolling fade effect-->
+    <Carousel client:load images={images} />
 </section>

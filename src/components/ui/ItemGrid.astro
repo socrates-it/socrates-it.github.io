@@ -20,7 +20,8 @@ const {
     items && (
     <div class='grid mx-auto gap-8 md:gap-y-12' >
         {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => (
-                <div class="intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+                <div class="intersect-once">
+                    <!--class="intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"-->
                     <div class='flex flex-row max-w-md' >
                         <div class="flex justify-center">
                             {(icon || defaultIcon) && (
