@@ -1,6 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
+import type { Image } from '~/types';
 import Hero from '~/components/widgets/Hero.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 
@@ -8,23 +8,19 @@ const metadata = {
 	title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
 	ignoreTitleTemplate: true,
 };
+
+const heroImages: Image[]  = [
+	{ src: '../assets/images/canyon.png', alt: 'Canyon' },
+	{ src: '../assets/images/fiori.png', alt: 'Fiori' },
+	{ src: '../assets/images/foresta.png', alt: 'Foresta' }
+]
 ---
 
 <Layout metadata={metadata}>
 	<!-- Hero Widget ******************* -->
 
 	<Hero
-		actions={[
-			{
-				variant: 'primary',
-				text: 'Get template',
-				href: 'https://github.com/onwidget/astrowind',
-				target: '_blank',
-				icon: 'material-symbols:5g-mobiledata-badge',
-			},
-			{ text: 'Learn more', href: '#features' },
-		]}
-		image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+		images={heroImages}
 	>
 		<Fragment slot="title">
 			Free template for <span class="hidden xl:inline">creating websites with</span>

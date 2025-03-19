@@ -54,28 +54,33 @@
     --font-sans: var(--aw-font-sans, ui-sans-serif);
     --font-serif: var(--aw-font-serif, ui-serif);
     --font-heading: var(--aw-font-heading, ui-sans-serif);
-    --animate-fade: fade-in-up 1s both;
-    --animate-fade-out: fade-out 1s both;
+    --animate-fade-in: fade-in-up 1s both;
+    --animate-fade-out: fade-out-down 1s both;
     --animate-spin: spin-r-once 1s both;
 
     @keyframes fade-in-up {
         0% {
             opacity: 0;
             transform: translateY(2rem);
+            visibility: hidden;
         }
         100% {
             opacity: 1;
             transform: translateY(0);
+            visibility: visible;
         }
     }
 
-    @keyframes fade-out {
+    @keyframes fade-out-down {
         0% {
             opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
         }
         100% {
             opacity: 0;
-            transform: translateY(2rem); /* Optional: add a slight downward movement for a fade-out effect */
+            transform: translateY(2rem);
+            visibility: hidden;
         }
     }
 
