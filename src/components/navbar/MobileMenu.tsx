@@ -1,4 +1,4 @@
-import type { FC } from "react"
+import {type FC, useEffect} from "react"
 import { useState } from "react"
 import type { MenuItem } from "./menu-items"
 import { cn } from "~/common/css.ts"
@@ -37,7 +37,10 @@ type Props = {
 }
 const MobileMenu: FC<Props> = ({ items }) => {
     const [isOpen, setIsOpen] = useState(false)
+    const [hasMounted, setHasMounted] = useState(false);
+
     const onOpen = () => {
+        setHasMounted(true);
         setIsOpen(true)
     }
     const onClose = () => {
@@ -50,10 +53,15 @@ const MobileMenu: FC<Props> = ({ items }) => {
                 <div
                     className={cn(
                         "container mx-auto px-10 mt-[24px]",
-                        "absolute left-0 right-0", // Center the div
+                        "absolute left-0 right-0",
                         "bg-yellow-400 ",
-                        "z-10 transition-all duration-300 ease-in-out", // Specify transition-opacity for clarity
-                        `${isOpen ? 'animate-fade-in' : 'animate-fade-out'}` // Correct opacity classes
+                        "z-10 transition-all duration-300 ease-in-out",
+                        {
+                            "hidden": !hasMounted,
+                            "visible": hasMounted && isOpen,
+                            "animate-fade-in": hasMounted && isOpen,
+                            "animate-fade-out": hasMounted && !isOpen
+                        }
                     )}
                 >
                     <div className={cn(
