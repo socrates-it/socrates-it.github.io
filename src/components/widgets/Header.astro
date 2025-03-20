@@ -46,7 +46,7 @@ const {
 <header
         class:list={[
             { sticky: isSticky, relative: !isSticky, dark: isDark },
-            'top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out bg-red-500 dark:bg-blue-500',
+            'top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out bg-transparent',
         ]}
         {...isSticky ? { 'data-aw-sticky-header': true } : {}}
         {...id ? { id } : {}}

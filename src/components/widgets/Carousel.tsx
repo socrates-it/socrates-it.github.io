@@ -2,55 +2,86 @@
 import React, {useEffect, useState} from 'react';
 import clsx from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import {cn} from "~/common/css.ts";
 
 interface CarouselProps {
     images: { src: string; alt: string }[];
 }
 
-const Carousel: React.FC<CarouselProps> = ({ images }: CarouselProps) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+const Carousel = ({ images }: CarouselProps) => {
+    const [imageIndex, setImageIndex] = useState(0);
 
-    const totalImages = images.length;
-
-    const goToNext = () => {
-        console.log(`currentIndex: ${currentIndex}`);
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % totalImages); // Wraps around at the end
+    const nextSlide = () => {
+        setImageIndex((prevIndex) => {
+            if (prevIndex === images.length - 1) return 0
+            return prevIndex + 1
+        });
     };
 
-    // Go to the previous image (wraps around when at the start)
-    const goToPrevious = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? totalImages - 1 : prevIndex - 1
-        );
+    const prevSlide = () => {
+        setImageIndex((prevIndex) => {
+            if (prevIndex === 0) return images.length - 1
+            return prevIndex - 1
+        });
     };
 
-    useEffect(() => {
-        // if (!autoSlide) return
-        const slideInterval = setInterval(goToNext, 3000)
-        return () => clearInterval(slideInterval)
-    }, [])
+    console.log(images)
+    //immagine 1: onNext: aggiungo transalte-x-full, onPRev: aggiungo -translate-x-full
+    //immagine 2: onNext: aggiungo transalte-x-full, onPRev: aggiungo -translate-x-full
 
     return (
-        <div className='overflow-hidden relative'>
-            <div className='flex transition-transform ease-out duration-500' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-                {[...images.map((s) => (
-                    <img src={s.src} alt={s.alt} key={s.alt} />
-                ))]}
+        <div className="relative w-full h-full">
+            <div
+                className='w-full h-full flex overflow-hidden'
+            >
+                {images.map(({ src, alt }, index) => (
+                    <img
+                        key={src}
+                        src={src}
+                        alt={alt}
+                        aria-hidden={imageIndex !== index}
+                        className='object-cover w-full h-full block shrink-0 grow-0 transition-transform duration-300 ease-in-out'
+                        style={{ translate: `${-100 * imageIndex}%` }}
+                    />
+                ))}
             </div>
-            <div className="absolute inset-0 flex items-center justify-between p-4">
-                <button onClick={goToPrevious} className='p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white'>
-                    MAMAAM
-                </button>
-                <button onClick={goToNext} className='p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white'>
-                    CODJJ
-                </button>
-            </div>
-            <div className='absolute bottom-4 right-0 left-0'>
-                <div className='flex items-center justify-center gap-2'>
-                    {images.map((s, i) => (
-                        <div key={i} className={`transition-all w-1.5 h-1.5 bg-white rounded-full  ${currentIndex === i ? "p-0.5" : "bg-opacity-50"}`} />
-                    ))}
-                </div>
+            <button
+                className="absolute block top-1/2 left-5 transform -translate-y-1/2 bg-gray-800 transition-colors duration-300 hover:bg-green-950 text-white p-4 rounded z-10 cursor-pointer"
+                onClick={prevSlide}
+            >
+                <div
+                    className="w-6  border-green-600 h-6
+                        border-l-2 border-b-2 translate-x-1.5
+                        transform rotate-45 rounded-bl"
+                />
+            </button>
+            <button
+                className="absolute block top-1/2 right-5 transform -translate-y-1/2 bg-gray-800 transition-colors duration-300 hover:bg-green-950 text-white p-4 rounded z-10 cursor-pointer"
+                onClick={nextSlide}
+            >
+                <div
+                    className="w-6  border-green-600 h-6
+                        border-t-2 border-r-2 -translate-x-1.5
+                        transform rotate-45 rounded-tr"
+                />
+            </button>
+            <div
+                className='absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2 bg-gray-800 p-2 rounded-xl z-50'
+            >
+                {images.map((_, index) => (
+                    <button
+                        key={index}
+                        className="[unset:all] block cursor-pointer w-2.5 h-2.5  relative"
+                        aria-label={`View Image ${index + 1}`}
+                        onClick={() => setImageIndex(index)}
+                    >
+                        {index === imageIndex ? (
+                            <div className="w-full h-full bg-gray-400 rounded-full"></div>
+                        ) : (
+                            <div className="w-full h-full border-1 transition-colors duration-300 hover:bg-green-800 border-gray-600 rounded-full"></div>
+                        )}
+                    </button>
+                ))}
             </div>
         </div>
     );
