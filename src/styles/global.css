@@ -57,6 +57,7 @@
     --animate-fade-in: fade-in-up 1s both;
     --animate-fade-out: fade-out-down 1s both;
     --animate-spin: spin-r-once 1s both;
+    --animate-infinite-scroll: infinite-scroll 10s linear infinite;
 
     @keyframes fade-in-up {
         0% {
@@ -90,6 +91,15 @@
         }
         100% {
             transform: rotate(360deg);
+        }
+    }
+
+    @keyframes infinite-scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
         }
     }
 }

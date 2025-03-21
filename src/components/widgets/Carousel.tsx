@@ -1,5 +1,4 @@
-// Carousel.tsx
-import React, {useEffect, useState} from 'react';
+import React, {Fragment, useEffect, useState} from 'react';
 import clsx from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import {cn} from "~/common/css.ts";
@@ -35,14 +34,29 @@ const Carousel = ({ images }: CarouselProps) => {
                 className='w-full h-full flex overflow-hidden'
             >
                 {images.map(({ src, alt }, index) => (
-                    <img
-                        key={src}
-                        src={src}
-                        alt={alt}
-                        aria-hidden={imageIndex !== index}
-                        className='object-cover w-full h-full block shrink-0 grow-0 transition-transform duration-300 ease-in-out'
-                        style={{ translate: `${-100 * imageIndex}%` }}
-                    />
+                    <Fragment>
+                        <div
+                            className='object-cover w-full h-full block shrink-0 grow-0 transition-transform duration-1000 ease-in-out'
+                            style={{translate: `${-100 * imageIndex}%`}}
+                        >
+                            <img
+                                key={src}
+                                src={src}
+                                alt={alt}
+                                aria-hidden={imageIndex !== index}
+                                className='object-cover w-full h-full block shrink-0 grow-0'
+                            />
+                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl text-blue-500 flex space-x-8">
+                                <button className='bg-blue-900'>
+                                    get tickets
+                                </button>
+                                <button className='bg-blue-900'>
+                                    explore
+                                </button>
+                            </div>
+                        </div>
+                    </Fragment>
+
                 ))}
             </div>
             <button
@@ -66,7 +80,7 @@ const Carousel = ({ images }: CarouselProps) => {
                 />
             </button>
             <div
-                className='absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2 bg-gray-800 p-2 rounded-xl z-50'
+                className='absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-3 bg-gray-800 p-2 rounded-xl z-50'
             >
                 {images.map((_, index) => (
                     <button
@@ -78,7 +92,7 @@ const Carousel = ({ images }: CarouselProps) => {
                         {index === imageIndex ? (
                             <div className="w-full h-full bg-gray-400 rounded-full"></div>
                         ) : (
-                            <div className="w-full h-full border-1 transition-colors duration-300 hover:bg-green-800 border-gray-600 rounded-full"></div>
+                            <div className="w-full h-full border-1 transition-all hover:scale-90 duration-300 hover:bg-green-800 border-gray-600 rounded-full"></div>
                         )}
                     </button>
                 ))}
@@ -88,4 +102,3 @@ const Carousel = ({ images }: CarouselProps) => {
 };
 
 export default Carousel;
-
