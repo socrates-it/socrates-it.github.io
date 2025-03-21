@@ -33,7 +33,7 @@ const {
     id = 'header',
     links = [],
     actions = [],
-    isSticky = false,
+    isSticky = true,
     isDark = false,
     isFullWidth = false,
     showToggleTheme = false,
@@ -46,15 +46,13 @@ const {
 <header
         class:list={[
             { sticky: isSticky, relative: !isSticky, dark: isDark },
-            'top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out bg-transparent',
+            'top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out bg-transparent h-40 ',
         ]}
-        {...isSticky ? { 'data-aw-sticky-header': true } : {}}
         {...id ? { id } : {}}
 >
     <div class="text-white logo-bg-svg">
         <div class="container mx-auto px-10 py-2.5 ">
-                <Navigation />
-                <slot name="hero" />
+            <Navigation />
         </div>
     </div>
 </header>

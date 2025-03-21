@@ -11,7 +11,7 @@ const images = await Astro.glob("/src/assets/images/*").then(files => {
 import type { Hero as Props } from '~/types';
 ---
 
-<section class="absolute top-0 right-0 left-0 bg-red-500 h-[600px]">
+<section class="relative -top-40 bg-red-500 h-[600px]">
     <!--class="relative md:-mt-[76px] not-prose bg-red-500" maybe useful for scrolling fade effect-->
     <Carousel client:load images={images} />
 </section>
