@@ -9,47 +9,47 @@ importers:
   .:
     dependencies:
       '@astrojs/react':
-        specifier: ^4.2.1
+        specifier: 4.2.1
         version: 4.2.1(@types/node@22.13.10)(@types/react-dom@19.0.4(@types/react@19.0.10))(@types/react@19.0.10)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(yaml@2.7.0)
+      '@fontsource-variable/manrope':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@tailwindcss/vite':
-        specifier: ^4.0.14
+        specifier: 4.0.14
         version: 4.0.14(vite@6.2.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))
       '@types/react':
-        specifier: ^19.0.10
+        specifier: 19.0.10
         version: 19.0.10
       '@types/react-dom':
-        specifier: ^19.0.4
+        specifier: 19.0.4
         version: 19.0.4(@types/react@19.0.10)
       astro:
-        specifier: ^5.5.2
+        specifier: 5.5.2
         version: 5.5.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.36.0)(typescript@5.8.2)(yaml@2.7.0)
       astro-icon:
-        specifier: ^1.1.5
+        specifier: 1.1.5
         version: 1.1.5
       react:
-        specifier: ^19.0.0
+        specifier: 19.0.0
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: 19.0.0
         version: 19.0.0(react@19.0.0)
       tailwindcss:
-        specifier: ^4.0.14
+        specifier: 4.0.14
         version: 4.0.14
     devDependencies:
       '@astrojs/ts-plugin':
-        specifier: ^1.10.4
+        specifier: 1.10.4
         version: 1.10.4
       '@iconify-json/material-symbols':
-        specifier: ^1.2.16
+        specifier: 1.2.16
         version: 1.2.16
-      '@iconify-json/mdi':
-        specifier: ^1.2.3
-        version: 1.2.3
       clsx:
-        specifier: ^2.1.1
+        specifier: 2.1.1
         version: 2.1.1
       tailwind-merge:
-        specifier: ^3.0.2
+        specifier: 3.0.2
         version: 3.0.2
 
 packages:
@@ -328,11 +328,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@fontsource-variable/manrope@5.2.5':
+    resolution: {integrity: sha512-6Mo3ldtgAhxvSSyy+bLbFRjkiYhVo6RLcasJfj9Du5k2nX16/RwjQdBbZJfvsofVt6GqQ+O6AVkazmS3Xw5R9A==}
+
   '@iconify-json/material-symbols@1.2.16':
     resolution: {integrity: sha512-hCUbIYLWPX9YMChvqEScG5tvFLZ2arXl+bnsvUQDrtsGq00wu4S4qIofH3uZgClYxXhvApkDKtJDlXhoygzmMQ==}
-
-  '@iconify-json/mdi@1.2.3':
-    resolution: {integrity: sha512-O3cLwbDOK7NNDf2ihaQOH5F9JglnulNDFV7WprU2dSoZu3h3cWH//h74uQAB87brHmvFVxIOkuBX2sZSzYhScg==}
 
   '@iconify/tools@4.1.1':
     resolution: {integrity: sha512-Hybu/HGhv6T8nLQhiG9rKx+ekF7NNpPOEQAy7JRSKht3s3dcFSsPccYzk24Znc9MTxrR6Gak3cg6CPP5dyvS2Q==}
@@ -2404,11 +2404,9 @@ snapshots:
   '@esbuild/win32-x64@0.25.1':
     optional: true
 
-  '@iconify-json/material-symbols@1.2.16':
-    dependencies:
-      '@iconify/types': 2.0.0
+  '@fontsource-variable/manrope@5.2.5': {}
 
-  '@iconify-json/mdi@1.2.3':
+  '@iconify-json/material-symbols@1.2.16':
     dependencies:
       '@iconify/types': 2.0.0
 

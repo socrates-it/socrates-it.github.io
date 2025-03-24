@@ -1,0 +1,39 @@
+---
+import {Icon} from "astro-icon/components";
+
+const contents = [
+    {
+        icon: 'material-symbols:currency-exchange:', title: 'title 1', description: 'description 1'
+    },
+    {
+        icon: 'material-symbols:currency-exchange:', title: 'title 2', description: 'description2'
+    },
+    {
+        icon: 'material-symbols:currency-exchange:', title: 'title3', description: 'description3'
+    },
+]
+
+---
+
+<section class="bg-red-500 py-20">
+    <ul class="grid grid-cols-1 gap-4 container mx-auto max-w-6xl px-5 xl:px-0 space-y-10">
+        {contents.map((item, index) => (
+            <li
+            class={`bg-gray-200 p-4 rounded-md shadow-md flex items-center space-x-4 ${
+            index % 2 === 0
+                ? 'flex-row'  
+            : 'flex-row-reverse'
+            }`}
+            >
+                <div class="flex-shrink-0">
+                    <Icon name={item.icon} class="h-[20px] w-[20px] bg-amber-600" />
+                </div>
+
+                <div class="flex-grow">
+                    <p>{item.title}</p>
+                </div>
+            </li>
+        ))}
+    </ul>
+</section>
+

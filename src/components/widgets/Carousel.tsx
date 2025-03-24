@@ -36,9 +36,9 @@ const Carousel = () => {
     };
 
     return (
-        <div className="group relative top w-full h-full overflow-y-visible">
+        <div className="group relative top w-full h-full">
             <div
-                className='w-full h-full flex '
+                className='w-full h-full flex overflow-hidden'
             >
                 {images.map(({ src, alt }, index) => (
                     <Fragment key={alt} >
@@ -54,8 +54,8 @@ const Carousel = () => {
                             <div className={cn(
                                      "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2",
                                      "text-center bg-black/50 p-6 rounded-xl text-white uppercase",
-                                     'space-y-10',
-                                     'opacity-0 group-hover:opacity-100 transition-opacity duration-1000',
+                                     'space-y-4 sm:space-y-6 max-w-40 sm:max-w-full text-xs sm:text-lg',
+                                     'opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-1000',
                                  )}
                             >
                                 <p>Design Thinking Conference</p>
@@ -70,29 +70,29 @@ const Carousel = () => {
                 ))}
             </div>
             <button
-                className="opacity-0 group-hover:opacity-100 absolute block top-1/2 left-5 transform -translate-y-1/2 bg-gray-800 transition-all duration-300 hover:bg-green-950 text-white p-4 rounded z-10 cursor-pointer"
+                className="opacity-100 sm:opacity-0 group-hover:opacity-100 absolute block top-1/2 left-5 transform -translate-y-1/2 bg-gray-800 transition-all duration-300 hover:bg-green-950 text-white p-2 sm:p-4 rounded z-10 cursor-pointer"
                 onClick={prevSlide}
             >
                 <div
-                    className="w-6  border-green-600 h-6
-                        border-l-2 border-b-2 translate-x-1.5
+                    className="h-3 w-3 sm:w-6 sm:h-6 border-green-600
+                        border-l-2 border-b-2 transalte-x-[5] translate-x-0.5 sm:translate-x-1.5
                         transform rotate-45 rounded-bl"
                 />
             </button>
             <button
-                className="opacity-0 group-hover:opacity-100 absolute top-1/2 right-5 transform -translate-y-1/2 bg-gray-800 transition-all duration-300 hover:bg-green-950 text-white p-4 rounded z-10 cursor-pointer"
+                className="opacity-100 sm:opacity-0 group-hover:opacity-100 absolute top-1/2 right-5 transform -translate-y-1/2 bg-gray-800 transition-all duration-300 hover:bg-green-950 text-white p-2 sm:p-4 rounded z-10 cursor-pointer"
                 onClick={nextSlide}
             >
                 <div
-                    className="w-6  border-green-600 h-6
-                        border-t-2 border-r-2 -translate-x-1.5
+                    className="h-3 w-3 sm:w-6 sm:h-6 border-green-600
+                        border-t-2 border-r-2 -transalte-x-[5] -translate-x-0.5 sm:-translate-x-1.5
                         transform rotate-45 rounded-tr"
                 />
             </button>
             <div
                 className={
-                    cn('absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-3 bg-gray-800 p-2 rounded-xl z-50',
-                    'opacity-0 group-hover:opacity-100 transition-opacity duration-300')
+                    cn('absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-3 bg-gray-800 p-2 rounded-xl',
+                    'opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-300')
                 }
             >
                 {images.map((_, index) => (
