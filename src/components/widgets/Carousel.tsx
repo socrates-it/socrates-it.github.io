@@ -36,9 +36,9 @@ const Carousel = () => {
     };
 
     return (
-        <div className="group relative topw-full h-full">
+        <div className="group relative top w-full h-full overflow-y-visible">
             <div
-                className='w-full h-full flex overflow-x-hidden'
+                className='w-full h-full flex '
             >
                 {images.map(({ src, alt }, index) => (
                     <Fragment key={alt} >
@@ -47,7 +47,7 @@ const Carousel = () => {
                             style={{
                                 translate: `${-100 * imageIndex}%`,
                                 backgroundImage: `url(${src})`,
-                                backgroundPosition: 'center', // Adjust this value as needed
+                                backgroundPosition: 'center',
                                 backgroundSize: 'cover'
                             }}
                         >

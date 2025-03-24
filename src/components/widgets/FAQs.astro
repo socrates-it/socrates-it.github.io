@@ -10,7 +10,7 @@ const {
     tagline = '',
     items = [],
     columns = 2,
-
+    isSticky = true,
     id,
     isDark = false,
     classes = {},
@@ -18,7 +18,7 @@ const {
 } = Astro.props;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+<WidgetWrapper id={id} isDark={isDark} isSticky={isSticky} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
     <Headline title={title} subtitle={subtitle} tagline={tagline} />
     <ItemGrid
             items={items}

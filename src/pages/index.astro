@@ -3,23 +3,22 @@ import Layout from '~/layouts/PageLayout.astro';
 import type { Image } from '~/types';
 import Hero from '~/components/widgets/Hero.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
+import InfoPanel from "../components/widgets/InfoPanel.astro";
 
 const metadata = {
 	title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
 	ignoreTitleTemplate: true,
 };
-
-const heroImages: Image[]  = [
-	{ src: '../assets/images/canyon.png', alt: 'Canyon' },
-	{ src: '../assets/images/fiori.png', alt: 'Fiori' },
-	{ src: '../assets/images/foresta.png', alt: 'Foresta' }
-]
 ---
 
 <Layout metadata={metadata}>
 	<!-- Hero Widget ******************* -->
 
-	<Hero images={heroImages} />
+	<Hero />
+
+	<!-- InfoPanel Widget ******************* -->
+
+	<InfoPanel />
 
 	<!-- FAQs Widget ******************* -->
 

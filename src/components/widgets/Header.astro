@@ -33,7 +33,7 @@ const {
     id = 'header',
     links = [],
     actions = [],
-    isSticky = true,
+    isSticky = false,
     isDark = false,
     isFullWidth = false,
     showToggleTheme = false,
@@ -45,8 +45,8 @@ const {
 
 <header
         class:list={[
-            { sticky: isSticky, relative: !isSticky, dark: isDark },
-            'top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out bg-transparent h-40 ',
+            { dark: isDark },
+            'z-40 fixed flex-none mx-auto w-full border-b border-gray-50/0 transition-opacity ease-in-out bg-transparent h-40',
         ]}
         {...id ? { id } : {}}
 >
