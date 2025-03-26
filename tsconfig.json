@@ -1,12 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": [
-    ".astro/types.d.ts",
-    "**/*"
-  ],
-  "exclude": [
-    "dist"
-  ],
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"],
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "react",
@@ -15,8 +10,15 @@
         "name": "@astrojs/ts-plugin"
       }
     ],
+    "target": "ESNext",
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
     "verbatimModuleSyntax": true, //enforce type imports
     //Astro’s bundler may try to incorrectly bundle your imported types as if they were JavaScript.
+    "outDir": "dist",
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"],

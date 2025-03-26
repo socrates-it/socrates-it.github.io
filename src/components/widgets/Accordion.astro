@@ -3,13 +3,13 @@ import {Icon} from "astro-icon/components";
 
 const contents = [
     {
-        icon: 'material-symbols:currency-exchange:', title: 'title 1', description: 'description 1'
+        icon: 'material-symbols:currency-exchange:', title: 'title 1', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n  1'
     },
     {
-        icon: 'material-symbols:currency-exchange:', title: 'title 2', description: 'description2'
+        icon: 'material-symbols:currency-exchange:', title: 'title 2', description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n 2'
     },
     {
-        icon: 'material-symbols:currency-exchange:', title: 'title3', description: 'description3'
+        icon: 'material-symbols:currency-exchange:', title: 'title3', description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n 3'
     },
 ]
 
@@ -19,18 +19,15 @@ const contents = [
     <ul class="grid grid-cols-1 gap-4 container mx-auto max-w-6xl px-5 xl:px-0 space-y-10">
         {contents.map((item, index) => (
             <li
-            class={`bg-gray-200 p-4 rounded-md shadow-md flex items-center space-x-4 ${
-            index % 2 === 0
-                ? 'flex-row'  
-            : 'flex-row-reverse'
-            }`}
+            class={`bg-gray-200 p-4 rounded-md shadow-md flex items-center space-x-4 flex-row`}
             >
-                <div class="flex-shrink-0">
-                    <Icon name={item.icon} class="h-[20px] w-[20px] bg-amber-600" />
+                <div class="flex-shrink-0 mx-auto bg-blue-500 p-6">
+                    <Icon name={item.icon} class="size-[40px] sm:size-[80px]" />
                 </div>
-
-                <div class="flex-grow">
-                    <p>{item.title}</p>
+                <span class={`block w-20 h-0.5 bg-gray-400 transform -rotate-90`}></span>
+                <div class="flex-grow w-40">
+                    <h2 class="text-2xl font-bold">{item.title}</h2>
+                    <p>{item.description}</p>
                 </div>
             </li>
         ))}
