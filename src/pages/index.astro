@@ -7,6 +7,8 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Accordion from "../components/widgets/Accordion.astro";
 import FeaturesGrid from "../components/widgets/FeaturesGrid";
 import EventDetails from '~/components/widgets/EventDetails';
+import EventSchedule from '~/components/widgets/EventSchedule';
+
 
 const metadata = {
 	title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
@@ -31,9 +33,13 @@ const metadata = {
 
 	<Cards client:load />
 
-	<!-- Cards Widget ******************* -->
+	<!-- EventDetails Widget ******************* -->
 
 	<EventDetails client:load />
+
+	<!-- EventSchedule Widget ******************* -->
+
+	<EventSchedule client:load />
 
 	<!-- FAQs Widget ******************* -->
 
