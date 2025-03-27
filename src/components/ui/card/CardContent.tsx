@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React from 'react'
 
 interface CardContentProps {
   project: { title: string; description: string; src: string; alt: string }
