@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import {
   MdiLightHeart as Heart,
   WpfGroup as Users,
@@ -37,31 +37,41 @@ const FeatureGrid = () => {
   }, [])
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 p-8 bg-white text-black">
-      {features.map((feature, index) => {
-        const totalItems = features.length
-        const isTopRow = index < columns
-        const isBottomRow = index >= totalItems - columns
-        const isLeftmost = index % columns === 0
-        const isRightmost = index % columns === columns - 1
+    <div className="container mx-auto max-w-6xl">
+      <div className=" text-black py-16 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-black">WHY YOU CHOOSE US?</h2>
+        <div className="mt-2 flex justify-center">
+          <div className="w-12 h-[2px] bg-[#9b1c31] translate-x-1 translate-y-0.5"></div>
+          <div className="w-12 h-[2px] bg-[#9b1c31] -translate-x-1 -translate-y-0.5"></div>
+        </div>
+        <p className="text-gray-400 text-lg mt-3">Global Grand Event on Digital Design</p>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 p-8 bg-white text-black">
+        {features.map((feature, index) => {
+          const totalItems = features.length
+          const isTopRow = index < columns
+          const isBottomRow = index >= totalItems - columns
+          const isLeftmost = index % columns === 0
+          const isRightmost = index % columns === columns - 1
 
-        return (
-          <div
-            key={index}
-            className={`group p-6 border-[0.5px] border-gray-700 flex flex-col items-center text-center transition-[background-color,box-shadow] duration-300
+          return (
+            <div
+              key={index}
+              className={`group p-6 border-[0.5px] border-gray-700 flex flex-col items-center text-center transition-[background-color,box-shadow] duration-300
               ${isTopRow ? 'border-t-transparent' : ''}
               ${isBottomRow ? 'border-b-transparent' : ''}
               ${isLeftmost ? 'border-l-transparent' : ''}
               ${isRightmost ? 'border-r-transparent' : ''}
               ${hoveredIndex === index ? 'bg-gray-100 shadow-lg' : 'bg-white'}`}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}>
-            <div className={`text-black mb-3 group-hover:text-pink-500 transition-colors duration-300`}>{feature.icon}</div>
-            <h3 className="text-lg font-bold">{feature.title}</h3>
-            <p className="text-gray-400 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur commodo ligula eget dolor.</p>
-          </div>
-        )
-      })}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}>
+              <div className={`text-black mb-3 group-hover:text-pink-500 transition-colors duration-300`}>{feature.icon}</div>
+              <h3 className="text-lg font-bold">{feature.title}</h3>
+              <p className="text-gray-400 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur commodo ligula eget dolor.</p>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }

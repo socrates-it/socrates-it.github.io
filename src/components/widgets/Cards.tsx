@@ -33,31 +33,33 @@ const Cards = () => {
   }
 
   return (
-    <div className="container mx-auto max-w-6xl px-5 xl:px-0 grid grid-cols-1 md:grid-cols-2 gap-20 p-6 bg-yellow-400">
-      {projects.map((project, index) => (
-        <Fragment key={project.title}>
-          <div key={index} className="group shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-102">
-            <div
-              className="cursor-pointer relative w-full h-48 bg-cover bg-center"
-              style={{ backgroundImage: `url(${project.src})` }}
-              onClick={() => handleOpenModal(project)}>
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-blue-500/50 to-purple-600/50 flex items-center justify-center transition-opacity duration-300">
-                <MajesticonsOpen className="size-20 text-white font-bold text-lg" />
+    <div className="bg-red-500">
+      <div className="container mx-auto max-w-6xl px-5 xl:px-0 grid grid-cols-1 md:grid-cols-2 gap-20 p-6 bg-yellow-400">
+        {projects.map((project, index) => (
+          <Fragment key={project.title}>
+            <div key={index} className="group shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-102">
+              <div
+                className="cursor-pointer relative w-full h-48 bg-cover bg-center"
+                style={{ backgroundImage: `url(${project.src})` }}
+                onClick={() => handleOpenModal(project)}>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-blue-500/50 to-purple-600/50 flex items-center justify-center transition-opacity duration-300">
+                  <MajesticonsOpen className="size-20 text-white font-bold text-lg" />
+                </div>
               </div>
+
+              <CardContent project={project} />
+
+              {/*{openModals[project.title] && (*/}
+              {/*    <Dialog*/}
+              {/*        onClose={() => setOpenModals(prev => ({...prev, [project.title]: false}))}*/}
+              {/*        project={project}*/}
+              {/*    />*/}
+              {/*)}*/}
             </div>
-
-            <CardContent project={project} />
-
-            {/*{openModals[project.title] && (*/}
-            {/*    <Dialog*/}
-            {/*        onClose={() => setOpenModals(prev => ({...prev, [project.title]: false}))}*/}
-            {/*        project={project}*/}
-            {/*    />*/}
-            {/*)}*/}
-          </div>
-          {openModals[project.title] && <Dialog onClose={() => setOpenModals(prev => ({ ...prev, [project.title]: false }))} project={project} />}
-        </Fragment>
-      ))}
+            {openModals[project.title] && <Dialog onClose={() => setOpenModals(prev => ({ ...prev, [project.title]: false }))} project={project} />}
+          </Fragment>
+        ))}
+      </div>
     </div>
   )
 }
