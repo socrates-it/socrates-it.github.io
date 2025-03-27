@@ -33,8 +33,16 @@ const Cards = () => {
   }
 
   return (
-    <div className="bg-red-500">
-      <div className="container mx-auto max-w-6xl px-5 xl:px-0 grid grid-cols-1 md:grid-cols-2 gap-20 p-6 bg-yellow-400">
+    <Fragment>
+      <div className="text-black py-16 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-black uppercase">About This Events</h2>
+        <div className="mt-2 flex justify-center">
+          <div className="w-12 h-[2px] bg-[#9b1c31] translate-x-1 translate-y-0.5"></div>
+          <div className="w-12 h-[2px] bg-[#9b1c31] -translate-x-1 -translate-y-0.5"></div>
+        </div>
+        <p className="text-gray-400 text-lg mt-3">Global Grand Event on Digital Design</p>
+      </div>
+      <div className="container mx-auto max-w-6xl px-5 xl:px-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 p-6 bg-yellow-400">
         {projects.map((project, index) => (
           <Fragment key={project.title}>
             <div key={index} className="group shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-102">
@@ -46,21 +54,13 @@ const Cards = () => {
                   <MajesticonsOpen className="size-20 text-white font-bold text-lg" />
                 </div>
               </div>
-
-              <CardContent project={project} />
-
-              {/*{openModals[project.title] && (*/}
-              {/*    <Dialog*/}
-              {/*        onClose={() => setOpenModals(prev => ({...prev, [project.title]: false}))}*/}
-              {/*        project={project}*/}
-              {/*    />*/}
-              {/*)}*/}
+              <CardContent project={project} openModal={handleOpenModal} />
             </div>
             {openModals[project.title] && <Dialog onClose={() => setOpenModals(prev => ({ ...prev, [project.title]: false }))} project={project} />}
           </Fragment>
         ))}
       </div>
-    </div>
+    </Fragment>
   )
 }
 

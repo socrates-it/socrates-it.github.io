@@ -38,7 +38,7 @@ const FeatureGrid = () => {
 
   return (
     <div className="container mx-auto max-w-6xl">
-      <div className=" text-black py-16 text-center">
+      <div className="text-black py-16 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-black">WHY YOU CHOOSE US?</h2>
         <div className="mt-2 flex justify-center">
           <div className="w-12 h-[2px] bg-[#9b1c31] translate-x-1 translate-y-0.5"></div>
