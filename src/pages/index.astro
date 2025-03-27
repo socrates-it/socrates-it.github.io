@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import type { Image } from '~/types';
 import Hero from '~/components/widgets/Hero.astro';
+import Cards from '~/components/widgets/Cards.tsx';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Accordion from "../components/widgets/Accordion.astro";
 
@@ -19,6 +20,10 @@ const metadata = {
 	<!-- InfoPanel Widget ******************* -->
 
 	<Accordion />
+
+	<!-- Cards Widget ******************* -->
+
+	<Cards client:load />
 
 	<!-- FAQs Widget ******************* -->
 
