@@ -7,6 +7,7 @@ import {
   MdiLightMessage as MessageSquare,
   PhImagesThin as Images,
 } from '~/assets/icons/Icons.tsx'
+import SectionIntro from '~components/ui/SectionIntro.tsx'
 
 const features = [
   { title: 'Get Inspired', icon: <Heart />, color: 'text-pink-500' },
@@ -38,14 +39,7 @@ const FeatureGrid = () => {
 
   return (
     <div className="container mx-auto max-w-6xl">
-      <div className="text-black py-16 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-black">WHY YOU CHOOSE US?</h2>
-        <div className="mt-2 flex justify-center">
-          <div className="w-12 h-[2px] bg-[#9b1c31] translate-x-1 translate-y-0.5"></div>
-          <div className="w-12 h-[2px] bg-[#9b1c31] -translate-x-1 -translate-y-0.5"></div>
-        </div>
-        <p className="text-gray-400 text-lg mt-3">Global Grand Event on Digital Design</p>
-      </div>
+      <SectionIntro title={'WHY YOU CHOOSE US?'} description={'Global Grand Event on Digital Design'} />
       <div className="grid grid-cols-2 md:grid-cols-3 p-8 bg-white text-black">
         {features.map((feature, index) => {
           const totalItems = features.length
@@ -65,7 +59,7 @@ const FeatureGrid = () => {
               ${hoveredIndex === index ? 'bg-gray-100 shadow-lg' : 'bg-white'}`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}>
-              <div className={`text-black mb-3 group-hover:text-pink-500 transition-colors duration-300`}>{feature.icon}</div>
+              <div className={`text-black mb-3 group-hover:text-accent transition-colors duration-300`}>{feature.icon}</div>
               <h3 className="text-lg font-bold">{feature.title}</h3>
               <p className="text-gray-400 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur commodo ligula eget dolor.</p>
             </div>

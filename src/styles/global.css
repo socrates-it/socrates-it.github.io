@@ -6,15 +6,16 @@
   --aw-font-heading: 'Inter Variable';
 
   --aw-color-primary: rgb(4, 102, 48);
-  --aw-color-secondary: rgb(170, 202, 170);
-  --aw-color-accent: rgb(112, 173, 122);
+  --aw-color-secondary: rgb(112, 173, 122);
+  --aw-color-accent: rgb(39, 192, 64);
+  --aw-color-highlight: rgb(170, 202, 170);
 
   --aw-color-text-heading: rgb(0 0 0);
   --aw-color-text-subtitle: rgb(168, 168, 168);
   --aw-color-text-default: rgb(16 16 16);
   --aw-color-text-muted: rgb(16 16 16 / 66%);
   --aw-color-bg-page: rgb(255, 255, 255);
-  --aw-color-bg-light: rgb(225, 225, 225);
+  --aw-color-bg-light: #f3f4f6;
   --aw-color-text-page: red;
 
   --aw-color-bg-page-dark: rgb(3 6 32);
@@ -51,6 +52,7 @@
   --color-primary: var(--aw-color-primary);
   --color-secondary: var(--aw-color-secondary);
   --color-accent: var(--aw-color-accent);
+  --color-highlight: var(--aw-color-highlight);
   --color-heading: var(--aw-color-text-heading);
   --color-subtitle: var(--aw-color-text-subtitle);
   --color-default: var(--aw-color-text-default);

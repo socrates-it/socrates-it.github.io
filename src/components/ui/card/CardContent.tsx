@@ -6,13 +6,13 @@ interface CardContentProps {
 }
 const CardContent = ({ project, openModal }: CardContentProps) => {
   return (
-    <div className="p-6 flex flex-col h-[200px] justify-between bg-red-400">
+    <div className="p-6 flex flex-col h-[200px] justify-between bg-light">
       <div className="overflow-hidden">
         <h3 className="text-xl font-semibold truncate">{project.title}</h3>
         <p className="text-gray-600 line-clamp-2">{project.description}</p>
       </div>
       <div>
-        <button className="cursor-pointer bg-blue-600 px-4 py-2 rounded-lg" onClick={() => openModal(project)}>
+        <button className="btn-primary px-4" onClick={() => openModal(project)}>
           Read more
         </button>
       </div>

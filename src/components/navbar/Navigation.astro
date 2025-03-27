@@ -5,15 +5,15 @@ import MobileMenu from "./MobileMenu";
 import DesktopMenu from "./DesktopMenu.astro";
 ---
 
-<nav class="flex items-center justify-between bg-green-500">
-    <a href="/public" aria-label="Go to homepage">
-        <Icon name="astro" class="h-[50px] w-[200px] bg-amber-600" />
+<nav class="flex items-center justify-between">
+    <a href="/public" aria-label="Go to homepage" class="-ml-5">
+        <Icon name="astro" class="h-[50px] w-[200px]" />
     </a>
 
-    <div class="md:hidden">
+    <div class="md:hidden mr-5">
         <MobileMenu items={menuItems} client:media="(max-width:767px)" />
     </div>
-    <div class="hidden md:block">
+    <div class="hidden md:block mr-5">
         <DesktopMenu items={menuItems} />
     </div>
 </nav>

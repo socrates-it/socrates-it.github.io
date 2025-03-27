@@ -51,17 +51,18 @@ const Carousel = () => {
               <div
                 className={cn(
                   'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
-                  'text-center bg-black/50 p-6 rounded-xl text-white uppercase',
+                  'text-center bg-light p-6 rounded-xl text-white uppercase',
                   'space-y-4 sm:space-y-6 max-w-56 sm:max-w-full text-xs sm:text-lg',
                   'opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-1000',
                 )}>
-                <p>Design Thinking Conference</p>
-                <p>2025 edition Coming soon</p>
+                <p className="text-secondary font-extrabold">Design Thinking Conference</p>
+                <p className="text-secondary font-extrabold">2025 edition Coming soon</p>
                 <div className="flex justify-between items-center space-x-4 sm:space-x-12 w-full h-12">
-                  <button onClick={() => prevSlide()} className="py-2 px-4 sm:px-6 bg-pink-700 rounded uppercase cursor-pointer w-20 sm:w-36 h-full">
+                  <button onClick={() => prevSlide()} className="btn-primary w-20 sm:w-36 h-full">
                     get ticket
                   </button>
-                  <button onClick={() => nextSlide()} className="py-2 px-4 sm:px-6 bg-pink-700 rounded uppercase cursor-pointer w-20 sm:w-36 h-full">
+                  {/*className="py-2 px-4 sm:px-6 bg-pink-700 rounded uppercase cursor-pointer w-20 sm:w-36 h-full"*/}
+                  <button onClick={() => nextSlide()} className="btn-primary w-20 sm:w-36 h-full">
                     explore
                   </button>
                 </div>

@@ -3,6 +3,7 @@ import CardContent from '~/components/ui/card/CardContent.tsx'
 import Dialog from '~/components/ui/dialog/Dialog.tsx'
 import DialogContent from '~/components/ui/dialog/DialogContent.tsx'
 import { MajesticonsOpen } from '~/assets/icons/Icons.tsx'
+import SectionIntro from '~components/ui/SectionIntro.tsx'
 
 const projects = [
   {
@@ -34,15 +35,8 @@ const Cards = () => {
 
   return (
     <Fragment>
-      <div className="text-black py-16 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-black uppercase">About This Events</h2>
-        <div className="mt-2 flex justify-center">
-          <div className="w-12 h-[2px] bg-[#9b1c31] translate-x-1 translate-y-0.5"></div>
-          <div className="w-12 h-[2px] bg-[#9b1c31] -translate-x-1 -translate-y-0.5"></div>
-        </div>
-        <p className="text-gray-400 text-lg mt-3">Global Grand Event on Digital Design</p>
-      </div>
-      <div className="container mx-auto max-w-6xl px-5 xl:px-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 p-6 bg-yellow-400">
+      <SectionIntro title={'About This Events'} description={'Global Grand Event on Digital Design'} />
+      <div className="container mx-auto max-w-6xl px-5 xl:px-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 p-6 bg-page">
         {projects.map((project, index) => (
           <Fragment key={project.title}>
             <div key={index} className="group shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-102">
@@ -50,7 +44,7 @@ const Cards = () => {
                 className="cursor-pointer relative w-full h-48 bg-cover bg-center"
                 style={{ backgroundImage: `url(${project.src})` }}
                 onClick={() => handleOpenModal(project)}>
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-blue-500/50 to-purple-600/50 flex items-center justify-center transition-opacity duration-300">
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-primary/50 to-light/50 flex items-center justify-center transition-opacity duration-300">
                   <MajesticonsOpen className="size-20 text-white font-bold text-lg" />
                 </div>
               </div>

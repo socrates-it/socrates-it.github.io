@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import SectionIntro from '~components/ui/SectionIntro.tsx'
 
 const eventData: Record<
   string,
@@ -66,15 +67,8 @@ const EventSchedule = () => {
   const [selectedDate, setSelectedDate] = useState('17 February')
 
   return (
-    <div className="bg-gray-50 min-h-screen p-10">
-      <div className="text-default py-16 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-heading uppercase">Event Schedules</h2>
-        <div className="mt-2 flex justify-center">
-          <div className="w-12 h-[2px] bg-primary translate-x-1 translate-y-0.5"></div>
-          <div className="w-12 h-[2px] bg-primary -translate-x-1 -translate-y-0.5"></div>
-        </div>
-        <p className="text-subtitle text-lg mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-      </div>
+    <div className="bg-page min-h-screen p-10">
+      <SectionIntro title={'Event Schedules'} description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'} />
 
       <div className="flex mt-10 gap-10 max-w-6xl mx-auto">
         {/* Sidebar */}
@@ -82,7 +76,7 @@ const EventSchedule = () => {
           {Object.keys(eventData).map(date => (
             <button
               key={date}
-              className={`block w-full p-4 text-left font-semibold transition-colors duration-300 cursor-pointer hover:bg-accent ${selectedDate === date ? 'bg-primary text-white hover:bg-primary' : 'bg-gray-100 text-gray-800'}`}
+              className={`block w-full p-4 text-left font-semibold transition-colors duration-300 cursor-pointer hover:bg-highlight ${selectedDate === date ? 'bg-primary text-white hover:bg-primary' : 'bg-light text-gray-800'}`}
               onClick={() => setSelectedDate(date)}>
               {date}
             </button>
@@ -92,7 +86,7 @@ const EventSchedule = () => {
         {/* Event Details */}
         <div className="w-2/3">
           {eventData[selectedDate].map((event, index) => (
-            <div key={index} className="bg-gray-200 p-6 mb-4 rounded-lg shadow-lg transition-colors duration-300">
+            <div key={index} className="bg-light p-6 mb-4 rounded-lg shadow-lg transition-colors duration-300">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-gray-500 rounded-full"></div>
                 <div>
