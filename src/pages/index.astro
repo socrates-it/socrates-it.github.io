@@ -5,6 +5,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Cards from '~/components/widgets/Cards.tsx';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Accordion from "../components/widgets/Accordion.astro";
+import FeaturesGrid from "../components/widgets/FeaturesGrid";
 
 const metadata = {
 	title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
@@ -24,6 +25,10 @@ const metadata = {
 	<!-- Cards Widget ******************* -->
 
 	<Cards client:load />
+
+	<!-- FeaturesGrid Widget ******************* -->
+
+	<FeaturesGrid client:load client:only/>
 
 	<!-- FAQs Widget ******************* -->
 
