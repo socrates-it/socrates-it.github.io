@@ -13,12 +13,10 @@ type HProps = {
 const Hamburger: FC<HProps> = ({ isOpen, onClose, onOpen }) => {
   return (
     <div className="xp-4 space-y-1.5 cursor-pointer w-6 h-6" onClick={isOpen ? onClose : onOpen}>
-      <span className={`block w-6 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out ${isOpen ? 'opacity-0' : ''}`}></span>
+      <span className={`block w-6 h-0.5 bg-page transition-all duration-300 ease-in-out ${isOpen ? 'opacity-0' : ''}`}></span>
       <span
-        className={`block w-4 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out ${
-          isOpen ? 'transform rotate-45 absolute w-6' : 'animate-spin'
-        }`}></span>
-      <span className={`block w-6 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out ${isOpen ? 'transform -rotate-45 absolute' : ''}`}></span>
+        className={`block w-4 h-0.5 bg-page transition-all duration-300 ease-in-out ${isOpen ? 'transform rotate-45 absolute w-6' : 'animate-spin'}`}></span>
+      <span className={`block w-6 h-0.5 bg-page transition-all duration-300 ease-in-out ${isOpen ? 'transform -rotate-45 absolute' : ''}`}></span>
     </div>
   )
 }
@@ -39,21 +37,18 @@ const MobileMenu: FC<Props> = ({ items }) => {
   }
 
   return (
-    <div className="text-gray-950">
+    <div className="text-page">
       <Hamburger isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
       <div
-        className={cn('container mx-auto px-10 mt-[24px]', 'absolute left-0 right-0', 'bg-yellow-400 ', 'z-10 transition-all duration-300 ease-in-out', {
-          hidden: !hasMounted,
-          visible: hasMounted && isOpen,
-          'animate-fade-in': hasMounted && isOpen,
-          'animate-fade-out': hasMounted && !isOpen,
+        className={cn('w-full mx-auto px-5', 'absolute left-0 right-0 top-17', 'bg-primary', 'z-10 overflow-hidden transition-[height] duration-700', {
+          'h-21': isOpen,
+          'h-0': !isOpen,
         })}>
-        <div className={cn('bg-blue-400', 'z-10')}>
-          <ul data-open={isOpen} className="text-3xl space-y-4 py-2 bg-green-400 ">
-            <li className="font-bold">Menu</li>
+        <div className="z-10 ">
+          <ul data-open={isOpen} className={` border-t ${isOpen ? 'border-t-page' : 'border-t-transparent'} transition-colors duration-700`}>
             {items.map(x => {
               return (
-                <li key={x.label}>
+                <li key={x.label} className="text-xl border-l-6 pl-2 border-transparent hover:border-accent transition-colors duration-300">
                   <MenuLink item={x} />
                 </li>
               )

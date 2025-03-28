@@ -15,8 +15,8 @@
   --aw-color-text-default: rgb(16 16 16);
   --aw-color-text-muted: rgb(16 16 16 / 66%);
   --aw-color-bg-page: rgb(255, 255, 255);
-  --aw-color-bg-light: #f3f4f6;
-  --aw-color-text-page: red;
+  --aw-color-bg-light: rgb(243, 244, 246);
+  --aw-color-text-page: rgb(243, 244, 246);
 
   --aw-color-bg-page-dark: rgb(3 6 32);
 
@@ -64,6 +64,8 @@
   --animate-fade-out: fade-out-down 1s both;
   --animate-spin: spin-r-once 1s both;
   --animate-infinite-scroll: infinite-scroll 10s linear infinite;
+  --animate-expand: expand 0.3s 1s both;
+  --animate-collapse: collapse 0.3s 1s both;
 
   @keyframes fade-in-up {
     0% {
@@ -100,12 +102,29 @@
     }
   }
 
-  @keyframes infinite-scroll {
+  @keyframes expand {
     0% {
-      transform: translateX(0);
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
     }
     100% {
-      transform: translateX(-50%);
+      max-height: 500px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  @keyframes collapse {
+    0% {
+      max-height: 500px;
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
     }
   }
 }
