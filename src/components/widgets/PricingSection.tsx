@@ -43,16 +43,21 @@ export default function PricingSection() {
   const [billingCycle, setBillingCycle] = useState('Monthly')
 
   return (
-    <div className="py-16 text-center px-6">
-      <h2 className="text-4xl font-bold"></h2>
+    <div className="py-16 text-page text-center px-6">
       <SectionIntro title="Get Tickets" description="Find a plan that fits your business best" />
 
       {/* Pricing Plans */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-10">
         {plans.map((plan, index) => (
-          <div key={index} className={cn('rounded-lg p-6 text-left bg-light')}>
+          <div
+            key={index}
+            className={cn('rounded-lg p-6 text-left bg-light', {
+              'bg-gray-200': index === 0,
+              'bg-primary': index === 1,
+              'bg-light': index === 2,
+            })}>
             <h3 className="text-xl font-semibold">{plan.name}</h3>
-            <p className="text-4xl font-bold mt-2">{plan.price}</p>
+            <p className="text-4xl  font-bold mt-2">{plan.price}</p>
             <p className=" mt-2">{plan.description}</p>
             <button
               className={cn('mt-6', {
@@ -65,7 +70,7 @@ export default function PricingSection() {
             <h4 className="mt-6 font-semibold">Features include:</h4>
             <ul className="mt-4 space-y-2">
               {plan.features.map((feature, i) => (
-                <li key={i} className="flex items-center text-subtitle">
+                <li key={i} className="flex items-center text-white">
                   ✅ <span className="ml-2">{feature}</span>
                 </li>
               ))}

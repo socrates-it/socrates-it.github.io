@@ -158,11 +158,11 @@
 }
 
 @utility btn-primary {
-  @apply btn font-semibold bg-primary/80 hover:bg-primary text-white border-primary/80 hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-purple-500;
+  @apply btn font-semibold bg-primary/80 hover:bg-primary text-white border-primary/10 hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-purple-500;
 }
 
 @utility btn-secondary {
-  @apply btn bg-page;
+  @apply btn bg-secondary border-primary/80 hover:bg-page text-default;
 }
 
 @utility btn-tertiary {
