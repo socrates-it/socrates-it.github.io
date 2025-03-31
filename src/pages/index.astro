@@ -9,6 +9,8 @@ import FeaturesGrid from "../components/widgets/FeaturesGrid";
 import EventDetails from '~/components/widgets/EventDetails';
 import EventSchedule from '~/components/widgets/EventSchedule';
 import SpeakersGrid from '~/components/widgets/SpeakersGrid';
+import Sponsors from '~/components/widgets/Sponsors';
+import PricingSection from '~/components/widgets/PricingSection';
 
 
 const metadata = {
@@ -46,8 +48,16 @@ const metadata = {
 
 	<SpeakersGrid client:load />
 
-	<!-- FaQs Widget ******************* -->
+	<!-- FAQs Widget ******************* -->
 
 	<FAQs />
+
+	<!-- Sponsors Widget ******************* -->
+
+	<Sponsors />
+
+	<!-- PricingSection Widget ******************* -->
+
+	<PricingSection />
 
 </Layout>

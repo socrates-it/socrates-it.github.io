@@ -1,20 +1,19 @@
 import React from 'react'
+import SectionIntro from '~components/ui/SectionIntro.tsx'
 
 const sponsors = [
-  { name: 'Techno', image: '/path-to-techno-logo.png' },
-  { name: 'Studio', image: '/path-to-studio-logo.png' },
-  { name: 'Rofhalatan', image: '/path-to-rofhalatan-logo.png' },
-  { name: 'Education', image: '/path-to-education-logo.png' },
+  { name: 'Techno', image: 'src/assets/icons/astro.svg' },
+  { name: 'Studio', image: 'src/assets/icons/astro.svg' },
+  { name: 'Rofhalatan', image: 'src/assets/icons/astro.svg' },
+  { name: 'Education', image: 'src/assets/icons/astro.svg' },
 ]
 
 export default function Sponsors() {
   return (
-    <div className="bg-gray-900 text-white py-16 text-center">
-      <h2 className="text-4xl font-bold">SPONSORS</h2>
-      <div className="w-16 h-1 bg-pink-600 mx-auto mt-2 mb-6"></div>
-      <p className="text-lg text-gray-400 mb-8">Global Grand Event on Digital Design</p>
+    <div className="bg-page text-default py-16 text-center">
+      <SectionIntro title={'Sponsors'} description={'Global Grand Event on Digital Design\n'} />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto px-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto p-10 pb-20">
         {sponsors.map((sponsor, index) => (
           <div key={index} className="border border-gray-700 rounded-lg p-6 flex justify-center items-center h-40">
             <img src={sponsor.image} alt={sponsor.name} className="max-h-full max-w-full opacity-75" />
@@ -22,8 +21,17 @@ export default function Sponsors() {
         ))}
       </div>
 
+      <div>
+        <p className="text-xl mb-6">Download the sponsorship prospect.</p>
+        <p className="text-md text-subtitle">
+          Feel free to contact us at
+          <span className="italic text-secondary"> socrates.italia@gmail.com </span>
+          for any further detail.
+        </p>
+      </div>
+
       <div className="mt-10">
-        <button className="bg-pink-600 text-white px-6 py-3 rounded-lg text-lg font-semibold">BECOME A SPONSOR</button>
+        <button className="btn-primary">BECOME A SPONSOR</button>
       </div>
     </div>
   )
