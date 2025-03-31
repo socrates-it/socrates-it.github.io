@@ -13,10 +13,11 @@
   --aw-color-text-heading: rgb(0 0 0);
   --aw-color-text-subtitle: rgb(168, 168, 168);
   --aw-color-text-default: rgb(16 16 16);
+  --aw-color-text-page: rgb(243, 244, 246);
+
   --aw-color-text-muted: rgb(16 16 16 / 66%);
   --aw-color-bg-page: rgb(255, 255, 255);
   --aw-color-bg-light: rgb(243, 244, 246);
-  --aw-color-text-page: rgb(243, 244, 246);
 
   --aw-color-bg-page-dark: rgb(3 6 32);
 

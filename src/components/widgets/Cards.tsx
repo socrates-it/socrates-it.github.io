@@ -34,9 +34,9 @@ const Cards = () => {
   }
 
   return (
-    <Fragment>
-      <SectionIntro title={'About This Events'} description={'Global Grand Event on Digital Design'} />
-      <div className="container mx-auto max-w-6xl px-5 xl:px-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 p-6 bg-page">
+    <div className="py-10">
+      <SectionIntro title={'About This Cards'} description={'Global Grand Event on Digital Design'} />
+      <div className="container mx-auto max-w-6xl px-10 xl:px-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 p-6 bg-page">
         {projects.map((project, index) => (
           <Fragment key={project.title}>
             <div key={index} className="group shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-102">
@@ -54,7 +54,7 @@ const Cards = () => {
           </Fragment>
         ))}
       </div>
-    </Fragment>
+    </div>
   )
 }
 
