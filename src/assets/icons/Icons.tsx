@@ -74,3 +74,14 @@ export function MdiLightMessage(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
+
+export function MynauiChevronDownCircle(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" {...props}>
+      <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}>
+        <path d="m15.5 10.75l-3.5 3.5l-3.5-3.5"></path>
+        <path d="M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0"></path>
+      </g>
+    </svg>
+  )
+}

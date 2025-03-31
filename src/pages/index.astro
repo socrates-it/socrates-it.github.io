@@ -4,7 +4,7 @@ import type { Image } from '~/types';
 import Hero from '~/components/widgets/Hero.astro';
 import Cards from '~/components/widgets/Cards.tsx';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Accordion from "../components/widgets/Accordion.astro";
+import Accordion from "../components/widgets/Accordion";
 import FeaturesGrid from "../components/widgets/FeaturesGrid";
 import EventDetails from '~/components/widgets/EventDetails';
 import EventSchedule from '~/components/widgets/EventSchedule';
@@ -23,7 +23,7 @@ const metadata = {
 
 	<!-- InfoPanel Widget ******************* -->
 
-	<Accordion />
+	<Accordion client:only />
 
 	<!-- FeaturesGrid Widget ******************* -->
 

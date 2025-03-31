@@ -70,9 +70,9 @@ const EventSchedule = () => {
     <div className="bg-page min-h-screen p-10">
       <SectionIntro title={'Event Schedules'} description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'} />
 
-      <div className="flex mt-10 gap-10 max-w-6xl mx-auto">
+      <div className="flex mt-10 gap-10 max-w-6xl mx-auto flex-col sm:flex-row">
         {/* Sidebar */}
-        <div className="w-1/3">
+        <div className="w-full sm:w-1/3">
           {Object.keys(eventData).map(date => (
             <button
               key={date}
@@ -84,12 +84,12 @@ const EventSchedule = () => {
         </div>
 
         {/* Event Details */}
-        <div className="w-2/3">
+        <div className="w-full sm:w-2/3">
           {eventData[selectedDate].map((event, index) => (
             <div key={index} className="bg-light p-6 mb-4 rounded-lg shadow-lg transition-colors duration-300">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gray-500 rounded-full"></div>
-                <div>
+                <div className="min-w-12 size-12 bg-gray-500 rounded-full"></div>
+                <div className="space-y-4 sm:space-y-2">
                   <p className="text-sm text-gray-400">{event.time}</p>
                   <h3 className="text-lg font-bold">{event.title}</h3>
                   <p className="text-gray-500">{event.speaker}</p>
