@@ -6,12 +6,12 @@ const EventGuideline = () => {
     <section className="bg-page text-default p-container">
       <SectionIntro title={'Event Guideline'} description={'Global Grand Event on Digital Design'} />
 
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center mt-12">
-        <div className="md:w-1/2 p-4">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+        <div className="md:w-1/2 pb-4 md:p-0 md:pr-md">
           <img src="src/assets/images/canyon.jpg" alt="Event Presentation" className="rounded-lg shadow-lg" />
         </div>
 
-        <div className="md:w-1/2 p-4">
+        <div className="md:w-1/2 md:pl-md">
           <p className="text-gray-300 mb-6">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
             1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
