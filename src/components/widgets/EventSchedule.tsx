@@ -70,7 +70,7 @@ const EventSchedule = () => {
     <div className="bg-page min-h-screen p-container">
       <SectionIntro title={'Event Schedules'} description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'} />
 
-      <div className="flex mt-10 gap-10 max-w-6xl container mx-auto flex-col sm:flex-row">
+      <div className="flex gap-10 max-w-6xl container mx-auto flex-col sm:flex-row">
         {/* Sidebar */}
         <div className="w-full sm:w-1/3">
           {Object.keys(eventData).map(date => (

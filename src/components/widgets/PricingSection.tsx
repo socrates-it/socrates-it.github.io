@@ -46,7 +46,7 @@ export default function PricingSection() {
     <div className="text-default text-center p-container">
       <SectionIntro title="Get Tickets" description="Find a plan that fits your business best" />
       {/* Pricing Plans */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {plans.map((plan, index) => (
           <div
             key={index}
