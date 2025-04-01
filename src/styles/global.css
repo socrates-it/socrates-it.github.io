@@ -21,6 +21,12 @@
 
   --aw-color-bg-page-dark: rgb(3 6 32);
 
+  --aw-spacing-xs: 0.5rem;  /* 8px */
+  --aw-spacing-sm: 1rem;    /* 16px */
+  --aw-spacing-md: 1.5rem;  /* 24px */
+  --aw-spacing-lg: 2rem;    /* 32px */
+  --aw-spacing-xl: 3rem;    /* 48px */
+
   ::selection {
     background-color: lavender;
   }
@@ -67,6 +73,12 @@
   --animate-infinite-scroll: infinite-scroll 10s linear infinite;
   --animate-expand: expand 0.3s 1s both;
   --animate-collapse: collapse 0.3s 1s both;
+
+  --spacing-xs: var(--aw-spacing-xs);
+  --spacing-sm: var(--aw-spacing-sm);
+  --spacing-md: var(--aw-spacing-md);
+  --spacing-lg: var(--aw-spacing-lg);
+  --spacing-xl: var(--aw-spacing-xl);
 
   @keyframes fade-in-up {
     0% {
@@ -167,6 +179,10 @@
 
 @utility btn-tertiary {
   @apply btn border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
+}
+
+@utility p-container {
+  @apply p-xl;
 }
 
 #header.scroll > div:first-child {

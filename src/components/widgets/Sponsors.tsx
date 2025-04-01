@@ -10,10 +10,10 @@ const sponsors = [
 
 export default function Sponsors() {
   return (
-    <div className="bg-page text-default py-16 text-center">
+    <div className="bg-page text-default p-container text-center">
       <SectionIntro title={'Sponsors'} description={'Global Grand Event on Digital Design\n'} />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto p-10 pb-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto pb-20">
         {sponsors.map((sponsor, index) => (
           <div key={index} className="border border-gray-700 rounded-lg p-6 flex justify-center items-center h-40">
             <img src={sponsor.image} alt={sponsor.name} className="max-h-full max-w-full opacity-75" />
@@ -22,7 +22,7 @@ export default function Sponsors() {
       </div>
 
       <div>
-        <p className="text-xl mb-6">Download the sponsorship prospect.</p>
+        <p className="text-xl mb-2">Download the sponsorship prospect.</p>
         <p className="text-md text-subtitle">
           Feel free to contact us at
           <span className="italic text-secondary"> socrates.italia@gmail.com </span>

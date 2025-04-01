@@ -38,7 +38,7 @@ const FeatureGrid = () => {
   }, [])
 
   return (
-    <div className="container mx-auto max-w-6xl ">
+    <div className="container mx-auto max-w-6xl p-container">
       <SectionIntro title={'WHY YOU CHOOSE US?'} description={'Global Grand Event on Digital Design'} />
       <div className="grid grid-cols-2 md:grid-cols-3 text-black">
         {features.map((feature, index) => {

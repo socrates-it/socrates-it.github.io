@@ -67,7 +67,7 @@ const EventSchedule = () => {
   const [selectedDate, setSelectedDate] = useState('17 February')
 
   return (
-    <div className="bg-page min-h-screen px-10">
+    <div className="bg-page min-h-screen p-container">
       <SectionIntro title={'Event Schedules'} description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'} />
 
       <div className="flex mt-10 gap-10 max-w-6xl container mx-auto flex-col sm:flex-row">

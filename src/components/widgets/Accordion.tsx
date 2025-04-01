@@ -17,7 +17,7 @@ export default function Accordion() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto ">
+    <div className="max-w-6xl mx-auto p-container">
       <SectionIntro title={'About This Events'} description={'Global Grand Event on Digital Design'} />
       <div>
         {accordionData.map((item, index) => (

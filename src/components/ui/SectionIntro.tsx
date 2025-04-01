@@ -5,7 +5,7 @@ interface SectionIntroProps {
 
 const SectionIntro = ({ title, description }: SectionIntroProps) => {
   return (
-    <div className="text-default py-16 text-center">
+    <div className="text-default pb-xl text-center">
       <h2 className="text-4xl md:text-5xl font-bold text-heading uppercase">{title}</h2>
       <div className="mt-2 flex justify-center">
         <div className="w-12 h-[2px] bg-primary translate-x-1 translate-y-0.5"></div>
