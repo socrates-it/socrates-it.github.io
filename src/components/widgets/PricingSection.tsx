@@ -43,7 +43,7 @@ export default function PricingSection() {
   const [billingCycle, setBillingCycle] = useState('Monthly')
 
   return (
-    <div className="py-16 text-page text-center px-6">
+    <div className="py-16 text-default text-center px-10">
       <SectionIntro title="Get Tickets" description="Find a plan that fits your business best" />
 
       {/* Pricing Plans */}
@@ -52,9 +52,9 @@ export default function PricingSection() {
           <div
             key={index}
             className={cn('rounded-lg p-6 text-left bg-light', {
-              'bg-gray-200': index === 0,
-              'bg-primary': index === 1,
-              'bg-light': index === 2,
+              ' bg-light': index === 0,
+              'bg-primary text-white': index === 1,
+              'bg-gray-200': index === 2,
             })}>
             <h3 className="text-xl font-semibold">{plan.name}</h3>
             <p className="text-4xl  font-bold mt-2">{plan.price}</p>
@@ -70,7 +70,11 @@ export default function PricingSection() {
             <h4 className="mt-6 font-semibold">Features include:</h4>
             <ul className="mt-4 space-y-2">
               {plan.features.map((feature, i) => (
-                <li key={i} className="flex items-center text-white">
+                <li
+                  key={i}
+                  className={cn('flex items-center', {
+                    'text-default': index === 0 || index === 2,
+                  })}>
                   ✅ <span className="ml-2">{feature}</span>
                 </li>
               ))}
