@@ -7,7 +7,7 @@ const teamMembers = [
     name: 'Jonathon Doe',
     role: 'Product Designer, Tesla',
     image: 'src/assets/images/canyon.jpg',
-    socials: { github: 'https://github.com/', linkedin: 'https://linkedin.com/', bluesky: 'https://bluesky.com/' },
+    socials: { github: 'https://github.com/', linkedin: 'https://linkedin.com/', bluesky: 'https://bsky.app/' },
   },
   {
     name: 'Patric Green',
@@ -25,7 +25,7 @@ const teamMembers = [
     name: 'Jhon Doe',
     role: 'UI/UX Designer, Apple',
     image: 'src/assets/images/fiori.jpg',
-    socials: { github: 'https://github.com/', linkedin: 'https://linkedin.com/', bluesky: 'https://bluesky.com/' },
+    socials: { github: 'https://github.com/', linkedin: 'https://linkedin.com/', bluesky: 'https://bsky.app/' },
   },
 ]
 

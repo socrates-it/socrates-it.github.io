@@ -21,7 +21,6 @@ const features = [
 const FeatureGrid = () => {
   const [hoveredIndex, setHoveredIndex] = useState<null | number>(null)
   const [columns, setColumns] = useState(3) // Default to 3 columns
-  const [width, setWidth] = useState(window.innerWidth)
 
   useEffect(() => {
     const updateColumns = () => {
