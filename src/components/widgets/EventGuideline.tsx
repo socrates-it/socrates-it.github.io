@@ -3,7 +3,7 @@ import SectionIntro from '~components/ui/SectionIntro.tsx'
 
 const EventGuideline = () => {
   return (
-    <section className="bg-page text-default p-container">
+    <section className="bg-light text-default p-container">
       <SectionIntro title={'Event Guideline'} description={'Global Grand Event on Digital Design'} />
 
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center">

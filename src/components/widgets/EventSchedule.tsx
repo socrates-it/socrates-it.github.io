@@ -76,7 +76,7 @@ const EventSchedule = () => {
           {Object.keys(eventData).map(date => (
             <button
               key={date}
-              className={`block w-full p-4 text-left font-semibold transition-colors duration-300 cursor-pointer hover:bg-highlight ${selectedDate === date ? 'bg-primary text-white hover:bg-primary' : 'bg-light text-gray-800'}`}
+              className={`block w-full p-4 text-left font-semibold transition-colors duration-300 cursor-pointer hover:bg-highlight ${selectedDate === date ? 'bg-primary text-white hover:bg-primary' : 'bg-soft text-gray-800'}`}
               onClick={() => setSelectedDate(date)}>
               {date}
             </button>

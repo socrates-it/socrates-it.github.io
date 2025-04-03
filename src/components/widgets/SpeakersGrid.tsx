@@ -53,7 +53,7 @@ export default function SpeakersGrid() {
               <div className="relative bottom-full -translate-y-10 labg-transparent p-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                 <ul className="flex justify-end space-x-2">
                   {Object.entries(member.socials).map(([key, url]) => (
-                    <li key={key} className="size-8 bg-primary rounded text-page">
+                    <li key={key} className="size-8 bg-primary rounded text-light">
                       <a href={url} target="_blank" rel="noopener noreferrer" className="w-full">
                         {iconMap[key]}
                       </a>

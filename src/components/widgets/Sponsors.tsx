@@ -10,7 +10,7 @@ const sponsors = [
 
 export default function Sponsors() {
   return (
-    <div className="bg-page text-default p-container text-center">
+    <div className="bg-light text-default p-container text-center">
       <SectionIntro title={'Sponsors'} description={'Global Grand Event on Digital Design\n'} />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto pb-20">

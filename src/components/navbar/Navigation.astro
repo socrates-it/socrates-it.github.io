@@ -2,16 +2,20 @@
 import { menuItems } from "./menu-items"
 import MobileMenu from "./MobileMenu";
 import DesktopMenu from "./DesktopMenu.astro";
+import ThemeIcon from "./ThemeIcon.astro";
 ---
 
 <nav class="flex items-center justify-between">
-    <a href="/public" aria-label="Go to homepage" class="ml-5">
+    <a href="/public" aria-label="Go to homepage" class="ml-md">
         <div>Logo</div>
     </a>
-    <div class="md:hidden mr-5">
-        <MobileMenu items={menuItems} client:media="(max-width:767px)" />
-    </div>
-    <div class="hidden md:block mr-5">
-        <DesktopMenu items={menuItems} />
+    <div class="flex items-center justify-between">
+        <ThemeIcon/>
+        <div class="md:hidden mr-md">
+            <MobileMenu items={menuItems} client:media="(max-width:767px)"/>
+        </div>
+        <div class="hidden md:block mr-md">
+            <DesktopMenu items={menuItems}/>
+        </div>
     </div>
 </nav>

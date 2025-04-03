@@ -10,23 +10,23 @@ export default function ContactForm() {
             <input
               type="text"
               placeholder="First Name"
-              className="w-full p-3 bg-gray-300 border border-transparent rounded focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300"
+              className="w-full p-3 bg-muted border border-transparent rounded focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300"
             />
             <input
               type="email"
               placeholder="Email"
-              className="w-full p-3 bg-gray-300 border border-transparent rounded focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300"
+              className="w-full p-3 bg-muted border border-transparent rounded focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300"
             />
           </div>
           <input
             type="text"
             placeholder="Subject"
-            className="w-full p-3 bg-gray-300 border border-transparent rounded focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300"
+            className="w-full p-3 bg-muted border border-transparent rounded focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300"
           />
           <textarea
             rows={5}
             placeholder="Message"
-            className="w-full p-3 bg-gray-300 border border-transparent rounded focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300"></textarea>
+            className="w-full p-3 bg-muted border border-transparent rounded focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300"></textarea>
           <button type="submit" className="w-full btn-primary">
             SEND US NOW
           </button>

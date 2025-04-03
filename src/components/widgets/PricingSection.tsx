@@ -8,7 +8,6 @@ const plans = [
     price: '$49',
     description: 'Start building your team and hire the most talented workers in the world.',
     features: ['Unlimited placeholder texts', 'Consectetur adipiscing elit', 'Excepteur sint occaecat cupidatat', 'Officia deserunt mollit anim'],
-    buttonColor: 'bg-gray-800',
   },
   {
     name: 'Pro',
@@ -22,7 +21,6 @@ const plans = [
       'Officia deserunt mollit anim',
       'Excepteur sint occaecat cupidatat',
     ],
-    buttonColor: 'bg-blue-600',
   },
   {
     name: 'Enterprise',
@@ -35,7 +33,6 @@ const plans = [
       'Excepteur sint occaecat cupidatat',
       'Officia deserunt mollit anim',
     ],
-    buttonColor: 'bg-gray-800',
   },
 ]
 
@@ -51,9 +48,9 @@ export default function PricingSection() {
           <div
             key={index}
             className={cn('rounded-lg p-6 text-left bg-light', {
-              ' bg-light': index === 0,
+              ' bg-subtle': index === 0,
               'bg-primary text-white': index === 1,
-              'bg-gray-200': index === 2,
+              'bg-muted': index === 2,
             })}>
             <h3 className="text-xl font-semibold">{plan.name}</h3>
             <p className="text-4xl  font-bold mt-2">{plan.price}</p>

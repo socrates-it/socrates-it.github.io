@@ -55,7 +55,7 @@ const FeatureGrid = () => {
               ${isBottomRow ? 'border-b-transparent' : ''}
               ${isLeftmost ? 'border-l-transparent' : ''}
               ${isRightmost ? 'border-r-transparent' : ''}
-              ${hoveredIndex === index ? 'bg-gray-100 shadow-lg' : 'bg-white'}`}
+              ${hoveredIndex === index ? 'bg-subtle' : 'bg-white'}`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}>
               <div className={`text-black mb-3 group-hover:text-accent transition-colors duration-300`}>{feature.icon}</div>
