@@ -5,10 +5,9 @@ import DesktopMenu from "./DesktopMenu.astro";
 ---
 
 <nav class="flex items-center justify-between">
-    <a href="/public" aria-label="Go to homepage" class="-ml-5">
+    <a href="/public" aria-label="Go to homepage" class="ml-5">
         <div>Logo</div>
     </a>
-
     <div class="md:hidden mr-5">
         <MobileMenu items={menuItems} client:media="(max-width:767px)" />
     </div>
