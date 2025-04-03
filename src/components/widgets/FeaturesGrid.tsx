@@ -39,7 +39,7 @@ const FeatureGrid = () => {
   return (
     <div className="container mx-auto max-w-6xl p-container">
       <SectionIntro title={'WHY YOU CHOOSE US?'} description={'Global Grand Event on Digital Design'} />
-      <div className="grid grid-cols-2 md:grid-cols-3 text-black">
+      <div className="grid grid-cols-2 md:grid-cols-3 text-default">
         {features.map((feature, index) => {
           const totalItems = features.length
           const isTopRow = index < columns
@@ -50,16 +50,16 @@ const FeatureGrid = () => {
           return (
             <div
               key={index}
-              className={`group p-6 border-[0.5px] border-gray-700 flex flex-col items-center text-center transition-[background-color,box-shadow] duration-300
+              className={`group p-6 border-[0.5px] border-lighter-contrast flex flex-col items-center text-center transition-[background-color] duration-300
               ${isTopRow ? 'border-t-transparent' : ''}
               ${isBottomRow ? 'border-b-transparent' : ''}
               ${isLeftmost ? 'border-l-transparent' : ''}
               ${isRightmost ? 'border-r-transparent' : ''}
-              ${hoveredIndex === index ? 'bg-subtle' : 'bg-white'}`}
+              ${hoveredIndex === index ? 'bg-subtle dark:bg-lighter-contrast' : 'bg-white dark:bg-dark'}`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}>
-              <div className={`text-black mb-3 group-hover:text-accent transition-colors duration-300`}>{feature.icon}</div>
-              <h3 className="text-lg font-bold">{feature.title}</h3>
+              <div className={`text-default mb-3 group-hover:text-accent dark:text-light transition-colors duration-300`}>{feature.icon}</div>
+              <h3 className="text-lg font-bold dark:text-subtle">{feature.title}</h3>
               <p className="text-gray-400 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur commodo ligula eget dolor.</p>
             </div>
           )

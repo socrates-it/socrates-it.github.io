@@ -55,8 +55,8 @@ const Carousel = () => {
                   'space-y-4 sm:space-y-6 max-w-56 sm:max-w-full text-xs sm:text-lg',
                   'opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-1000',
                 )}>
-                <p className="text-secondary font-extrabold bg-light dark:bg-dark rounded-xl">Design Thinking Conference</p>
-                <p className="text-secondary font-extrabold bg-light dark:bg-dark rounded-xl">2025 edition Coming soon</p>
+                <p className="text-secondary font-extrabold bg-light dark:bg-contrast rounded-xl">Design Thinking Conference</p>
+                <p className="text-secondary font-extrabold bg-light dark:bg-contrast rounded-xl">2025 edition Coming soon</p>
                 <div className="flex justify-between items-center space-x-4 sm:space-x-12 w-full h-12">
                   <button onClick={() => prevSlide()} className="btn-primary w-20 sm:w-36 h-full">
                     get ticket

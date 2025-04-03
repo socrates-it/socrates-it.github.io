@@ -40,7 +40,7 @@ const MobileMenu: FC<Props> = ({ items }) => {
     <div className="text-page">
       <Hamburger isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
       <div
-        className={cn('w-full mx-auto px-5', 'absolute left-0 right-0 top-15', 'bg-primary', 'z-10 overflow-hidden transition-[height] duration-700', {
+        className={cn('w-full mx-auto px-5', 'absolute left-0 right-0 top-19', 'bg-primary', 'z-10 overflow-hidden transition-[height] duration-700', {
           'h-31': isOpen,
           'h-0': !isOpen,
         })}>

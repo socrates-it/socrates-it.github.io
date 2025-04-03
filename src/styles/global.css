@@ -23,9 +23,9 @@
   --aw-color-bg-accent: rgb(220, 235, 255); /* Light blue accent */
   --aw-color-bg-dark: rgb(23, 24, 28); /* Dark background */
   --aw-color-bg-secondary: rgb(107, 114, 128); /* Secondary gray */
-  --aw-color-bg-tertiary: rgb(75, 85, 99); /* Darker gray */
   --aw-color-bg-contrast: rgb(36, 38, 47); /* Strong contrast dark */
   --aw-color-bg-light-contrast: rgb(107, 114, 128); /* Light contrast dark */
+  --aw-color-bg-lighter-contrast: #364153; /* Darker gray */
   --aw-color-bg-overlay: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
   --aw-color-bg-inverted: rgb(255, 255, 255); /* For inverted themes */
 
@@ -78,6 +78,7 @@
   --color-dark: var(--aw-color-bg-dark);
   --color-contrast: var(--aw-color-bg-contrast);
   --color-light-contrast: var(--aw-color-bg-light-contrast);
+  --color-lighter-contrast: var(--aw-color-bg-lighter-contrast);
 
   --color-heading: var(--aw-color-text-heading);
   --color-subtitle: var(--aw-color-text-subtitle);
