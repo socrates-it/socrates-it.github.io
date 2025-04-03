@@ -51,17 +51,16 @@ const Carousel = () => {
               <div
                 className={cn(
                   'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
-                  'text-center bg-light p-6 rounded-xl text-white uppercase',
+                  'text-center bg-transparent p-6 rounded-xl text-light uppercase',
                   'space-y-4 sm:space-y-6 max-w-56 sm:max-w-full text-xs sm:text-lg',
                   'opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-1000',
                 )}>
-                <p className="text-secondary font-extrabold">Design Thinking Conference</p>
-                <p className="text-secondary font-extrabold">2025 edition Coming soon</p>
+                <p className="text-secondary font-extrabold bg-light dark:bg-dark rounded-xl">Design Thinking Conference</p>
+                <p className="text-secondary font-extrabold bg-light dark:bg-dark rounded-xl">2025 edition Coming soon</p>
                 <div className="flex justify-between items-center space-x-4 sm:space-x-12 w-full h-12">
                   <button onClick={() => prevSlide()} className="btn-primary w-20 sm:w-36 h-full">
                     get ticket
                   </button>
-                  {/*className="py-2 px-4 sm:px-6 bg-pink-700 rounded uppercase cursor-pointer w-20 sm:w-36 h-full"*/}
                   <button onClick={() => nextSlide()} className="btn-primary w-20 sm:w-36 h-full">
                     explore
                   </button>
@@ -72,19 +71,29 @@ const Carousel = () => {
         ))}
       </div>
       <button
-        className="opacity-100 sm:opacity-0 group-hover:opacity-100 absolute block top-1/2 left-5 transform -translate-y-1/2 bg-gray-800 transition-all duration-300 hover:bg-green-950 text-white p-2 sm:p-4 rounded z-10 cursor-pointer"
+        className={cn(
+          'opacity-100 sm:opacity-0 group-hover:opacity-100',
+          'absolute top-1/2 left-5 transform -translate-y-1/2',
+          'bg-primary transition-all duration-300 hover:bg-primary-dark',
+          'p-2 sm:p-4 rounded z-10 cursor-pointer',
+        )}
         onClick={prevSlide}>
         <div
-          className="h-3 w-3 sm:w-6 sm:h-6 border-green-600
+          className="h-3 w-3 sm:w-6 sm:h-6 border-secondary
                         border-l-2 border-b-2 transalte-x-[5] translate-x-0.5 sm:translate-x-1.5
                         transform rotate-45 rounded-bl"
         />
       </button>
       <button
-        className="opacity-100 sm:opacity-0 group-hover:opacity-100 absolute top-1/2 right-5 transform -translate-y-1/2 bg-gray-800 transition-all duration-300 hover:bg-green-950 text-white p-2 sm:p-4 rounded z-10 cursor-pointer"
+        className={cn(
+          'opacity-100 sm:opacity-0 group-hover:opacity-100',
+          'absolute top-1/2 right-5 transform -translate-y-1/2',
+          'bg-primary transition-all duration-300 hover:bg-primary-dark',
+          'p-2 sm:p-4 rounded z-10 cursor-pointer',
+        )}
         onClick={nextSlide}>
         <div
-          className="h-3 w-3 sm:w-6 sm:h-6 border-green-600
+          className="h-3 w-3 sm:w-6 sm:h-6 border-secondary
                         border-t-2 border-r-2 -transalte-x-[5] -translate-x-0.5 sm:-translate-x-1.5
                         transform rotate-45 rounded-tr"
         />
@@ -101,9 +110,9 @@ const Carousel = () => {
             aria-label={`View Image ${index + 1}`}
             onClick={() => setImageIndex(index)}>
             {index === imageIndex ? (
-              <div className="w-full h-full bg-gray-400 rounded-full"></div>
+              <div className="w-full h-full bg-subtitle rounded-full"></div>
             ) : (
-              <div className="w-full h-full border-1 transition-all hover:scale-90 duration-300 hover:bg-green-800 border-gray-600 rounded-full"></div>
+              <div className="w-full h-full border-1 transition-all hover:scale-90 duration-300 hover:bg-primary border-light-contrast rounded-full"></div>
             )}
           </button>
         ))}

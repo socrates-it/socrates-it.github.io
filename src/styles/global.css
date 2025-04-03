@@ -6,6 +6,7 @@
   --aw-font-heading: 'Inter Variable';
 
   --aw-color-primary: rgb(4, 102, 48);
+  --aw-color-primary-dark: rgb(3, 46, 21);
   --aw-color-secondary: rgb(112, 173, 122);
   --aw-color-accent: rgb(39, 192, 64);
   --aw-color-highlight: rgb(170, 202, 170);
@@ -20,10 +21,11 @@
   --aw-color-bg-soft: rgb(237, 237, 245); /* Soft lavender */
   --aw-color-bg-muted: rgb(229, 231, 235); /* Muted gray */
   --aw-color-bg-accent: rgb(220, 235, 255); /* Light blue accent */
-  --aw-color-bg-dark: rgb(3, 6, 32); /* Dark background */
+  --aw-color-bg-dark: rgb(23, 24, 28); /* Dark background */
   --aw-color-bg-secondary: rgb(107, 114, 128); /* Secondary gray */
   --aw-color-bg-tertiary: rgb(75, 85, 99); /* Darker gray */
   --aw-color-bg-contrast: rgb(36, 38, 47); /* Strong contrast dark */
+  --aw-color-bg-light-contrast: rgb(107, 114, 128); /* Light contrast dark */
   --aw-color-bg-overlay: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
   --aw-color-bg-inverted: rgb(255, 255, 255); /* For inverted themes */
 
@@ -64,6 +66,7 @@
 
 @theme {
   --color-primary: var(--aw-color-primary);
+  --color-primary-dark: var(--aw-color-primary-dark);
   --color-secondary: var(--aw-color-secondary);
   --color-accent: var(--aw-color-accent);
   --color-highlight: var(--aw-color-highlight);
@@ -74,7 +77,7 @@
   --color-muted: var(--aw-color-bg-muted);
   --color-dark: var(--aw-color-bg-dark);
   --color-contrast: var(--aw-color-bg-contrast);
-
+  --color-light-contrast: var(--aw-color-bg-light-contrast);
 
   --color-heading: var(--aw-color-text-heading);
   --color-subtitle: var(--aw-color-text-subtitle);
@@ -162,10 +165,6 @@
 /* TODO: investigate if useful and how to substitute */
 @custom-variant intersect (&:not([no-intersect]));
 
-@utility bg-light {
-  background-color: var(--aw-color-bg-light);
-}
-
 @utility bg-subtle {
   background-color: var(--aw-color-bg-subtle);
 }
@@ -180,10 +179,6 @@
 
 @utility text-light {
   color: var(--aw-color-text-light);
-}
-
-@utility text-muted {
-  color: var(--aw-color-text-muted);
 }
 
 @utility btn {
