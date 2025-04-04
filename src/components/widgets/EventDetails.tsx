@@ -34,7 +34,7 @@ const EventDetails = () => {
   ]
 
   return (
-    <div className="bg-green-800 text-white py-12 px-xl">
+    <div className="bg-green-800 text-white p-custom">
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
         {details.map((item, index) => (
           <div key={index} className="flex flex-col items-center">

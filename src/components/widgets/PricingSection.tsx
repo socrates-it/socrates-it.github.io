@@ -40,10 +40,10 @@ export default function PricingSection() {
   const [billingCycle, setBillingCycle] = useState('Monthly')
 
   return (
-    <div className="text-default text-center p-container">
+    <div className="text-default text-center p-custom">
       <SectionIntro title="Get Tickets" description="Find a plan that fits your business best" />
       {/* Pricing Plans */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 container-custom">
         {plans.map((plan, index) => (
           <div
             key={index}

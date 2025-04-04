@@ -37,10 +37,10 @@ const iconMap: Record<string, JSX.Element> = {
 
 export default function SpeakersGrid() {
   return (
-    <div className="bg-highlight p-container">
+    <div className="bg-highlight p-custom">
       <SectionIntro title={"Who's Speaking?\n"} description={'Global Grand Event on Digital Design'} />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 max-w-6xl container mx-auto overflow-hidden">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 container-custom overflow-hidden">
         {teamMembers.map((member, index) => (
           <div key={index} className="relative group overflow-hidden shadow-lg hover:scale-98 transition-transform duration-300">
             {/* Image */}

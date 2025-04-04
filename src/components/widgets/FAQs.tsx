@@ -31,7 +31,7 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <div className="max-w-6xl mx-auto p-container">
+    <div className="container-custom p-custom">
       <SectionIntro title={'Frequently asked questions'} description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit'} />
       <div className="space-y-6">
         {faqs.map((faq, index) => (

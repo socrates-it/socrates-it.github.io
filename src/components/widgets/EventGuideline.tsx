@@ -3,10 +3,10 @@ import SectionIntro from '~components/ui/SectionIntro.tsx'
 
 const EventGuideline = () => {
   return (
-    <section className="bg-light text-default p-container">
+    <section className="bg-light text-default p-custom">
       <SectionIntro title={'Event Guideline'} description={'Global Grand Event on Digital Design'} />
 
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+      <div className="container-custom flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 pb-4 md:p-0 md:pr-md">
           <img src="src/assets/images/canyon.jpg" alt="Event Presentation" className="rounded-lg shadow-lg" />
         </div>

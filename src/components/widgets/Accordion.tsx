@@ -17,7 +17,7 @@ export default function Accordion() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto p-container dark:bg-dark">
+    <div className="container-custom py-custom px-xl sm:px-20 md:px-40 dark:bg-dark">
       <SectionIntro title={'About This Events'} description={'Global Grand Event on Digital Design'} />
       <div>
         {accordionData.map((item, index) => (
@@ -48,10 +48,10 @@ export default function Accordion() {
                 'transition-[height] overflow-hidden duration-300',
                 'flex justify-between items-center ',
                 'bg-light dark:bg-dark border-t-0',
-                { 'h-20 ': openIndex === index, 'h-0': openIndex !== index },
+                { 'h-22 ': openIndex === index, 'h-0': openIndex !== index },
               )}>
               <p
-                className={cn('relative pl-4 transition-colors duration-100', {
+                className={cn('relative transition-colors duration-100 p-sm', {
                   'text-default dark:text-white': openIndex === index,
                   'text-transparent': openIndex !== index,
                 })}>

@@ -2,7 +2,7 @@ import SectionIntro from '~components/ui/SectionIntro.tsx'
 
 const GoogleMap = () => {
   return (
-    <div className="p-container">
+    <div className="p-custom">
       <SectionIntro title="Where do we meet" description="Get indications" />
       <iframe
         title="google map"
@@ -13,7 +13,7 @@ const GoogleMap = () => {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        className="container mx-auto max-w-6xl"></iframe>
+        className="container-custom"></iframe>
     </div>
   )
 }

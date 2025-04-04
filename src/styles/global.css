@@ -84,10 +84,10 @@
   --color-subtitle: var(--aw-color-text-subtitle);
   --color-default: var(--aw-color-text-default);
 
-
   --font-sans: var(--aw-font-sans, ui-sans-serif);
   --font-serif: var(--aw-font-serif, ui-serif);
   --font-heading: var(--aw-font-heading, ui-sans-serif);
+
   --animate-fade-in: fade-in-up 1s both;
   --animate-fade-out: fade-out-down 1s both;
   --animate-spin: spin-r-once 1s both;
@@ -198,8 +198,20 @@
   @apply btn border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
 }
 
-@utility p-container {
-  @apply p-xl;
+@utility px-custom {
+  @apply px-md md:px-xl;
+}
+
+@utility py-custom {
+  @apply py-md md:py-xl;
+}
+
+@utility p-custom {
+  @apply p-md md:p-xl;
+}
+
+@utility container-custom {
+  @apply max-w-6xl mx-auto container;
 }
 
 #header.scroll > div:first-child {

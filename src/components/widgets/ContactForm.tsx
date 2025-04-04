@@ -2,9 +2,9 @@ import SectionIntro from '~components/ui/SectionIntro.tsx'
 
 export default function ContactForm() {
   return (
-    <div className="flex flex-col items-center justify-center p-container">
+    <div className="flex flex-col items-center justify-center p-custom">
       <SectionIntro title="Drop A Message" description="Global Grand Event on Digital Design" />
-      <div className="max-w-2xl w-full bg-light rounded-lg p-xl shadow-lg">
+      <div className="max-w-2xl w-full bg-light rounded-lg p-custom shadow-lg">
         <form className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input

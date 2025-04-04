@@ -5,16 +5,16 @@ import DesktopMenu from "./DesktopMenu.astro";
 import ThemeIcon from "./ThemeIcon.astro";
 ---
 
-<nav class="flex items-center justify-between">
-    <a href="/public" aria-label="Go to homepage" class="ml-md">
+<nav class="flex items-center justify-between px-custom">
+    <a href="/public" aria-label="Go to homepage">
         <div>Logo</div>
     </a>
     <div class="flex items-center justify-between">
         <ThemeIcon/>
-        <div class="md:hidden mr-md">
+        <div class="md:hidden">
             <MobileMenu items={menuItems} client:media="(max-width:767px)"/>
         </div>
-        <div class="hidden md:block mr-md">
+        <div class="hidden md:block">
             <DesktopMenu items={menuItems}/>
         </div>
     </div>
