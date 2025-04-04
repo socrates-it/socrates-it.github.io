@@ -26,7 +26,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4 # docs https://pnpm.io/continuous-integration#github-actions
         with:
-          version: 10
+          version: 10.5.2
 
       - uses: actions/setup-node@v4
         with:
