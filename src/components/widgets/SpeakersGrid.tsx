@@ -6,19 +6,19 @@ const teamMembers = [
   {
     name: 'Jonathon Doe',
     role: 'Product Designer, Tesla',
-    image: 'src/assets/images/canyon.jpg',
+    image: '/images/canyon.jpg',
     socials: { github: 'https://github.com/', linkedin: 'https://linkedin.com/', bluesky: 'https://bsky.app/' },
   },
   {
     name: 'Patric Green',
     role: 'Front-end Developer, Dropbox',
-    image: 'src/assets/images/fiori.jpg',
+    image: '/images/fiori.jpg',
     socials: { github: 'https://github.com/', linkedin: 'https://linkedin.com/' },
   },
   {
     name: 'Paul Kowalsky',
     role: 'Lead Developer, Google',
-    image: 'src/assets/images/foresta.jpg',
+    image: '/images/foresta.jpg',
     socials: { github: 'https://github.com/', linkedin: 'https://linkedin.com/' },
   },
   {

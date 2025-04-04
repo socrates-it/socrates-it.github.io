@@ -9,19 +9,19 @@ const projects = [
   {
     title: 'Progetto Alpha',
     description: "Un'innovativa piattaforma di e-learning con funzionalità avanzate.",
-    src: 'src/assets/images/canyon.jpg',
+    src: '/images/canyon.jpg',
     alt: 'canyon.jpg',
   },
   {
     title: 'Progetto Beta',
     description: "Un'app mobile per la gestione del tempo e della produttività.",
-    src: 'src/assets/images/fiori.jpg',
+    src: '/images/fiori.jpg',
     alt: 'fiori.jpg',
   },
   {
     title: 'Progetto Gamma',
     description: 'Un sito web interattivo per la visualizzazione di dati in tempo reale.',
-    src: 'src/assets/images/foresta.jpg',
+    src: '/images/foresta.jpg',
     alt: 'foresta.jpg',
   },
 ]

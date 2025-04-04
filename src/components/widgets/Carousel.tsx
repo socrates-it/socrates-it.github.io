@@ -5,15 +5,15 @@ import { cn } from '~/common/css.ts'
 
 const images = [
   {
-    src: 'src/assets/images/canyon.jpg',
+    src: '/images/canyon.jpg',
     alt: 'canyon.jpg',
   },
   {
-    src: 'src/assets/images/fiori.jpg',
+    src: '/images/fiori.jpg',
     alt: 'fiori.jpg',
   },
   {
-    src: 'src/assets/images/foresta.jpg',
+    src: '/images/foresta.jpg',
     alt: 'foresta.jpg',
   },
 ]
