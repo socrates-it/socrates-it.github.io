@@ -42,7 +42,7 @@ const Cards = () => {
             <div key={index} className="group shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-102">
               <div
                 className="cursor-pointer relative w-full h-48 bg-cover bg-center"
-                style={{ backgroundImage: `url(${project.src})` }}
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/${project.src})` }}
                 onClick={() => handleOpenModal(project)}>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-primary/50 to-light/50 flex items-center justify-center transition-opacity duration-300">
                   <MajesticonsOpen className="size-20 text-white font-bold text-lg" />

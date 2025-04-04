@@ -8,7 +8,7 @@ const EventGuideline = () => {
 
       <div className="container-custom flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 pb-4 md:p-0 md:pr-md">
-          <img src="/images/canyon.jpg" alt="Event Presentation" className="rounded-lg shadow-lg" />
+          <img src={`${import.meta.env.BASE_URL}/images/canyon.jpg`} alt="Event Presentation" className="rounded-lg shadow-lg" />
         </div>
 
         <div className="md:w-1/2 md:pl-md">

@@ -44,7 +44,7 @@ const Carousel = () => {
               className={`w-full h-full shrink-0 grow-0 transition-transform duration-1000 ease-in-out]`}
               style={{
                 translate: `${-100 * imageIndex}%`,
-                backgroundImage: `url(${src})`,
+                backgroundImage: `url(${import.meta.env.BASE_URL}/${src})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
               }}>

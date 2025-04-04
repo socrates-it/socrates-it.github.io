@@ -48,7 +48,7 @@ export default function SpeakersGrid() {
               {/* Overlay */}
               <div
                 className="w-full h-full transition-transform bg-cover bg-center duration-300 bg-opacity-80 p-4"
-                style={{ backgroundImage: `url(${member.image})` }}></div>
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/${member.image})` }}></div>
               <div className="absolute inset-0 bg-transparent group-hover:bg-gray-900/50 transition-colors duration-300" />
               <div className="relative bottom-full -translate-y-10 labg-transparent p-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                 <ul className="flex justify-end space-x-2">
