@@ -34,7 +34,7 @@ jobs:
           cache: "pnpm"
 
       - name: Install
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Run npm run build and upload artifact through actions/upload-pages-artifact@v1
         uses: withastro/action@v2
