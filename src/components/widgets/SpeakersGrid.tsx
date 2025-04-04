@@ -24,7 +24,7 @@ const teamMembers = [
   {
     name: 'Jhon Doe',
     role: 'UI/UX Designer, Apple',
-    image: 'src/assets/images/fiori.jpg',
+    image: '/images/fiori.jpg',
     socials: { github: 'https://github.com/', linkedin: 'https://linkedin.com/', bluesky: 'https://bsky.app/' },
   },
 ]
