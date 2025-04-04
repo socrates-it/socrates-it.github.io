@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - ".vscode/**"
+      - "**.md"
+  workflow_dispatch:
+  schedule:
+    # Let's do it on the 2nd of January because we don't know which timezone is used by GitHub Actions
+    - cron: "0 0 2 1 *"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install
+        run: npm ci
+
+      - name: Run npm run build and upload artifact through actions/upload-pages-artifact@v1
+        uses: withastro/action@v2
+        with:
+          path: . # The root location of your Astro project inside the repository. (optional)
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
