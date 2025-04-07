@@ -15,7 +15,7 @@ export default function Sponsors() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 container-custom pb-20">
         {sponsors.map((sponsor, index) => (
-          <div key={index} className="border border-gray-700 rounded-lg p-6 flex justify-center items-center h-40">
+          <div key={index} className="border bg-light border-gray-700 rounded-lg p-6 flex justify-center items-center h-40">
             <img src={sponsor.image} alt={sponsor.name} className="max-h-full max-w-full opacity-75" />
           </div>
         ))}
@@ -23,9 +23,9 @@ export default function Sponsors() {
 
       <div>
         <p className="text-xl mb-2">Download the sponsorship prospect.</p>
-        <p className="text-md text-subtitle">
+        <p className="text-md text-light">
           Feel free to contact us at
-          <span className="italic text-secondary"> socrates.italia@gmail.com </span>
+          <span className="italic text-primary"> socrates.italia@gmail.com </span>
           for any further detail.
         </p>
       </div>

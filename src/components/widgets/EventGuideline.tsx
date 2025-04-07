@@ -1,38 +1,60 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
 
+const guidelines = [
+  {
+    img: '/images/people.jpg',
+    title: 'people',
+    description:
+      'Everyone who is concerned with coding, testing, code quality and software craft. There is no agenda and there are no speakers before the event starts. Proposals are presented during the event itself in the mornings, and voted by the participants right after. Meet us if you want to share your knowledge, experience and expertise!',
+  },
+  {
+    img: '/images/action.jpg',
+    title: 'action',
+    description:
+      'The event will be run as a non-profit, low-cost event. It will be much like a retreat. We will be there for 48 hours to collaborate and share ideas in a self-organized Open Space. There will be hands-on coding sessions, sessions focused on discussion, interactive talks and lots more.\n' +
+      '\n',
+  },
+  {
+    img: '/images/fun.jpg',
+    title: 'fun',
+    description:
+      'We will not only spend the days together but also the nights. And – believe it or not – programmers are a great company! There will be be lots of opportunities to spend your time. Starting with simple chilling over hiking and biking, playing games, hanging around, talking and laughing.',
+  },
+]
+
 const EventGuideline = () => {
+  const [width, setWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    setWidth(window.innerWidth)
+  }, [width])
+
   return (
-    <section className="text-default p-custom">
+    <section className="text-default p-custom container-custom">
       <SectionIntro title={'Event Guideline'} description={'Global Grand Event on Digital Design'} />
 
-      <div className="container-custom flex flex-col md:flex-row items-center">
-        <div className="md:w-1/2 pb-4 md:p-0 md:pr-md">
-          <img src={`${import.meta.env.BASE_URL}/images/canyon.jpg`} alt="Event Presentation" className="rounded-lg shadow-lg" />
-        </div>
+      <div className="bg-highlight rounded-lg">
+        {guidelines.map((guideline, index) => {
+          const isFirst = index === 0
+          const isLast = index === guidelines.length - 1
 
-        <div className="md:w-1/2 md:pl-md">
-          <p className="text-gray-300 mb-6">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-          </p>
+          return (
+            <div key={index} className={`relative ${isFirst ? 'pt-8 pb-8' : isLast ? 'pt-8 pb-8' : 'pt-8 pb-8'} rounded`}>
+              <div className={`flex flex-col-reverse md:flex-row-reverse items-center overflow-hidden md:h-[200px] `}>
+                <div className="md:w-3/5 flex flex-col px-lg md:px-0 md:pr-md h-full ">
+                  <h2 className="mb-4 italic text-md lg:text-lg text-primary capitalize">{guideline.title}</h2>
+                  <p className="text-light text-sm mb-6 sm:mb-0">{guideline.description}</p>
+                </div>
 
-          <h3 className="text-xl font-semibold mb-4">Check List</h3>
-          <ul className="text-gray-300 space-y-2">
-            <li className="flex items-center">
-              <span className="text-green-400 mr-2">✔</span> Lorem Ipsum is simply dummy
-            </li>
-            <li className="flex items-center">
-              <span className="text-green-400 mr-2">✔</span> Ipsum passages, and more recently
-            </li>
-            <li className="flex items-center">
-              <span className="text-green-400 mr-2">✔</span> PageMaker including versions
-            </li>
-            <li className="flex items-center">
-              <span className="text-green-400 mr-2">✔</span> Lorem Ipsum is simply dummy
-            </li>
-          </ul>
-        </div>
+                <div
+                  className="w-3/4 md:w-2/5 min-h-60 md:min-h-auto px-lg mb-md md:mb-0 flex items-center justify-center h-full bg-cover bg-center rounded-lg mx-lg"
+                  style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/${guideline.img})` }}
+                />
+              </div>
+            </div>
+          )
+        })}
       </div>
     </section>
   )
