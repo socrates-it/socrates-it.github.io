@@ -5,7 +5,7 @@ export type MenuItem = {
   variant?: 'chip' | 'link'
 }
 
-import { BASE_PATH } from '../../../astro.config.mjs'
+export const BASE_PATH = import.meta.env.BASE_URL
 
 export const menuItems: MenuItem[] = [
   { label: 'About', url: `${BASE_PATH}/about` },
