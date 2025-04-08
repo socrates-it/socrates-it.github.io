@@ -51,21 +51,23 @@ const Carousel = () => {
               <div
                 className={cn(
                   'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
-                  'text-center bg-transparent p-6 rounded-xl',
-                  'space-y-4 sm:space-y-6 max-w-56 sm:max-w-full text-xs sm:text-lg',
+                  'text-center rounded-xl',
+                  'space-y-4 sm:space-y-6 p-custom w-full text-xs sm:text-lg',
                   'opacity-100',
                 )}>
-                <div className="bg-light dark:bg-contrast dark:text-light rounded-xl space-y-2 font-extrabold p-4">
-                  <p>Design Thinking Conference</p>
-                  <p>2025 edition Coming soon</p>
-                </div>
-                <div className="flex justify-between items-center space-x-4 sm:space-x-12 w-full h-12">
-                  <button onClick={() => prevSlide()} className="btn-primary w-20 sm:w-36 h-full">
-                    get ticket
-                  </button>
-                  <button onClick={() => nextSlide()} className="btn-primary w-20 sm:w-36 h-full">
-                    explore
-                  </button>
+                <div className="container-custom space-y-8">
+                  <div className="w-100 mx-auto bg-light dark:bg-contrast dark:text-light rounded-xl space-y-2 font-bold p-4">
+                    <p>Design Thinking Conference</p>
+                    <p className="text-subtitle font-normal">2025 edition coming soon</p>
+                  </div>
+                  <div className="flex  justify-between items-center space-x-4 mx-auto w-75 h-lg">
+                    <button onClick={() => prevSlide()} className="btn-primary text-xs h-full w-30 rounded-lg">
+                      get ticket
+                    </button>
+                    <button onClick={() => nextSlide()} className="btn-primary text-xs h-full w-30 rounded-lg">
+                      explore
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
