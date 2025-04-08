@@ -36,12 +36,12 @@ const Carousel = () => {
   }
 
   return (
-    <div className="group relative top w-full h-full">
+    <div className="relative top w-full h-full">
       <div className="w-full h-full flex overflow-hidden">
         {images.map(({ src, alt }, index) => (
           <Fragment key={alt}>
             <div
-              className={`w-full h-full shrink-0 grow-0 transition-transform duration-1000 ease-in-out]`}
+              className={`w-full h-full shrink-0 grow-0 transition-transform duration-800 ease-in-out]`}
               style={{
                 translate: `${-100 * imageIndex}%`,
                 backgroundImage: `url(${import.meta.env.BASE_URL}/${src})`,
@@ -53,10 +53,12 @@ const Carousel = () => {
                   'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
                   'text-center bg-transparent p-6 rounded-xl text-light uppercase',
                   'space-y-4 sm:space-y-6 max-w-56 sm:max-w-full text-xs sm:text-lg',
-                  'opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-1000',
+                  'opacity-100',
                 )}>
-                <p className="text-secondary font-extrabold bg-light dark:bg-contrast rounded-xl">Design Thinking Conference</p>
-                <p className="text-secondary font-extrabold bg-light dark:bg-contrast rounded-xl">2025 edition Coming soon</p>
+                <div className="bg-light dark:bg-contrast rounded-xl text-primary font-extrabold">
+                  <p>Design Thinking Conference</p>
+                  <p>2025 edition Coming soon</p>
+                </div>
                 <div className="flex justify-between items-center space-x-4 sm:space-x-12 w-full h-12">
                   <button onClick={() => prevSlide()} className="btn-primary w-20 sm:w-36 h-full">
                     get ticket
@@ -70,34 +72,37 @@ const Carousel = () => {
           </Fragment>
         ))}
       </div>
-      <button
-        className={cn(
-          'opacity-100 sm:opacity-0 group-hover:opacity-100',
-          'absolute top-1/2 left-5 transform -translate-y-1/2',
-          'bg-primary transition-all duration-300 hover:bg-primary-dark',
-          'p-2 sm:p-4 rounded z-10 cursor-pointer',
-        )}
-        onClick={prevSlide}>
-        <div
-          className="h-3 w-3 sm:w-6 sm:h-6 border-secondary
-                        border-l-2 border-b-2 transalte-x-[5] translate-x-0.5 sm:translate-x-1.5
-                        transform rotate-45 rounded-bl"
-        />
-      </button>
-      <button
-        className={cn(
-          'opacity-100 sm:opacity-0 group-hover:opacity-100',
-          'absolute top-1/2 right-5 transform -translate-y-1/2',
-          'bg-primary transition-all duration-300 hover:bg-primary-dark',
-          'p-2 sm:p-4 rounded z-10 cursor-pointer',
-        )}
-        onClick={nextSlide}>
-        <div
-          className="h-3 w-3 sm:w-6 sm:h-6 border-secondary
-                        border-t-2 border-r-2 -transalte-x-[5] -translate-x-0.5 sm:-translate-x-1.5
-                        transform rotate-45 rounded-tr"
-        />
-      </button>
+      <div className="relative bg-transparent px-custom">
+        <div className="container-custom flex justify-between items-center">
+          <button
+            className={cn(
+              'opacity-100',
+              'bg-primary/20 border border-secondary transition-all duration-300 hover:bg-primary-dark/40',
+              'p-2 sm:p-4 rounded z-10 cursor-pointer relative bottom-57.5',
+            )}
+            onClick={prevSlide}>
+            <div
+              className="h-3 w-3 sm:w-6 sm:h-6 border-secondary
+                  border-l-2 border-b-2 translate-x-0.5 sm:translate-x-1.5
+                  transform rotate-45 rounded-bl"
+            />
+          </button>
+
+          <button
+            className={cn(
+              'opacity-100',
+              'bg-primary/20 border border-secondary transition-all duration-300 hover:bg-primary-dark/40',
+              'p-2 sm:p-4 rounded z-10 cursor-pointer relative bottom-57.5',
+            )}
+            onClick={nextSlide}>
+            <div
+              className="h-3 w-3 sm:w-6 sm:h-6 border-secondary
+                  border-t-2 border-r-2 translate-x-0.5 sm:-translate-x-1.5
+                  transform rotate-45 rounded-tr"
+            />
+          </button>
+        </div>
+      </div>
       <div
         className={cn(
           'absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-3 bg-gray-800 p-2 rounded-xl',

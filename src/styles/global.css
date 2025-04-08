@@ -187,7 +187,7 @@
 }
 
 @utility btn-primary {
-  @apply btn font-semibold bg-primary/80 hover:bg-primary text-white border-primary/10 hover:border-secondary hover:text-white;
+  @apply btn font-semibold bg-primary hover:bg-secondary text-white border-primary/10 hover:border-secondary hover:text-white;
 }
 
 @utility btn-secondary {

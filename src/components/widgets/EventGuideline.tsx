@@ -31,10 +31,10 @@ const EventGuideline = () => {
   }, [width])
 
   return (
-    <section className="text-default p-custom container-custom">
+    <section className="text-default p-custom">
       <SectionIntro title={'Event Guideline'} description={'Global Grand Event on Digital Design'} />
 
-      <div className="bg-highlight rounded-lg">
+      <div className="bg-highlight rounded-lg container-custom">
         {guidelines.map((guideline, index) => {
           const isFirst = index === 0
           const isLast = index === guidelines.length - 1
