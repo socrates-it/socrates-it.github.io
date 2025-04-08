@@ -45,11 +45,12 @@ const {
 
 <header
         class:list={[
-            { dark: isDark },
             'z-40 fixed py-xs flex-none mx-auto w-full px-custom',
-            'border-b border-gray-50/0 transition-opacity ease-in-out bg-primary dark:bg-contrast h-20',
+            'border-b border-gray-50/0 transition-all duration-500 ease-in-out',
+            'h-20',
+            'bg-transparent dark:bg-transparent',
         ]}
-        {...id ? { id } : {}}
+        id={id}
 >
     <div class="text-white logo-bg-svg">
         <div class="container mx-auto max-w-6xl py-2.5 ">
@@ -57,3 +58,23 @@ const {
         </div>
     </div>
 </header>
+
+<script type="text/javascript">
+    // Function to handle scroll event and toggle the background
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 200) {
+            // Add 'bg-primary' class when scrolled down more than 50px
+            header.classList.add('bg-primary');
+            header.classList.add('dark:bg-contrast');
+            header.classList.remove('bg-transparent');
+            header.classList.remove('dark:bg-transparent');
+        } else {
+            // Add 'bg-transparent' class when at the top of the page
+            header.classList.add('bg-transparent');
+            header.classList.add('dark:bg-transparent');
+            header.classList.remove('bg-primary');
+            header.classList.remove('dark:bg-black');
+        }
+    });
+</script>

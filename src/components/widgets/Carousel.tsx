@@ -51,11 +51,11 @@ const Carousel = () => {
               <div
                 className={cn(
                   'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
-                  'text-center bg-transparent p-6 rounded-xl text-light uppercase',
+                  'text-center bg-transparent p-6 rounded-xl',
                   'space-y-4 sm:space-y-6 max-w-56 sm:max-w-full text-xs sm:text-lg',
                   'opacity-100',
                 )}>
-                <div className="bg-light dark:bg-contrast rounded-xl text-primary font-extrabold">
+                <div className="bg-light dark:bg-contrast dark:text-light rounded-xl space-y-2 font-extrabold p-4">
                   <p>Design Thinking Conference</p>
                   <p>2025 edition Coming soon</p>
                 </div>
@@ -97,7 +97,7 @@ const Carousel = () => {
             onClick={nextSlide}>
             <div
               className="h-3 w-3 sm:w-6 sm:h-6 border-secondary
-                  border-t-2 border-r-2 translate-x-0.5 sm:-translate-x-1.5
+                  border-t-2 border-r-2 -translate-x-0.5 sm:-translate-x-1.5
                   transform rotate-45 rounded-tr"
             />
           </button>
