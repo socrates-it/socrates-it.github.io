@@ -3,15 +3,24 @@ import astro from 'src/assets/icons/astro.svg';
 import {MajesticonsOpen} from "../../assets/icons/Icons";
 import React from "react";
 import { MdiGithub, MdiLinkedin, RiBlueskyFill } from '~/assets/icons/Icons.tsx'
+import { basePath } from '../../../astro.config.mjs'
 
-const footerData: {title: string, links: string[]}[] = [
-        {
-            title: 'Quick Links',
-            links: ['About Conference', 'Our Speakers', 'Event Schedule', 'Event Photo Gallery'],
-        },
+const footerData: {title: string, links: { text: string, url: string }[]}[] = [
+    {
+        title: 'Quick Links',
+        links: [
+            {'text': 'About Conference', 'url': 'about'},
+            {'text': 'Our Speakers', 'url': 'speakers'},
+            {'text': 'Event Schedule', 'url': 'speakers'}
+        ]
+    },
+    {
+        title: 'Policies',
+        links: [{'text': 'Cookie Policy', 'url': 'cookie-policy'}, {'text': 'Privacy Policy', 'url': 'privacy-policy'}]
+    }
     ]
----
 
+---
 <footer class="p-custom">
     <div class="border-t border-t-dark dark:border-t-muted container-custom gap-10 grid grid-cols-1 md:grid-cols-4 py-xl">
         <div
@@ -21,13 +30,9 @@ const footerData: {title: string, links: string[]}[] = [
         {footerData.map((item, index) => (
                 <div class="flex flex-col items-start space-y-4">
                     <h3 class="text-lg font-bold dark:text-light">{item.title}</h3>
-                    {item.links.map(link => (<p class="text-sm mt-1 opacity-90 dark:text-light">{link}</p>))}
+                    {item.links.map(link => (<a href={link.url} class="text-sm mt-1 opacity-90 dark:text-light">{link.text}</a>))}
                 </div>
         ))}
-        <div class="flex flex-col items-start space-y-6">
-            <h3 class="text-lg font-bold dark:text-light">Contact Us</h3>
-            <button class="btn-primary w-30 px-2 text-xs">Send Message</button>
-        </div>
         <div class="flex flex-col items-start space-y-6">
             <h3 class="text-lg font-bold dark:text-light">Follow Us</h3>
             <ul class="flex justify-start space-x-2">

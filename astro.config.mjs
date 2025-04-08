@@ -6,6 +6,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 import icon from 'astro-icon'
 
+export const basePath = '/socrates-2025'
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), icon()],
@@ -14,5 +16,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  base: '/socrates-2025',
+  base: basePath,
 })

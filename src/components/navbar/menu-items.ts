@@ -1,3 +1,5 @@
+import { basePath } from '../../../astro.config.mjs'
+
 export type MenuItem = {
   label: string
   url: string
@@ -6,7 +8,7 @@ export type MenuItem = {
 }
 
 export const menuItems: MenuItem[] = [
-  { label: 'About', url: '/' },
-  { label: 'Schedule', url: '/servizi/' },
-  { label: 'Sponsors', url: '/approccio/' },
+  { label: 'About', url: `${basePath}/about` },
+  { label: 'Schedule', url: `${basePath}/servizi/` },
+  { label: 'Sponsors', url: `${basePath}/approccio/` },
 ]
