@@ -1,5 +1,3 @@
-import { basePath } from '../../../astro.config.mjs'
-
 export type MenuItem = {
   label: string
   url: string
@@ -7,8 +5,10 @@ export type MenuItem = {
   variant?: 'chip' | 'link'
 }
 
+import { BASE_PATH } from '../../../astro.config.mjs'
+
 export const menuItems: MenuItem[] = [
-  { label: 'About', url: `${basePath}/about` },
-  { label: 'Schedule', url: `${basePath}/servizi/` },
-  { label: 'Sponsors', url: `${basePath}/approccio/` },
+  { label: 'About', url: `${BASE_PATH}/about` },
+  { label: 'Schedule', url: `${BASE_PATH}/servizi` },
+  { label: 'Sponsors', url: `${BASE_PATH}/approccio` },
 ]
