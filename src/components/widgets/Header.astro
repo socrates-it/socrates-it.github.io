@@ -43,13 +43,14 @@ const {
 
 const currentPath = Astro.url.pathname;
 const isHome = currentPath === '/socrates-2025/';
----
 
+---
 <header
         class:list={[
             'z-40 fixed py-xs flex-none mx-auto w-full px-custom',
             'border-b border-gray-50/0 transition-all duration-500 ease-in-out',
-            'h-20 text-light bg-transparent dark:bg-transparent'
+            'h-20 text-light',
+            isHome ? 'bg-transparent dark:bg-transparent' : 'bg-primary dark:bg-primary',
         ]}
         id={id}
 >
@@ -62,17 +63,6 @@ const isHome = currentPath === '/socrates-2025/';
     // Function to handle scroll event and toggle the background
     const header = document.querySelector('header');
     const isHome = window.location.pathname === '/socrates-2025';
-
-    if (isHome) {
-        header?.classList.add('bg-transparent');
-        header?.classList.add('dark:bg-transparent');
-        header?.classList.remove('bg-primary');
-        header?.classList.remove('dark:bg-contrast');
-    } else {
-        header?.classList.add('bg-primary');
-        header?.classList.remove('bg-transparent');
-        header?.classList.remove('dark:bg-transparent');
-    }
 
     window.addEventListener('scroll', () => {
         if (!isHome) return; // Exit early if not on home page
