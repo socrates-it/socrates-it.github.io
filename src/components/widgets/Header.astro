@@ -5,7 +5,6 @@ import Button from '~/components/ui/Button.astro';
 
 import type { CallToAction } from '~/types';
 import Navigation from "../navbar/Navigation.astro";
-import {BASE_PATH} from "../navbar/menu-items";
 
 interface Link {
     text?: string;
@@ -42,15 +41,13 @@ const {
     position = 'center',
 } = Astro.props;
 
-const isHome = Astro.url.pathname === `${BASE_PATH}/`;
 ---
 
 <header
         class:list={[
             'z-40 fixed py-xs flex-none mx-auto w-full px-custom',
             'border-b border-gray-50/0 transition-all duration-500 ease-in-out',
-            'h-20',
-            isHome ? 'bg-transparent dark:bg-transparent text-light' : 'bg-primary text-light',
+            'h-20 text-light bg-transparent dark:bg-transparent'
         ]}
         id={id}
 >
@@ -61,24 +58,27 @@ const isHome = Astro.url.pathname === `${BASE_PATH}/`;
 
 <script type="text/javascript">
     // Function to handle scroll event and toggle the background
+    const header = document.querySelector('header');
+    const isHome = window.location.pathname === '/socrates-2025';
+
+    if (isHome) {
+        header.classList.add('bg-transparent');
+        header.classList.add('dark:bg-transparent');
+        header.classList.remove('bg-primary');
+        header.classList.remove('dark:bg-contrast');
+    } else {
+        header.classList.add('bg-primary');
+        header.classList.remove('bg-transparent');
+        header.classList.remove('dark:bg-transparent');
+    }
+
     window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        const isHome = window.location.pathname === '/socrates-2025';
+        if (!isHome) return; // Exit early if not on home page
 
-        if (!isHome) return;
-
-        if (window.scrollY > 200) {
-            // Add 'bg-primary' class when scrolled down more than 50px
-            header.classList.add('bg-primary');
-            header.classList.add('dark:bg-contrast');
-            header.classList.remove('bg-transparent');
-            header.classList.remove('dark:bg-transparent');
-        } else {
-            // Add 'bg-transparent' class when at the top of the page
-            header.classList.add('bg-transparent');
-            header.classList.add('dark:bg-transparent');
-            header.classList.remove('bg-primary');
-            header.classList.remove('dark:bg-black');
-        }
+        const scrolledDown = window.scrollY > 200;
+        header.classList.toggle('bg-primary', scrolledDown);
+        header.classList.toggle('dark:bg-contrast', scrolledDown);
+        header.classList.toggle('bg-transparent', !scrolledDown);
+        header.classList.toggle('dark:bg-transparent', !scrolledDown);
     });
 </script>
