@@ -30,7 +30,7 @@ export default function Partners() {
           <a key={index} href={partner.url}>
             <div className={cn('dark:bg-light-contrast dark:border-light dark:text-light', 'flex items-center justify-center ')}>
               <div
-                className={cn('rounded-4xl size-16 sm:size-20 bg-contain', 'bg-cover')}
+                className={cn('rounded-4xl size-16 sm:size-20 bg-contain bg-center bg-no-repeat')}
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/${partner.image})` }}
               />
             </div>

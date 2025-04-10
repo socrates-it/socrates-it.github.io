@@ -14,5 +14,6 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
+  site: 'https://doubleloop-io.github.io',
   base: '/socrates-2025',
 })
