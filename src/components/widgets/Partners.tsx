@@ -22,19 +22,23 @@ const partners = [
 
 export default function Partners() {
   return (
-    <div className="p-custom text-center bg-secondary">
+    <div className="p-custom text-center bg-soft dark:bg-contrast">
       <SectionIntro title={'Partners'} description={'Global Grand Event on Digital Design\n'} />
 
-      <div className="grid grid-cols-3 p-md bg-light rounded-lg md:grid-cols-4 gap-md container-custom justify-items-center">
+      <div className="grid grid-cols-3 rounded-lg md:grid-cols-4 lg:grid-cols-5 gap-xl container-custom justify-items-center">
         {partners.map((partner, index) => (
-          <a key={index} href={partner.url}>
-            <div className={cn('dark:bg-light-contrast dark:border-light dark:text-light', 'flex items-center justify-center ')}>
+          <a key={index} href={partner.url} className="size-20">
+            <div
+              className={cn(
+                'bg-light size-full border border-light-contrast rounded-lg shadow-md dark:bg-light-contrast dark:border-light dark:text-light',
+                'flex items-center justify-center ',
+              )}>
               <div
                 className={cn('rounded-4xl size-16 sm:size-20 bg-contain bg-center bg-no-repeat')}
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/${partner.image})` }}
               />
             </div>
-            <div className="italic text-xs sm:text-sm">{partner.name}</div>
+            <div className="italic mt-xs text-xs sm:text-sm">{partner.name}</div>
           </a>
         ))}
       </div>
