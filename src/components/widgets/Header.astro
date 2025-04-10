@@ -41,6 +41,7 @@ const {
     position = 'center',
 } = Astro.props;
 
+const currentPath = Astro.url.pathname;
 ---
 
 <header
@@ -50,36 +51,35 @@ const {
             'h-20 text-light bg-transparent dark:bg-transparent'
         ]}
         id={id}
-        client:load
 >
         <div class="container-custom py-2.5 ">
             <Navigation />
         </div>
 </header>
 
-<script type="module">
+<script>
     // Function to handle scroll event and toggle the background
     const header = document.querySelector('header');
     const isHome = window.location.pathname === '/socrates-2025';
 
     if (isHome) {
-        header.classList.add('bg-transparent');
-        header.classList.add('dark:bg-transparent');
-        header.classList.remove('bg-primary');
-        header.classList.remove('dark:bg-contrast');
+        header?.classList.add('bg-transparent');
+        header?.classList.add('dark:bg-transparent');
+        header?.classList.remove('bg-primary');
+        header?.classList.remove('dark:bg-contrast');
     } else {
-        header.classList.add('bg-primary');
-        header.classList.remove('bg-transparent');
-        header.classList.remove('dark:bg-transparent');
+        header?.classList.add('bg-primary');
+        header?.classList.remove('bg-transparent');
+        header?.classList.remove('dark:bg-transparent');
     }
 
     window.addEventListener('scroll', () => {
         if (!isHome) return; // Exit early if not on home page
 
         const scrolledDown = window.scrollY > 200;
-        header.classList.toggle('bg-primary', scrolledDown);
-        header.classList.toggle('dark:bg-contrast', scrolledDown);
-        header.classList.toggle('bg-transparent', !scrolledDown);
-        header.classList.toggle('dark:bg-transparent', !scrolledDown);
+        header?.classList.toggle('bg-primary', scrolledDown);
+        header?.classList.toggle('dark:bg-contrast', scrolledDown);
+        header?.classList.toggle('bg-transparent', !scrolledDown);
+        header?.classList.toggle('dark:bg-transparent', !scrolledDown);
     });
 </script>
