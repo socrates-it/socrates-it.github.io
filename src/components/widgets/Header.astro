@@ -40,16 +40,12 @@ const {
     position = 'center',
 } = Astro.props;
 
-const currentPath = Astro.url.pathname;
-const isHome = currentPath === '/socrates-2025/';
-console.log(isHome)
 ---
 <header
         class:list={[
             'z-40 fixed py-xs flex-none mx-auto w-full px-custom',
             'border-b border-gray-50/0 transition-all duration-500 ease-in-out',
-            'h-20 text-light',
-            isHome ? 'bg-transparent dark:bg-transparent' : 'bg-primary dark:bg-primary',
+            'h-20 text-light bg-transparent dark:bg-transparent',
         ]}
         id={id}
 >
@@ -58,19 +54,30 @@ console.log(isHome)
         </div>
 </header>
 
-<script>
-    // Function to handle scroll event and toggle the background
-    const header = document.querySelector('header');
-    const isHome = window.location.pathname === '/socrates-2025/';
-    console.log(window.location.pathname);
-    console.log('isHome (client-side):', isHome);
-    window.addEventListener('scroll', () => {
-        if (!isHome) return; // Exit early if not on home page
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+        const header = document.querySelector('header');
+        const isHome = window.location.pathname === '/socrates-2025/';
 
-        const scrolledDown = window.scrollY > 200;
-        header?.classList.toggle('bg-primary', scrolledDown);
-        header?.classList.toggle('dark:bg-contrast', scrolledDown);
-        header?.classList.toggle('bg-transparent', !scrolledDown);
-        header?.classList.toggle('dark:bg-transparent', !scrolledDown);
+        if (!isHome) {
+            header.classList.remove('bg-transparent', 'dark:bg-transparent');
+            header.classList.add('bg-primary', 'dark:bg-primary');
+        } else {
+            // Initial state on load
+            header.classList.add('bg-transparent', 'dark:bg-transparent');
+            header.classList.remove('bg-primary', 'dark:bg-primary');
+
+            // Update on scroll
+            const onScroll = () => {
+                const scrolledDown = window.scrollY > 200;
+                header.classList.toggle('bg-primary', scrolledDown);
+                header.classList.toggle('dark:bg-contrast', scrolledDown);
+                header.classList.toggle('bg-transparent', !scrolledDown);
+                header.classList.toggle('dark:bg-transparent', !scrolledDown);
+            };
+
+            window.addEventListener('scroll', onScroll);
+            onScroll(); // Trigger once to set initial state
+        }
     });
 </script>
