@@ -4,9 +4,9 @@ import { MdiLightHeart, MynauiChevronDownCircle, PhImagesThin, WpfGroup } from '
 import { cn } from '~/common/css.ts'
 
 const accordionData = [
-  { icon: <MdiLightHeart />, title: 'Get Inspired', content: 'Explore creative ideas and insights to spark your imagination.' },
-  { icon: <WpfGroup />, title: 'Meet New Faces', content: 'Connect with like-minded professionals and expand your network.' },
-  { icon: <PhImagesThin />, title: 'Free Swags', content: 'Enjoy exclusive merchandise and gifts from our sponsors.' },
+  { icon: <MdiLightHeart />, title: 'Where do we meet?', content: 'Explore creative ideas and insights to spark your imagination.' },
+  { icon: <WpfGroup />, title: 'Who we are?', content: 'Connect with like-minded professionals and expand your network.' },
+  { icon: <PhImagesThin />, title: 'How can you contact us?', content: 'Enjoy exclusive merchandise and gifts from our sponsors.' },
 ]
 
 export default function Accordion() {
