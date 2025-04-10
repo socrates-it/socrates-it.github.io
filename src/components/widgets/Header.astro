@@ -1,4 +1,3 @@
-
 ---
 import { Icon } from 'astro-icon/components';
 import Button from '~/components/ui/Button.astro';
@@ -43,7 +42,7 @@ const {
 
 const currentPath = Astro.url.pathname;
 const isHome = currentPath === '/socrates-2025/';
-
+console.log(isHome)
 ---
 <header
         class:list={[
@@ -63,7 +62,8 @@ const isHome = currentPath === '/socrates-2025/';
     // Function to handle scroll event and toggle the background
     const header = document.querySelector('header');
     const isHome = window.location.pathname === '/socrates-2025';
-
+    console.log(window.location.pathname);
+    console.log('isHome (client-side):', isHome);
     window.addEventListener('scroll', () => {
         if (!isHome) return; // Exit early if not on home page
 
