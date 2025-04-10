@@ -115,3 +115,27 @@ export function RiBlueskyFill(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
+
+export function IconParkSolidDoubleBed(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} viewBox="0 0 48 48" {...props}>
+      <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4}>
+        <path d="M8 12a3 3 0 0 1 3-3h26a3 3 0 0 1 3 3v11H8zM6 35v4m36-4v4"></path>
+        <path fill="currentColor" d="M20 18h-6a3 3 0 0 0-3 3v2h12v-2a3 3 0 0 0-3-3m14 0h-6a3 3 0 0 0-3 3v2h12v-2a3 3 0 0 0-3-3"></path>
+        <path d="M4 26a3 3 0 0 1 3-3h34a3 3 0 0 1 3 3v9H4z"></path>
+      </g>
+    </svg>
+  )
+}
+
+export function IconParkSolidSingleBed(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} viewBox="0 0 48 48" {...props}>
+      <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4}>
+        <path d="M8 12a3 3 0 0 1 3-3h26a3 3 0 0 1 3 3v11H8zM6 35v4m36-4v4"></path>
+        <path fill="currentColor" d="M29 18H19a3 3 0 0 0-3 3v2h16v-2a3 3 0 0 0-3-3"></path>
+        <path d="M4 26a3 3 0 0 1 3-3h34a3 3 0 0 1 3 3v9H4z"></path>
+      </g>
+    </svg>
+  )
+}

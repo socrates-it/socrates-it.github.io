@@ -31,7 +31,7 @@ export default function Partners() {
             <div
               className={cn(
                 'bg-light size-full border border-light-contrast rounded-lg shadow-md dark:bg-light-contrast dark:border-light dark:text-light',
-                'flex items-center justify-center ',
+                'flex items-center justify-center p-2',
               )}>
               <div
                 className={cn('rounded-4xl size-16 sm:size-20 bg-contain bg-center bg-no-repeat')}

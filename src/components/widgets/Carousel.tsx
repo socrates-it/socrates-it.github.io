@@ -5,15 +5,15 @@ import { cn } from '~/common/css.ts'
 
 const images = [
   {
-    src: '/images/canyon.jpg',
+    src: '/images/socrates-meeting.jpg',
     alt: 'canyon.jpg',
   },
   {
-    src: '/images/fiori.jpg',
+    src: '/images/socrates-meeting-2.jpg',
     alt: 'fiori.jpg',
   },
   {
-    src: '/images/foresta.jpg',
+    src: '/images/socrates-meeting-4.jpg',
     alt: 'foresta.jpg',
   },
 ]
