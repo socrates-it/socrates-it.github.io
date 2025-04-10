@@ -1,4 +1,4 @@
-export const BASE_PATH = process.env.BASE_PATH || '/socrates-2025'
+export const BASE_PATH = '/socrates-2025'
 
 export type MenuItem = {
   label: string
