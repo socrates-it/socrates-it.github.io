@@ -50,24 +50,23 @@ const Carousel = () => {
               }}>
               <div
                 className={cn(
-                  'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
+                  'absolute -bottom-8 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
                   'text-center rounded-xl',
-                  'space-y-4 sm:space-y-6 p-custom w-full text-xs sm:text-lg',
+                  'space-y-4 sm:space-y-6 w-full text-xs sm:text-lg',
                   'opacity-100',
                 )}>
-                <div className="container-custom space-y-8">
+                <div className="bg-primary space-y-8">
                   <div className="w-50 sm:w-100 mx-auto bg-light dark:bg-contrast dark:text-light rounded-xl space-y-2 font-bold p-4">
-                    <p>Design Thinking Conference</p>
-                    <p className="text-subtitle font-normal">2025 edition coming soon</p>
+                    <p className="font-bold">SoCraTes 2025 edition coming soon</p>
                   </div>
-                  <div className="flex justify-between items-center space-x-4 mx-auto w-50 sm:w-75 h-lg">
-                    <button onClick={() => prevSlide()} className="btn-primary text-xs h-full w-30 rounded-lg">
-                      get ticket
-                    </button>
-                    <button onClick={() => nextSlide()} className="btn-primary text-xs h-full w-30 rounded-lg">
-                      explore
-                    </button>
-                  </div>
+                  {/*<div className="flex justify-between items-center space-x-4 mx-auto w-50 sm:w-75 h-lg">*/}
+                  {/*  <button onClick={() => prevSlide()} className="btn-primary text-xs h-full w-30 rounded-lg">*/}
+                  {/*    get ticket*/}
+                  {/*  </button>*/}
+                  {/*  <button onClick={() => nextSlide()} className="btn-primary text-xs h-full w-30 rounded-lg">*/}
+                  {/*    explore*/}
+                  {/*  </button>*/}
+                  {/*</div>*/}
                 </div>
               </div>
             </div>

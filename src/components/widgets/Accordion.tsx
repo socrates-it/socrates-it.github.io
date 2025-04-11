@@ -31,10 +31,7 @@ export default function Accordion() {
                 { 'border-b-primary dark:border-b-light-contrast': openIndex === index, 'border-b-transparent dark:border-b-transparent': openIndex !== index },
               )}
               onClick={() => toggleAccordion(index)}>
-              <div className="flex items-center justify-between">
-                <div className="mr-2 text-primary-dark dark:text-secondary">{item.icon}</div>
-                {item.title}
-              </div>
+              <div className="flex items-center justify-between">{item.title}</div>
               <div className="size-4 flex items-center justify-between">
                 <div className="w-full h-0.5 bg-default dark:bg-light-contrast" />
                 <div

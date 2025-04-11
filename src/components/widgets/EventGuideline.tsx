@@ -10,7 +10,7 @@ const guidelines = [
   },
   {
     img: '/images/action.jpg',
-    title: 'action',
+    title: 'retreat',
     description:
       'The event will be run as a non-profit, low-cost event. It will be much like a retreat. We will be there for 48 hours to collaborate and share ideas in a self-organized Open Space. There will be hands-on coding sessions, sessions focused on discussion, interactive talks and lots more.\n' +
       '\n',
@@ -19,7 +19,7 @@ const guidelines = [
     img: '/images/fun.jpg',
     title: 'fun',
     description:
-      'We will not only spend the days together but also the nights. And – believe it or not – programmers are a great company! There will be be lots of opportunities to spend your time. Starting with simple chilling over hiking and biking, playing games, hanging around, talking and laughing.',
+      'We will not only spend the days together but also the nights. And – believe it or not – programmers are a great company! There will be be lots of opportunities to spend your time. Starting with simple chilling over walking, playing games, hanging around, talking and laughing.',
   },
 ]
 
@@ -34,7 +34,7 @@ const EventGuideline = () => {
     <section className="text-default p-custom">
       <SectionIntro title={'Event Guideline'} description={'Global Grand Event on Digital Design'} />
 
-      <div className="bg-highlight rounded-lg container-custom">
+      <div className="bg-highlight rounded-lg max-w-6xl mx-auto">
         {guidelines.map((guideline, index) => {
           const isFirst = index === 0
           const isLast = index === guidelines.length - 1

@@ -3,14 +3,18 @@ import {BASE_PATH, menuItems} from "./menu-items"
 import MobileMenu from "./MobileMenu";
 import DesktopMenu from "./DesktopMenu.astro";
 import ThemeIcon from "./ThemeIcon.astro";
+import { Image } from 'astro:assets';
+import socratesLogo from '../../../public/images/socrates-logo.png';
 
 ---
 
 <nav class="flex items-center justify-between">
     <a href={`${BASE_PATH}`} aria-label="Go to homepage">
-        <div>Logo</div>
+        <div class="size-16 md:size-20 bg-no-repeat bg-contain bg-center"
+             style={`background-image: url(${socratesLogo.src});`}
+        />
     </a>
-    <div class="flex items-center justify-between">
+    <div class="flex items-center bg-primary rounded justify-between">
         <ThemeIcon/>
         <div class="md:hidden">
             <MobileMenu items={menuItems} client:media="(max-width:767px)"/>
