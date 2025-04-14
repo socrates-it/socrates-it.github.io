@@ -7,19 +7,19 @@ import SectionIntro from '~components/ui/SectionIntro.tsx'
 
 const projects = [
   {
-    title: 'Progetto Alpha',
+    title: 'Our Values',
     description: "Un'innovativa piattaforma di e-learning con funzionalità avanzate.",
     src: '/images/canyon.jpg',
     alt: 'canyon.jpg',
   },
   {
-    title: 'Progetto Beta',
+    title: 'Open Space',
     description: "Un'app mobile per la gestione del tempo e della produttività.",
     src: '/images/fiori.jpg',
     alt: 'fiori.jpg',
   },
   {
-    title: 'Progetto Gamma',
+    title: 'Code of Conduct',
     description: 'Un sito web interattivo per la visualizzazione di dati in tempo reale.',
     src: '/images/foresta.jpg',
     alt: 'foresta.jpg',

@@ -47,27 +47,7 @@ const Carousel = () => {
                 backgroundImage: `url(${import.meta.env.BASE_URL}/${src})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
-              }}>
-              <div
-                className={cn(
-                  'absolute bg-light/80 dark:bg-contrast -bottom-5 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
-                  'text-center',
-                  'space-y-4 sm:space-y-6 w-full text-lg md:text-2xl',
-                  'opacity-100',
-                )}>
-                <div className="w-80 sm:w-100 mx-auto text-primary rounded-xl p-1">
-                  <p className="italic">SoCraTes 2025 edition coming soon</p>
-                </div>
-                {/*<div className="flex justify-between items-center space-x-4 mx-auto w-50 sm:w-75 h-lg">*/}
-                {/*  <button onClick={() => prevSlide()} className="btn-primary text-xs h-full w-30 rounded-lg">*/}
-                {/*    get ticket*/}
-                {/*  </button>*/}
-                {/*  <button onClick={() => nextSlide()} className="btn-primary text-xs h-full w-30 rounded-lg">*/}
-                {/*    explore*/}
-                {/*  </button>*/}
-                {/*</div>*/}
-              </div>
-            </div>
+              }}></div>
           </Fragment>
         ))}
       </div>
@@ -121,6 +101,26 @@ const Carousel = () => {
       {/*    </button>*/}
       {/*  ))}*/}
       {/*</div>*/}
+      <div
+        className={cn(
+          'absolute bg-primary/80 dark:bg-contrast -bottom-11.5 md:-bottom-22 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
+          'text-center',
+          'space-y-4 sm:space-y-6 w-full text-xl md:text-4xl',
+          'opacity-100',
+        )}>
+        <div className="w-50 sm:w-80 mx-auto text-light rounded-xl py-4 md:py-10">
+          <p className="font-bold h-full mb-1 md:mb-4">SoCraTes 2025</p>
+          <p className="text-md font-thin h-full">COMING SOON</p>
+        </div>
+        {/*<div className="flex justify-between items-center space-x-4 mx-auto w-50 sm:w-75 h-lg">*/}
+        {/*  <button onClick={() => prevSlide()} className="btn-primary text-xs h-full w-30 rounded-lg">*/}
+        {/*    get ticket*/}
+        {/*  </button>*/}
+        {/*  <button onClick={() => nextSlide()} className="btn-primary text-xs h-full w-30 rounded-lg">*/}
+        {/*    explore*/}
+        {/*  </button>*/}
+        {/*</div>*/}
+      </div>
     </div>
   )
 }
