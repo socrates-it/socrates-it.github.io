@@ -12,14 +12,14 @@ const { items } = Astro.props
 
 <ul
     class={cn(
-        "flex flex-wrap items-center justify-end mr-sm",
-        "md:gap-x-4",
+        "flex flex-wrap items-center justify-end",
+        "md:gap-x-6",
         "lg:gap-x-8",
     )}
 >
     {
         items.map((x) => (
-            <li class="text-sm p-6">
+            <li class="text-sm text-highlight dark:text-light-contrast font-bold hover:text-light transition duration-300">
                 <MenuLink client:load item={x} />
             </li>
         ))
