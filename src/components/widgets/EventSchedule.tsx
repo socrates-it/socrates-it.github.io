@@ -6,43 +6,33 @@ const eventData: Record<
   {
     time: string
     title: string
-    speaker: string
     description: string
-    location: string
   }[]
 > = {
   'October 2': [
     {
-      time: '10am - 12:30pm',
-      title: 'Web Design Principles and Best Practices',
-      speaker: 'David Warner',
-      description: 'Consectetur adipiscing elit. Quod distinctio impedit sint accusantium ducimus...',
-      location: 'Hall 1, Building A, Golden Street, South Africa',
+      time: '3:00 pm',
+      title: 'Welcome In!',
+      description: 'We kick off SoCraTes IT with a good beer and networking activities',
     },
   ],
   'October 3': [
     {
       time: '9am - 11:30am',
       title: 'Advanced UI/UX Design Techniques',
-      speaker: 'Sarah Johnson',
       description: 'Exploring the latest trends in UI/UX design with a hands-on approach...',
-      location: 'Hall 3, Innovation Hub, London',
     },
     {
       time: '2pm - 4pm',
       title: 'Typography in Digital Media',
-      speaker: 'Mark Spencer',
       description: 'How typography impacts user experience and readability...',
-      location: 'Room 12, Design Center, New York',
     },
   ],
   'October 4': [
     {
       time: '11am - 1pm',
       title: 'Color Psychology in Branding',
-      speaker: 'Jessica Lee',
       description: 'Understanding the role of colors in brand perception...',
-      location: 'Main Auditorium, Paris Expo',
     },
   ],
   'October 5': [
@@ -88,6 +78,7 @@ const EventSchedule = () => {
           {eventData[selectedDate].map((event, index) => (
             <div key={index} className="bg-light p-6 mb-4 rounded-lg shadow-lg transition-colors duration-300">
               <div className="flex items-center gap-4">
+                <div className="min-w-12 size-12 bg-gray-500 rounded-full"></div>
                 <div className="space-y-4 sm:space-y-2">
                   <p className="text-sm text-gray-400">{event.time}</p>
                   <h3 className="text-lg font-bold">{event.title}</h3>
@@ -95,9 +86,6 @@ const EventSchedule = () => {
                 </div>
               </div>
               <p className="text-gray-400 mt-3">{event.description}</p>
-              <p className="mt-2">
-                <span className="bg-secondary rounded font-semibold text-white px-2 ">Location: {event.location}</span>
-              </p>
             </div>
           ))}
         </div>
