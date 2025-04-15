@@ -21,7 +21,7 @@ export default function Sponsors() {
               className="shadow-md dark:shadow-light/20 border bg-light border-light-contrast rounded-lg p-6 flex justify-center items-center h-40">
               <img src={sponsor.image} alt={sponsor.name} className="max-h-full max-w-full opacity-75" />
             </div>
-            <div className="italic text-xs sm:text-sm">{sponsor.name}</div>
+            <div className="italic text-xs sm:text-sm dark:text-light">{sponsor.name}</div>
           </div>
         ))}
       </div>

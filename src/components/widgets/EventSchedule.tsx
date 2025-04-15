@@ -11,7 +11,7 @@ const eventData: Record<
     location: string
   }[]
 > = {
-  '14 February': [
+  'October 2': [
     {
       time: '10am - 12:30pm',
       title: 'Web Design Principles and Best Practices',
@@ -20,7 +20,7 @@ const eventData: Record<
       location: 'Hall 1, Building A, Golden Street, South Africa',
     },
   ],
-  '15 February': [
+  'October 3': [
     {
       time: '9am - 11:30am',
       title: 'Advanced UI/UX Design Techniques',
@@ -36,7 +36,7 @@ const eventData: Record<
       location: 'Room 12, Design Center, New York',
     },
   ],
-  '16 February': [
+  'October 4': [
     {
       time: '11am - 1pm',
       title: 'Color Psychology in Branding',
@@ -45,7 +45,7 @@ const eventData: Record<
       location: 'Main Auditorium, Paris Expo',
     },
   ],
-  '17 February': [
+  'October 5': [
     {
       time: '10am - 12:30pm',
       title: 'Web Design Principles and Best Practices',
@@ -64,7 +64,7 @@ const eventData: Record<
 }
 
 const EventSchedule = () => {
-  const [selectedDate, setSelectedDate] = useState('17 February')
+  const [selectedDate, setSelectedDate] = useState('October 2')
 
   return (
     <div className="min-h-screen p-custom">
@@ -76,7 +76,7 @@ const EventSchedule = () => {
           {Object.keys(eventData).map(date => (
             <button
               key={date}
-              className={`block w-full p-4 text-left font-semibold transition-colors duration-300 cursor-pointer hover:bg-highlight ${selectedDate === date ? 'bg-primary text-white hover:bg-primary' : 'bg-soft text-gray-800'}`}
+              className={`block w-full p-4 text-left font-semibold transition-colors duration-300 cursor-pointer hover:bg-highlight dark:hover:bg-gray-400 ${selectedDate === date ? 'bg-primary text-white hover:bg-primary dark:bg-lighter-contrast dark:hover:bg-lighter-contrast' : 'bg-soft text-gray-800'}`}
               onClick={() => setSelectedDate(date)}>
               {date}
             </button>
@@ -88,7 +88,6 @@ const EventSchedule = () => {
           {eventData[selectedDate].map((event, index) => (
             <div key={index} className="bg-light p-6 mb-4 rounded-lg shadow-lg transition-colors duration-300">
               <div className="flex items-center gap-4">
-                <div className="min-w-12 size-12 bg-gray-500 rounded-full"></div>
                 <div className="space-y-4 sm:space-y-2">
                   <p className="text-sm text-gray-400">{event.time}</p>
                   <h3 className="text-lg font-bold">{event.title}</h3>

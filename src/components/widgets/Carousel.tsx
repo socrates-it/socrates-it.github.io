@@ -103,7 +103,7 @@ const Carousel = () => {
       {/*</div>*/}
       <div
         className={cn(
-          'absolute bg-primary/80 dark:bg-contrast -bottom-11.5 md:-bottom-22 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
+          'absolute bg-primary/80 -bottom-11.5 md:-bottom-22 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
           'text-center',
           'space-y-4 sm:space-y-6 w-full text-xl md:text-4xl',
           'opacity-100',

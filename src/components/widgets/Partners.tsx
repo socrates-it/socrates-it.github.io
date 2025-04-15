@@ -38,7 +38,7 @@ export default function Partners() {
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/${partner.image})` }}
               />
             </div>
-            <div className="italic text-xs sm:text-sm">{partner.name}</div>
+            <div className="italic text-xs sm:text-sm dark:text-light">{partner.name}</div>
           </a>
         ))}
       </div>

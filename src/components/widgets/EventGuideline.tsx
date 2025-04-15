@@ -34,7 +34,7 @@ const EventGuideline = () => {
     <section className="text-default p-custom">
       <SectionIntro title={'WHAT IS SoCraTes?'} />
 
-      <div className="bg-secondary rounded-lg max-w-6xl mx-auto">
+      <div className="bg-secondary dark:bg-light-contrast rounded-lg max-w-6xl mx-auto">
         {guidelines.map((guideline, index) => {
           const isFirst = index === 0
           const isLast = index === guidelines.length - 1
@@ -43,7 +43,7 @@ const EventGuideline = () => {
             <div key={index} className={`relative ${isFirst ? 'pt-8 pb-8' : isLast ? 'pt-8 pb-8' : 'pt-8 pb-8'} rounded`}>
               <div className={`flex flex-col-reverse md:flex-row-reverse items-center overflow-hidden md:h-[200px] `}>
                 <div className="md:w-3/5 flex flex-col px-lg md:px-0 md:pr-md h-full ">
-                  <h2 className="mb-4 italic text-md lg:text-lg text-primary-dark capitalize">{guideline.title}</h2>
+                  <h2 className="mb-4 italic text-md lg:text-lg text-primary-dark dark:text-contrast capitalize">{guideline.title}</h2>
                   <p className="text-light text-sm mb-6 sm:mb-0">{guideline.description}</p>
                 </div>
 
