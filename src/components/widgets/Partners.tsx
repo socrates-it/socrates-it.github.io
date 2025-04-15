@@ -23,7 +23,7 @@ const partners = [
 export default function Partners() {
   return (
     <div className="p-custom text-center bg-soft dark:bg-contrast">
-      <SectionIntro title={'Partners'} description={'Global Grand Event on Digital Design\n'} />
+      <SectionIntro title={'PARTNERS'} />
 
       <div className="grid grid-cols-3 rounded-lg md:grid-cols-4 lg:grid-cols-5 gap-x-0 gap-y-24 container-custom justify-items-center mb-xl md:mb-0">
         {partners.map((partner, index) => (

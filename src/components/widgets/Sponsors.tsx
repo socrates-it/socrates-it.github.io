@@ -11,7 +11,7 @@ const sponsors = [
 export default function Sponsors() {
   return (
     <div className="p-custom text-center bg-soft dark:bg-contrast">
-      <SectionIntro title={'Sponsors'} description={'Global Grand Event on Digital Design\n'} />
+      <SectionIntro title={'SPONSORS'} />
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-md container-custom pb-20">
         {sponsors.map((sponsor, index) => (
@@ -36,7 +36,9 @@ export default function Sponsors() {
       </div>
 
       <div className="mt-10">
-        <button className="btn-primary">BECOME A SPONSOR</button>
+        <button className="btn-primary">
+          <a href="mailto:socrates-it@googlegroups.com">BECOME A SPONSOR</a>
+        </button>
       </div>
     </div>
   )

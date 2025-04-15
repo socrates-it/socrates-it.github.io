@@ -161,6 +161,16 @@
       visibility: hidden;
     }
   }
+
+  @keyframes infinite-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
 }
 
 /* TODO: investigate if useful and how to substitute */
@@ -265,4 +275,53 @@
 
 .dd *:first-child {
   margin-top: 0;
+}
+
+.scroller {
+  /* This could be further customized if needed */
+}
+
+.scroller__inner {
+  /* Default state when not animated: allow wrapping */
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* When animated, hide overflow and apply mask gradients */
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, white 20%, white 80%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, white 20%, white 80%, transparent 100%);
+}
+
+/* Force inner content to a single line and animate scrolling */
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+}
+
+/* Animation direction based on data attribute */
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+/* Animation speed based on data attribute */
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+/* Optional: Styling for tag list items */
+.tag-list li {
+  /* You can apply Tailwind classes inline as well, but here’s an example */
 }

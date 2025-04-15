@@ -68,7 +68,7 @@ const EventSchedule = () => {
 
   return (
     <div className="min-h-screen p-custom">
-      <SectionIntro title={'Event Schedules'} description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'} />
+      <SectionIntro title={'EVENT SCHEDULE'} />
 
       <div className="flex gap-10 container-custom flex-col sm:flex-row">
         {/* Sidebar */}

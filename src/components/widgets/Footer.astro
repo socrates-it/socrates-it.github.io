@@ -4,6 +4,7 @@ import {MajesticonsOpen} from "../../assets/icons/Icons";
 import React from "react";
 import { MdiGithub, MdiLinkedin, RiBlueskyFill } from '~/assets/icons/Icons.tsx'
 import {BASE_PATH} from "../navbar/menu-items";
+import socratesLogo from '../../../public/images/socrates-logo.png';
 
 const footerData: {title: string, links: { text: string, url: string }[]}[] = [
     {
@@ -23,10 +24,11 @@ const footerData: {title: string, links: { text: string, url: string }[]}[] = [
 ---
 <footer class="p-custom">
     <div class="border-t border-t-dark dark:border-t-muted container-custom gap-10 grid grid-cols-1 md:grid-cols-4 py-xl">
-        <div
-            class="object-cover w-42 h-10 bg-no-repeat -translate-y-1"
-            style={{ backgroundImage: `url(${astro.src})` }}
-        />
+        <a href={`${BASE_PATH}`} aria-label="Go to homepage">
+            <div class="size-16 md:size-20 bg-no-repeat bg-contain bg-center"
+                 style={`background-image: url(${socratesLogo.src});`}
+            />
+        </a>
         {footerData.map((item, index) => (
                 <div class="flex flex-col items-start space-y-4">
                     <h3 class="text-lg font-bold dark:text-light">{item.title}</h3>

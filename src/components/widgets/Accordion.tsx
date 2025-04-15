@@ -18,7 +18,7 @@ export default function Accordion() {
 
   return (
     <div className="container-custom py-custom px-xl sm:px-20 md:px-40 dark:bg-dark">
-      <SectionIntro title={'About This Events'} description={'Global Grand Event on Digital Design'} />
+      <SectionIntro title={'FAQs'} />
       <div>
         {accordionData.map((item, index) => (
           <div key={index} className="shadow-lg group">
