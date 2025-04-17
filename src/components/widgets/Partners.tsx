@@ -16,7 +16,7 @@ const partners = [
   { name: 'Socrates Germany', image: 'images/socrates-germany.png', alt: 'socrates-germany', url: 'https://www.socrates-conference.de/home' },
   { name: 'Socrates France', image: 'images/socrates-france.png', alt: 'socrates-france', url: 'https://socrates-fr.github.io/' },
   { name: 'Socrates Austria', image: 'images/socrates-austria.svg', alt: 'socrates-austria', url: 'https://socrates-conference.at/' },
-  { name: 'JSCraftCamp', image: 'images/jscraftcamp.png', alt: 'jscraftcamp', url: 'https://jscraftcamp.org/' },
+  { name: 'JSCraftCamp', image: 'images/jscraftcamp.svg', alt: 'jscraftcamp', url: 'https://jscraftcamp.org/' },
   { name: 'Code Freeze', image: 'images/code-freeze.svg', alt: 'code-freeze', url: 'https://codefreeze.fi/' },
 ]
 
