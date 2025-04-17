@@ -1,29 +1,23 @@
 ---
-import hug from '../../../public/images/hug.jpg';
-import rocks from '../../../public/images/rocks.jpg';
-import inclusion from '../../../public/images/inclusion.jpg';
-
 import ImageSection from "./ImageSection.astro";
 
 const sections = [
     {
         title: 'Our Values',
-        imageUrl: rocks.src,
+        imageUrl: 'images/rocks.jpg',
         overlayColor: 'bg-green-800/90',
     },
     {
         title: 'Open Space',
-        imageUrl: inclusion.src,
+        imageUrl: 'images/inclusion.jpg',
         overlayColor: 'bg-green-900/90',
     },
     {
         title: 'Code of Conduct',
-        imageUrl: hug.src,
+        imageUrl: 'images/hug.jpg',
         overlayColor: 'bg-green-950/90',
     },
 ];
-
-const { title, imageUrl, overlayColor } = Astro.props;
 
 ---
 
