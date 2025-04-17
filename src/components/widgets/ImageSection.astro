@@ -1,0 +1,19 @@
+---
+const { imageUrl, overlayColor } = Astro.props;
+---
+
+<div
+        class="w-full overflow-hidden bg-cover bg-center"
+        style={`background-image: url(${imageUrl});`}
+>
+    <!-- Content -->
+    <div class="relative z-10 h-full flex flex-col justify-center items-center text-center text-white p-xl md:px-12"
+         class:list={[
+             'relative z-10 h-full flex flex-col justify-start items-start text-left text-white px-6 md:px-12',
+             `${overlayColor}`,
+         ]}
+    >
+
+        <slot/>
+    </div>
+</div>

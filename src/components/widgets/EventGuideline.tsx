@@ -3,7 +3,7 @@ import SectionIntro from '~components/ui/SectionIntro.tsx'
 
 const guidelines = [
   {
-    img: '/images/people.jpg',
+    img: '/images/group.jpg',
     title: 'people',
     description:
       'Everyone who is concerned with coding, testing, code quality and software craft. There is no agenda and there are no speakers before the event starts. Proposals are presented during the event itself in the mornings, and voted by the participants right after. Meet us if you want to share your knowledge, experience and expertise!',

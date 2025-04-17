@@ -1,0 +1,125 @@
+---
+import hug from '../../../public/images/hug.jpg';
+import rocks from '../../../public/images/rocks.jpg';
+import inclusion from '../../../public/images/inclusion.jpg';
+
+import ImageSection from "./ImageSection.astro";
+
+const sections = [
+    {
+        title: 'Our Values',
+        imageUrl: rocks.src,
+        overlayColor: 'bg-green-800/90',
+    },
+    {
+        title: 'Open Space',
+        imageUrl: inclusion.src,
+        overlayColor: 'bg-green-900/90',
+    },
+    {
+        title: 'Code of Conduct',
+        imageUrl: hug.src,
+        overlayColor: 'bg-green-950/90',
+    },
+];
+
+const { title, imageUrl, overlayColor } = Astro.props;
+
+---
+
+<div
+
+>
+    <ImageSection title={sections[0].title} imageUrl={sections[0].imageUrl} overlayColor={sections[0].overlayColor}>
+        <div class="space-y-md">
+            <h2 class="text-2xl md:text-3xl mb-md font-semibold drop-shadow-lg">{sections[0].title}</h2>
+            <h3 class="text-xl">Inclusiveness</h3>
+            <p class="text-sm">
+                A primary goal of SoCraTes conference is to be inclusive to the largest number of contributors, with the
+                most varied and diverse backgrounds possible.
+            </p>
+            <h3 class="text-xl">
+                Safe Environment
+            </h3>
+            <p class="text-sm">As such, we are committed to providing a friendly, safe and welcoming environment for all, regardless of
+                gender, sexual orientation, programming language, ability, ethnicity, socioeconomic status, and religion
+                (or lack thereof).
+            </p>
+            <p class="text-sm">
+                And so we invite all those who participate in the SoCraTes conference and the community surrounding the
+                conference to help us create safe and positive experiences for everyone.
+            </p>
+            <h3 class="text-xl">
+                Be welcoming, friendly, and patient
+            </h3>
+            <p class="text-sm">
+                Be respectful. Not all of us will agree with each other all the time, but disagreement is no excuse for poor behavior and poor manners. We might all experience some frustration now and then, but we cannot allow that frustration to turn into a personal attack.
+            </p>
+            <p class="text-sm">
+                Be aware of the effect your words may have on others. We are a community of professionals, and we conduct ourselves professionally. Be kind to others. Do not insult or put down other participants. Harassment and other exclusionary behavior aren’t acceptable.
+            </p>
+            <p class="text-sm">
+                <span class="italic">Credits</span>: These values are inspired by <span><a class="underline-offset-2 underline" href="https://www.djangoproject.com/conduct/">Django Code of Conduct and Citizenship Code of Conduct</a></span>
+            </p>
+        </div>
+    </ImageSection>
+    <ImageSection title={sections[1].title} imageUrl={sections[1].imageUrl} overlayColor={sections[1].overlayColor}>
+        <div class="space-y-md">
+            <h2 class="text-2xl md:text-3xl mb-md font-semibold drop-shadow-lg">{sections[1].title}</h2>
+            <p class="text-sm">
+                SoCraTes IT will be run as a three days
+                <span><a class="underline-offset-2 underline" href="https://agilecoachcamp.org/tiki-index.php?page=OpenSpace/">Open Space</a></span>, facilitated by the outstanding facilitator from
+                <span><a class="underline-offset-2 underline" href="https://connexxo.com/">Connexxo</a></span>. We love working in self-organizing teams - well, Open Space is a simple technique for creating a self-organizing conference!
+            </p>
+            <p class="text-sm">
+                It runs on "four principles and one law" and it has been used by thousands of people around the globe since then:
+            </p>
+            <ul class="text-sm list-disc list-inside">
+                <li>
+                    Whoever comes is the right people
+                </li>
+                <li>
+                    Whenever it starts is the right time
+                </li>
+                <li>
+                    Whatever happens is the only thing that could have
+                </li>
+                <li>
+                    When it’s over it’s over
+                </li>
+            </ul>
+            <h3 class="text-xl">
+                The Law Of Two Feet
+            </h3>
+            <p class="text-sm">
+                “If at any time you find that you are neither learning nor contributing, use you two feet and move to some place more to you liking.”
+            </p>
+            <p class="text-sm">
+                Such a place might be another group, or even outside into the sunshine. No matter what, don’t sit there feeling miserable. It’s your conference, and you’re in charge of it.
+            </p>
+            <p class="text-sm">
+                In OpenSpace there are no leaders, no followers, definitely no talking-heads - only participants. Does this sound strange to you? Come prepared to create the event you need - starting with collaboratively building our agenda, full of topics we have passion for.
+            </p>
+            <p class="text-sm">
+                Don’t worry how this will work - just show up with your passion and Prepare To Be Surprised!
+            </p>
+        </div>
+    </ImageSection>
+    <ImageSection title={sections[2].title} imageUrl={sections[2].imageUrl} overlayColor={sections[2].overlayColor}>
+        <div class="space-y-md">
+            <h2 class="text-2xl md:text-3xl mb-md font-semibold drop-shadow-lg">{sections[2].title}</h2>
+            <p class="text-sm">
+                SoCraTes IT follows the Conference Code of Conduct laid out by several conference organisers around the globe. We ask that you read the<span><a class="underline-offset-2 underline" href="http://confcodeofconduct.com/"> full version </a></span>before attending. You are required to cooperate with the code throughout the event to help ensure a safe environment for everybody.
+            </p>
+            <p class="text-sm">
+                Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, age, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organisers.
+            </p>
+            <h3 class="text-xl">
+                Scope
+            </h3>
+            <p class="text-sm">
+                This code of conduct applies to the SoCraTes conference itself and to all digital spaces that are related to the SoCraTes conference, such as the wiki and mailing list.
+            </p>
+        </div>
+    </ImageSection>
+</div>

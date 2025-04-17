@@ -58,8 +58,8 @@ const projects = [
         <br />
       </>,
     ],
-    src: '/images/canyon.jpg',
-    alt: 'canyon.jpg',
+    src: '/images/rocks.jpg',
+    alt: 'rocks.jpg',
   },
   {
     title: 'Open Space',
@@ -95,8 +95,8 @@ const projects = [
         Don’t worry how this will work – just show up with your passion and <strong>Prepare To Be Surprised!</strong>
       </>,
     ],
-    src: '/images/fiori.jpg',
-    alt: 'fiori.jpg',
+    src: '/images/inclusion.jpg',
+    alt: 'inclusion.jpg',
   },
   {
     title: 'Code of Conduct',
@@ -126,8 +126,8 @@ const projects = [
         This code of conduct applies to the SoCraTes conference itself and to all related digital spaces, such as the wiki and mailing list.
       </>,
     ],
-    src: '/images/foresta.jpg',
-    alt: 'foresta.jpg',
+    src: '/images/hug.jpg',
+    alt: 'hug.jpg',
   },
 ]
 

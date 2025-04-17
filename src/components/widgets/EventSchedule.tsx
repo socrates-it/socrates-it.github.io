@@ -39,16 +39,12 @@ const eventData: Record<
     {
       time: '10am - 12:30pm',
       title: 'Web Design Principles and Best Practices',
-      speaker: 'David Warner',
       description: 'Consectetur adipiscing elit. Quod distinctio impedit sint accusantium ducimus...',
-      location: 'Hall 1, Building A, Golden Street, South Africa',
     },
     {
       time: '2pm - 4pm',
       title: 'Interactive Web Animations',
-      speaker: 'Lisa Brown',
       description: 'Using CSS & JS to create smooth, engaging animations for modern web apps...',
-      location: 'Tech Lab, Silicon Valley',
     },
   ],
 }
@@ -82,7 +78,6 @@ const EventSchedule = () => {
                 <div className="space-y-4 sm:space-y-2">
                   <p className="text-sm text-gray-400">{event.time}</p>
                   <h3 className="text-lg font-bold">{event.title}</h3>
-                  <p className="text-gray-500">{event.speaker}</p>
                 </div>
               </div>
               <p className="text-gray-400 mt-3">{event.description}</p>
