@@ -40,7 +40,7 @@ const DLPhotoAlbum: React.FC = () => {
           photos={shuffledTeamPhotos}
           onClick={({ index }) => setIndex(index)}
           render={{
-            image: props => <img {...props} src={props.src} alt={props.alt} className=" shadow bg-light dark:bg-contrast" />,
+            image: props => <img {...props} src={props.src} alt={props.alt} className=" shadow bg-light" />,
           }}
         />
 

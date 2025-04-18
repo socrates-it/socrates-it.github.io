@@ -55,11 +55,11 @@ const FeatureGrid = () => {
               ${isBottomRow ? 'border-b-transparent' : ''}
               ${isLeftmost ? 'border-l-transparent' : ''}
               ${isRightmost ? 'border-r-transparent' : ''}
-              ${hoveredIndex === index ? 'bg-subtle dark:bg-lighter-contrast' : 'bg-white dark:bg-dark'}`}
+              ${hoveredIndex === index ? 'bg-subtle' : 'bg-white'}`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}>
-              <div className={`text-default mb-3 group-hover:text-accent dark:text-light transition-colors duration-300`}>{feature.icon}</div>
-              <h3 className="text-lg font-bold dark:text-subtle">{feature.title}</h3>
+              <div className={`text-default mb-3 group-hover:text-accent transition-colors duration-300`}>{feature.icon}</div>
+              <h3 className="text-lg font-bold">{feature.title}</h3>
               <p className="text-gray-400 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur commodo ligula eget dolor.</p>
             </div>
           )

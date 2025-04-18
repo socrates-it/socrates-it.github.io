@@ -23,7 +23,7 @@ const footerData: {title: string, links: { text: string, url: string }[]}[] = [
 
 ---
 <footer class="p-custom">
-    <div class="border-t border-t-dark dark:border-t-muted container-custom gap-10 grid grid-cols-1 md:grid-cols-4 py-xl">
+    <div class="border-t border-t-dark container-custom gap-10 grid grid-cols-1 md:grid-cols-4 py-xl">
         <a href={`${BASE_PATH}`} aria-label="Go to homepage">
             <div class="size-16 md:size-20 bg-no-repeat bg-contain bg-center"
                  style={`background-image: url(${socratesLogo.src});`}
@@ -31,12 +31,12 @@ const footerData: {title: string, links: { text: string, url: string }[]}[] = [
         </a>
         {footerData.map((item, index) => (
                 <div class="flex flex-col items-start space-y-4">
-                    <h3 class="text-lg font-bold dark:text-light">{item.title}</h3>
-                    {item.links.map(link => (<a href={`${BASE_PATH}${link.url}`} class="text-sm mt-1 opacity-90 dark:text-light">{link.text}</a>))}
+                    <h3 class="text-lg font-bold">{item.title}</h3>
+                    {item.links.map(link => (<a href={`${BASE_PATH}${link.url}`} class="text-sm mt-1 opacity-90">{link.text}</a>))}
                 </div>
         ))}
         <div class="flex flex-col items-start space-y-6">
-            <h3 class="text-lg font-bold dark:text-light">Follow Us</h3>
+            <h3 class="text-lg font-bold">Follow Us</h3>
             <ul class="flex justify-start space-x-2">
                 <li  class="size-8 bg-primary rounded text-light">
                     <a href='https://linkedin.com/' target="_blank" rel="noopener noreferrer" class="size-full">
