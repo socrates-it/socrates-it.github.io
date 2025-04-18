@@ -1,5 +1,5 @@
 import React, { type JSX } from 'react'
-import { MdiGithub, MdiLinkedin, RiBlueskyFill } from '~/assets/icons/Icons.tsx'
+import { MdiGithub, MdiLinkedin, RiBlueskyFill } from '~/icons/Icons.tsx'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
 
 const teamMembers = [

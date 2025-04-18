@@ -2,10 +2,10 @@ import React from 'react'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
 
 const sponsors = [
-  { name: 'Techno', image: 'src/assets/icons/astro.svg' },
-  { name: 'Studio', image: 'src/assets/icons/astro.svg' },
-  { name: 'Rofhalatan', image: 'src/assets/icons/astro.svg' },
-  { name: 'Education', image: 'src/assets/icons/astro.svg' },
+  { name: 'Techno', image: 'src/icons/astro.svg' },
+  { name: 'Studio', image: 'src/icons/astro.svg' },
+  { name: 'Rofhalatan', image: 'src/icons/astro.svg' },
+  { name: 'Education', image: 'src/icons/astro.svg' },
 ]
 
 export default function Sponsors() {

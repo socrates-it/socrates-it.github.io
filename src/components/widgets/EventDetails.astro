@@ -1,0 +1,40 @@
+---
+import { availableSeats, eventDate, eventLocation } from '~/common/constants.ts';
+import { Icon } from 'astro-icon/components';
+
+const details = [
+  {
+    icon: 'location', // pass just the name of the icon
+    title: eventLocation.venue,
+    subtitle: eventLocation.address,
+  },
+  {
+    icon: 'calendar',
+    title: eventDate,
+    subtitle: 'We’ll be meeting at the Hotel Ambasciatori, located at Viale Amerigo Vespucci, 22, 47921 Rimini RN, Italy. See you there!',
+  },
+  {
+    icon: 'ticket',
+    title: `${availableSeats} AVAILABLE SEATS`,
+    subtitle: 'HURRY UP! FEW TICKETS ARE LEFT',
+  },
+  {
+    icon: 'food',
+    title: 'in place LUNCH & SNACKS',
+    subtitle: 'a few delicious breaks throughout the day',
+  },
+];
+
+---
+
+<div class="bg-green-800 text-white p-custom">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    {details.map((item) => (
+        <div class="flex flex-col items-center uppercase">
+          <div class="mb-3"><Icon name={item.icon} class='size-8' /></div>
+          <h3 class="text-lg font-bold">{item.title}</h3>
+          <p class="text-sm mt-1 opacity-90">{item.subtitle}</p>
+        </div>
+    ))}
+  </div>
+</div>

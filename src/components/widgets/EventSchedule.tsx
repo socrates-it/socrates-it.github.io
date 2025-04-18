@@ -9,7 +9,7 @@ import {
   FluentMdl2Lightbulb,
   FluentMdl2WavingHand,
   FluentPersonVoice16Regular,
-} from '~/assets/icons/Icons.tsx'
+} from '~/icons/Icons.tsx'
 
 const eventData: Record<
   string,

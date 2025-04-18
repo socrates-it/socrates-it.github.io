@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react'
 import CardContent from '~/components/ui/card/CardContent.tsx'
 import Dialog from '~/components/ui/dialog/Dialog.tsx'
 import DialogContent from '~/components/ui/dialog/DialogContent.tsx'
-import { MajesticonsOpen } from '~/assets/icons/Icons.tsx'
+import { MajesticonsOpen } from '~/icons/Icons.tsx'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
 
 const projects = [

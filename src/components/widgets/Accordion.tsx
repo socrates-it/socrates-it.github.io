@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
-import { MdiLightHeart, MynauiChevronDownCircle, PhImagesThin, WpfGroup } from '~/assets/icons/Icons.tsx'
 import { cn } from '~/common/css.ts'
 
 const accordionData = [
-  { icon: <MdiLightHeart />, title: 'Where do we meet?', content: 'Explore creative ideas and insights to spark your imagination.' },
-  { icon: <WpfGroup />, title: 'Who we are?', content: 'Connect with like-minded professionals and expand your network.' },
-  { icon: <PhImagesThin />, title: 'How can you contact us?', content: 'Enjoy exclusive merchandise and gifts from our sponsors.' },
+  { title: 'Where do we meet?', content: 'We will meet at Hotel Ambasciatori. Address is Viale Amerigo Vespucci, 22, 47921 Rimini RN, Italy' },
+  { title: 'Who we are?', content: 'Connect with like-minded professionals and expand your network.' },
+  {
+    title: 'How can you contact us?',
+    content: 'If you have any questions or need assistance, feel free to reach out to us at socrates-it@googlegroups.com. We’re here to help!',
+  },
 ]
 
 export default function Accordion() {
@@ -24,7 +26,7 @@ export default function Accordion() {
           <div key={index} className="shadow-lg group">
             <button
               className={cn(
-                'h-20 w-full text-heading dark:text-light-contrast text-lg font-semibold p-4 cursor-pointer ',
+                'h-20 w-full text-heading dark:text-light text-lg font-semibold p-4 cursor-pointer ',
                 'border border-primary dark:border-light-contrast group-first:rounded-t-2xl transition-colors duration-300',
                 'flex justify-between items-center ',
                 'bg-highlight dark:bg-contrast',
@@ -49,7 +51,7 @@ export default function Accordion() {
               )}>
               <p
                 className={cn('relative transition-colors duration-100 p-sm', {
-                  'text-default dark:text-white': openIndex === index,
+                  'dark:text-white': openIndex === index,
                   'text-transparent': openIndex !== index,
                 })}>
                 {item.content}

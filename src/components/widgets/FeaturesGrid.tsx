@@ -6,7 +6,7 @@ import {
   GridiconsTrophy as Trophy,
   MdiLightMessage as MessageSquare,
   PhImagesThin as Images,
-} from '~/assets/icons/Icons.tsx'
+} from '~/icons/Icons.tsx'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
 
 const features = [

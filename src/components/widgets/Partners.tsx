@@ -1,7 +1,7 @@
 import React from 'react'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
 import { cn } from '~/common/css.ts'
-import { MajesticonsOpen } from '~/assets/icons/Icons.tsx'
+import { MajesticonsOpen } from '~/icons/Icons.tsx'
 
 const partners = [
   {

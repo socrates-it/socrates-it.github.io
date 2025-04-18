@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 import { cn } from '~/common/css.ts'
+import { eventState } from '~/common/constants.ts'
 
 const images = [
   {
@@ -110,7 +111,7 @@ const Carousel = () => {
         )}>
         <div className="w-50 sm:w-80 mx-auto text-light rounded-xl py-4 md:py-10">
           <p className="font-bold h-full mb-1 md:mb-4">SoCraTes 2025</p>
-          <p className="text-md font-thin h-full">COMING SOON</p>
+          <p className="text-md uppercase font-thin h-full">{eventState}</p>
         </div>
         {/*<div className="flex justify-between items-center space-x-4 mx-auto w-50 sm:w-75 h-lg">*/}
         {/*  <button onClick={() => prevSlide()} className="btn-primary text-xs h-full w-30 rounded-lg">*/}

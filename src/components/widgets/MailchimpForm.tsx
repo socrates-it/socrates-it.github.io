@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
-import { IconParkSolidDoubleBed, IconParkSolidSingleBed } from '~/assets/icons/Icons.tsx'
+import { IconParkSolidDoubleBed, IconParkSolidSingleBed } from '~/icons/Icons.tsx'
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import ContactForm from '~components/widgets/ContactForm.tsx'
 
