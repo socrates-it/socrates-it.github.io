@@ -52,13 +52,15 @@ const Carousel = () => {
           </Fragment>
         ))}
       </div>
-      <div className="relative bg-transparent px-custom">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
+      <div className="absolute bg-transparent inset-0 px-custom">
+        <div className="max-w-6xl mx-auto relative h-full">
+          {/* Left Button */}
           <button
             className={cn(
+              'absolute left-0 top-1/2 -translate-y-1/2',
               'opacity-100',
               'bg-primary/20 border border-secondary transition-all duration-300 hover:bg-primary-dark/40',
-              'p-2 md:p-4 rounded z-10 cursor-pointer relative bottom-50 -translate-y-14 md:-translate-y-40',
+              'p-2 md:p-4 rounded z-10 cursor-pointer',
             )}
             onClick={prevSlide}>
             <div
@@ -68,11 +70,13 @@ const Carousel = () => {
             />
           </button>
 
+          {/* Right Button */}
           <button
             className={cn(
+              'absolute right-0 top-1/2 -translate-y-1/2',
               'opacity-100',
               'bg-primary/20 border border-secondary transition-all duration-300 hover:bg-primary-dark/40',
-              'p-2 md:p-4 rounded z-10 cursor-pointer relative bottom-50 -translate-y-14 md:-translate-y-40',
+              'p-2 md:p-4 rounded z-10 cursor-pointer',
             )}
             onClick={nextSlide}>
             <div
@@ -83,6 +87,7 @@ const Carousel = () => {
           </button>
         </div>
       </div>
+
       {/*<div*/}
       {/*  className={cn(*/}
       {/*    'absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-3 bg-gray-800 p-2 rounded-xl',*/}
@@ -104,12 +109,12 @@ const Carousel = () => {
       {/*</div>*/}
       <div
         className={cn(
-          'absolute bg-primary/80 -bottom-11.5 md:-bottom-22 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
+          'absolute bg-primary/80 -bottom-11.5 md:-bottom-16 lg:-bottom-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
           'text-center',
           'space-y-4 sm:space-y-6 w-full text-xl md:text-4xl',
           'opacity-100',
         )}>
-        <div className="w-50 sm:w-80 mx-auto text-light rounded-xl py-4 md:py-10">
+        <div className="w-50 sm:w-80 mx-auto text-light rounded-xl py-4">
           <p className="font-bold h-full mb-1 md:mb-4">SoCraTes 2025</p>
           <p className="text-md uppercase font-thin h-full">{eventState}</p>
         </div>

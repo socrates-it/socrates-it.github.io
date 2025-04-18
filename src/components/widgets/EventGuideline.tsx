@@ -32,7 +32,7 @@ const EventGuideline = () => {
 
   return (
     <section className="text-default p-custom">
-      <SectionIntro title={'WHAT IS SoCraTes?'} />
+      <SectionIntro title={'What is SoCraTes?'} />
 
       <div className="bg-secondary dark:bg-light-contrast rounded-lg max-w-6xl mx-auto">
         {guidelines.map((guideline, index) => {
@@ -43,8 +43,8 @@ const EventGuideline = () => {
             <div key={index} className={`relative ${isFirst ? 'pt-8 pb-8' : isLast ? 'pt-8 pb-8' : 'pt-8 pb-8'} rounded`}>
               <div className={`flex flex-col-reverse md:flex-row-reverse items-center overflow-hidden md:h-[200px] `}>
                 <div className="md:w-3/5 flex flex-col px-lg md:px-0 md:pr-md h-full ">
-                  <h2 className="mb-4 italic text-md lg:text-lg text-primary-dark dark:text-contrast capitalize">{guideline.title}</h2>
-                  <p className="text-light text-sm mb-6 sm:mb-0">{guideline.description}</p>
+                  <h2 className="mb-4 text-md lg:text-lg text-primary-dark dark:text-light font-bold uppercase text-light">{guideline.title}</h2>
+                  <p className="text-light text-md mb-6 sm:mb-0">{guideline.description}</p>
                 </div>
 
                 <div

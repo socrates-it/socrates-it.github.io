@@ -29,18 +29,18 @@ const DLPhotoAlbum: React.FC = () => {
   console.log(shuffledTeamPhotos)
   return (
     <div className="p-custom">
-      <SectionIntro title={'MEMORIES'} description={'Shared laughs, lessons learned, good times together.'} />
+      <SectionIntro title={'MEMORIES'} description={'Shared laughs, lessons learned, good times together'} />
 
       <div className="max-w-6xl mx-auto flex flex-col p-xl">
         <PhotoAlbum
           layout="columns"
           columns={noOfColumns}
-          padding={20}
+          padding={10}
           spacing={20}
           photos={shuffledTeamPhotos}
           onClick={({ index }) => setIndex(index)}
           render={{
-            image: props => <img {...props} src={props.src} alt={props.alt} className="p-10 shadow bg-light dark:bg-contrast" />,
+            image: props => <img {...props} src={props.src} alt={props.alt} className=" shadow bg-light dark:bg-contrast" />,
           }}
         />
 

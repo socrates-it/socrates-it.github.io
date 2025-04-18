@@ -41,14 +41,19 @@ const MobileMenu: FC<Props> = ({ items }) => {
       <Hamburger isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
       <div
         className={cn('w-full mx-auto px-5', 'absolute left-0 right-0 top-20', ' ', 'z-10 overflow-hidden transition-all duration-700', {
-          'bg-primary dark:bg-contrast h-32 border-t border-t-page': isOpen,
-          'bg-transparent dark:bg-transparent h-0 border-t border-transparent': !isOpen, // still apply border-t for height consistency
+          'bg-primary h-32 border-t border-t-page': isOpen,
+          'bg-transparent h-0 border-t border-transparent': !isOpen, // still apply border-t for height consistency
         })}>
         <div className="z-10 ">
           <ul data-open={isOpen} className={`transition-colors duration-700 py-2`}>
             {items.map(x => {
               return (
-                <li key={x.label} className="text-xl border-l-6 pl-2 py-1 border-transparent hover:border-accent transition-colors duration-300">
+                <li
+                  key={x.label}
+                  className={cn('text-xl border-l-6 pl-2 py-1 border-transparent hover:border-accent transition-colors duration-300', {
+                    'text-light': isOpen,
+                    'text-transparent': !isOpen, // still apply border-t for height consistency
+                  })}>
                   <MenuLink item={x} />
                 </li>
               )

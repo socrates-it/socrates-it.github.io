@@ -62,7 +62,8 @@
   }
 }
 
-@custom-variant dark (&:where(.dark, .dark *));
+/*UNUSED*/
+/*@custom-variant dark (&:where(.dark, .dark *));*/
 
 @theme {
   --color-primary: var(--aw-color-primary);

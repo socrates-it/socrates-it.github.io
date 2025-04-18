@@ -9,12 +9,11 @@ import socratesLogo from '../../../public/images/socrates-logo.png';
 
 <nav class="flex items-center justify-between">
     <a href={`${BASE_PATH}`} aria-label="Go to homepage">
-        <div class="size-16 md:size-20 bg-no-repeat bg-contain bg-center"
+        <div class="size-16 bg-no-repeat bg-contain bg-center"
              style={`background-image: url(${socratesLogo.src});`}
         />
     </a>
     <div class="flex items-center justify-between">
-        <ThemeIcon/>
         <div class="md:hidden">
             <MobileMenu items={menuItems} client:media="(max-width:767px)"/>
         </div>

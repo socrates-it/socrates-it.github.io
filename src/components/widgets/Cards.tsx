@@ -11,6 +11,7 @@ const projects = [
     description: 'SoCraTes fosters an inclusive community.',
     sections: [
       <>
+        <h1 className="text-xl mb-6">Our Values</h1>
         <h3>Inclusiveness</h3>
         <p>
           A primary goal of SoCraTes conference is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds possible.
@@ -22,10 +23,6 @@ const projects = [
           We are committed to providing a friendly, safe, and welcoming environment for all, regardless of gender, sexual orientation, programming language,
           ability, ethnicity, socioeconomic status, and religion (or lack thereof).
         </p>
-      </>,
-      <>
-        <h3>Positive Participation</h3>
-        <p>We invite all those who participate in the SoCraTes conference and community to help us create safe and positive experiences for everyone.</p>
       </>,
       <>
         <h3>Be welcoming, friendly, and patient</h3>

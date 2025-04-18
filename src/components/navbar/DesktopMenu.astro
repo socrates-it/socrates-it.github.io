@@ -19,7 +19,7 @@ const { items } = Astro.props
 >
     {
         items.map((x) => (
-            <li class="text-sm text-highlight dark:text-light-contrast font-bold hover:text-light transition duration-300">
+            <li class="text-md text-light font-bold">
                 <MenuLink client:load item={x} />
             </li>
         ))

@@ -22,7 +22,7 @@ const partners = [
 
 export default function Partners() {
   return (
-    <div className="p-custom text-center bg-soft dark:bg-contrast">
+    <div className="p-custom text-center bg-soft dark:bg-lighter-contrast">
       <SectionIntro title={'PARTNERS'} />
 
       <div className="grid grid-cols-3 rounded-lg md:grid-cols-4 lg:grid-cols-5 gap-x-0 gap-y-24 container-custom justify-items-center mb-xl md:mb-0">

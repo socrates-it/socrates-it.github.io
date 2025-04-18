@@ -15,7 +15,7 @@ const Dialog = ({ onClose, sections }: DialogProps) => {
           </button>
         </div>
         {sections.map((block, index) => (
-          <div key={index} className="bg-red-600 overflow-y-auto">
+          <div key={index} className=" overflow-y-auto">
             {block}
           </div>
         ))}
