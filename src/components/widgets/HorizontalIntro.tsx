@@ -2,11 +2,11 @@ import React from 'react'
 
 export default function HorizontalIntro() {
   return (
-    <div className="p-custom">
+    <div className="p-custom bg-lightest">
       <div className="flex flex-col md:flex-row items-stretch justify-between p-6 md:p-8 gap-6 md:gap-8 max-w-6xl mx-auto">
         {/* Left - Quote */}
         <div className="md:w-1/2 text-2xl md:text-4xl text-center font-bold text-primary leading-snug flex items-center justify-center">
-          "Great things happen when we come together."
+          "Shaping software through curiosity and connection."
         </div>
 
         {/* Right - Description */}

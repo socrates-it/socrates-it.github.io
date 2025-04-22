@@ -58,7 +58,7 @@ const Carousel = () => {
             <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">"Great things happen when we come together."</h2>
             <div className="space-y-md">
               <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl opacity-80">
-                SoCraTes 2025 <span className="uppercase">coming soon</span>
+                SoCraTes 2025 <span className="capitalize">coming soon</span>
               </p>
               <p className=" text-lg sm:text-2xl md:text-3xl lg:text-4xl">
                 <button className="btn-primary uppercase">

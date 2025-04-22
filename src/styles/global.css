@@ -5,22 +5,21 @@
   --aw-font-serif: 'Inter Variable';
   --aw-font-heading: 'Inter Variable';
 
-  --aw-color-primary: rgb(4, 102, 48);
-  --aw-color-primary-dark: rgb(3, 46, 21);
+  --aw-color-primary: rgb(22, 101, 52);
+  --aw-color-primary-dark: rgb(5, 46, 22);
   --aw-color-secondary: rgb(112, 173, 122);
-  --aw-color-accent: rgb(51, 131, 64);
-  --aw-color-highlight: rgb(170, 202, 170);
+  --aw-color-accent: rgb(0, 130, 54);
+  --aw-color-highlight: oklch(0.927 0.038 157.395);
 
   --aw-color-text-heading: rgb(0 0 0);
   --aw-color-text-subtitle: rgb(168, 168, 168);
   --aw-color-text-default: rgb(16 16 16);
-  --aw-color-text-light: rgb(255, 255, 255);
-  --aw-color-text-dark-muted: rgb(16 16 16 / 66%);
+  --aw-color-text-light: rgb(229, 231, 235);
+  --aw-color-text-dark-light: rgb(16 16 16 / 66%);
 
-  --aw-color-bg-subtle: rgb(248, 250, 252); /* Very light subtle background */
-  --aw-color-bg-soft: rgb(237, 237, 245); /* Soft lavender */
-  --aw-color-bg-muted: rgb(229, 231, 235); /* Muted gray */
-  --aw-color-bg-accent: rgb(220, 235, 255); /* Light blue accent */
+  --aw-color-lightest: rgb(249, 250, 251); /* Very light lightest background */
+  --aw-color-bg-lighter: rgb(243, 244, 246); /* Soft lavender */
+  --aw-color-bg-light: rgb(229, 231, 235); /* Muted gray */
   --aw-color-bg-dark: rgb(23, 24, 28); /* Dark background */
   --aw-color-bg-secondary: rgb(107, 114, 128); /* Secondary gray */
   --aw-color-bg-contrast: rgb(36, 38, 47); /* Strong contrast dark */
@@ -72,10 +71,9 @@
   --color-accent: var(--aw-color-accent);
   --color-highlight: var(--aw-color-highlight);
 
-  --color-light: var(--aw-color-text-light);
-  --color-subtle: var(--aw-color-bg-subtle);
-  --color-soft: var(--aw-color-bg-soft);
-  --color-muted: var(--aw-color-bg-muted);
+  --color-lightest: var(--aw-color-lightest);
+  --color-lighter: var(--aw-color-bg-lighter);
+  --color-light: var(--aw-color-bg-light);
   --color-dark: var(--aw-color-bg-dark);
   --color-contrast: var(--aw-color-bg-contrast);
   --color-light-contrast: var(--aw-color-bg-light-contrast);
@@ -177,22 +175,6 @@
 /* TODO: investigate if useful and how to substitute */
 @custom-variant intersect (&:not([no-intersect]));
 
-@utility bg-subtle {
-  background-color: var(--aw-color-bg-subtle);
-}
-
-@utility bg-muted {
-  background-color: var(--aw-color-bg-muted);
-}
-
-@utility bg-dark {
-  background-color: var(--aw-color-bg-dark);
-}
-
-@utility text-light {
-  color: var(--aw-color-text-light);
-}
-
 @utility btn {
   @apply inline-flex items-center justify-center rounded-full border-gray-400 border bg-transparent font-medium text-center text-base text-light leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-green-500 focus:ring-1 hover:bg-gray-100 hover:border-gray-600 cursor-pointer;
 }
@@ -206,7 +188,7 @@
 }
 
 @utility btn-tertiary {
-  @apply btn border-none shadow-none text-muted hover:text-gray-900;
+  @apply btn border-none shadow-none text-light hover:text-gray-900;
 }
 
 @utility px-custom {

@@ -1,0 +1,46 @@
+---
+import SectionIntro from '~/components/ui/SectionIntro.tsx'
+import {Icon} from "astro-icon/components";
+
+const projects = [
+  {
+    icon: 'people',
+    title: 'People',
+    description:
+        'Everyone who is concerned with coding, testing, code quality and software craft. There is no agenda and there are no speakers before the event starts. Proposals are presented during the event itself in the mornings, and voted by the participants right after. Meet us if you want to share your knowledge, experience and expertise!',
+  },
+  {
+    icon: 'hands',
+    title: 'Retreat',
+    description:
+        'The event will be run as a non-profit, low-cost event. It will be much like a retreat. We will be there for 48 hours to collaborate and share ideas in a self-organized Open Space. There will be hands-on coding sessions, sessions focused on discussion, interactive talks and lots more.',
+  },
+  {
+    icon: 'smile',
+    title: 'Fun',
+    description:
+        'We will not only spend the days together but also the nights. And – believe it or not – programmers are a great company! There will be lots of opportunities to spend your time. Starting with simple chilling over walking, playing games, hanging around, talking and laughing.',
+  },
+]
+---
+
+    <div class="p-custom bg-gray-50">
+      <SectionIntro title="what is socrates" description="Global Grand Event on Digital Design" client:only="react"/>
+
+      <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((project) => (
+            <div
+                class="bg-white flex flex-col text-center cursor-pointer shadow-lg p-8 gap-6 rounded transition-transform duration-300 hover:scale-102"
+            >
+                <div class="flex justify-center items-center gap-2.5">
+
+                    <div class="bg-highlight p-5 rounded">
+                        <Icon name={project.icon} class='size-8'/>
+                    </div>
+                </div>
+              <h3 class="font-bold">{project.title}</h3>
+              <p class="text-justify">{project.description}</p>
+            </div>
+        ))}
+      </div>
+    </div>
