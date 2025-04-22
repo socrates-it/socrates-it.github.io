@@ -45,7 +45,7 @@ const {
         class:list={[
             'z-40 fixed flex-none mx-auto w-full py-xs px-custom',
             'border-b border-gray-50/0 transition-all duration-500 ease-in-out',
-            'h-20 text-light bg-primary',
+            'h-20 text-light bg-transparent',
         ]}
         id={id}
 >
@@ -54,30 +54,28 @@ const {
         </div>
 </header>
 
-<!--<script type="text/javascript">-->
-<!--    document.addEventListener('DOMContentLoaded', () => {-->
-<!--        const header = document.querySelector('header');-->
-<!--        const isHome = window.location.pathname === '/socrates-2025/';-->
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+        const header = document.querySelector('header');
+        const isHome = window.location.pathname === '/socrates-2025/';
 
-<!--        if (!isHome) {-->
-<!--            header.classList.remove('bg-transparent', 'dark:bg-transparent');-->
-<!--            header.classList.add('bg-primary', 'dark:bg-primary');-->
-<!--        } else {-->
-<!--            // Initial state on load-->
-<!--            header.classList.add('bg-transparent', 'dark:bg-transparent');-->
-<!--            header.classList.remove('bg-primary', 'dark:bg-primary');-->
+        if (!isHome) {
+            header.classList.remove('bg-transparent');
+            header.classList.add('bg-primary');
+        } else {
+            // Initial state on load
+            header.classList.add('bg-transparent');
+            header.classList.remove('bg-primary');
 
-<!--            // Update on scroll-->
-<!--            const onScroll = () => {-->
-<!--                const scrolledDown = window.scrollY > 200;-->
-<!--                header.classList.toggle('bg-primary', scrolledDown);-->
-<!--                header.classList.toggle('dark:bg-contrast', scrolledDown);-->
-<!--                header.classList.toggle('bg-transparent', !scrolledDown);-->
-<!--                header.classList.toggle('dark:bg-transparent', !scrolledDown);-->
-<!--            };-->
+            // Update on scroll
+            const onScroll = () => {
+                const scrolledDown = window.scrollY > 200;
+                header.classList.toggle('bg-primary', scrolledDown);
+                header.classList.toggle('bg-transparent', !scrolledDown);
+            };
 
-<!--            window.addEventListener('scroll', onScroll);-->
-<!--            onScroll(); // Trigger once to set initial state-->
-<!--        }-->
-<!--    });-->
-<!--</script>-->
+            window.addEventListener('scroll', onScroll);
+            onScroll(); // Trigger once to set initial state
+        }
+    });
+</script>

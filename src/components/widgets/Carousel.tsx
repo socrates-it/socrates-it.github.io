@@ -52,80 +52,24 @@ const Carousel = () => {
           </Fragment>
         ))}
       </div>
-      <div className="absolute bg-transparent inset-0 px-custom">
+      <div className="absolute bg-black/60 inset-0 px-custom">
         <div className="max-w-6xl mx-auto relative h-full">
-          {/* Left Button */}
-          <button
-            className={cn(
-              'absolute left-0 top-1/2 -translate-y-1/2',
-              'opacity-100',
-              'bg-primary/20 border border-secondary transition-all duration-300 hover:bg-primary-dark/40',
-              'p-2 md:p-4 rounded z-10 cursor-pointer',
-            )}
-            onClick={prevSlide}>
-            <div
-              className="h-3 w-3 md:w-6 md:h-6 border-secondary
-                  border-l-2 border-b-2 translate-x-0.5 md:translate-x-1.5
-                  transform rotate-45 rounded-bl"
-            />
-          </button>
-
-          {/* Right Button */}
-          <button
-            className={cn(
-              'absolute right-0 top-1/2 -translate-y-1/2',
-              'opacity-100',
-              'bg-primary/20 border border-secondary transition-all duration-300 hover:bg-primary-dark/40',
-              'p-2 md:p-4 rounded z-10 cursor-pointer',
-            )}
-            onClick={nextSlide}>
-            <div
-              className="h-3 w-3 md:w-6 md:h-6 border-secondary
-                  border-t-2 border-r-2 -translate-x-0.5 md:-translate-x-1.5
-                  transform rotate-45 rounded-tr"
-            />
-          </button>
+          <div className=" w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-white text-center px-xl space-y-10 sm:space-y-12 md:space-y-14 lg:space-y-16">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">"Great things happen when we come together."</h2>
+            <div className="space-y-md">
+              <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl opacity-80">
+                SoCraTes 2025 <span className="uppercase">coming soon</span>
+              </p>
+              <p className=" text-lg sm:text-2xl md:text-3xl lg:text-4xl">
+                <button className="btn-primary uppercase">
+                  <a href="" target="_blank">
+                    register
+                  </a>
+                </button>
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/*<div*/}
-      {/*  className={cn(*/}
-      {/*    'absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-3 bg-gray-800 p-2 rounded-xl',*/}
-      {/*    'opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-300',*/}
-      {/*  )}>*/}
-      {/*  {images.map((_, index) => (*/}
-      {/*    <button*/}
-      {/*      key={index}*/}
-      {/*      className="[unset:all] block cursor-pointer w-2.5 h-2.5 relative"*/}
-      {/*      aria-label={`View Image ${index + 1}`}*/}
-      {/*      onClick={() => setImageIndex(index)}>*/}
-      {/*      {index === imageIndex ? (*/}
-      {/*        <div className="w-full h-full bg-subtitle rounded-full"></div>*/}
-      {/*      ) : (*/}
-      {/*        <div className="w-full h-full border-1 transition-all hover:scale-90 duration-300 hover:bg-primary border-light-contrast rounded-full"></div>*/}
-      {/*      )}*/}
-      {/*    </button>*/}
-      {/*  ))}*/}
-      {/*</div>*/}
-      <div
-        className={cn(
-          'absolute bg-primary/80 -bottom-11.5 md:-bottom-16 lg:-bottom-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
-          'text-center',
-          'space-y-4 sm:space-y-6 w-full text-xl md:text-4xl',
-          'opacity-100',
-        )}>
-        <div className="w-50 sm:w-80 mx-auto text-light rounded-xl py-4">
-          <p className="font-bold h-full mb-1 md:mb-4">SoCraTes 2025</p>
-          <p className="text-md uppercase font-thin h-full">{eventState}</p>
-        </div>
-        {/*<div className="flex justify-between items-center space-x-4 mx-auto w-50 sm:w-75 h-lg">*/}
-        {/*  <button onClick={() => prevSlide()} className="btn-primary text-xs h-full w-30 rounded-lg">*/}
-        {/*    get ticket*/}
-        {/*  </button>*/}
-        {/*  <button onClick={() => nextSlide()} className="btn-primary text-xs h-full w-30 rounded-lg">*/}
-        {/*    explore*/}
-        {/*  </button>*/}
-        {/*</div>*/}
       </div>
     </div>
   )
