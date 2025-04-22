@@ -137,7 +137,7 @@ const Cards = () => {
 
   return (
     <div className="p-custom">
-      <SectionIntro title={'About This Cards'} description={'Global Grand Event on Digital Design'} />
+      <SectionIntro title={'About This Cards'} isLightContrast={true} />
       <div className="container-custom grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20">
         {projects.map((project, index) => (
           <Fragment key={project.title}>

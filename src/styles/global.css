@@ -17,24 +17,24 @@
   --aw-color-text-light: rgb(229, 231, 235);
   --aw-color-text-dark-light: rgb(16 16 16 / 66%);
 
-  --aw-color-lightest: rgb(249, 250, 251); /* Very light lightest background */
-  --aw-color-bg-lighter: rgb(243, 244, 246); /* Soft lavender */
-  --aw-color-bg-light: rgb(229, 231, 235); /* Muted gray */
-  --aw-color-bg-dark: rgb(23, 24, 28); /* Dark background */
-  --aw-color-bg-secondary: rgb(107, 114, 128); /* Secondary gray */
-  --aw-color-bg-contrast: rgb(36, 38, 47); /* Strong contrast dark */
-  --aw-color-bg-light-contrast: rgb(107, 114, 128); /* Light contrast dark */
-  --aw-color-bg-lighter-contrast: #364153; /* Darker gray */
-  --aw-color-bg-overlay: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-  --aw-color-bg-inverted: rgb(255, 255, 255); /* For inverted themes */
+  --aw-color-lightest: rgb(249, 250, 251);
+  --aw-color-lighter: rgb(243, 244, 246);
+  --aw-color-light: rgb(229, 231, 235);
 
-  --aw-color-bg-blue: rgb(32, 34, 42); /* Strong contrast dark */
+  --aw-color-contrast: rgb(61, 62, 62);
+  --aw-color-light-contrast: rgb(71, 72, 72);
+  --aw-color-lightest-contrast: #B7BAC7;
+  --aw-color-contrast-secondary: rgb(107, 114, 128);
 
   --aw-spacing-xs: 0.5rem;  /* 8px */
   --aw-spacing-sm: 1rem;    /* 16px */
   --aw-spacing-md: 1.5rem;  /* 24px */
   --aw-spacing-lg: 2rem;    /* 32px */
   --aw-spacing-xl: 3rem;    /* 48px */
+  --aw-spacing-4xl: 6rem;   /* 96px */
+
+  --aw-breakpoint-3xl: 120rem;
+  --aw-breakpoint-4xl: 160rem;
 
   ::selection {
     background-color: lavender;
@@ -72,12 +72,11 @@
   --color-highlight: var(--aw-color-highlight);
 
   --color-lightest: var(--aw-color-lightest);
-  --color-lighter: var(--aw-color-bg-lighter);
-  --color-light: var(--aw-color-bg-light);
-  --color-dark: var(--aw-color-bg-dark);
-  --color-contrast: var(--aw-color-bg-contrast);
-  --color-light-contrast: var(--aw-color-bg-light-contrast);
-  --color-lighter-contrast: var(--aw-color-bg-lighter-contrast);
+  --color-lighter: var(--aw-color-lighter);
+  --color-light: var(--aw-color-light);
+  --color-contrast: var(--aw-color-contrast);
+  --color-light-contrast: var(--aw-color-light-contrast);
+  --color-lighter-contrast: var(--aw-color-lightest-contrast);
 
   --color-heading: var(--aw-color-text-heading);
   --color-subtitle: var(--aw-color-text-subtitle);
@@ -99,6 +98,10 @@
   --spacing-md: var(--aw-spacing-md);
   --spacing-lg: var(--aw-spacing-lg);
   --spacing-xl: var(--aw-spacing-xl);
+  --spacing-4xl: var(--aw-spacing-4xl);
+
+  --breakpoint-3xl: var(--aw-breakpoint-3xl);
+  --breakpoint-4xl: var(--aw-breakpoint-4xl);
 
   @keyframes fade-in-up {
     0% {
@@ -176,7 +179,7 @@
 @custom-variant intersect (&:not([no-intersect]));
 
 @utility btn {
-  @apply inline-flex items-center justify-center rounded-full border-gray-400 border bg-transparent font-medium text-center text-base text-light leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-green-500 focus:ring-1 hover:bg-gray-100 hover:border-gray-600 cursor-pointer;
+  @apply inline-flex items-center justify-center rounded-xl border-gray-400 border bg-transparent font-medium text-center text-base text-light leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-green-500 focus:ring-1 hover:bg-gray-100 hover:border-gray-600 cursor-pointer;
 }
 
 @utility btn-primary {

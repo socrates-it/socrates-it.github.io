@@ -24,13 +24,13 @@ const projects = [
 ]
 ---
 
-    <div class="p-custom bg-gray-50">
-      <SectionIntro title="what is socrates" description="Global Grand Event on Digital Design" client:only="react"/>
+    <div class="px-custom pb-xl md:pb-4xl bg-gray-50">
+      <SectionIntro title="what is socrates" isLightContrast={false} client:only="react"/>
 
       <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
             <div
-                class="bg-white flex flex-col text-center cursor-pointer shadow-lg p-8 gap-6 rounded transition-transform duration-300 hover:scale-102"
+                class="bg-white flex flex-col text-center cursor-pointer shadow-lg p-8 gap-6 rounded-xl transition-transform duration-300 hover:scale-102"
             >
                 <div class="flex justify-center items-center gap-2.5">
 
