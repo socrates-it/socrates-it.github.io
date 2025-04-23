@@ -1,24 +1,39 @@
-import React, { type JSX } from 'react'
+import React, { type ReactNode, useEffect } from 'react'
 
 interface DialogProps {
+  children?: ReactNode
+  isOpen: boolean
   onClose: () => void
-  sections: JSX.Element[]
+  title: string
 }
-const Dialog = ({ onClose, sections }: DialogProps) => {
+const Dialog = ({ children, isOpen, onClose, title }: DialogProps) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isOpen])
+
+  if (!isOpen) {
+    return null
+  }
+
   return (
-    <div className="fixed z-50 inset-0 flex items-center justify-center bg-black/50" onClick={onClose}>
-      <div className="w-1/2 h-2/3 p-6 bg-white rounded-lg shadow-lg overflow-y-auto" onClick={e => e.stopPropagation()}>
-        <div className="w-full h-10 flex justify-end ">
+    <div className="fixed z-50 inset-0 flex items-center justify-center px-custom bg-black/50" onClick={onClose}>
+      <div className="max-w-6xl max-h-[80%] bg-white rounded-lg shadow-lg py-md pt-5 overflow-hidden flex flex-col" onClick={e => e.stopPropagation()}>
+        <div className="w-full px-md pb-xl flex h-10 justify-between ">
+          <h2 className="mb-lg font-bold text-2xl">{title}</h2>
           <button className="size-4 cursor-pointer" onClick={onClose}>
-            <span className="block w-6 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out transform rotate-45 -translate-x-1 absolute" />
-            <span className="block w-6 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out transform -rotate-45 -translate-x-1 absolute" />
+            <span className="block w-6 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out transform rotate-45 translate-y-1.5 -translate-x-0.5 absolute" />
+            <span className="block w-6 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out transform -rotate-45 translate-y-1.5 -translate-x-0.5 absolute" />
           </button>
         </div>
-        {sections.map((block, index) => (
-          <div key={index} className=" overflow-y-auto">
-            {block}
-          </div>
-        ))}
+        <div className="space-y-lg overflow-y-auto flex-grow px-md">{children}</div>
       </div>
     </div>
   )

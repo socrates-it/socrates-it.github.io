@@ -311,3 +311,13 @@
 .tag-list li {
   /* You can apply Tailwind classes inline as well, but here’s an example */
 }
+
+/* custom truncate */
+@media (min-width: 768px) {
+  .truncate-multi-line {
+    overflow: hidden;
+    display: -webkit-box; /* Required for older Safari/Chrome */
+    -webkit-line-clamp: 4; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+}

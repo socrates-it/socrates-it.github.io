@@ -3,7 +3,6 @@ import Layout from '~/layouts/PageLayout.astro';
 import type { Image } from '~/types';
 import Hero from '~/components/widgets/Hero.astro';
 import HorizontalIntro from '~/components/widgets/HorizontalIntro.tsx';
-import Cards from '~/components/widgets/Cards.tsx';
 import Accordion from "../components/widgets/Accordion";
 import FeaturesGrid from "../components/widgets/FeaturesGrid";
 import EventDetails from '../components/widgets/EventDetails.astro';
@@ -42,11 +41,11 @@ const metadata = {
 
 	<!-- EventGuideline Widget ******************* -->
 
-	<EventGuideline client:only/>
+	<EventGuideline client:load />
 
 	<!-- Cards Widget ******************* -->
 
-	<Cards client:load />
+	<!--<Cards client:load />-->
 
 	<!-- ImageSections Widget ******************* -->
 

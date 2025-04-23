@@ -152,7 +152,6 @@ const Cards = () => {
               </div>
               <CardContent project={project} openModal={handleOpenModal} />
             </div>
-            {openModals[project.title] && <Dialog onClose={() => setOpenModals(prev => ({ ...prev, [project.title]: false }))} sections={project.sections} />}
           </Fragment>
         ))}
       </div>

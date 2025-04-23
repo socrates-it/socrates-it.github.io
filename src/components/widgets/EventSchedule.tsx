@@ -141,7 +141,7 @@ const EventSchedule = () => {
 
   return (
     <div className="min-h-screen p-custom">
-      <SectionIntro title={'event schedule'} />
+      <SectionIntro title={'event schedule'} isLightContrast={false} />
 
       <div className="flex gap-10 container-custom flex-col sm:flex-row">
         {/* Sidebar */}
