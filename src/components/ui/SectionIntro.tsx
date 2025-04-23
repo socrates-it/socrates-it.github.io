@@ -4,12 +4,14 @@ interface SectionIntroProps {
   title: string
   description?: string
   color?: string
+  dimensions?: string
+  position?: string
 }
 
-const SectionIntro = ({ title, description, color = 'contrast' }: SectionIntroProps) => {
+const SectionIntro = ({ title, description, color = 'contrast', dimensions = 'text-4xl md:text-5xl', position = 'text-center' }: SectionIntroProps) => {
   return (
-    <div className="pb-xl text-center">
-      <h2 className={cn('text-4xl md:text-5xl font-bold capitalize', `text-${color}`)}>{title}</h2>
+    <div className={position}>
+      <h2 className={cn('font-bold capitalize', `text-${color}`, `${dimensions}`)}>{title}</h2>
       {description && <p className={cn('text-lg mt-3', `text-${color}`)}>{description}</p>}
     </div>
   )

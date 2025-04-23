@@ -22,21 +22,31 @@ const partners = [
 
 export default function Partners() {
   return (
-    <div className="p-custom text-center bg-soft">
-      <SectionIntro title={'PARTNERS'} />
-
-      <div className="grid grid-cols-3 rounded-lg md:grid-cols-4 lg:grid-cols-5 gap-x-0 gap-y-24 container-custom justify-items-center mb-xl md:mb-0">
-        {partners.map((partner, index) => (
-          <a key={index} href={partner.url} className="size-20">
-            <div className={cn('bg-light size-full border border-light-contrast rounded-lg shadow-md', 'flex items-center justify-center p-xs mb-xs')}>
-              <div
-                className={cn('rounded-4xl size-16 sm:size-20 bg-contain bg-center bg-no-repeat')}
-                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/${partner.image})` }}
-              />
-            </div>
-            <div className="italic text-xs sm:text-sm">{partner.name}</div>
-          </a>
-        ))}
+    <div className="p-custom text-center">
+      <div className="max-w-6xl mx-auto flex justify-center items-center">
+        <div className="w-2/5 flex">
+          <SectionIntro
+            title={'partners'}
+            description="We're proud to collaborate with and be supported by a vibrant community"
+            dimensions={'text-3xl md:text-4xl'}
+            position={'text-left w-3/4'}
+          />
+        </div>
+        <div className="w-3/5">
+          <div className="grid grid-cols-3 rounded-lg gap-10 justify-items-center">
+            {partners.map((partner, index) => (
+              <a key={index} href={partner.url} className="size-full">
+                <div className={cn('bg-white size-full rounded-lg shadow-md', 'flex items-center justify-center p-xs mb-xs')}>
+                  <div
+                    className={cn('rounded-4xl size-16 sm:size-20 bg-contain bg-center bg-no-repeat')}
+                    style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/${partner.image})` }}
+                  />
+                </div>
+                {/*<div className="italic text-xs sm:text-sm">{partner.name}</div>*/}
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -39,7 +39,7 @@ const DLPhotoAlbum: React.FC = () => {
     { src: 'https://placehold.co/400x400/EEE/31343C', alt: 'Placeholder 6' },
   ]
   return (
-    <div className="p-custom">
+    <div className="p-custom bg-white">
       <SectionIntro title={'memories'} description={'Shared laughs, lessons learned, good times together'} />
 
       <div className="max-w-6xl mx-auto flex flex-col">
