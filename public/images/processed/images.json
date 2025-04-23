@@ -3,41 +3,47 @@
     "src": "/images/processed/IMG_0030.webp",
     "width": 4032,
     "height": 3024,
-    "format": "webp"
+    "format": "webp",
+    "alt": "boardgame"
   },
   {
     "src": "/images/processed/IMG_20231019_135124308_HDR.webp",
     "width": 2304,
     "height": 1728,
     "format": "webp",
-    "orientation": 1
+    "orientation": 1,
+    "alt": "hangout"
   },
   {
     "src": "/images/processed/IMG_20231021_164233824.webp",
     "width": 3472,
     "height": 4624,
     "format": "webp",
-    "orientation": 1
+    "orientation": 1,
+    "alt": "post-it"
   },
   {
     "src": "/images/processed/PXL_20241003_202125229.MP.webp",
     "width": 3072,
     "height": 4080,
     "format": "webp",
-    "orientation": 1
+    "orientation": 1,
+    "alt": "game"
   },
   {
     "src": "/images/processed/PXL_20241004_072914746.webp",
     "width": 4080,
     "height": 3072,
     "format": "webp",
-    "orientation": 1
+    "orientation": 1,
+    "alt": "speaker"
   },
   {
     "src": "/images/processed/PXL_20241004_083759486_exported_1229_1728031123246.webp",
     "width": 4080,
     "height": 3072,
     "format": "webp",
-    "orientation": 1
+    "orientation": 1,
+    "alt": "meeting"
   }
 ]

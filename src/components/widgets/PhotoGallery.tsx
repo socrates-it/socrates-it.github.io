@@ -8,12 +8,18 @@ import PhotoAlbum, { type Photo, type ResponsiveParameter } from 'react-photo-al
 
 import socratesPhotos from '../../../public/images/processed/images.json'
 const updatedUrlPhotos = socratesPhotos.map(photo => {
-  return { ...photo, src: `${import.meta.env.BASE_URL}/${photo.src}` }
+  return { src: `${import.meta.env.BASE_URL}/${photo.src}`, alt: photo.alt }
 })
 
 import { shuffleFY } from '~/common/array.ts'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
+import { cn } from '~/common/css.ts'
 type DLPhoto = Photo & SlideImage
+
+interface GridImageProps {
+  src: string
+  alt: string
+}
 
 const noOfColumns: ResponsiveParameter<number> = containerWidth => {
   if (containerWidth < 1024) return 2
@@ -24,34 +30,51 @@ const noOfColumns: ResponsiveParameter<number> = containerWidth => {
 const shuffledTeamPhotos = shuffleFY(updatedUrlPhotos)
 
 const DLPhotoAlbum: React.FC = () => {
-  const [index, setIndex] = useState(-1)
-
+  const images: GridImageProps[] = [
+    { src: 'https://placehold.co/400x400/EEE/31343C', alt: 'Placeholder 1' },
+    { src: 'https://placehold.co/400x400/EEE/31343C', alt: 'Placeholder 2' },
+    { src: 'https://placehold.co/400x400/EEE/31343C', alt: 'Placeholder 3' },
+    { src: 'https://placehold.co/400x400/EEE/31343C', alt: 'Placeholder 4' },
+    { src: 'https://placehold.co/400x400/EEE/31343C', alt: 'Placeholder 5' },
+    { src: 'https://placehold.co/400x400/EEE/31343C', alt: 'Placeholder 6' },
+  ]
   return (
     <div className="p-custom">
       <SectionIntro title={'memories'} description={'Shared laughs, lessons learned, good times together'} />
 
-      <div className="max-w-6xl mx-auto flex flex-col p-xl">
-        <PhotoAlbum
-          layout="columns"
-          columns={noOfColumns}
-          padding={10}
-          spacing={20}
-          photos={shuffledTeamPhotos}
-          onClick={({ index }) => setIndex(index)}
-          render={{
-            image: props => <img {...props} src={props.src} alt={props.alt} className=" shadow bg-light" />,
-          }}
-        />
+      <div className="max-w-6xl mx-auto flex flex-col">
+        {/*<PhotoAlbum*/}
+        {/*  layout="columns"*/}
+        {/*  columns={noOfColumns}*/}
+        {/*  padding={10}*/}
+        {/*  spacing={20}*/}
+        {/*  photos={shuffledTeamPhotos}*/}
+        {/*  onClick={({ index }) => setIndex(index)}*/}
+        {/*  render={{*/}
+        {/*    image: props => <img {...props} src={props.src} alt={props.alt} className=" shadow bg-light" />,*/}
+        {/*  }}*/}
+        {/*/>*/}
 
-        <Lightbox
-          styles={{ root: { '--yarl__color_backdrop': 'rgba(0, 0, 0, .8)' } }}
-          slides={shuffledTeamPhotos}
-          open={index >= 0}
-          index={index}
-          close={() => setIndex(-1)}
-          plugins={[]}
-          controller={{ closeOnBackdropClick: true }}
-        />
+        {/*<Lightbox*/}
+        {/*  styles={{ root: { '--yarl__color_backdrop': 'rgba(0, 0, 0, .8)' } }}*/}
+        {/*  slides={shuffledTeamPhotos}*/}
+        {/*  open={index >= 0}*/}
+        {/*  index={index}*/}
+        {/*  close={() => setIndex(-1)}*/}
+        {/*  plugins={[]}*/}
+        {/*  controller={{ closeOnBackdropClick: true }}*/}
+        {/*/>*/}
+        <div
+          className={cn(
+            'grid gap-0 sm:gap-10',
+            'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3', // Responsive grid layout
+          )}>
+          {updatedUrlPhotos.map((image, index) => (
+            <div className="aspect-4/3 flex justify-center items-center">
+              <img src={image.src} alt={image.alt} className="w-3/4 h-3/4 sm:w-full sm:h-full object-cover " />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
