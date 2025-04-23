@@ -23,8 +23,8 @@ const partners = [
 export default function Partners() {
   return (
     <div className="p-custom text-center">
-      <div className="max-w-6xl mx-auto flex justify-center items-center">
-        <div className="w-2/5 flex">
+      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-center items-center">
+        <div className="w-full sm:w-2/5 flex mb-xl sm:mb-0">
           <SectionIntro
             title={'partners'}
             description="We're proud to collaborate with and be supported by a vibrant community"
@@ -32,7 +32,7 @@ export default function Partners() {
             position={'text-left w-3/4'}
           />
         </div>
-        <div className="w-3/5">
+        <div className="w-full sm:w-3/5">
           <div className="grid grid-cols-3 rounded-lg gap-10 justify-items-center">
             {partners.map((partner, index) => (
               <a key={index} href={partner.url} className="size-full">
