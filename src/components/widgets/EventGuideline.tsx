@@ -11,7 +11,7 @@ enum GuideLinesTitles {
 
 const guidelines = [
   {
-    img: '/images/group.jpg',
+    img: '/images/people.jpg',
     title: GuideLinesTitles.first,
     description: [
       'SoCraTes fosters an inclusive community.',
@@ -19,14 +19,14 @@ const guidelines = [
     ],
   },
   {
-    img: '/images/action.jpg',
+    img: '/images/attendees.jpg',
     title: GuideLinesTitles.second,
     description: [
       'SoCraTes IT will be run as a three-day Open Space, facilitated by the outstanding facilitator from Connexxo. We love working in self-organizing teams – well, Open Space is a simple technique for creating a self-organizing conference!',
     ],
   },
   {
-    img: '/images/fun.jpg',
+    img: '/images/rope.jpg',
     title: GuideLinesTitles.third,
     description: [
       'SoCraTes IT follows the Conference Code of Conduct laid out by several conference organisers around the globe. We ask that you read the full version before attending. You are required to cooperate with the code throughout the event to help ensure a safe environment for everybody.',

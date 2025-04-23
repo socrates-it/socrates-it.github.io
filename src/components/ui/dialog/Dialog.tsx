@@ -7,22 +7,6 @@ interface DialogProps {
   title: string
 }
 const Dialog = ({ children, isOpen, onClose, title }: DialogProps) => {
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-    }
-
-    return () => {
-      document.body.style.overflow = ''
-    }
-  }, [isOpen])
-
-  if (!isOpen) {
-    return null
-  }
-
   return (
     <div className="fixed z-50 inset-0 flex items-center justify-center px-custom bg-black/50" onClick={onClose}>
       <div className="max-w-6xl max-h-[80%] bg-white rounded-lg shadow-lg py-md pt-5 overflow-hidden flex flex-col" onClick={e => e.stopPropagation()}>
@@ -33,7 +17,7 @@ const Dialog = ({ children, isOpen, onClose, title }: DialogProps) => {
             <span className="block w-6 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out transform -rotate-45 translate-y-1.5 -translate-x-0.5 absolute" />
           </button>
         </div>
-        <div className="space-y-lg overflow-y-auto flex-grow px-md">{children}</div>
+        <div className="space-y-lg overflow-y-auto flex-grow pt-sm px-md">{children}</div>
       </div>
     </div>
   )
