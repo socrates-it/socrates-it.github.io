@@ -1,7 +1,4 @@
 ---
-import { Icon } from 'astro-icon/components';
-import Button from '~/components/ui/Button.astro';
-
 import type { CallToAction } from '~/types';
 import Navigation from "../navbar/Navigation.astro";
 
@@ -30,14 +27,6 @@ export interface Props {
 
 const {
     id = 'header',
-    links = [],
-    actions = [],
-    isSticky = false,
-    isDark = false,
-    isFullWidth = false,
-    showToggleTheme = false,
-    showRssFeed = false,
-    position = 'center',
 } = Astro.props;
 
 ---
@@ -61,16 +50,16 @@ const {
 
         if (!isHome) {
             header.classList.remove('bg-transparent');
-            header.classList.add('bg-primary');
+            header.classList.add('bg-tertiary');
         } else {
             // Initial state on load
             header.classList.add('bg-transparent');
-            header.classList.remove('bg-primary');
+            header.classList.remove('bg-tertiary');
 
             // Update on scroll
             const onScroll = () => {
                 const scrolledDown = window.scrollY > 200;
-                header.classList.toggle('bg-primary', scrolledDown);
+                header.classList.toggle('bg-tertiary', scrolledDown);
                 header.classList.toggle('bg-transparent', !scrolledDown);
             };
 

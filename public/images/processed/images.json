@@ -1,100 +1,9 @@
 [
   {
-    "src": "/images/processed/AA67BD14-7EB6-4F77-B6A6-C2360945B727.webp",
-    "width": 1920,
-    "height": 1080,
-    "format": "webp",
-    "orientation": 1
-  },
-  {
-    "src": "/images/processed/IMG20241004085707.webp",
-    "width": 3000,
-    "height": 4000,
-    "format": "webp",
-    "orientation": 1
-  },
-  {
-    "src": "/images/processed/IMG_0028.webp",
-    "width": 4032,
-    "height": 3024,
-    "format": "webp",
-    "orientation": 1
-  },
-  {
     "src": "/images/processed/IMG_0030.webp",
     "width": 4032,
     "height": 3024,
     "format": "webp"
-  },
-  {
-    "src": "/images/processed/IMG_0598.webp",
-    "width": 4032,
-    "height": 3024,
-    "format": "webp",
-    "orientation": 1
-  },
-  {
-    "src": "/images/processed/IMG_1277.webp",
-    "width": 4032,
-    "height": 3024,
-    "format": "webp",
-    "orientation": 1
-  },
-  {
-    "src": "/images/processed/IMG_3823.webp",
-    "width": 3024,
-    "height": 4032,
-    "format": "webp"
-  },
-  {
-    "src": "/images/processed/IMG_4266.webp",
-    "width": 4032,
-    "height": 3024,
-    "format": "webp",
-    "orientation": 1
-  },
-  {
-    "src": "/images/processed/IMG_4756.webp",
-    "width": 3024,
-    "height": 4032,
-    "format": "webp"
-  },
-  {
-    "src": "/images/processed/IMG_4760.webp",
-    "width": 3024,
-    "height": 4032,
-    "format": "webp"
-  },
-  {
-  "src": "/images/processed/IMG_4770.webp",
-  "width": 4032,
-  "height": 3024,
-  "format": "webp"
-  },
-  {
-    "src": "/images/processed/IMG_4775.webp",
-    "width": 3024,
-    "height": 4032,
-    "format": "webp"
-  },
-  {
-    "src": "/images/processed/IMG_7272.webp",
-    "width": 4032,
-    "height": 3024,
-    "format": "webp"
-  },
-  {
-    "src": "/images/processed/IMG_7324.webp",
-    "width": 3520,
-    "height": 1980,
-    "format": "webp"
-  },
-  {
-    "src": "/images/processed/IMG_20220922_212558688.webp",
-    "width": 3472,
-    "height": 4624,
-    "format": "webp",
-    "orientation": 1
   },
   {
     "src": "/images/processed/IMG_20231019_135124308_HDR.webp",
@@ -104,58 +13,9 @@
     "orientation": 1
   },
   {
-    "src": "/images/processed/IMG_20231020_124905.webp",
-    "width": 4640,
-    "height": 3472,
-    "format": "webp",
-    "orientation": 1
-  },
-  {
-    "src": "/images/processed/IMG_20231021_091853.webp",
-    "width": 3472,
-    "height": 4640,
-    "format": "webp",
-    "orientation": 1
-  },
-  {
     "src": "/images/processed/IMG_20231021_164233824.webp",
     "width": 3472,
     "height": 4624,
-    "format": "webp",
-    "orientation": 1
-  },
-  {
-    "src": "/images/processed/PXL_20231020_080735170.webp",
-    "width": 1512,
-    "height": 2688,
-    "format": "webp",
-    "orientation": 1
-  },
-  {
-    "src": "/images/processed/PXL_20231020_080823170.webp",
-    "width": 1512,
-    "height": 2688,
-    "format": "webp",
-    "orientation": 1
-  },
-  {
-    "src": "/images/processed/PXL_20231020_130523217.webp",
-    "width": 2688,
-    "height": 1512,
-    "format": "webp",
-    "orientation": 1
-  },
-  {
-    "src": "/images/processed/PXL_20231020_185439447.webp",
-    "width": 2688,
-    "height": 1512,
-    "format": "webp",
-    "orientation": 1
-  },
-  {
-    "src": "/images/processed/PXL_20241003_200114410_exported_833_1727986107307.webp",
-    "width": 3072,
-    "height": 4080,
     "format": "webp",
     "orientation": 1
   },
@@ -175,20 +35,6 @@
   },
   {
     "src": "/images/processed/PXL_20241004_083759486_exported_1229_1728031123246.webp",
-    "width": 4080,
-    "height": 3072,
-    "format": "webp",
-    "orientation": 1
-  },
-  {
-    "src": "/images/processed/PXL_20241004_100619136.webp",
-    "width": 4080,
-    "height": 3072,
-    "format": "webp",
-    "orientation": 1
-  },
-  {
-    "src": "/images/processed/PXL_20241004_155407984.webp",
     "width": 4080,
     "height": 3072,
     "format": "webp",

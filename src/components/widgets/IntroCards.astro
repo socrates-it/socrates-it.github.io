@@ -25,7 +25,7 @@ const projects = [
 ---
 
     <div class="px-custom pb-xl md:pb-4xl bg-gray-50">
-      <SectionIntro title="what is socrates" isLightContrast={false} client:only="react"/>
+      <SectionIntro title="what is socrates" client:only="react"/>
 
       <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
@@ -38,8 +38,8 @@ const projects = [
                         <Icon name={project.icon} class='size-8'/>
                     </div>
                 </div>
-              <h3 class="font-bold">{project.title}</h3>
-              <p class="text-justify">{project.description}</p>
+              <h3 class="font-bold text-contrast">{project.title}</h3>
+              <p class="text-justify text-lighter-contrast">{project.description}</p>
             </div>
         ))}
       </div>

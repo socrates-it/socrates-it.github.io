@@ -43,7 +43,7 @@ const EventGuideline = () => {
 
   return (
     <section className="px-custom py-4xl bg-contrast">
-      <SectionIntro title={'What We Stand For'} isLightContrast={true} />
+      <SectionIntro title={'What We Stand For'} color="lightest" />
 
       <div className="rounded-lg max-w-6xl mx-auto space-y-xl">
         {guidelines.map((guideline, index) => {
@@ -109,7 +109,7 @@ const EventGuideline = () => {
               others. Do not insult or put down other participants. Harassment and other exclusionary behavior aren’t acceptable.
             </p>
             <p>
-              Credits: These values are inspired by{' '}
+              <span className="italic">Credits</span>: These values are inspired by{' '}
               <a href="https://www.djangoproject.com/conduct/" className="text-accent">
                 Django Code of Conduct and Citizenship Code of Conduct
               </a>

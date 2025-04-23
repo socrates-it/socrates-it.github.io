@@ -140,8 +140,8 @@ const EventSchedule = () => {
   const [selectedDate, setSelectedDate] = useState('October 2')
 
   return (
-    <div className="min-h-screen p-custom">
-      <SectionIntro title={'event schedule'} isLightContrast={false} />
+    <div className="min-h-screen p-custom bg-lightest">
+      <SectionIntro title={'event schedule'} color="contrast" />
 
       <div className="flex gap-10 container-custom flex-col sm:flex-row">
         {/* Sidebar */}
@@ -149,7 +149,7 @@ const EventSchedule = () => {
           {Object.keys(eventData).map(date => (
             <button
               key={date}
-              className={`block w-full p-4 text-left font-semibold transition-colors duration-300 cursor-pointer hover:bg-highlight  ${selectedDate === date ? 'bg-primary text-white hover:bg-primary' : 'bg-soft text-gray-800'}`}
+              className={`block w-full p-4 text-left font-semibold transition-colors duration-300 cursor-pointer  ${selectedDate === date ? 'bg-accent hover:bg-accent text-white ' : 'bg-white text-black  hover:bg-light'}`}
               onClick={() => setSelectedDate(date)}>
               {date}
             </button>
@@ -157,17 +157,17 @@ const EventSchedule = () => {
         </div>
 
         {/* Event Details */}
-        <div className="w-full sm:w-2/3">
+        <div className="w-full  sm:w-2/3">
           {eventData[selectedDate].map((event, index) => (
-            <div key={index} className="bg-light p-4 mb-4 rounded-lg shadow-lg transition-colors duration-300">
+            <div key={index} className="bg-white shadow-lg p-4 mb-4 rounded-lg transition-colors duration-300">
               <div className="flex items-center gap-4">
-                <div className="size-12 bg-primary text-light rounded-full flex justify-center items-center">{event.icon}</div>
+                <div className="size-12 bg-secondary text-white rounded-full flex justify-center items-center">{event.icon}</div>
                 <div className="space-y-0">
-                  <p className="text-sm text-gray-400">{event.time}</p>
-                  <h3 className="text-lg font-bold">{event.title}</h3>
+                  <p className="text-sm text-lightest-contrast">{event.time}</p>
+                  <h3 className="text-lg text-contrast font-bold">{event.title}</h3>
                 </div>
               </div>
-              <p className="text-gray-400 mt-3">{event.description}</p>
+              <p className="text-lightest-contrast mt-3">{event.description}</p>
             </div>
           ))}
         </div>

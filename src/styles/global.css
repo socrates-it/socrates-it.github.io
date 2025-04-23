@@ -7,9 +7,10 @@
 
   --aw-color-primary: rgb(22, 101, 52);
   --aw-color-primary-dark: rgb(5, 46, 22);
-  --aw-color-secondary: rgb(112, 173, 122);
-  --aw-color-accent: rgb(0, 130, 54);
-  --aw-color-highlight: oklch(0.927 0.038 157.395);
+  --aw-color-secondary: rgb(117, 182, 129);
+  --aw-color-tertiary: rgb(13, 84, 43);
+  --aw-color-accent: rgb(34, 124, 72);
+  --aw-color-highlight: rgb(201, 232, 207);
 
   --aw-color-text-heading: rgb(0 0 0);
   --aw-color-text-subtitle: rgb(168, 168, 168);
@@ -23,7 +24,8 @@
 
   --aw-color-contrast: rgb(61, 62, 62);
   --aw-color-light-contrast: rgb(71, 72, 72);
-  --aw-color-lightest-contrast: #B7BAC7;
+  --aw-color-lighter-contrast: rgb(111, 113, 113);
+  --aw-color-lightest-contrast: rgb(153, 161, 175);
   --aw-color-contrast-secondary: rgb(107, 114, 128);
 
   --aw-spacing-xs: 0.5rem;  /* 8px */
@@ -68,6 +70,7 @@
   --color-primary: var(--aw-color-primary);
   --color-primary-dark: var(--aw-color-primary-dark);
   --color-secondary: var(--aw-color-secondary);
+  --color-tertiary: var(--aw-color-tertiary);
   --color-accent: var(--aw-color-accent);
   --color-highlight: var(--aw-color-highlight);
 
@@ -76,7 +79,9 @@
   --color-light: var(--aw-color-light);
   --color-contrast: var(--aw-color-contrast);
   --color-light-contrast: var(--aw-color-light-contrast);
-  --color-lighter-contrast: var(--aw-color-lightest-contrast);
+  --color-lighter-contrast: var(--aw-color-lighter-contrast);
+  --color-lightest-contrast: var(--aw-color-lightest-contrast);
+
 
   --color-heading: var(--aw-color-text-heading);
   --color-subtitle: var(--aw-color-text-subtitle);

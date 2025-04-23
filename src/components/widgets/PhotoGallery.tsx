@@ -26,10 +26,9 @@ const shuffledTeamPhotos = shuffleFY(updatedUrlPhotos)
 const DLPhotoAlbum: React.FC = () => {
   const [index, setIndex] = useState(-1)
 
-  console.log(shuffledTeamPhotos)
   return (
     <div className="p-custom">
-      <SectionIntro title={'MEMORIES'} description={'Shared laughs, lessons learned, good times together'} />
+      <SectionIntro title={'memories'} description={'Shared laughs, lessons learned, good times together'} />
 
       <div className="max-w-6xl mx-auto flex flex-col p-xl">
         <PhotoAlbum
