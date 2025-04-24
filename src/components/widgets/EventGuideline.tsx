@@ -57,7 +57,7 @@ const EventGuideline = () => {
 
                 <div className="md:w-3/5 flex flex-col md:px-xl h-full justify-between">
                   <div className="mb-xl md:mb-0">
-                    <h2 className="mb-xs text-md lg:text-lg font-bold capitalize text-lightest">{guideline.title}</h2>
+                    <h2 className="mb-xs text-xl font-bold capitalize text-lightest">{guideline.title}</h2>
                     <div className="space-y-sm truncate-multi-line ">
                       {guideline.description.map((item, index) => (
                         <p key={item} className="text-lightest text-md text-ellipsis">

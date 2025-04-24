@@ -8,8 +8,8 @@ export type MenuItem = {
 }
 
 export const menuItems: MenuItem[] = [
-  { label: 'About', url: `${BASE_PATH}about` },
-  { label: 'Schedule', url: `${BASE_PATH}servizi` },
-  { label: 'Sponsors', url: `${BASE_PATH}approccio` },
+  { label: 'About', url: `${BASE_PATH}#about` },
+  { label: 'Schedule', url: `${BASE_PATH}#schedule` },
+  { label: 'Sponsors', url: `${BASE_PATH}#sponsors` },
   { label: 'Register', url: `${BASE_PATH}register` },
 ]

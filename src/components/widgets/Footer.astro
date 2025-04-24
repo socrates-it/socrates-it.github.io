@@ -22,8 +22,8 @@ const footerData: {title: string, links: { text: string, url: string }[]}[] = [
     ]
 
 ---
-<footer class="px-md md:px-xl bg-white">
-    <div class="max-w-6xl mx-auto gap-10 grid grid-cols-1 md:grid-cols-4 py-xl">
+<footer class="px-md md:px-xl bg-white pt-12 md:pt-24 pb-6">
+    <div class="max-w-6xl mx-auto gap-10 grid grid-cols-1 md:grid-cols-4">
         <a href={`${BASE_PATH}`} aria-label="Go to homepage">
             <div class="size-16 md:size-20 bg-no-repeat bg-contain bg-center"
                  style={`background-image: url(${socratesLogo.src});`}
@@ -56,5 +56,5 @@ const footerData: {title: string, links: { text: string, url: string }[]}[] = [
             </ul>
         </div>
     </div>
-    <p class="text-gray-500 text-sm mt-6 text-center container mx-auto max-w-6xl">&copy; 2025 YourCompany. All Rights Reserved.</p>
+    <p class="text-gray-500 text-sm mt-4xl text-center container mx-auto max-w-6xl">&copy; 2025 YourCompany. All Rights Reserved.</p>
 </footer>

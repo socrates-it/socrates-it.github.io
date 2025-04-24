@@ -140,7 +140,7 @@ const EventSchedule = () => {
   const [selectedDate, setSelectedDate] = useState('October 2')
 
   return (
-    <div className="min-h-screen pt-11 md:pt-23 pb-14 md:pb-26 px-md md:px-xl bg-lightest">
+    <div id="schedule" className="min-h-screen pt-11 md:pt-23 pb-14 md:pb-26 px-md md:px-xl bg-lightest">
       <SectionIntro title={'event schedule'} color="contrast" />
 
       <div className="flex gap-10 max-w-6xl mx-auto flex-col sm:flex-row">
