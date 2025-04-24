@@ -55,14 +55,14 @@ const Carousel = () => {
       <div className="absolute bg-black/60 inset-0 px-custom">
         <div className="max-w-6xl mx-auto relative h-full">
           <div className=" w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-white text-center px-xl space-y-10 sm:space-y-12 md:space-y-14 lg:space-y-16">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">"Great things happen when we come together."</h2>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold">"Great things happen when we come together."</h2>
             <div className="space-y-md">
-              <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl opacity-80">
+              <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-light">
                 SoCraTes 2025 <span className="capitalize">coming soon</span>
               </p>
-              <p className=" text-lg sm:text-2xl md:text-3xl lg:text-4xl">
+              <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl">
                 <button className="btn-primary uppercase">
-                  <a href="" target="_blank">
+                  <a href="/socrates-2025/register" target="_blank">
                     register
                   </a>
                 </button>

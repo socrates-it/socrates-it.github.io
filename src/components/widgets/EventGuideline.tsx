@@ -42,7 +42,7 @@ const EventGuideline = () => {
   }
 
   return (
-    <section className="px-custom py-4xl bg-contrast">
+    <section className="px-md md:px-xl pt-12 md:pt-24 pb-14 md:pb-26 bg-contrast">
       <SectionIntro title={'What We Stand For'} color="lightest" />
 
       <div className="rounded-lg max-w-6xl mx-auto space-y-xl">

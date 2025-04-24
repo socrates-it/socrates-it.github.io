@@ -8,7 +8,7 @@ interface DialogProps {
 }
 const Dialog = ({ children, isOpen, onClose, title }: DialogProps) => {
   return (
-    <div className="fixed z-50 inset-0 flex items-center justify-center px-custom bg-black/50" onClick={onClose}>
+    <div className="fixed z-50 inset-0 flex items-center justify-center px-md md:px-xl bg-black/50" onClick={onClose}>
       <div className="max-w-6xl max-h-[80%] bg-white rounded-lg shadow-lg py-md pt-5 overflow-hidden flex flex-col" onClick={e => e.stopPropagation()}>
         <div className="w-full px-md pb-xl flex h-10 justify-between ">
           <h2 className="mb-lg font-bold text-2xl">{title}</h2>

@@ -22,8 +22,8 @@ const footerData: {title: string, links: { text: string, url: string }[]}[] = [
     ]
 
 ---
-<footer class="p-custom">
-    <div class="border-t border-t-dark container-custom gap-10 grid grid-cols-1 md:grid-cols-4 py-xl">
+<footer class="px-md md:px-xl bg-white">
+    <div class="max-w-6xl mx-auto gap-10 grid grid-cols-1 md:grid-cols-4 py-xl">
         <a href={`${BASE_PATH}`} aria-label="Go to homepage">
             <div class="size-16 md:size-20 bg-no-repeat bg-contain bg-center"
                  style={`background-image: url(${socratesLogo.src});`}
@@ -38,17 +38,17 @@ const footerData: {title: string, links: { text: string, url: string }[]}[] = [
         <div class="flex flex-col items-start space-y-6">
             <h3 class="text-lg font-bold">Follow Us</h3>
             <ul class="flex justify-start space-x-2">
-                <li  class="size-8 bg-primary rounded text-light">
+                <li  class="size-8 bg-primary rounded text-white">
                     <a href='https://linkedin.com/' target="_blank" rel="noopener noreferrer" class="size-full">
                         <MdiLinkedin className="size-full"/>
                     </a>
                 </li>
-                <li  class="size-8 bg-primary rounded text-light">
+                <li  class="size-8 bg-primary rounded text-white">
                     <a href='https://github.com/' target="_blank" rel="noopener noreferrer" class="size-full">
                         <MdiGithub className="size-full"/>
                     </a>
                 </li>
-                <li  class="size-8 bg-primary rounded text-light">
+                <li  class="size-8 bg-primary rounded text-white">
                     <a href='https://bsky.app/' target="_blank" rel="noopener noreferrer" >
                         <RiBlueskyFill className="size-full"/>
                     </a>

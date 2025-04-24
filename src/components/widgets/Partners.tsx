@@ -22,13 +22,14 @@ const partners = [
 
 export default function Partners() {
   return (
-    <div className="p-custom text-center">
+    <div className="px-md md:px-xl pt-12 md:pt-24 pb-14 md:pb-26 text-center bg-lightest">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-center items-center">
-        <div className="w-full sm:w-2/5 flex mb-xl sm:mb-0">
+        <div className="w-full sm:w-2/5 flex ">
           <SectionIntro
             title={'partners'}
             description="We're proud to collaborate with and be supported by a vibrant community"
             dimensions={'text-3xl md:text-4xl'}
+            margin={'mb-xl sm:mb-0'}
             position={'text-left w-3/4'}
           />
         </div>

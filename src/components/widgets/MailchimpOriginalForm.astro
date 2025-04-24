@@ -1,8 +1,8 @@
 ---
-// no scripting needed unless you want interactivity
+import {Icon} from "astro-icon/components";
 ---
 
-<div id="mc_embed_signup" class="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow space-y-6">
+<div id="mc_embed_signup" class="max-w-2xl mx-auto p-6 bg-white rounded-lg space-y-6">
     <form
             action="https://socrates-conference.us20.list-manage.com/subscribe/post?u=4e24ba7602f7acf9fe79737d3&amp;id=be9dbd9e7a&amp;v_id=3927&amp;f_id=00d46ae4f0"
             method="post"
@@ -12,7 +12,7 @@
             target="_blank"
             novalidate
     >
-        <p class="text-sm">
+        <p>
             Fill the form and subscribe. You’ll get an email with the hotel registration form.
         </p>
 
@@ -25,7 +25,7 @@
                         id="mce-EMAIL"
                         required
                         placeholder="Email"
-                        class="w-full p-3 bg-muted border border-transparent rounded focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300"
+                        class="w-full p-3 bg-lighter border border-transparent rounded focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300"
                 />
             </div>
         </div>
@@ -38,7 +38,7 @@
                         name="FNAME"
                         id="mce-FNAME"
                         placeholder="First Name"
-                        class="w-full p-3 bg-muted border border-transparent rounded focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300"
+                        class="w-full p-3 bg-lighter border border-transparent rounded focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300"
                 />
             </div>
             <div class="mc-field-group">
@@ -48,14 +48,14 @@
                         name="LNAME"
                         id="mce-LNAME"
                         placeholder="Last Name"
-                        class="w-full p-3 bg-muted border border-transparent rounded focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300"
+                        class="w-full p-3 bg-lighter border border-transparent rounded focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300"
                 />
             </div>
         </div>
 
-        <div class="space-y-4 text-sm text-dark">
+        <div class="space-y-4 text-dark">
             <div>
-                <strong>Permissions</strong>
+                <strong class="text-lg">Permissions</strong>
                 <p class="mt-1">
                     I wish to receive email communications from SoCraTes IT, including news about our conferences. We use Mailchimp as our marketing platform. By
                     clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing.
@@ -68,7 +68,7 @@
             <fieldset class="mc_fieldset">
                 <div class="flex items-start space-x-2">
                     <input type="checkbox" id="gdpr_11381" name="gdpr[11381]" value="Y" class="mt-1" required />
-                    <label for="gdpr_11381" class="text-sm">
+                    <label for="gdpr_11381" class=>
                         Yes, I declare to have read and understood SoCraTes IT’s Privacy Policy.
                     </label>
                 </div>
@@ -80,14 +80,55 @@
             <input type="text" name="b_4e24ba7602f7acf9fe79737d3_be9dbd9e7a" tabindex="-1" value="" />
         </div>
 
-        <div>
+        <div class="mb-lg">
             <input
                     type="submit"
                     value="Register"
                     name="subscribe"
                     id="mc-embedded-subscribe"
-                    class="uppercase w-full p-3 bg-secondary text-white rounded font-semibold hover:bg-secondary/90 transition-all duration-300"
+                    class="btn-primary uppercase w-full"
             />
+        </div>
+
+        <div class="space-y-12 pb-custom">
+            {/* Included Section */}
+            <div class="mx-auto space-y-4">
+                <h2 class="font-bold text-lg">What is included in the cost?</h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>
+                        <strong>Two nights full-board:</strong> breakfast, lunch, dinner and snack buffet all day (vegetarian and gluten-free food included!)
+                    </li>
+                    <li>Use of the congress rooms</li>
+                    <li>
+                        The hotel has both twin and double rooms. If there is someone you are willing to share the room with, feel free to book the double room. If you
+                        don’t know anyone, don’t worry: sign in to the{' '}
+                        <a href="https://softwarecrafters.slack.com/messages/italian" target="_blank" rel="noopener noreferrer" class="text-primary underline">
+                            Software Crafters #italian channel
+                        </a>{' '}
+                        on Slack and find a suitable roommate.
+                    </li>
+                    <li>City tax</li>
+                </ul>
+            </div>
+
+            {/* Rooms Section */}
+            <div class="">
+                {/*<h3 class="bg-primary text-light text-center text-xl rounded-t-lg p-sm font-semibold  uppercase">Rooms</h3>*/}
+                <div class="grid md:grid-cols-2 mx-auto">
+                    <div class="hover:bg-subtle flex flex-col items-center justify-center">
+                        <h4 class="font-medium">Shared double room</h4>
+                        <div class="flex items-center justify-center">
+                            <Icon name={'single-bed'} class='size-14 text-primary'/>
+                            <Icon name={'single-bed'} class='size-14 text-primary'/>
+                        </div>                    <p class="mt-2 text-subtitle italic">from € 260 per attendee</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <h4 class="font-medium">Single room</h4>
+                        <Icon name={'single-bed'} class='size-14 text-primary'/>                        <p class="mt-2 text-subtitle italic">from € 320 per attendee</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </form>
 </div>

@@ -33,6 +33,8 @@
   --aw-spacing-md: 1.5rem;  /* 24px */
   --aw-spacing-lg: 2rem;    /* 32px */
   --aw-spacing-xl: 3rem;    /* 48px */
+  --aw-spacing-2xl: 4rem;   /* 64px */
+  --aw-spacing-3xl: 5rem;   /* 80px */
   --aw-spacing-4xl: 6rem;   /* 96px */
 
   --aw-breakpoint-3xl: 120rem;
@@ -103,6 +105,8 @@
   --spacing-md: var(--aw-spacing-md);
   --spacing-lg: var(--aw-spacing-lg);
   --spacing-xl: var(--aw-spacing-xl);
+  --spacing-2xl: var(--aw-spacing-2xl);
+  --spacing-3xl: var(--aw-spacing-3xl);
   --spacing-4xl: var(--aw-spacing-4xl);
 
   --breakpoint-3xl: var(--aw-breakpoint-3xl);
@@ -197,22 +201,6 @@
 
 @utility btn-tertiary {
   @apply btn border-none shadow-none text-light hover:text-gray-900;
-}
-
-@utility px-custom {
-  @apply px-md md:px-xl;
-}
-
-@utility py-custom {
-  @apply py-md md:py-xl;
-}
-
-@utility p-custom {
-  @apply p-md md:p-xl;
-}
-
-@utility container-custom {
-  @apply max-w-6xl mx-auto container;
 }
 
 #header.scroll > div:first-child {

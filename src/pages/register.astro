@@ -1,0 +1,22 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import MailchimpOriginalForm from "../components/widgets/MailchimpOriginalForm.astro";
+
+const metadata = {
+    title: 'Register',
+    ignoreTitleTemplate: true,
+};
+
+---
+
+<Layout metadata={metadata}>
+
+    <div class="p-custom bg-lightest">
+        <div class="max-w-6xl mx-auto space-y-10 pt-24">
+            <h1 class="text-4xl md:text-4xl font-extrabold text-center uppercase">{metadata.title}</h1>
+
+            <MailchimpOriginalForm />
+        </div>
+    </div>
+
+</Layout>

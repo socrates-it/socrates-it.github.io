@@ -140,10 +140,10 @@ const EventSchedule = () => {
   const [selectedDate, setSelectedDate] = useState('October 2')
 
   return (
-    <div className="min-h-screen p-custom bg-lightest">
+    <div className="min-h-screen pt-11 md:pt-23 pb-14 md:pb-26 px-md md:px-xl bg-lightest">
       <SectionIntro title={'event schedule'} color="contrast" />
 
-      <div className="flex gap-10 container-custom flex-col sm:flex-row">
+      <div className="flex gap-10 max-w-6xl mx-auto flex-col sm:flex-row">
         {/* Sidebar */}
         <div className="w-full sm:w-1/3">
           {Object.keys(eventData).map(date => (
@@ -157,9 +157,9 @@ const EventSchedule = () => {
         </div>
 
         {/* Event Details */}
-        <div className="w-full  sm:w-2/3">
+        <div className="w-full space-y-4 sm:w-2/3">
           {eventData[selectedDate].map((event, index) => (
-            <div key={index} className="bg-white shadow-lg p-4 mb-4 rounded-lg transition-colors duration-300">
+            <div key={index} className="bg-white shadow-lg p-4 rounded-lg transition-colors duration-300">
               <div className="flex items-center gap-4">
                 <div className="size-12 bg-secondary text-white rounded-full flex justify-center items-center">{event.icon}</div>
                 <div className="space-y-0">
