@@ -10,9 +10,10 @@ const footerData: {title: string, links: { text: string, url: string }[]}[] = [
     {
         title: 'Quick Links',
         links: [
-            {'text': 'About Conference', 'url': 'about'},
-            {'text': 'Our Speakers', 'url': 'speakers'},
-            {'text': 'Event Schedule', 'url': 'speakers'}
+            {'text': 'About Conference', 'url': '#about'},
+            {'text': 'Our Schedule', 'url': '#schedule'},
+            {'text': 'Event Sponsors', 'url': '#sponsors'},
+            {'text': 'Register', 'url': 'register'}
         ]
     },
     {
@@ -39,22 +40,22 @@ const footerData: {title: string, links: { text: string, url: string }[]}[] = [
             <h3 class="text-lg font-bold">Follow Us</h3>
             <ul class="flex justify-start space-x-2">
                 <li  class="size-8 bg-primary rounded text-white">
-                    <a href='https://linkedin.com/' target="_blank" rel="noopener noreferrer" class="size-full">
+                    <a href='https://www.linkedin.com/company/socrates-italy/' target="_blank" rel="noopener noreferrer" class="size-full">
                         <MdiLinkedin className="size-full"/>
                     </a>
                 </li>
-                <li  class="size-8 bg-primary rounded text-white">
-                    <a href='https://github.com/' target="_blank" rel="noopener noreferrer" class="size-full">
-                        <MdiGithub className="size-full"/>
-                    </a>
-                </li>
-                <li  class="size-8 bg-primary rounded text-white">
-                    <a href='https://bsky.app/' target="_blank" rel="noopener noreferrer" >
-                        <RiBlueskyFill className="size-full"/>
-                    </a>
-                </li>
+                <!--<li  class="size-8 bg-primary rounded text-white">-->
+                <!--    <a href='https://github.com/' target="_blank" rel="noopener noreferrer" class="size-full">-->
+                <!--        <MdiGithub className="size-full"/>-->
+                <!--    </a>-->
+                <!--</li>-->
+                <!--<li  class="size-8 bg-primary rounded text-white">-->
+                <!--    <a href='https://bsky.app/' target="_blank" rel="noopener noreferrer" >-->
+                <!--        <RiBlueskyFill className="size-full"/>-->
+                <!--    </a>-->
+                <!--</li>-->
             </ul>
         </div>
     </div>
-    <p class="text-gray-500 text-sm mt-4xl text-center container mx-auto max-w-6xl">&copy; 2025 YourCompany. All Rights Reserved.</p>
+    <p class="text-gray-500 text-sm mt-4xl text-center container mx-auto max-w-6xl">Published under the Apache License 2.0.</p>
 </footer>
