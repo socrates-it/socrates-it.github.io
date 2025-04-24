@@ -41,7 +41,7 @@ const MobileMenu: FC<Props> = ({ items }) => {
       <Hamburger isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
       <div
         className={cn('w-full mx-auto px-5', 'absolute left-0 right-0 top-20', ' ', 'z-10 overflow-hidden transition-all duration-700', {
-          'bg-primary h-32 border-t border-t-page': isOpen,
+          'bg-primary h-40 border-t border-t-page': isOpen,
           'bg-transparent h-0 border-t border-transparent': !isOpen, // still apply border-t for height consistency
         })}>
         <div className="z-10 ">
@@ -54,7 +54,7 @@ const MobileMenu: FC<Props> = ({ items }) => {
                     'text-light': isOpen,
                     'text-transparent': !isOpen, // still apply border-t for height consistency
                   })}>
-                  <MenuLink item={x} />
+                  <MenuLink item={x} onClose={onClose} />
                 </li>
               )
             })}

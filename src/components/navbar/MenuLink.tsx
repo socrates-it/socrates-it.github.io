@@ -5,8 +5,9 @@ import type { MenuItem } from './menu-items.ts'
 
 type Props = {
   item: MenuItem
+  onClose?: () => void
 }
-const MenuLink: FC<Props> = ({ item }) => {
+const MenuLink: FC<Props> = ({ item, onClose }) => {
   const [path, setPath] = useState('ON_THE_SERVER')
   const isActive = isActiveLink(path, item.url)
   const isChip = item.variant === 'chip'
@@ -28,7 +29,10 @@ const MenuLink: FC<Props> = ({ item }) => {
         { 'before:scale-x-100': isActive && isLink },
         // className,
       )}
-      href={item.url}>
+      href={item.url}
+      onClick={() => {
+        if (onClose) onClose()
+      }}>
       {isChip ? (
         <span className={cn('inline-block py-1 px-3 whitespace-nowrap rounded-3xl bg-dl2-300 text-dl2-800 text-[85%]')}>{item.label}</span>
       ) : (
