@@ -29,7 +29,7 @@ const noOfColumns: ResponsiveParameter<number> = containerWidth => {
 
 const shuffledTeamPhotos = shuffleFY(updatedUrlPhotos)
 
-const DLPhotoAlbum: React.FC = () => {
+const PhotoGallery: React.FC = () => {
   const images: GridImageProps[] = [
     { src: 'https://placehold.co/400x400/EEE/31343C', alt: 'Placeholder 1' },
     { src: 'https://placehold.co/400x400/EEE/31343C', alt: 'Placeholder 2' },
@@ -70,7 +70,7 @@ const DLPhotoAlbum: React.FC = () => {
             'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3', // Responsive grid layout
           )}>
           {updatedUrlPhotos.map((image, index) => (
-            <div className="flex justify-center items-center">
+            <div key={image.src} className="flex justify-center items-center">
               <img src={image.src} alt={image.alt} className="w-3/4 sm:w-full object-cover aspect-4/3" />
             </div>
           ))}
@@ -80,4 +80,4 @@ const DLPhotoAlbum: React.FC = () => {
   )
 }
 
-export default DLPhotoAlbum
+export default PhotoGallery

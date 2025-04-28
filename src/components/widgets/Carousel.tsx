@@ -3,6 +3,7 @@ import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 import { cn } from '~/common/css.ts'
 import { eventState } from '~/common/constants.ts'
+import { EventState } from '~/common/types.ts'
 
 const images = [
   {
@@ -21,20 +22,6 @@ const images = [
 
 const Carousel = () => {
   const [imageIndex, setImageIndex] = useState(0)
-
-  const nextSlide = () => {
-    setImageIndex(prevIndex => {
-      if (prevIndex === images.length - 1) return 0
-      return prevIndex + 1
-    })
-  }
-
-  const prevSlide = () => {
-    setImageIndex(prevIndex => {
-      if (prevIndex === 0) return images.length - 1
-      return prevIndex - 1
-    })
-  }
 
   return (
     <div className="relative top w-full h-full">
@@ -57,15 +44,24 @@ const Carousel = () => {
           <div className=" w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-white text-center px-xl space-y-10 sm:space-y-12 md:space-y-14 lg:space-y-16">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold">"Great things happen when we come together."</h2>
             <div className="space-y-md">
-              <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-light">
-                SoCraTes 2025 <span className="capitalize">coming soon</span>
-              </p>
+              <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-light">SoCraTes 2025</p>
               <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl">
-                <button className="btn-primary uppercase">
-                  <a href="/socrates-2025/register" target="_blank">
-                    register
-                  </a>
-                </button>
+                {eventState === EventState.AnnouncementList && (
+                  <button className="btn-primary uppercase">
+                    <a href="/socrates-2025/register" target="_blank">
+                      register
+                    </a>
+                  </button>
+                )}
+                {eventState === EventState.ComingSoon && (
+                  <span className="bg-primary text-lg sm:text-2xl md:text-3xl lg:text-4xl uppercase px-4 py-2">{eventState}</span>
+                )}
+                {eventState === EventState.RegistrationOpen && (
+                  <span className="bg-primary text-lg sm:text-2xl md:text-3xl lg:text-4xl uppercase px-4 py-2">{eventState}</span>
+                )}
+                {eventState === EventState.SoldOut && (
+                  <span className="bg-primary text-lg sm:text-2xl md:text-3xl lg:text-4xl uppercase px-4 py-2">{eventState}</span>
+                )}
               </p>
             </div>
           </div>

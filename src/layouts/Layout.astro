@@ -1,11 +1,9 @@
 ---
 import '~/styles/global.css';
 import '@fontsource-variable/manrope';
-import { ClientRouter } from "astro:transitions"
 import {BASE_PATH} from "../components/navbar/menu-items";
 
 import type { MetaData as MetaDataType } from '~/types';
-import BasicScripts from "../components/common/BasicScripts.astro";
 
 export interface Props {
 	metadata?: MetaDataType;
@@ -28,11 +26,9 @@ const { metadata = {} } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 
 		<title>SoCraTes-IT</title>
-
-		<ClientRouter />
 	</head>
 	<body class="antialiased text-default bg-white transition-colors duration-500 tracking-tight">
-	<slot />
+		<slot />
 	</body>
 </html>
 
