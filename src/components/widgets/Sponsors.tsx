@@ -42,15 +42,17 @@ export default function Sponsors() {
         <div className="w-full sm:w-3/5">
           <div className="grid grid-cols-3 rounded-lg gap-10 justify-items-center">
             {partners.map((partner, index) => (
-              <a key={index} href={partner.url} className="size-full">
-                <div className={cn('bg-white size-full rounded-lg shadow-md', 'flex items-center justify-center p-xs mb-xs')}>
-                  <div
-                    className={cn('rounded-4xl size-16 sm:size-20 bg-contain bg-center bg-no-repeat')}
-                    style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/${partner.image})` }}
-                  />
-                </div>
-                {/*<div className="italic text-xs sm:text-sm">{partner.name}</div>*/}
-              </a>
+              <div className="size-full  flex flex-col items-center justify-center">
+                <a key={index} href={partner.url} className="size-full flex justify-center items-start">
+                  <div className={cn('bg-white size-full rounded-lg shadow-md', 'flex items-center justify-center p-xs mb-xs')}>
+                    <div
+                      className={cn('rounded-4xl size-16 sm:size-20 bg-contain bg-center bg-no-repeat')}
+                      style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/${partner.image})` }}
+                    />
+                  </div>
+                </a>
+                <div className="h-full text-light">{partner.name}</div>
+              </div>
             ))}
           </div>
         </div>
