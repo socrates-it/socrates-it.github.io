@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 import { cn } from '~/common/css.ts'
-import { eventState } from '~/common/constants.ts'
+import { BASE_PATH, eventState } from '~/common/constants.ts'
 import { EventState } from '~/common/types.ts'
 
 const images = [
@@ -43,26 +43,41 @@ const Carousel = () => {
         <div className="max-w-6xl mx-auto relative h-full">
           <div className=" w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-white text-center px-xl space-y-10 sm:space-y-12 md:space-y-14 lg:space-y-16">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold">"Great things happen when we come together."</h2>
-            <div className="space-y-md">
+            <div className="space-y-md  w-full">
               <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-light">SoCraTes 2025</p>
-              <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl">
-                {eventState === EventState.AnnouncementList && (
-                  <button className="btn-primary uppercase">
-                    <a href="/socrates-2025/register" target="_blank">
-                      register
-                    </a>
+              <div className="text-lg sm:text-2xl md:text-3xl lg:text-4xl w-2/3 sm:w-1/2 mx-auto">
+                {eventState === EventState.ANNOUNCEMENT_LIST && (
+                  <button
+                    className="uppercase btn-primary w-full py-4 sm:py-6 text-lg sm:text-2xl"
+                    onClick={() => {
+                      const element = document.getElementById('details')
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'instant' })
+                      }
+                    }}>
+                    Explore Details
                   </button>
                 )}
-                {eventState === EventState.ComingSoon && (
-                  <span className="bg-primary text-lg sm:text-2xl md:text-3xl lg:text-4xl uppercase px-4 py-2">{eventState}</span>
+
+                {eventState === EventState.COMING_SOON && (
+                  <div className="mx-auto py-4 sm:py-6 bg-primary text-lg sm:text-2xl md:text-3xl lg:text-4xl uppercase">{eventState}</div>
                 )}
-                {eventState === EventState.RegistrationOpen && (
-                  <span className="bg-primary text-lg sm:text-2xl md:text-3xl lg:text-4xl uppercase px-4 py-2">{eventState}</span>
+
+                {eventState === EventState.REGISTRATION_OPEN && (
+                  <a href="/socrates-2025/register">
+                    <button className="uppercase btn-primary w-full y-4 sm:py-6 text-lg sm:text-2xl">register</button>
+                  </a>
                 )}
-                {eventState === EventState.SoldOut && (
-                  <span className="bg-primary text-lg sm:text-2xl md:text-3xl lg:text-4xl uppercase px-4 py-2">{eventState}</span>
+
+                {eventState === EventState.SOLD_OUT && (
+                  <>
+                    <div className="mx-auto py-4 sm:py-6 text-lg sm:text-2xl md:text-3xl lg:text-4xl uppercase">sold out</div>
+                    <button className="uppercase btn-primary w-full y-4 sm:py-6 text-lg sm:text-2xl">
+                      <a href="mailto:socrates-it@googlegroups.com">{eventState}</a>
+                    </button>
+                  </>
                 )}
-              </p>
+              </div>
             </div>
           </div>
         </div>

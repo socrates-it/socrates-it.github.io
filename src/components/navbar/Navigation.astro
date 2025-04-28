@@ -1,5 +1,5 @@
 ---
-import {BASE_PATH, menuItems} from "./menu-items"
+import {BASE_PATH, filteredMenuItems} from "../../common/constants"
 import MobileMenu from "./MobileMenu";
 import DesktopMenu from "./DesktopMenu.astro";
 import ThemeIcon from "./ThemeIcon.astro";
@@ -15,10 +15,10 @@ import socratesLogo from '../../../public/images/socrates-logo.png';
     </a>
     <div class="flex items-center justify-between">
         <div class="md:hidden">
-            <MobileMenu items={menuItems} client:media="(max-width:767px)"/>
+            <MobileMenu items={filteredMenuItems} client:media="(max-width:767px)"/>
         </div>
         <div class="hidden md:block">
-            <DesktopMenu items={menuItems}/>
+            <DesktopMenu items={filteredMenuItems}/>
         </div>
     </div>
 </nav>

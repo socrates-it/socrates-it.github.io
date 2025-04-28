@@ -1,12 +1,17 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import MailchimpOriginalForm from "../components/widgets/MailchimpOriginalForm.astro";
+import {eventState} from "../common/constants";
+import {EventState} from "../common/types";
 
 const metadata = {
     title: 'Register',
     ignoreTitleTemplate: true,
 };
 
+if (eventState !== EventState.REGISTRATION_OPEN) {
+    return new Response('Not Found', { status: 404 });
+}
 ---
 
 <Layout metadata={metadata}>

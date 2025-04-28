@@ -1,6 +1,6 @@
 export enum EventState {
-  AnnouncementList = 'Announcement List',
-  ComingSoon = 'Coming Soon',
-  RegistrationOpen = 'Registration Open',
-  SoldOut = 'Sold Out',
+  ANNOUNCEMENT_LIST = 'Details Available',
+  COMING_SOON = 'Coming Soon',
+  REGISTRATION_OPEN = 'Register',
+  SOLD_OUT = 'Join the Waitlist',
 }

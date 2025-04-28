@@ -1,35 +1,111 @@
 ---
-import { availableSeats, eventDate, eventLocation } from '~/common/constants.ts';
+import { availableSeats, eventDate, eventLocation, eventState } from '~/common/constants.ts';
 import { Icon } from 'astro-icon/components';
+import {EventState} from "../../common/types";
 
-const details = [
-  {
-    icon: 'location', // pass just the name of the icon
-    title: eventLocation.venue,
-    subtitle: eventLocation.address,
-  },
-  {
-    icon: 'calendar',
-    title: eventDate,
-    subtitle: 'Don’t miss it!',
-  },
-  {
-    icon: 'ticket',
-    title: `${availableSeats} AVAILABLE SEATS`,
-    subtitle: 'HURRY UP! FEW TICKETS ARE LEFT',
-  },
-  {
-    icon: 'food',
-    title: 'in place LUNCH & SNACKS',
-    subtitle: 'a few delicious breaks throughout the day',
-  },
-];
+const details = {
+  [EventState.ANNOUNCEMENT_LIST]: [
+    {
+      icon: 'location',
+      title: eventLocation.venue,
+      subtitle: eventLocation.address,
+    },
+    {
+      icon: 'calendar',
+      title: eventDate,
+      subtitle: 'Don’t miss it',
+    },
+    {
+      icon: 'ticket',
+      title: `tickets available soon`,
+      subtitle: 'stay tuned',
+    },
+    {
+      icon: 'food',
+      title: 'In place LUNCH & SNACKS',
+      subtitle: 'A few delicious breaks throughout the day',
+    },
+  ],
+
+  [EventState.REGISTRATION_OPEN]: [
+    {
+      icon: 'location',
+      title: eventLocation.venue,
+      subtitle: eventLocation.address,
+    },
+    {
+      icon: 'calendar',
+      title: eventDate,
+      subtitle: 'save the date',
+    },
+    {
+      icon: 'ticket',
+      title: `${availableSeats} available seats`,
+      subtitle: 'Don’t miss it',
+    },
+    {
+      icon: 'food',
+      title: 'In place lunch & snacks',
+      subtitle: 'A few delicious breaks throughout the day',
+    },
+  ],
+
+  [EventState.SOLD_OUT]: [
+    {
+      icon: 'location',
+      title: eventLocation.venue,
+      subtitle: eventLocation.address,
+    },
+    {
+      icon: 'calendar',
+      title: eventDate,
+      subtitle: 'Event is sold out',
+    },
+    {
+      icon: 'ticket',
+      title: 'No Available Seats',
+      subtitle: 'see you next year',
+    },
+    {
+      icon: 'food',
+      title: 'In place LUNCH & SNACKS',
+      subtitle: 'A few delicious breaks throughout the day',
+    },
+  ],
+
+  [EventState.COMING_SOON]: [
+    {
+      icon: 'location',
+      title: 'Location coming soon',
+      subtitle: 'Stay tuned for more details.',
+    },
+    {
+      icon: 'calendar',
+      title: 'Date coming soon',
+      subtitle: 'Stay tuned for more details.',
+    },
+    {
+      icon: 'ticket',
+      title: 'tickets coming soon',
+      subtitle: 'Get ready to register once it’s live',
+    },
+    {
+      icon: 'food',
+      title: 'details coming soon',
+      subtitle: 'Stay tuned for more details',
+    },
+  ],
+
+  // You can add more statuses (like WAITLIST or LIVE) with custom details...
+};
+
+const eventDetails = details[eventState];
 
 ---
 
-<div class="bg-accent text-white p-xl">
+<div id="details" class="bg-accent text-white p-xl">
   <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
-    {details.map((item) => (
+    {eventDetails.map((item) => (
         <div class="flex flex-col items-center uppercase">
           <div class="mb-3"><Icon name={item.icon} class='size-8' /></div>
           <h3 class="text-lg font-bold">{item.title}</h3>
