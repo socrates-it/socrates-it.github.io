@@ -57,6 +57,25 @@ export default function Sponsors() {
           </div>
         </div>
       </div>
+      <div className="mt-30 text-white">
+        <p className="text-xl mb-2">
+          Download the{' '}
+          <a href="https://www.socrates-conference.it/pdf/Socrates%20IT%202024%20-%20sponsorship%20info.pdf" className="text-secondary">
+            sponsorship prospect
+          </a>
+          .
+        </p>
+        <p className="text-md text-subtitle">
+          Feel free to contact us at <span className="italic text-secondary">socrates.italia@gmail.com</span> for any further detail.
+        </p>
+      </div>
+      <div className="mt-10">
+        <button className="btn-primary">
+          <a href="mailto:socrates-it@googlegroups.com" className="capitalize">
+            become a sponsor
+          </a>
+        </button>
+      </div>
     </div>
   )
 }

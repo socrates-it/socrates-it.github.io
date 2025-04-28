@@ -1,6 +1,6 @@
 import { EventState } from '~/common/types.ts'
 
-export let eventState: EventState = EventState.ANNOUNCEMENT_LIST
+export let eventState: EventState = EventState.COMING_SOON
 export const eventDate = new Date('2025-10-02').toLocaleDateString('it-IT')
 
 export const availableSeats = 80
