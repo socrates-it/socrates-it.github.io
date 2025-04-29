@@ -72,7 +72,7 @@ export default function PricingSection() {
                 </ul>
               </>
             ) : (
-              <div className="mt-6 font-semibold">
+              <div className="mt-6">
                 Our goal is to reduce the final ticket price for all attendees. Feel free to contribute as you wish! Contact us to agree what we can do for you!
               </div>
             )}

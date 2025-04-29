@@ -18,7 +18,13 @@ import MailchimpForm from "../components/widgets/MailchimpForm";
 import MailchimpOriginalForm from "../components/widgets/MailchimpOriginalForm.astro";
 import ImageSections from "../components/widgets/ImageSections.astro";
 import IntroCards from '../components/widgets/IntroCards.astro';
+import socratesPhotos from '../../public/images/processed/images.json'
+import {shuffleFY} from "../common/array";
+const updatedUrlPhotos = socratesPhotos.map(photo => {
+	return { src: `${import.meta.env.BASE_URL}${photo.src}`, alt: photo.alt }
+})
 
+const shuffledTeamPhotos = shuffleFY(updatedUrlPhotos)
 
 const metadata = {
 	title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
@@ -73,7 +79,7 @@ const metadata = {
 
 	<!-- Partners Widget *******************-->
 
-	<PhotoGallery client:load />
+	<PhotoGallery client:load photos={shuffledTeamPhotos}/>
 
 	<!-- Partners Widget *******************-->
 
