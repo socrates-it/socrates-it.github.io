@@ -30,14 +30,6 @@ const noOfColumns: ResponsiveParameter<number> = containerWidth => {
 const shuffledTeamPhotos = shuffleFY(updatedUrlPhotos)
 
 const PhotoGallery: React.FC = () => {
-  const images: GridImageProps[] = [
-    { src: 'https://placehold.co/400x400/EEE/31343C', alt: 'Placeholder 1' },
-    { src: 'https://placehold.co/400x400/EEE/31343C', alt: 'Placeholder 2' },
-    { src: 'https://placehold.co/400x400/EEE/31343C', alt: 'Placeholder 3' },
-    { src: 'https://placehold.co/400x400/EEE/31343C', alt: 'Placeholder 4' },
-    { src: 'https://placehold.co/400x400/EEE/31343C', alt: 'Placeholder 5' },
-    { src: 'https://placehold.co/400x400/EEE/31343C', alt: 'Placeholder 6' },
-  ]
   return (
     <div className="px-md md:px-xl pt-11 md:pt-23 pb-14 md:pb-26 bg-white">
       <SectionIntro title={'memories'} description={'Shared laughs, lessons learned, good times together'} />
@@ -69,7 +61,7 @@ const PhotoGallery: React.FC = () => {
             'grid gap-10',
             'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3', // Responsive grid layout
           )}>
-          {updatedUrlPhotos.map((image, index) => (
+          {shuffledTeamPhotos.map((image, index) => (
             <div key={image.src} className="flex justify-center items-center">
               <img src={image.src} alt={image.alt} className="w-3/4 sm:w-full object-cover aspect-4/3" />
             </div>

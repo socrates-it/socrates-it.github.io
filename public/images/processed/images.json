@@ -39,11 +39,59 @@
     "alt": "speaker"
   },
   {
-    "src": "/images/processed/PXL_20241004_083759486_exported_1229_1728031123246.webp",
+    "src": "/images/processed/IMG_1277.webp",
     "width": 4080,
     "height": 3072,
     "format": "webp",
     "orientation": 1,
     "alt": "meeting"
+  },
+  {
+    "src": "/images/processed/PXL_20241004_083759486_exported_1229_1728031123246.webp",
+    "width": 4032,
+    "height": 3024,
+    "format": "webp",
+    "alt": "trio",
+    "orientation": 1
+  },
+  {
+    "src": "/images/processed/PXL_20241004_100619136.webp",
+    "width": 4080,
+    "height": 3072,
+    "format": "webp",
+    "orientation": 1,
+    "alt": "mob"
+  },
+  {
+    "src": "/images/processed/IMG_0598.webp",
+    "width": 4080,
+    "height": 3072,
+    "format": "webp",
+    "orientation": 1,
+    "alt": "mob"
+  },
+  {
+    "src": "/images/processed/IMG_0028.webp",
+    "width": 4032,
+    "height": 3024,
+    "format": "webp",
+    "orientation": 1,
+    "alt": "session"
+  },
+  {
+    "src": "/images/processed/IMG_6685.webp",
+    "width": 4032,
+    "height": 3024,
+    "format": "webp",
+    "orientation": 1,
+    "alt": "session"
+  },
+  {
+    "src": "/images/processed/PXL_20231020_185439447.webp",
+    "width": 2688,
+    "height": 1512,
+    "format": "webp",
+    "orientation": 1,
+    "alt": "session"
   }
 ]

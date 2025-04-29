@@ -1,6 +1,7 @@
 import React from 'react'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
 import { cn } from '~/common/css.ts'
+import PricingSection from '~components/widgets/PricingSection.tsx'
 
 const sponsors = [
   { name: 'Techno', image: 'src/icons/astro.svg' },
@@ -33,7 +34,7 @@ export default function Sponsors() {
         <div className="w-full sm:w-2/5 flex justify-end mb-xl sm:mb-0">
           <SectionIntro
             title={'sponsors'}
-            color={'light'}
+            color={'lightest'}
             description="Grateful for the generous commitment that powers this event"
             dimensions={'text-3xl md:text-4xl'}
             position={'text-right w-3/4'}
@@ -57,10 +58,11 @@ export default function Sponsors() {
           </div>
         </div>
       </div>
+      <PricingSection />
       <div className="mt-30 text-white">
         <p className="text-xl mb-2">
           Download the{' '}
-          <a href="https://www.socrates-conference.it/pdf/Socrates%20IT%202024%20-%20sponsorship%20info.pdf" className="text-secondary">
+          <a href="https://www.socrates-conference.it/pdf/Socrates%20IT%202024%20-%20sponsorship%20info.pdf" target="_blank" className="text-secondary">
             sponsorship prospect
           </a>
           .
@@ -71,7 +73,7 @@ export default function Sponsors() {
       </div>
       <div className="mt-10">
         <button className="btn-primary">
-          <a href="mailto:socrates-it@googlegroups.com" className="capitalize">
+          <a href="mailto:socrates-it@googlegroups.com" className="capitalize" target="_blank">
             become a sponsor
           </a>
         </button>
