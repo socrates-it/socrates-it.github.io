@@ -3,28 +3,10 @@ import SectionIntro from '~components/ui/SectionIntro.tsx'
 import { cn } from '~/common/css.ts'
 import PricingSection from '~components/widgets/PricingSection.tsx'
 
-const sponsors = [
-  { name: 'Techno', image: 'src/icons/astro.svg' },
-  { name: 'Studio', image: 'src/icons/astro.svg' },
-  { name: 'Rofhalatan', image: 'src/icons/astro.svg' },
-  { name: 'Education', image: 'src/icons/astro.svg' },
-]
-
-const partners = [
-  {
-    name: 'Socrates Conference CH',
-    image: 'images/socrates-conference-switzerland.webp',
-    alt: 'socrates-conference-switzerland',
-    url: 'https://www.socrates-ch.org/',
-  },
-  { name: 'Socrates Day CH', image: 'images/socrates-day-switzerland.webp', alt: 'socrates-day-switzerland', url: 'https://socrates-day.ch/' },
-  { name: 'Socrates UK', image: 'images/socrates-uk.png', alt: 'socrates-uk', url: 'http://socratesuk.org/' },
-  { name: 'Socrates BE', image: 'images/socrates-be.png', alt: 'socrates-be', url: 'https://socratesbe.org/' },
-  { name: 'Socrates Germany', image: 'images/socrates-germany.png', alt: 'socrates-germany', url: 'https://www.socrates-conference.de/home' },
-  { name: 'Socrates France', image: 'images/socrates-france.png', alt: 'socrates-france', url: 'https://socrates-fr.github.io/' },
-  { name: 'Socrates Austria', image: 'images/socrates-austria.svg', alt: 'socrates-austria', url: 'https://socrates-conference.at/' },
-  { name: 'JSCraftCamp', image: 'images/jscraftcamp.svg', alt: 'jscraftcamp', url: 'https://jscraftcamp.org/' },
-  { name: 'Code Freeze', image: 'images/code-freeze.svg', alt: 'code-freeze', url: 'https://codefreeze.fi/' },
+type Sponsor = { name: string; image: string; alt: string; url: string; type: 'square' | 'rectangle' }
+const sponsors: Sponsor[] = [
+  { name: 'doubleloop', image: 'images/doubleloop.png', alt: 'doubleloop', url: 'https://www.doubleloop.io/', type: 'rectangle' },
+  { name: 'Connexxo', image: 'images/connexxo.png', alt: 'Connexxo', url: 'https://www.connexxo.com', type: 'rectangle' },
 ]
 
 export default function Sponsors() {
@@ -42,17 +24,14 @@ export default function Sponsors() {
         </div>
         <div className="w-full sm:w-3/5">
           <div className="grid grid-cols-3 rounded-lg gap-10 justify-items-center">
-            {partners.map((partner, index) => (
+            {sponsors.map((sponsor, index) => (
               <div className="size-full  flex flex-col items-center justify-center">
-                <a key={index} href={partner.url} className="size-full flex justify-center items-start">
+                <a key={index} href={sponsor.url} className="size-full flex justify-center items-start">
                   <div className={cn('bg-white size-full rounded-lg shadow-md', 'flex items-center justify-center p-xs mb-xs')}>
-                    <div
-                      className={cn('rounded-4xl size-16 sm:size-20 bg-contain bg-center bg-no-repeat')}
-                      style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/${partner.image})` }}
-                    />
+                    <Logo {...sponsor} />
                   </div>
                 </a>
-                <div className="h-full text-light">{partner.name}</div>
+                <div className="h-full text-light">{sponsor.name}</div>
               </div>
             ))}
           </div>
@@ -80,4 +59,21 @@ export default function Sponsors() {
       </div>
     </div>
   )
+}
+
+function Logo(sponsor: Sponsor) {
+  if (sponsor.type === 'rectangle')
+    return (
+      <div
+        className={cn('rounded-4xl size-16 sm:size-20 bg-contain bg-center bg-no-repeat')}
+        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/${sponsor.image})` }}
+      />
+    )
+  if (sponsor.type === 'square')
+    return (
+      <div
+        className={cn('rounded-4xl size-16 sm:size-20 bg-contain bg-center bg-no-repeat')}
+        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/${sponsor.image})` }}
+      />
+    )
 }
