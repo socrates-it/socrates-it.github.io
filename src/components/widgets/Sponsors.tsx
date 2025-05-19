@@ -63,7 +63,7 @@ function Logo(sponsor: Sponsor) {
   if (sponsor.type === 'rectangle')
     return (
       <div
-        className={cn('rounded-4xl size-16 sm:size-20 bg-contain bg-center bg-no-repeat')}
+        className={cn('rounded-4xl h-16 sm:h-20 w-32 sm:w-40 bg-contain bg-center bg-no-repeat')}
         style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/${sponsor.image})` }}
       />
     )
