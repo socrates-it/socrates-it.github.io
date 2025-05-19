@@ -1,8 +1,8 @@
 import { type FC, useEffect } from 'react'
 import { useState } from 'react'
-import type { MenuItem } from './menu-items'
 import { cn } from '~/common/css.ts'
 import MenuLink from './MenuLink'
+import type { MenuItem } from '~/common/constants.ts'
 
 type HProps = {
   isOpen: boolean

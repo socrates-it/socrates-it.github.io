@@ -51,11 +51,9 @@ export default function Sponsors() {
         </p>
       </div>
       <div className="mt-10">
-        <button className="btn-primary">
-          <a href="mailto:socrates-it@googlegroups.com" className="capitalize" target="_blank">
-            become a sponsor
-          </a>
-        </button>
+        <a href="mailto:socrates-it@googlegroups.com">
+          <button className="btn-primary capitalize">become a sponsor</button>
+        </a>
       </div>
     </div>
   )

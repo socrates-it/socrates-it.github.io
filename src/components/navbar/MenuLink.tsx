@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
 import type { FC } from 'react'
 import { cn } from '../../common/css'
-import type { MenuItem } from './menu-items.ts'
+import type { MenuItem } from '~/common/constants.ts'
 
 type Props = {
   item: MenuItem
   onClose?: () => void
 }
+
 const MenuLink: FC<Props> = ({ item, onClose }) => {
   const [path, setPath] = useState('ON_THE_SERVER')
   const isActive = isActiveLink(path, item.url)
