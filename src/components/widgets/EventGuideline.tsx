@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
 import { FimgaArrow } from '~/icons/Icons.tsx'
 import Dialog from '~components/ui/dialog/Dialog.tsx'
@@ -59,7 +59,7 @@ const EventGuideline = () => {
                   <div className="mb-xl md:mb-0">
                     <h2 className="mb-xs text-xl font-bold capitalize text-lightest">{guideline.title}</h2>
                     <div className="space-y-sm truncate-multi-line ">
-                      {guideline.description.map((item, index) => (
+                      {guideline.description.map(item => (
                         <p key={item} className="text-lightest text-md text-ellipsis">
                           {item}
                         </p>

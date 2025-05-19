@@ -1,7 +1,5 @@
 import React, { Fragment, useState } from 'react'
 import CardContent from '~/components/ui/card/CardContent.tsx'
-import Dialog from '~/components/ui/dialog/Dialog.tsx'
-import DialogContent from '~/components/ui/dialog/DialogContent.tsx'
 import { MajesticonsOpen } from '~/icons/Icons.tsx'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
 
@@ -129,7 +127,7 @@ const projects = [
 ]
 
 const Cards = () => {
-  const [openModals, setOpenModals] = useState(Object.fromEntries(projects.map(p => [p.title, false])))
+  const [, setOpenModals] = useState(Object.fromEntries(projects.map(p => [p.title, false])))
 
   function handleOpenModal(project: { title: string; description: string; src: string; alt: string }) {
     setOpenModals(prev => ({ ...prev, [project.title]: true }))

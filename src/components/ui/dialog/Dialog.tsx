@@ -1,4 +1,4 @@
-import React, { type ReactNode, useEffect } from 'react'
+import React, { type ReactNode } from 'react'
 
 interface DialogProps {
   children?: ReactNode
@@ -6,7 +6,7 @@ interface DialogProps {
   onClose: () => void
   title: string
 }
-const Dialog = ({ children, isOpen, onClose, title }: DialogProps) => {
+const Dialog = ({ children, onClose, title }: DialogProps) => {
   return (
     <div className="fixed z-50 inset-0 flex items-center justify-center px-md md:px-xl bg-black/50" onClick={onClose}>
       <div className="max-w-6xl max-h-[80%] bg-white rounded-lg shadow-lg py-md pt-5 overflow-hidden flex flex-col" onClick={e => e.stopPropagation()}>

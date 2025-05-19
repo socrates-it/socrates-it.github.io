@@ -1,5 +1,4 @@
-import { type FC, useEffect } from 'react'
-import { useState } from 'react'
+import { type FC, useState } from 'react'
 import { cn } from '~/common/css.ts'
 import MenuLink from './MenuLink'
 import type { MenuItem } from '~/common/constants.ts'
@@ -26,7 +25,7 @@ type Props = {
 }
 const MobileMenu: FC<Props> = ({ items }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const [hasMounted, setHasMounted] = useState(false)
+  const [, setHasMounted] = useState(false)
 
   const onOpen = () => {
     setHasMounted(true)

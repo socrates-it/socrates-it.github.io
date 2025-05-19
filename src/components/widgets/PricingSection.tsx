@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
 import { cn } from '~/common/css.ts'
 

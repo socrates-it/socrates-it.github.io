@@ -1,11 +1,11 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
-  MdiLightHeart as Heart,
-  WpfGroup as Users,
-  MaterialSymbolsLightMailOutline as Mail,
   GridiconsTrophy as Trophy,
+  MaterialSymbolsLightMailOutline as Mail,
+  MdiLightHeart as Heart,
   MdiLightMessage as MessageSquare,
   PhImagesThin as Images,
+  WpfGroup as Users,
 } from '~/icons/Icons.tsx'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
 

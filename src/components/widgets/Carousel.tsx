@@ -1,8 +1,5 @@
-import React, { Fragment, useEffect, useState } from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
-import { cn } from '~/common/css.ts'
-import { BASE_PATH, eventState } from '~/common/constants.ts'
+import React, { Fragment, useState } from 'react'
+import { eventState } from '~/common/constants.ts'
 import { EventState } from '~/common/types.ts'
 
 const images = [
@@ -21,12 +18,12 @@ const images = [
 ]
 
 const Carousel = () => {
-  const [imageIndex, setImageIndex] = useState(0)
+  const [imageIndex] = useState(0)
 
   return (
     <div className="relative top w-full h-full">
       <div className="w-full h-full flex overflow-hidden">
-        {images.map(({ src, alt }, index) => (
+        {images.map(({ src, alt }) => (
           <Fragment key={alt}>
             <div
               className={`w-full h-full shrink-0 grow-0 transition-transform duration-800 ease-in-out]`}
