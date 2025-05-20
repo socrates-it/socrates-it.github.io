@@ -5,6 +5,7 @@ import react from '@astrojs/react'
 import tailwindcss from '@tailwindcss/vite'
 
 import icon from 'astro-icon'
+// noinspection ES6PreferShortImport
 import { BASE_PATH } from './src/common/constants.js'
 
 // https://astro.build/config
@@ -15,6 +16,6 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  site: `https://doubleloop-io.github.io${BASE_PATH}`,
+  site: `https://doubleloop-io.github.io`,
   base: `${BASE_PATH}`,
 })

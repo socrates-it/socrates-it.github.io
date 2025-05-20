@@ -14,8 +14,10 @@ import socratesPhotos from '../../public/images/processed/images.json'
 import {shuffleFY} from "../common/array";
 import {eventState} from "../common/constants";
 import {EventState} from "../common/types";
+import { prependBasePath } from '~/common/constants.ts';
+
 const updatedUrlPhotos = socratesPhotos.map(photo => {
-	return { src: `${import.meta.env.BASE_URL}${photo.src}`, alt: photo.alt }
+	return { src: `${prependBasePath(photo.src)}`, alt: photo.alt }
 })
 
 const shuffledTeamPhotos = shuffleFY(updatedUrlPhotos)

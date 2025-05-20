@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
 import { FimgaArrow } from '~/icons/Icons.tsx'
 import Dialog from '~components/ui/dialog/Dialog.tsx'
+import { prependBasePath } from '~/common/constants.ts'
 
 enum GuideLinesTitles {
   first = 'Our Values',
@@ -52,7 +53,7 @@ const EventGuideline = () => {
               <div className={`rounded-3xl bg-light-contrast p-md flex flex-col md:flex-row items-center overflow-hidden md:h-[300px]`}>
                 <div
                   className="w-full md:w-2/5 min-h-60 md:min-h-auto mb-md md:mb-0 flex items-center justify-center h-full bg-cover bg-center rounded-2xl mr-0 md:mr-lg"
-                  style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/${guideline.img})` }}
+                  style={{ backgroundImage: `url(${prependBasePath(guideline.img)})` }}
                 />
 
                 <div className="md:w-3/5 flex flex-col md:px-xl h-full justify-between">

@@ -2,11 +2,12 @@ import React from 'react'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
 import { cn } from '~/common/css.ts'
 import PricingSection from '~components/widgets/PricingSection.tsx'
+import { prependBasePath } from '~/common/constants.ts'
 
 type Sponsor = { name: string; image: string; alt: string; url: string; type: 'square' | 'rectangle' }
 const sponsors: Sponsor[] = [
-  { name: 'doubleloop', image: 'images/doubleloop.png', alt: 'doubleloop', url: 'https://www.doubleloop.io/', type: 'rectangle' },
-  { name: 'Connexxo', image: 'images/connexxo.png', alt: 'Connexxo', url: 'https://www.connexxo.com', type: 'rectangle' },
+  { name: 'doubleloop', image: '/images/doubleloop.png', alt: 'doubleloop', url: 'https://www.doubleloop.io/', type: 'rectangle' },
+  { name: 'Connexxo', image: '/images/connexxo.png', alt: 'Connexxo', url: 'https://www.connexxo.com', type: 'rectangle' },
 ]
 
 export default function Sponsors() {
@@ -64,14 +65,14 @@ function Logo(sponsor: Sponsor) {
     return (
       <div
         className={cn('rounded-4xl h-16 sm:h-20 w-32 sm:w-40 bg-contain bg-center bg-no-repeat')}
-        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/${sponsor.image})` }}
+        style={{ backgroundImage: `url(${prependBasePath(sponsor.image)})` }}
       />
     )
   if (sponsor.type === 'square')
     return (
       <div
         className={cn('rounded-4xl size-16 sm:size-20 bg-contain bg-center bg-no-repeat')}
-        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/${sponsor.image})` }}
+        style={{ backgroundImage: `url(${prependBasePath(sponsor.image)})` }}
       />
     )
 }
