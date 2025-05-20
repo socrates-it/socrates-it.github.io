@@ -16,11 +16,12 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  PUBLIC_BASE_PATH: socrates-2025
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      PUBLIC_BASE_PATH: ${{ secrets.PUBLIC_BASE_PATH }}
 
     steps:
       - uses: actions/checkout@v4
