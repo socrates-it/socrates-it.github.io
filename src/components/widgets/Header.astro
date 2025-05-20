@@ -41,25 +41,17 @@ const siteUrl = Astro.site;
         id={id}
 >
         <div class="max-w-6xl mx-auto">
-            <p>siteUrl: {siteUrl}</p>
             <Navigation />
         </div>
 </header>
 
 <script is:inline type="text/javascript" define:vars={{siteUrl}}>
     document.addEventListener('DOMContentLoaded', () => {
-        console.log('typeof siteUrl:', typeof siteUrl);
-        console.log('raw siteUrl:', siteUrl);
-
         const header = document.querySelector('header');
+        console.log(siteUrl)
 
-        const normalizedPath = window.location.pathname.replace(/\/+$/, ''); // remove trailing slash
-        const basePath = siteUrl
-            ? siteUrl.replace(/^https?:\/\/[^/]+/, '').replace(/\/+$/, '')
-            : '';
-
-        console.log('normalizedPath: ', normalizedPath);
-        console.log('basePath: ', basePath);
+        const normalizedPath = window.location.pathname.split('/')[1]
+        const basePath = siteUrl.split('/')[3];
 
         const isHome = normalizedPath === basePath;
 
