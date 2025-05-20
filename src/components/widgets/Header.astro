@@ -48,14 +48,10 @@ const siteUrl = Astro.site;
 <script is:inline type="text/javascript" define:vars={{siteUrl}}>
     document.addEventListener('DOMContentLoaded', () => {
         const header = document.querySelector('header');
-        console.log(siteUrl)
 
-        const normalizedPath = window.location.pathname.split('/')[1]
-        const basePath = siteUrl.split('/')[3];
+        const pathItems = window.location.pathname.split('/').filter(item => item !== '')
 
-        const isHome = normalizedPath === basePath;
-
-        if (!isHome) {
+        if (pathItems.length > 1) {
             header.classList.remove('bg-transparent');
             header.classList.add('bg-tertiary');
         } else {
