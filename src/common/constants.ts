@@ -10,8 +10,7 @@ export const eventLocation = {
   venue: 'Hotel Ambasciatori',
 }
 
-const basePath = import.meta.env.PUBLIC_BASE_PATH
-export const BASE_PATH = `/${basePath}/`
+export const BASE_PATH = '/socrates-2025/'
 
 export type MenuItem = {
   label: string
