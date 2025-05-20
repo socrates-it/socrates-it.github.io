@@ -1,6 +1,6 @@
 import { EventState } from '~/common/types.ts'
 
-export const eventState: EventState = EventState.COMING_SOON
+export let eventState: EventState = EventState.ANNOUNCEMENT_LIST
 export const eventDate = new Date('2025-10-02').toLocaleDateString('it-IT')
 
 export const availableSeats = 80
@@ -27,8 +27,6 @@ export const menuItems: MenuItem[] = [
 ]
 
 export const filteredMenuItems = menuItems.filter(menuItem => {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
   if (eventState === EventState.REGISTRATION_OPEN) {
     return true
   } else {

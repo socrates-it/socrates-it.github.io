@@ -40,12 +40,17 @@ const Carousel = () => {
         <div className="max-w-6xl mx-auto relative h-full">
           <div className=" w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-white text-center px-xl space-y-10 sm:space-y-12 md:space-y-14 lg:space-y-16">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold">"Great things happen when we come together."</h2>
-            <div className="space-y-md  w-full">
-              <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-light">SoCraTes 2025</p>
-              <div className="text-lg sm:text-2xl md:text-3xl lg:text-4xl w-2/3 sm:w-1/2 mx-auto">
+            <div className="space-y-xs md:space-y-md w-full">
+              <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-light font-bold">SoCraTes 2025</p>
+              {eventState !== EventState.COMING_SOON && (
+                <ul className="flex italic text-base sm:text-xl lg:text-2xl space-x-4 sm:space-x-8 justify-center mb-12 md:mb-22 lg:mb-32">
+                  <li style={{ wordSpacing: '0.5rem' }}>02/10/2025 - 04/10/2025, Rimini</li>
+                </ul>
+              )}
+              <div className="w-42 sm:w-60 md:w-1/3 mx-auto">
                 {eventState === EventState.ANNOUNCEMENT_LIST && (
                   <button
-                    className="uppercase btn-primary w-full py-4 sm:py-6 text-lg sm:text-2xl"
+                    className="uppercase btn-primary w-full py-4 sm:py-6 text-sm sm:text-lg lg:text-2xl"
                     onClick={() => {
                       const element = document.getElementById('details')
                       if (element) {

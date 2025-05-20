@@ -20,6 +20,8 @@ import ImageSections from "../components/widgets/ImageSections.astro";
 import IntroCards from '../components/widgets/IntroCards.astro';
 import socratesPhotos from '../../public/images/processed/images.json'
 import {shuffleFY} from "../common/array";
+import {eventState} from "../common/constants";
+import {EventState} from "../common/types";
 const updatedUrlPhotos = socratesPhotos.map(photo => {
 	return { src: `${import.meta.env.BASE_URL}${photo.src}`, alt: photo.alt }
 })
@@ -63,7 +65,10 @@ const metadata = {
 
 	<!-- EventSchedule Widget ******************* -->
 
-	<EventSchedule client:load />
+	{
+		eventState !== EventState.COMING_SOON &&
+		<EventSchedule client:load/>
+	}
 
 	<!-- EventDetails Widget ******************* -->
 
@@ -71,7 +76,10 @@ const metadata = {
 
 	<!-- GoogleMap Widget ******************* -->
 
-	<GoogleMap />
+	{
+		eventState !== EventState.COMING_SOON &&
+		<GoogleMap />
+	}
 
 	<!--&lt;!&ndash; SpeakersGrid Widget ******************* &ndash;&gt;-->
 
