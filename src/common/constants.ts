@@ -9,8 +9,8 @@ export const eventLocation = {
   address: 'Viale Amerigo Vespucci, 22, 47921 Rimini RN, Italy',
   venue: 'Hotel Ambasciatori',
 }
-
-export const BASE_PATH = '/socrates-2025/'
+const base_path = import.meta.env.PUBLIC_BASE_PATH
+export const BASE_PATH = `/${base_path}/`
 
 export type MenuItem = {
   label: string

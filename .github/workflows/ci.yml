@@ -19,6 +19,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      PUBLIC_BASE_PATH: socrates-2025
 
     steps:
       - uses: actions/checkout@v4
