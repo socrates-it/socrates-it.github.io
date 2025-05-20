@@ -41,12 +41,16 @@ const siteUrl = Astro.site;
         id={id}
 >
         <div class="max-w-6xl mx-auto">
+            <p>siteUrl: {siteUrl}</p>
             <Navigation />
         </div>
 </header>
 
 <script is:inline type="text/javascript" define:vars={{siteUrl}}>
     document.addEventListener('DOMContentLoaded', () => {
+        console.log('typeof siteUrl:', typeof siteUrl);
+        console.log('raw siteUrl:', siteUrl);
+
         const header = document.querySelector('header');
 
         const normalizedPath = window.location.pathname.replace(/\/+$/, ''); // remove trailing slash
