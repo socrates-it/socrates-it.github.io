@@ -15,6 +15,6 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  site: `https://doubleloop-io.github.io/${BASE_PATH}`,
+  site: `https://doubleloop-io.github.io${BASE_PATH}`,
   base: `${BASE_PATH}`,
 })
