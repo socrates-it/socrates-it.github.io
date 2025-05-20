@@ -45,20 +45,17 @@ const siteUrl = Astro.site;
         </div>
 </header>
 
-<script type="text/javascript" define:vars={{siteUrl}}>
+<script is:inline type="text/javascript" define:vars={{siteUrl}}>
     document.addEventListener('DOMContentLoaded', () => {
-        function normalize(path) {
-            // remove trailing slash, ensure leading slash, remove index.html if present
-            return path.replace(/\/index\.html$/, '').replace(/\/+$/, '').replace(/^([^/])/, '/$1');
-        }
-
         const header = document.querySelector('header');
 
-        const normalizedPath = normalize(window.location.pathname);
-        const basePath = normalize(new URL(siteUrl).pathname);
+        const normalizedPath = window.location.pathname.replace(/\/+$/, ''); // remove trailing slash
+        const basePath = siteUrl
+            ? siteUrl.replace(/^https?:\/\/[^/]+/, '').replace(/\/+$/, '')
+            : '';
 
-        console.log('normalizedPath: ', normalizedPath)// same
-        console.log('basePath: ', basePath)// same
+        console.log('normalizedPath: ', normalizedPath);
+        console.log('basePath: ', basePath);
 
         const isHome = normalizedPath === basePath;
 
