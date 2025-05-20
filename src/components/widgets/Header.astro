@@ -47,9 +47,12 @@ const siteUrl = Astro.site;
 
 <script type="text/javascript" define:vars={{siteUrl}}>
     document.addEventListener('DOMContentLoaded', () => {
-        const basePath = siteUrl.substring(siteUrl.lastIndexOf('/'), siteUrl.length) + '/';
         const header = document.querySelector('header');
-        const isHome = window.location.pathname === basePath;
+
+        const normalizedPath = window.location.pathname.replace(/\/+$/, ''); // remove trailing slash
+        const basePath = new URL(siteUrl).pathname.replace(/\/+$/, '');      // same
+
+        const isHome = normalizedPath === basePath;
 
         if (!isHome) {
             header.classList.remove('bg-transparent');
