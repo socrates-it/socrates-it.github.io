@@ -5,7 +5,7 @@ import react from '@astrojs/react'
 import tailwindcss from '@tailwindcss/vite'
 
 import icon from 'astro-icon'
-import { BASE_PATH } from '~/common/constants.js'
+import { BASE_PATH } from './src/common/constants.js'
 
 // https://astro.build/config
 export default defineConfig({
