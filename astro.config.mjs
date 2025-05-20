@@ -5,6 +5,7 @@ import react from '@astrojs/react'
 import tailwindcss from '@tailwindcss/vite'
 
 import icon from 'astro-icon'
+import { BASE_PATH } from '~/common/constants.js'
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,6 +15,6 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  site: 'https://doubleloop-io.github.io',
-  base: '/socrates-2025',
+  site: `https://doubleloop-io.github.io/${BASE_PATH}`,
+  base: `${BASE_PATH}`,
 })

@@ -29,6 +29,8 @@ const {
     id = 'header',
 } = Astro.props;
 
+const siteUrl = Astro.site;
+
 ---
 <header
         class:list={[
@@ -43,10 +45,11 @@ const {
         </div>
 </header>
 
-<script type="text/javascript">
+<script type="text/javascript" define:vars={{siteUrl}}>
     document.addEventListener('DOMContentLoaded', () => {
+        const basePath = siteUrl.substring(siteUrl.lastIndexOf('/'), siteUrl.length) + '/';
         const header = document.querySelector('header');
-        const isHome = window.location.pathname === '/socrates-2025/';
+        const isHome = window.location.pathname === basePath;
 
         if (!isHome) {
             header.classList.remove('bg-transparent');
