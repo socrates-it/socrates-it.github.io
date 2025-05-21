@@ -1,6 +1,6 @@
 import { EventState } from './types.ts'
 
-export const eventState: EventState = EventState.REGISTRATION_OPEN
+export const eventState: EventState = EventState.ANNOUNCEMENT_LIST
 export const eventDate = new Date('2025-10-02').toLocaleDateString('it-IT')
 
 export const availableSeats = 80
@@ -12,7 +12,6 @@ export const eventLocation = {
 
 export const BASE_PATH = process.env.PUBLIC_BASE_PATH || '/'
 
-console.log('fooo', BASE_PATH)
 export type MenuItem = {
   label: string
   url: string
@@ -28,6 +27,8 @@ export const menuItems: MenuItem[] = [
 ]
 
 export const filteredMenuItems = menuItems.filter(menuItem => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   if (eventState === EventState.REGISTRATION_OPEN) {
     return true
   } else {
