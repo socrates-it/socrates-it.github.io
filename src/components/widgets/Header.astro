@@ -51,7 +51,7 @@ const siteUrl = Astro.site;
 
         const pathItems = window.location.pathname.split('/').filter(item => item !== '')
 
-        if (pathItems.length > 0) {
+        if (pathItems.length > 1) {
             header.classList.remove('bg-transparent');
             header.classList.add('bg-tertiary');
         } else {
