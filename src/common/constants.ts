@@ -10,8 +10,8 @@ export const eventLocation = {
   venue: 'Hotel Ambasciatori',
 }
 
-export const BASE_PATH = '/'
-console.log('BASE_PATH', BASE_PATH)
+export const BASE_PATH = import.meta.env.PUBLIC_BASE_PATH || 'socrates-2025'
+
 export type MenuItem = {
   label: string
   url: string
@@ -20,10 +20,10 @@ export type MenuItem = {
 }
 
 export const menuItems: MenuItem[] = [
-  { label: 'About', url: '/#about' },
-  { label: 'Schedule', url: '/#schedule' },
-  { label: 'Sponsors', url: '/#sponsors' },
-  { label: 'Register', url: '/register' },
+  { label: 'About', url: `/${BASE_PATH}/#about` },
+  { label: 'Schedule', url: `/${BASE_PATH}/#schedule` },
+  { label: 'Sponsors', url: `/${BASE_PATH}/#sponsors` },
+  { label: 'Register', url: `/${BASE_PATH}/register` },
 ]
 console.log(menuItems)
 export const filteredMenuItems = menuItems.filter(menuItem => {
