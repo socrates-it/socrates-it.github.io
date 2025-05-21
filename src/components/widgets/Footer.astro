@@ -1,12 +1,8 @@
 ---
-import astro from '../../icons/astro.svg';
-import {MajesticonsOpen} from "../../icons/Icons";
 import React from "react";
-import { MdiGithub, MdiLinkedin, RiBlueskyFill } from '../../icons/Icons.tsx'
+import { MdiLinkedin } from '../../icons/Icons.tsx'
 import {BASE_PATH, filteredMenuItems, type MenuItem} from "../../common/constants";
 import socratesLogo from '../../../public/images/socrates-logo.png';
-import {eventState} from "../../common/constants";
-import {EventState} from "../../common/types";
 
 const footerData: {title: string, links: MenuItem[]}[] = [
     {
@@ -30,7 +26,7 @@ const footerData: {title: string, links: MenuItem[]}[] = [
         {footerData.map((item, index) => (
                 <div class="flex flex-col items-start space-y-4">
                     <h3 class="text-lg font-bold">{item.title}</h3>
-                    {item.links.map(link => (<a href={`${BASE_PATH}${link.url}`} class="text-sm mt-1 opacity-90">{link.label}</a>))}
+                    {item.links.map(link => (<a href={`${link.url}`} class="text-sm mt-1 opacity-90">{link.label}</a>))}
                 </div>
         ))}
         <div class="flex flex-col items-start space-y-6">
