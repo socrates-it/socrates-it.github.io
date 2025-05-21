@@ -11,7 +11,7 @@ const footerData: {title: string, links: MenuItem[]}[] = [
     },
     {
         title: 'Policies',
-        links: [{'label': 'Cookie Policy', 'url': 'cookie-policy'}, {'label': 'Privacy Policy', 'url': 'privacy-policy'}]
+        links: [{'label': 'Cookie Policy', 'url': `/${BASE_PATH}/cookie-policy`}, {'label': 'Privacy Policy', 'url': `/${BASE_PATH}/privacy-policy`}]
     }
     ]
 
@@ -26,7 +26,7 @@ const footerData: {title: string, links: MenuItem[]}[] = [
         {footerData.map((item, index) => (
                 <div class="flex flex-col items-start space-y-4">
                     <h3 class="text-lg font-bold">{item.title}</h3>
-                    {item.links.map(link => (<a href={`/${BASE_PATH}/${link.url}`} class="text-sm mt-1 opacity-90">{link.label}</a>))}
+                    {item.links.map(link => (<a href={link.url}} class="text-sm mt-1 opacity-90">{link.label}</a>))}
                 </div>
         ))}
         <div class="flex flex-col items-start space-y-6">
