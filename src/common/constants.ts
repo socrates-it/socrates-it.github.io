@@ -10,7 +10,7 @@ export const eventLocation = {
   venue: 'Hotel Ambasciatori',
 }
 
-export const BASE_PATH = process.env.PUBLIC_BASE_PATH
+export const BASE_PATH = process.env.PUBLIC_BASE_PATH || '/'
 
 console.log('fooo', BASE_PATH)
 export type MenuItem = {
