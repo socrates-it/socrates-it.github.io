@@ -42,7 +42,7 @@ export default function Sponsors() {
       <div className="mt-30 text-white">
         <p className="text-xl mb-2">
           Download the{' '}
-          <a href="https://www.socrates-conference.it/pdf/Socrates%20IT%202024%20-%20sponsorship%20info.pdf" target="_blank" className="text-secondary">
+          <a href={prependBasePath('/pdf/Socrates%20IT%202024%20-%20sponsorship%20info.pdf')} target="_blank" className="text-secondary">
             sponsorship prospect
           </a>
           .
