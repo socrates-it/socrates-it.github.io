@@ -17,7 +17,8 @@ permissions:
   id-token: write
 
 env:
-  PUBLIC_BASE_PATH: ${{ vars.PUBLIC_BASE_PATH || 'socrates-2025'}}
+  BASE_PATH: ${{ vars.BASE_PATH }}
+  SITE: ${{ vars.SITE }}
 
 jobs:
   build:

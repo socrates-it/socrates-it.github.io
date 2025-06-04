@@ -10,8 +10,6 @@ export const eventLocation = {
   venue: 'Hotel Ambasciatori',
 }
 
-export const BASE_PATH = import.meta.env.PUBLIC_BASE_PATH || 'socrates-2025'
-
 export type MenuItem = {
   label: string
   url: string
@@ -19,13 +17,15 @@ export type MenuItem = {
   variant?: 'chip' | 'link'
 }
 
+export const prependBasePath = (subPath: string) => `${import.meta.env.BASE_URL}${subPath}`.replace('//', '/')
+
 export const menuItems: MenuItem[] = [
-  { label: 'About', url: `/${BASE_PATH}/#about` },
-  { label: 'Schedule', url: `/${BASE_PATH}/#schedule` },
-  { label: 'Sponsors', url: `/${BASE_PATH}/#sponsors` },
-  { label: 'Register', url: `/${BASE_PATH}/register` },
+  { label: 'About', url: prependBasePath(`/#about`) },
+  { label: 'Schedule', url: prependBasePath(`/#schedule`) },
+  { label: 'Sponsors', url: prependBasePath(`/#sponsors`) },
+  { label: 'Register', url: prependBasePath(`/register`) },
 ]
-console.log(menuItems)
+
 export const filteredMenuItems = menuItems.filter(menuItem => {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
@@ -35,5 +35,3 @@ export const filteredMenuItems = menuItems.filter(menuItem => {
     return menuItem.label !== 'Register'
   }
 })
-
-export const prependBasePath = (subPath: string) => `${import.meta.env.BASE_URL}${subPath}`.replace('//', '/')

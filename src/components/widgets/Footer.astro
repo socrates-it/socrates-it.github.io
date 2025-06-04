@@ -1,7 +1,7 @@
 ---
 import React from "react";
 import { MdiLinkedin } from '../../icons/Icons.tsx'
-import {BASE_PATH, filteredMenuItems, type MenuItem} from "../../common/constants";
+import {prependBasePath, filteredMenuItems, type MenuItem} from "../../common/constants";
 import socratesLogo from '../../../public/images/socrates-logo.png';
 
 const footerData: {title: string, links: MenuItem[]}[] = [
@@ -11,14 +11,14 @@ const footerData: {title: string, links: MenuItem[]}[] = [
     },
     {
         title: 'Policies',
-        links: [{'label': 'Cookie Policy', 'url': `/${BASE_PATH}/cookie-policy`}, {'label': 'Privacy Policy', 'url': `/${BASE_PATH}/privacy-policy`}]
+        links: [{'label': 'Cookie Policy', 'url': prependBasePath(`/cookie-policy`)}, {'label': 'Privacy Policy', 'url': prependBasePath(`/privacy-policy`)}]
     }
     ]
 
 ---
 <footer class="px-md md:px-xl bg-white pt-12 md:pt-24 pb-6">
     <div class="max-w-6xl mx-auto gap-10 grid grid-cols-1 md:grid-cols-4">
-        <a href={`/${BASE_PATH}`} aria-label="Go to homepage">
+        <a href={prependBasePath(`/`)} aria-label="Go to homepage">
             <div class="size-16 md:size-20 bg-no-repeat bg-contain bg-center"
                  style={`background-image: url(${socratesLogo.src});`}
             />

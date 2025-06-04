@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-import { BASE_PATH, eventState, prependBasePath } from '~/common/constants.ts'
+import { eventState, prependBasePath } from '~/common/constants.ts'
 import { EventState } from '~/common/types.ts'
 
 const images = [
@@ -66,7 +66,7 @@ const Carousel = () => {
                 )}
 
                 {eventState === EventState.REGISTRATION_OPEN && (
-                  <a href={`${BASE_PATH}/register`}>
+                  <a href={prependBasePath(`/register`)}>
                     <button className="uppercase btn-primary w-full y-4 sm:py-6 text-lg sm:text-2xl">register</button>
                   </a>
                 )}

@@ -6,7 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 import icon from 'astro-icon'
 // noinspection ES6PreferShortImport
-import { BASE_PATH } from './src/common/constants.js'
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,7 +14,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-
-  site: `https://doubleloop-io.github.io/${BASE_PATH}`,
-  base: `/${BASE_PATH}`,
+  site: process.env.SITE || 'https://socrates-conference.it',
+  base: process.env.BASE_PATH || '/',
 })

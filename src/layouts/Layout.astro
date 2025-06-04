@@ -1,7 +1,7 @@
 ---
 import '~/styles/global.css';
 import '@fontsource-variable/manrope';
-import {BASE_PATH} from "../common/constants";
+import {prependBasePath} from "../common/constants";
 
 import type { MetaData as MetaDataType } from '~/types';
 
@@ -17,11 +17,11 @@ const { metadata = {} } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href={`/${BASE_PATH}/favicon/favicon-96x96.png`} sizes="96x96" />
-		<link rel="icon" type="image/svg+xml" href={`/${BASE_PATH}/favicon/favicon.svg`} />
-		<link rel="shortcut icon" href={`/${BASE_PATH}/favicon/favicon.ico`} />
-		<link rel="apple-touch-icon" sizes="180x180" href={`/${BASE_PATH}/favicon/apple-touch-icon.png`} />
-		<link rel="manifest" href={`/${BASE_PATH}/favicon/site.webmanifest`} />
+		<link rel="icon" type="image/png" href={prependBasePath(`/favicon/favicon-96x96.png`)} sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href={prependBasePath(`/favicon/favicon.svg`)} />
+		<link rel="shortcut icon" href={prependBasePath(`/favicon/favicon.ico`)} />
+		<link rel="apple-touch-icon" sizes="180x180" href={prependBasePath(`/favicon/apple-touch-icon.png`)} />
+		<link rel="manifest" href={prependBasePath(`/favicon/site.webmanifest`)} />
 
 		<meta name="generator" content={Astro.generator} />
 
