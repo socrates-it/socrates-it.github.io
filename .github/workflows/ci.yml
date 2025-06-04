@@ -2,14 +2,14 @@ name: CI
 
 on:
   push:
-    branches: ["main"]
+    branches: ['main']
     paths-ignore:
-      - ".vscode/**"
-      - "**.md"
+      - '.vscode/**'
+      - '**.md'
   workflow_dispatch:
   schedule:
     # Let's do it on the 2nd of January because we don't know which timezone is used by GitHub Actions
-    - cron: "0 0 2 1 *"
+    - cron: '0 0 2 1 *'
 
 permissions:
   contents: read
@@ -17,7 +17,7 @@ permissions:
   id-token: write
 
 env:
-  PUBLIC_BASE_PATH: socrates-2025
+  PUBLIC_BASE_PATH: ${{ vars.PUBLIC_BASE_PATH || 'socrates-2025'}}
 
 jobs:
   build:
@@ -34,7 +34,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "pnpm"
+          cache: 'pnpm'
 
       - name: Install
         run: pnpm install --frozen-lockfile
