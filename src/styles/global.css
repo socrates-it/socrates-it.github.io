@@ -314,3 +314,56 @@
     -webkit-box-orient: vertical;
   }
 }
+
+/* mailchimp form */
+#mc_embed_signup_scroll input {
+  background: var(--color-lighter);
+  width: 100%;
+  padding: 0.75rem; /* 12px */
+  border: 1px solid transparent;
+  border-radius: 0.25rem; /* 4px */
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+#mc_embed_signup_scroll input:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-color: #60a5fa; /* ring-secondary (blue-400) */
+  box-shadow: 0 0 0 2px var(--color-secondary);
+}
+
+.content__gdpr label {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.content__gdprLegal {
+  margin-bottom: 1.2rem;
+}
+
+.content__gdprLegal p:last-child {
+  margin-top: 1.2rem;
+}
+
+.content__gdprLegal a {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+fieldset label {
+  display: flex !important;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+fieldset label #gdpr_11381  {
+  background-color: purple;
+  width: auto !important;
+}
+
+fieldset label span{
+  font-size: 1rem;
+  font-weight: 500;
+}
