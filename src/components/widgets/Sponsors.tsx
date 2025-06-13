@@ -12,51 +12,55 @@ const sponsors: Sponsor[] = [
 
 export default function Sponsors() {
   return (
-    <div id="sponsors" className="px-md md:px-xl pt-12 md:pt-24 pb-14 md:pb-26 text-center bg-contrast">
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-center items-center">
-        <div className="w-full sm:w-2/5 flex">
-          <SectionIntro
-            title={'sponsors'}
-            color={'lightest'}
-            description="Grateful for the generous commitment that powers this event"
-            dimensions={'text-3xl md:text-4xl'}
-            position={'text-left w-3/4'}
-          />
-        </div>
-        <div className="w-full sm:w-3/5">
-          <div className="grid grid-cols-3 rounded-lg gap-10 justify-items-center">
-            {sponsors.map((sponsor, index) => (
-              <div className="size-full  flex flex-col items-center justify-center">
-                <a key={index} href={sponsor.url} className="size-full flex justify-center items-start">
-                  <div className={cn('bg-white size-full rounded-lg shadow-md', 'flex items-center justify-center p-xs mb-xs')}>
-                    <Logo {...sponsor} />
-                  </div>
-                </a>
-                <div className="h-full text-light">{sponsor.name}</div>
-              </div>
-            ))}
+    <>
+      <div id="sponsors" className="px-md md:px-xl pt-12 md:pt-24 pb-14 md:pb-16 text-center bg-accent">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-center items-center">
+          <div className="w-full sm:w-2/5 flex">
+            <SectionIntro
+              title={'sponsors'}
+              color={'lightest'}
+              description="Grateful for the generous commitment that powers this event"
+              dimensions={'text-3xl md:text-4xl'}
+              position={'text-left w-3/4'}
+            />
+          </div>
+          <div className="w-full sm:w-3/5">
+            <div className="grid grid-cols-3 rounded-lg gap-10 justify-items-center">
+              {sponsors.map((sponsor, index) => (
+                <div className="size-full  flex flex-col items-center justify-center">
+                  <a key={index} href={sponsor.url} className="size-full flex justify-center items-start">
+                    <div className={cn('bg-white size-full rounded-lg shadow-md', 'flex items-center justify-center p-xs mb-xs')}>
+                      <Logo {...sponsor} />
+                    </div>
+                  </a>
+                  <div className="h-full text-light">{sponsor.name}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-      <PricingSection />
-      <div className="mt-30 text-white">
-        <p className="text-xl mb-2">
-          Download the{' '}
-          <a href={prependBasePath('/pdf/Socrates%20IT%202024%20-%20sponsorship%20info.pdf')} target="_blank" className="text-secondary">
-            sponsorship prospect
+      <div id="sponsors-program" className="px-md md:px-xl pb-14 md:pb-26 text-center bg-contrast">
+        <PricingSection />
+        <div className="mt-20 md:mt-30 text-white">
+          <p className="text-xl mb-2">
+            Download the{' '}
+            <a href={prependBasePath('/pdf/Socrates%20IT%202024%20-%20sponsorship%20info.pdf')} target="_blank" className="text-secondary">
+              sponsorship prospect
+            </a>
+            .
+          </p>
+          <p className="text-md text-subtitle">
+            Feel free to contact us at <span className="italic text-secondary">socrates.italia@gmail.com</span> for any further detail.
+          </p>
+        </div>
+        <div className="mt-10">
+          <a href="mailto:socrates-it@googlegroups.com">
+            <button className="btn-primary capitalize">become a sponsor</button>
           </a>
-          .
-        </p>
-        <p className="text-md text-subtitle">
-          Feel free to contact us at <span className="italic text-secondary">socrates.italia@gmail.com</span> for any further detail.
-        </p>
+        </div>
       </div>
-      <div className="mt-10">
-        <a href="mailto:socrates-it@googlegroups.com">
-          <button className="btn-primary capitalize">become a sponsor</button>
-        </a>
-      </div>
-    </div>
+    </>
   )
 }
 
