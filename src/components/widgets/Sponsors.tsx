@@ -13,14 +13,14 @@ const sponsors: Sponsor[] = [
 export default function Sponsors() {
   return (
     <div id="sponsors" className="px-md md:px-xl pt-12 md:pt-24 pb-14 md:pb-26 text-center bg-contrast">
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row-reverse justify-center items-center">
-        <div className="w-full sm:w-2/5 flex justify-end mb-xl sm:mb-0">
+      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-center items-center">
+        <div className="w-full sm:w-2/5 flex">
           <SectionIntro
             title={'sponsors'}
             color={'lightest'}
             description="Grateful for the generous commitment that powers this event"
             dimensions={'text-3xl md:text-4xl'}
-            position={'text-right w-3/4'}
+            position={'text-left w-3/4'}
           />
         </div>
         <div className="w-full sm:w-3/5">
