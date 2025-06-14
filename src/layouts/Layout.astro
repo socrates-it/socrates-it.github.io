@@ -1,7 +1,7 @@
 ---
 import '~/styles/global.css';
 import '@fontsource-variable/manrope';
-import {prependBasePath} from "../common/constants";
+import { defaultMetadata, prependBasePath } from '../common/constants'
 
 import type { MetaData } from '~/types';
 
@@ -9,7 +9,9 @@ export interface Props {
 	metadata?: MetaData;
 }
 
-const { metadata = {} } = Astro.props;
+const { metadata: {title, ignoreTitleTemplate} = defaultMetadata } = Astro.props;
+const pageTitle = ignoreTitleTemplate ? title : `SoCraTes-IT - ${title}`
+
 ---
 
 <!doctype html>
@@ -25,7 +27,7 @@ const { metadata = {} } = Astro.props;
 
 		<meta name="generator" content={Astro.generator} />
 
-		<title>SoCraTes-IT</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body class="antialiased text-default bg-white transition-colors duration-500 tracking-tight">
 		<slot />

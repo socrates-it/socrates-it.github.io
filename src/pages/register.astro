@@ -4,10 +4,7 @@ import MailchimpOriginalForm from "../components/widgets/MailchimpOriginalForm.a
 import {eventState} from "../common/constants";
 import {EventState} from "../common/types";
 
-const metadata = {
-    title: 'Registration',
-    ignoreTitleTemplate: true,
-};
+const metadata = { title: 'Registration', ignoreTitleTemplate: false };
 
 if (eventState !== EventState.REGISTRATION_OPEN) {
     return new Response('Not Found', { status: 404 });

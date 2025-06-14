@@ -1,4 +1,5 @@
 import { EventState } from './types.ts'
+import type { MetaData } from '~/types'
 
 export const eventState: EventState = EventState.REGISTRATION_OPEN
 export const eventDate = new Date('2025-10-02').toLocaleDateString('it-IT')
@@ -35,3 +36,5 @@ export const filteredMenuItems = menuItems.filter(menuItem => {
     return menuItem.label !== 'Register'
   }
 })
+
+export const defaultMetadata: MetaData = { title: 'SoCraTes-IT', ignoreTitleTemplate: true }
