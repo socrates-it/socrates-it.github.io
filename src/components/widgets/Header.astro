@@ -1,51 +1,55 @@
 ---
-import Navigation from "../navbar/Navigation.astro";
+import Navigation from '../navbar/Navigation.astro'
 
 export interface Props {
-    id?: string;
+  id?: string;
+  bgAlwaysTertiary?: boolean;
 }
 
-const { id = 'header' } = Astro.props;
+const { id = 'header', bgAlwaysTertiary = false } = Astro.props
 
-const siteUrl = Astro.site;
-
+const siteUrl = Astro.site
+const defaultBg = bgAlwaysTertiary ? 'bg-tertiary' : 'bg-transparent'
 ---
 <header
-        class:list={[
-            'z-40 fixed flex-none mx-auto w-full py-xs px-md md:px-xl',
-            'border-b border-gray-50/0 transition-all duration-500 ease-in-out',
-            'h-20 text-light bg-transparent',
-        ]}
-        id={id}
+  class:list={[
+    'z-40 fixed flex-none mx-auto w-full py-xs px-md md:px-xl',
+    'border-b border-gray-50/0 transition-all duration-500 ease-in-out',
+    'h-20 text-light',
+    defaultBg,
+  ]}
+  id={id}
 >
-        <div class="max-w-6xl mx-auto">
-            <Navigation />
-        </div>
+  <div class="max-w-6xl mx-auto">
+    <Navigation />
+  </div>
 </header>
 
-<script is:inline type="text/javascript" define:vars={{siteUrl}}>
+<script is:inline type="text/javascript" define:vars={{ siteUrl, bgAlwaysTertiary }}>
+  if (!bgAlwaysTertiary) {
     document.addEventListener('DOMContentLoaded', () => {
-        const header = document.querySelector('header');
+      const header = document.querySelector('header')
 
-        const pathItems = window.location.pathname.split('/').filter(item => item !== '')
+      const pathItems = window.location.pathname.split('/').filter(item => item !== '')
 
-        if (pathItems.length > 1) {
-            header.classList.remove('bg-transparent');
-            header.classList.add('bg-tertiary');
-        } else {
-            // Initial state on load
-            header.classList.add('bg-transparent');
-            header.classList.remove('bg-tertiary');
+      if (pathItems.length > 1) {
+        header.classList.remove('bg-transparent')
+        header.classList.add('bg-tertiary')
+      } else {
+        // Initial state on load
+        header.classList.add('bg-transparent')
+        header.classList.remove('bg-tertiary')
 
-            // Update on scroll
-            const onScroll = () => {
-                const scrolledDown = window.scrollY > 200;
-                header.classList.toggle('bg-tertiary', scrolledDown);
-                header.classList.toggle('bg-transparent', !scrolledDown);
-            };
-
-            window.addEventListener('scroll', onScroll);
-            onScroll(); // Trigger once to set initial state
+        // Update on scroll
+        const onScroll = () => {
+          const scrolledDown = window.scrollY > 200
+          header.classList.toggle('bg-tertiary', scrolledDown)
+          header.classList.toggle('bg-transparent', !scrolledDown)
         }
-    });
+
+        window.addEventListener('scroll', onScroll)
+        onScroll() // Trigger once to set initial state
+      }
+    })
+  }
 </script>
