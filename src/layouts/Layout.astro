@@ -3,10 +3,10 @@ import '~/styles/global.css';
 import '@fontsource-variable/manrope';
 import {prependBasePath} from "../common/constants";
 
-import type { MetaData as MetaDataType } from '~/types';
+import type { MetaData } from '~/types';
 
 export interface Props {
-	metadata?: MetaDataType;
+	metadata?: MetaData;
 }
 
 const { metadata = {} } = Astro.props;

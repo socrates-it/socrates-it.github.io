@@ -1,33 +1,11 @@
 ---
-import type { CallToAction } from '~/types';
 import Navigation from "../navbar/Navigation.astro";
-
-interface Link {
-    text?: string;
-    href?: string;
-    ariaLabel?: string;
-    icon?: string;
-}
-
-interface MenuLink extends Link {
-    links?: Array<MenuLink>;
-}
 
 export interface Props {
     id?: string;
-    links?: Array<MenuLink>;
-    actions?: Array<CallToAction>;
-    isSticky?: boolean;
-    isDark?: boolean;
-    isFullWidth?: boolean;
-    showToggleTheme?: boolean;
-    showRssFeed?: boolean;
-    position?: string;
 }
 
-const {
-    id = 'header',
-} = Astro.props;
+const { id = 'header' } = Astro.props;
 
 const siteUrl = Astro.site;
 
