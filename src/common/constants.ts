@@ -37,4 +37,5 @@ export const filteredMenuItems = menuItems.filter(menuItem => {
   }
 })
 
-export const defaultMetadata: MetaData = { title: 'SoCraTes-IT', ignoreTitleTemplate: true }
+export const defaultTitle = 'SoCraTes Italy'
+export const defaultMetadata: MetaData = { title: defaultTitle, ignoreTitleTemplate: true }

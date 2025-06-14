@@ -12,7 +12,7 @@ import GoogleMap from "../components/widgets/GoogleMap";
 import IntroCards from '../components/widgets/IntroCards.astro';
 import socratesPhotos from '../../public/images/processed/images.json'
 import {shuffleFY} from "../common/array";
-import {eventState} from "../common/constants";
+import { defaultTitle, eventState } from '../common/constants'
 import {EventState} from "../common/types";
 import { prependBasePath } from '~/common/constants.ts';
 
@@ -22,7 +22,7 @@ const updatedUrlPhotos = socratesPhotos.map(photo => {
 
 const shuffledTeamPhotos = shuffleFY(updatedUrlPhotos)
 
-const metadata = { title: 'SoCraTes-IT', ignoreTitleTemplate: true };
+const metadata = { title: defaultTitle, ignoreTitleTemplate: true };
 
 ---
 

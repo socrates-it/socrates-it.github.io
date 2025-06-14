@@ -1,7 +1,7 @@
 ---
 import '~/styles/global.css';
 import '@fontsource-variable/manrope';
-import { defaultMetadata, prependBasePath } from '../common/constants'
+import { defaultMetadata, defaultTitle, prependBasePath } from '../common/constants'
 
 import type { MetaData } from '~/types';
 
@@ -10,7 +10,7 @@ export interface Props {
 }
 
 const { metadata: {title, ignoreTitleTemplate} = defaultMetadata } = Astro.props;
-const pageTitle = ignoreTitleTemplate ? title : `SoCraTes-IT - ${title}`
+const pageTitle = ignoreTitleTemplate ? title : `${defaultTitle} - ${title}`
 
 ---
 
