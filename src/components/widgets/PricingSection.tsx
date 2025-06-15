@@ -9,7 +9,7 @@ const plans = [
     features: [
       'Your logo on the website',
       'Mentions on Twitter',
-      'Your name in the thank you email to participants of SoCraTes IT',
+      'Your name in the thank you email to participants of SoCraTes Italy',
       'A mention at the beginning and end of the conference',
     ],
   },

@@ -24,7 +24,7 @@ const eventData: Record<
     {
       time: '3:00pm - 7:30pm',
       title: 'Welcome in!',
-      description: 'We kick off SoCraTes IT with a good beer and networking activities',
+      description: 'We kick off SoCraTes Italy with a good beer and networking activities',
       icon: <FluentMdl2WavingHand className="size-6" />,
     },
     {
@@ -50,7 +50,7 @@ const eventData: Record<
     {
       time: '9:00am - 9:30am',
       title: 'Official opening',
-      description: 'Introduction to the spirit of SoCraTes IT and the Open Space',
+      description: 'Introduction to the spirit of SoCraTes Italy and the Open Space',
       icon: <FluentConferenceRoom20Regular className="size-6" />,
     },
     {

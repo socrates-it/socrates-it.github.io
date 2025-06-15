@@ -23,14 +23,14 @@ const guidelines = [
     img: '/images/attendees.jpg',
     title: GuideLinesTitles.second,
     description: [
-      'SoCraTes IT will be run as a three-day Open Space, facilitated by the outstanding facilitator from Connexxo. We love working in self-organizing teams – well, Open Space is a simple technique for creating a self-organizing conference!',
+      'SoCraTes Italy will be run as a three-day Open Space, facilitated by the outstanding facilitator from Connexxo. We love working in self-organizing teams – well, Open Space is a simple technique for creating a self-organizing conference!',
     ],
   },
   {
     img: '/images/rope.jpg',
     title: GuideLinesTitles.third,
     description: [
-      'SoCraTes IT follows the Conference Code of Conduct laid out by several conference organisers around the globe. We ask that you read the full version before attending. You are required to cooperate with the code throughout the event to help ensure a safe environment for everybody.',
+      'SoCraTes Italy follows the Conference Code of Conduct laid out by several conference organisers around the globe. We ask that you read the full version before attending. You are required to cooperate with the code throughout the event to help ensure a safe environment for everybody.',
     ],
   },
 ]
@@ -122,7 +122,7 @@ const EventGuideline = () => {
         <Dialog onClose={() => handleToggleModal(GuideLinesTitles.second)} isOpen={openModals[GuideLinesTitles.second]} title={GuideLinesTitles.second}>
           <div className="space-y-md ">
             <p>
-              SoCraTes IT will be run as a three days{' '}
+              SoCraTes Italy will be run as a three days{' '}
               <a href="https://agilecoachcamp.org/tiki-index.php?page=OpenSpace" className="text-accent">
                 Open Space
               </a>
@@ -159,7 +159,7 @@ const EventGuideline = () => {
         <Dialog onClose={() => handleToggleModal(GuideLinesTitles.third)} isOpen={openModals[GuideLinesTitles.third]} title={GuideLinesTitles.third}>
           <div className="space-y-md ">
             <p>
-              SoCraTes IT follows the Conference Code of Conduct laid out by several conference organisers around the globe. We ask that you read the{' '}
+              SoCraTes Italy follows the Conference Code of Conduct laid out by several conference organisers around the globe. We ask that you read the{' '}
               <a href="http://confcodeofconduct.com/" className="text-accent">
                 full version
               </a>{' '}
