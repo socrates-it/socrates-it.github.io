@@ -8,7 +8,7 @@ const plans = [
     price: '€500 + VAT',
     features: [
       'Your logo on the website',
-      'Mentions on Twitter',
+      'Mentions on our social media channels',
       'Your name in the thank you email to participants of SoCraTes Italy',
       'A mention at the beginning and end of the conference',
     ],
