@@ -10,8 +10,8 @@ const sponsors: Sponsor[] = [
   { name: 'Connexxo', image: '/images/sponsors/connexxo.png', alt: 'Connexxo', url: 'https://www.connexxo.com', type: 'rectangle' },
   { name: 'CodicePlastico', image: '/images/sponsors/codiceplastico.png', alt: 'CodicePlastico', url: 'https://codiceplastico.com/it/', type: 'rectangle' },
   { name: 'QMates', image: '/images/sponsors/qmates.jpg', alt: 'QMates', url: 'https://qmates.tech/', type: 'rectangle' },
-  { name: 'Intré', image: '/images/sponsors/intre.png', alt: 'Intré', url: 'http://www.intre.it', type: 'rectangle' },
 ]
+const supporters: Sponsor[] = [{ name: 'Intré', image: '/images/sponsors/intre.png', alt: 'Intré', url: 'http://www.intre.it', type: 'rectangle' }]
 
 export default function Sponsors() {
   return (
@@ -28,18 +28,30 @@ export default function Sponsors() {
             />
           </div>
           <div className="w-full sm:w-3/5">
-            <div className="grid grid-cols-3 rounded-lg gap-10 justify-items-center">
-              {sponsors.map((sponsor, index) => (
-                <div className="size-full  flex flex-col items-center justify-center">
-                  <a key={index} href={sponsor.url} className="size-full flex justify-center items-start">
-                    <div className={cn('bg-white size-full rounded-lg shadow-md', 'flex items-center justify-center p-xs mb-xs')}>
-                      <Logo {...sponsor} />
-                    </div>
-                  </a>
-                  <div className="h-full text-light">{sponsor.name}</div>
+            <div className="flex-col">
+              {supporters.length > 0 && (
+                <div className="mb-10">
+                  <h3 className="font-bold capitalize text-white text-2xl md:text-3xl">Sponsors</h3>
                 </div>
-              ))}
+              )}
+              <div className="grid grid-cols-3 rounded-lg gap-10 justify-items-center">
+                {sponsors.map((sponsor, index) => (
+                  <SponsorSection key={index} index={index} {...sponsor} />
+                ))}
+              </div>
             </div>
+            {supporters.length > 0 && (
+              <div className="flex-col mt-10">
+                <div className="mb-10">
+                  <h3 className="font-bold capitalize text-white text-2xl md:text-3xl">Supporters</h3>
+                </div>
+                <div className="grid grid-cols-3 rounded-lg gap-10 justify-items-center">
+                  {supporters.map((sponsor, index) => (
+                    <SponsorSection key={index} index={index} {...sponsor} />
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -64,6 +76,19 @@ export default function Sponsors() {
         </div>
       </div>
     </>
+  )
+}
+
+function SponsorSection({ index, ...sponsor }: Sponsor & { index: number }) {
+  return (
+    <div className="size-full  flex flex-col items-center justify-center">
+      <a key={index} href={sponsor.url} className="size-full flex justify-center items-start">
+        <div className={cn('bg-white size-full rounded-lg shadow-md', 'flex items-center justify-center p-xs mb-xs')}>
+          <Logo {...sponsor} />
+        </div>
+      </a>
+      <div className="h-full text-light">{sponsor.name}</div>
+    </div>
   )
 }
 
