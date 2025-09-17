@@ -6,7 +6,7 @@ import { prependBasePath } from '~/common/constants.ts'
 
 type Sponsor = { name: string; image: string; alt: string; url: string; type: 'square' | 'rectangle' }
 const sponsors: Sponsor[] = [
-  { name: 'doubleloop', image: '/images/doubleloop.png', alt: 'doubleloop', url: 'https://www.doubleloop.io/', type: 'rectangle' },
+  { name: 'doubleloop', image: '/images/doubleloop.png', alt: 'doubleloop', url: 'https://doubleloop.io/', type: 'rectangle' },
   { name: 'Connexxo', image: '/images/connexxo.png', alt: 'Connexxo', url: 'https://www.connexxo.com', type: 'rectangle' },
 ]
 
