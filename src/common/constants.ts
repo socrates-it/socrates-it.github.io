@@ -2,8 +2,10 @@ import { EventState } from './types.ts'
 import type { MetaData } from '~/types'
 
 export const eventState: EventState = EventState.SOLD_OUT
-export const eventStartDate = new Date('2025-10-02').toLocaleDateString('it-IT')
+const startDate = new Date('2025-10-02')
+export const eventStartDate = startDate.toLocaleDateString('it-IT')
 export const eventEndDate = new Date('2025-10-04').toLocaleDateString('it-IT')
+export const eventYear = `${startDate.getFullYear()}`
 
 export const availableSeats = 80
 
