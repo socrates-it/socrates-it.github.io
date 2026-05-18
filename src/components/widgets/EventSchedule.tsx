@@ -20,7 +20,7 @@ const eventData: Record<
     icon: JSX.Element
   }[]
 > = {
-  'October 2': [
+  'September 17': [
     {
       time: '3:00pm - 7:30pm',
       title: 'Welcome in!',
@@ -40,7 +40,7 @@ const eventData: Record<
       icon: <FluentDrinkMargarita20Regular className="size-6" />,
     },
   ],
-  'October 3': [
+  'September 18': [
     {
       time: '8:00am - 9:00am',
       title: 'Wake up, lazy guys!',
@@ -90,7 +90,7 @@ const eventData: Record<
       icon: <FluentMdl2EatDrink className="size-6" />,
     },
   ],
-  'October 4': [
+  'September 19': [
     {
       time: '8:00am - 9:00am',
       title: 'The early bird gets the worm!',
@@ -137,7 +137,7 @@ const eventData: Record<
 }
 
 const EventSchedule = () => {
-  const [selectedDate, setSelectedDate] = useState('October 2')
+  const [selectedDate, setSelectedDate] = useState('September 17')
 
   return (
     <div id="schedule" className="min-h-screen pt-11 md:pt-23 pb-14 md:pb-26 px-md md:px-xl bg-lightest">
