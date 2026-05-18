@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-import { eventState, prependBasePath } from '~/common/constants.ts'
+import { eventStartDate, eventState, prependBasePath } from '~/common/constants.ts'
 import { EventState } from '~/common/types.ts'
 
 const images = [
@@ -44,7 +44,7 @@ const Carousel = () => {
               <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-light font-bold">SoCraTes 2025</p>
               {eventState !== EventState.COMING_SOON && (
                 <ul className="flex italic text-base sm:text-xl lg:text-2xl space-x-4 sm:space-x-8 justify-center mb-12 md:mb-22 lg:mb-32">
-                  <li style={{ wordSpacing: '0.5rem' }}>02/10/2025 - 04/10/2025, Rimini</li>
+                  <li style={{ wordSpacing: '0.5rem' }}>{eventStartDate} - 04/10/2025, Rimini</li>
                 </ul>
               )}
               <div className="w-42 sm:w-60 md:w-1/3 mx-auto">
