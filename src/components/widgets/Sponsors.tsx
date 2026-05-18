@@ -12,7 +12,15 @@ const sponsors: Sponsor[] = [
   { name: 'Dorian s.r.l.', image: '/images/sponsors/dorian.png', alt: 'Dorian s.r.l.', url: 'https://www.doriansrl.it/', type: 'rectangle' },
   // { name: 'QMates', image: '/images/sponsors/qmates.jpg', alt: 'QMates', url: 'https://qmates.tech/', type: 'rectangle' },
 ]
-const supporters: Sponsor[] = [{ name: 'Intré', image: '/images/sponsors/intre.png', alt: 'Intré', url: 'http://www.intre.it', type: 'rectangle' }]
+const supporters: Sponsor[] = [
+  // {
+  //   name: 'Intré',
+  //   image: '/images/sponsors/intre.png',
+  //   alt: 'Intré',
+  //   url: 'http://www.intre.it',
+  //   type: 'rectangle',
+  // },
+]
 
 export default function Sponsors() {
   return (
