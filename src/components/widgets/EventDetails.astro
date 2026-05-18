@@ -1,5 +1,5 @@
 ---
-import { availableSeats, eventDate, eventLocation, eventState } from '~/common/constants.ts';
+import { availableSeats, eventStartDate, eventLocation, eventState } from '~/common/constants.ts';
 import { Icon } from 'astro-icon/components';
 import {EventState} from '~/common/types.ts';
 
@@ -12,7 +12,7 @@ const details = {
     },
     {
       icon: 'calendar',
-      title: eventDate,
+      title: eventStartDate,
       subtitle: 'Don’t miss it',
     },
     {
@@ -35,7 +35,7 @@ const details = {
     },
     {
       icon: 'calendar',
-      title: eventDate,
+      title: eventStartDate,
       subtitle: 'save the date',
     },
     {
@@ -58,7 +58,7 @@ const details = {
     },
     {
       icon: 'calendar',
-      title: eventDate,
+      title: eventStartDate,
       subtitle: 'Event is sold out',
     },
     {
@@ -81,7 +81,7 @@ const details = {
     },
     {
       icon: 'calendar',
-      title: eventDate,
+      title: eventStartDate,
       subtitle: 'Don’t miss it',
     },
     {
