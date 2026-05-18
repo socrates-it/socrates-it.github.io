@@ -9,6 +9,7 @@ const sponsors: Sponsor[] = [
   { name: 'doubleloop', image: '/images/sponsors/doubleloop.png', alt: 'doubleloop', url: 'https://doubleloop.io/', type: 'rectangle' },
   { name: 'Connexxo', image: '/images/sponsors/connexxo.png', alt: 'Connexxo', url: 'https://www.connexxo.com', type: 'rectangle' },
   { name: 'CodicePlastico', image: '/images/sponsors/codiceplastico.png', alt: 'CodicePlastico', url: 'https://codiceplastico.com/it/', type: 'rectangle' },
+  { name: 'Dorian s.r.l.', image: '/images/sponsors/dorian.png', alt: 'Dorian s.r.l.', url: 'https://www.doriansrl.it/', type: 'rectangle' },
   // { name: 'QMates', image: '/images/sponsors/qmates.jpg', alt: 'QMates', url: 'https://qmates.tech/', type: 'rectangle' },
 ]
 const supporters: Sponsor[] = [{ name: 'Intré', image: '/images/sponsors/intre.png', alt: 'Intré', url: 'http://www.intre.it', type: 'rectangle' }]
