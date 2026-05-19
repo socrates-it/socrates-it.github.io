@@ -13,6 +13,13 @@ const sponsors: Sponsor[] = [
   // { name: 'QMates', image: '/images/sponsors/qmates.jpg', alt: 'QMates', url: 'https://qmates.tech/', type: 'rectangle' },
 ]
 const supporters: Sponsor[] = [
+  {
+    name: 'Evoluzione',
+    image: '/images/sponsors/evoluzione.png',
+    alt: 'Evoluzione',
+    url: 'https://www.evoluzione.agency/',
+    type: 'rectangle',
+  },
   // {
   //   name: 'Intré',
   //   image: '/images/sponsors/intre.png',
