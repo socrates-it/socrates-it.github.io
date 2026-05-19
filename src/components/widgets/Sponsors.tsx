@@ -20,6 +20,13 @@ const supporters: Sponsor[] = [
     url: 'https://www.evoluzione.agency/',
     type: 'rectangle',
   },
+  {
+    name: 'Coders51',
+    image: '/images/sponsors/coders51.png',
+    alt: 'Coders51',
+    url: 'https://www.coders51.com/',
+    type: 'rectangle',
+  },
   // {
   //   name: 'Intré',
   //   image: '/images/sponsors/intre.png',
