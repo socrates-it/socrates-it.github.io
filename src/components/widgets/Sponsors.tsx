@@ -81,6 +81,13 @@ export default function Sponsors() {
       <div id="sponsors-program" className="px-md md:px-xl pb-14 md:pb-26 text-center bg-contrast">
         <PricingSection />
         <div className="mt-20 md:mt-30 text-white">
+          <p className="text-xl mb-2">
+            Download the{' '}
+            <a href={prependBasePath('/pdf/SoCraTes 2026 - Sponsorship.pdf')} target="_blank" className="text-secondary">
+              sponsorship prospect
+            </a>
+            .
+          </p>
           <p className="text-md text-subtitle">
             Feel free to contact us at <span className="italic text-secondary">socrates.italia@gmail.com</span> for any further detail.
           </p>
