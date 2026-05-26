@@ -37,6 +37,14 @@ import { Icon } from 'astro-icon/components'
         placeholder="your.email@example.com"
       />
     </div>
+    <input
+      type="text" 
+      name="botcheck" 
+      id="botcheck" 
+      style="position: absolute; left: -9999px;" 
+      tabindex="-1"
+      autocomplete="off"
+    />
     <div class="flex items-start">
       <input 
         type="checkbox" 
@@ -54,7 +62,7 @@ import { Icon } from 'astro-icon/components'
         ✉️ I wish to receive email communications from SoCraTes IT, including news about our conferences.
       </p>
       <p>
-        ℹ️ I acknowledge that my information will be transferred to Mailchimp (SoCraTes IT's marketing platform) for processing.
+        ℹ️ I acknowledge that my information will be transferred to Mailchimp (SoCraTes IT's emailing platform) for processing.
       </p>
     </div>
     <div id="formMessage" class="hidden">
@@ -77,6 +85,7 @@ import { Icon } from 'astro-icon/components'
     >
       Subscribe and start the registration process
     </button>
+    <div id="turnstile-widget" class="flex justify-center my-4"></div>
   </form>
   <div class="p-6">
     <h3 class="font-bold text-lg mb-4">How the registration process works</h3>
@@ -141,6 +150,10 @@ import { Icon } from 'astro-icon/components'
 
 <script>
   const WEB3FORMS_ACCESS_KEY = 'ba5f906f-9b6d-4531-a91d-1c485de41b89';
+  const TURNSTILE_SITE_KEY = '0x4AAAAAADWjcT1sDKbGhFHr';
+  const TURNSTILE_ENABLED = true;
+  
+  let turnstileToken = '';
   
   const form = document.getElementById('registrationForm') as HTMLFormElement;
   const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
@@ -192,11 +205,21 @@ import { Icon } from 'astro-icon/components'
     const firstName = (document.getElementById('firstName') as HTMLInputElement).value;
     const lastName = (document.getElementById('lastName') as HTMLInputElement).value;
     const email = (document.getElementById('email') as HTMLInputElement).value;
+    const botcheck = (document.getElementById('botcheck') as HTMLInputElement).value;
+    
+    if (botcheck) {
+      console.warn('Bot detected');
+      return;
+    }
+    
+    if (TURNSTILE_ENABLED && !turnstileToken) {
+      alert('Please complete the security check');
+      return;
+    }
     
     showLoading();
     
     try {
-      // Send to Web3Forms
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
@@ -209,30 +232,22 @@ import { Icon } from 'astro-icon/components'
           email: email,
           privacy: 'accepted',
           subject: 'New SoCraTes Italy Registration',
+          botcheck: '',
+          ...(TURNSTILE_ENABLED && turnstileToken ? { 'cf-turnstile-response': turnstileToken } : {}),
         }),
       });
       
       const result = await response.json();
       
       if (result.success) {
-        // Build Google Forms URL with pre-filled data
         const googleFormUrl = new URL('https://forms.gle/BsWooYxTUhw4ybS96');
         
-        // Note: Google Forms uses entry IDs for pre-filling
-        // To find the entry IDs:
-        // 1. Open your Google Form
-        // 2. Click the three dots menu > Get pre-filled link
-        // 3. Fill the form with test data and get the link
-        // 4. The URL will contain parameters like entry.12345=value
-        // 5. Use those entry IDs below
         const params = new URLSearchParams({
           // 'entry.XXXXXX': firstName,  // Replace XXXXXX with actual entry ID
           // 'entry.YYYYYY': lastName,   // Replace YYYYYY with actual entry ID
           // 'entry.ZZZZZZ': email,      // Replace ZZZZZZ with actual entry ID
         });
         
-        // Redirect to Google Forms with pre-filled data
-        // If no params are set, just redirect to the base URL
         if (params.toString()) {
           window.location.href = `${googleFormUrl.toString()}?${params.toString()}`;
         } else {
@@ -255,4 +270,16 @@ import { Icon } from 'astro-icon/components'
   form.addEventListener('submit', handleSubmit);
   
   checkFormValidity();
+  
+  if (TURNSTILE_ENABLED) {
+    window.turnstileCallback = function() {
+      turnstile.render('#turnstile-widget', {
+        sitekey: TURNSTILE_SITE_KEY,
+        callback: function(token: string) {
+          turnstileToken = token;
+        },
+      });
+    };
+  }
 </script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=turnstileCallback" defer></script>
