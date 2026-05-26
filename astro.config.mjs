@@ -16,4 +16,7 @@ export default defineConfig({
   },
   site: process.env.SITE || 'https://socrates-conference.it',
   base: process.env.BASE_PATH || '/',
+  server: {
+    allowedHosts: ['socrates-conference.it', 'www.socrates-conference.it', 'localhost', 'www.socrates-conference.local'],
+  },
 })
