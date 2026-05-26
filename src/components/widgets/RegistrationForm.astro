@@ -1,0 +1,137 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<div class="max-w-[800px] mx-auto p-6 bg-white rounded-lg space-y-6">
+  <form id="registrationForm" action="https://forms.gle/BsWooYxTUhw4ybS96" method="get" target="_self" class="space-y-6">
+    <div>
+      <label for="firstName" class="block text-sm font-semibold text-gray-700 mb-2">First Name</label>
+      <input 
+        type="text" 
+        id="firstName" 
+        name="firstName" 
+        required 
+        class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-colors placeholder-gray-400" 
+        placeholder="Enter your first name"
+      />
+    </div>
+    <div>
+      <label for="lastName" class="block text-sm font-semibold text-gray-700 mb-2">Last Name</label>
+      <input 
+        type="text" 
+        id="lastName" 
+        name="lastName" 
+        required 
+        class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-colors placeholder-gray-400" 
+        placeholder="Enter your last name"
+      />
+    </div>
+    <div>
+      <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        required 
+        class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-colors placeholder-gray-400" 
+        placeholder="your.email@example.com"
+      />
+    </div>
+    <div class="flex items-start">
+      <input 
+        type="checkbox" 
+        id="privacy" 
+        name="privacy" 
+        required 
+        class="mt-1 w-4 h-4 text-primary border-2 border-gray-300 rounded focus:ring-primary focus:ring-2"
+      />
+      <label for="privacy" class="ml-3 text-sm text-gray-700">
+        I declare to have read and understood SoCraTes IT's <a href="/privacy-policy" class="text-primary hover:underline font-medium">Privacy Policy</a>
+      </label>
+    </div>
+    <button 
+      type="submit" 
+      id="submitBtn"
+      disabled
+      class="w-full bg-primary text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 disabled:bg-gray-300 disabled:cursor-not-allowed enabled:hover:bg-primary-dark enabled:hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+    >
+      Register
+    </button>
+  </form>
+  <div class="p-6">
+    <p>
+      By subscribing to our newsletter, you’ll receive updates about the SoCraTes Italy conference, including the PDF
+      form you’ll need to fill out and send to the hotel to reserve your spot. We respect your privacy and will not
+      share your information with third parties.
+    </p>
+    <p class="mt-4 italic">
+      You may experience issues when subscribing using browsers with strict privacy settings, such as Firefox. If you
+      encounter any problems, we recommend trying a different browser or disabling strict privacy settings temporarily.
+    </p>
+  </div>
+  {/* Rooms Section */}
+  <div class="p-6">
+    {/* Included Section */}
+    <div class="mx-auto space-y-4">
+      <h2 class="font-bold text-lg">What is included in the cost?</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>
+          <strong>Two nights full-board:</strong> breakfast, lunch, dinner and snack buffet all day (vegetarian and
+          gluten-free food included!)
+        </li>
+        <li>
+          The hotel has both twin and double rooms. If there is someone you are willing to share the room with, feel
+          free to book the double room
+        </li>
+      </ul>
+    </div>
+
+    <div class="grid md:grid-cols-2 mx-auto mt-10">
+      <div class="hover:bg-subtle flex flex-col items-center justify-center">
+        <h4 class="font-medium">Shared double room</h4>
+        <div class="flex items-center justify-center">
+          <Icon name={'single-bed'} class="size-14 text-primary" />
+          <Icon name={'single-bed'} class="size-14 text-primary" />
+        </div>
+        <p class="mt-2 text-subtitle italic">from € 280 per attendee</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center">
+        <h4 class="font-medium">Single room</h4>
+        <Icon name={'single-bed'} class="size-14 text-primary" />
+        <p class="mt-2 text-subtitle italic">from € 360 per attendee</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('registrationForm') as HTMLFormElement;
+  const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
+  const inputs = form.querySelectorAll('input[required]');
+  
+  function checkFormValidity() {
+    let isValid = true;
+    inputs.forEach((input) => {
+      const inputEl = input as HTMLInputElement;
+      if (inputEl.type === 'checkbox') {
+        if (!inputEl.checked) {
+          isValid = false;
+        }
+      } else {
+        if (!inputEl.value.trim()) {
+          isValid = false;
+        }
+      }
+    });
+    
+    submitBtn.disabled = !isValid;
+  }
+  
+  inputs.forEach((input) => {
+    input.addEventListener(input.type === 'checkbox' ? 'change' : 'input', checkFormValidity);
+    input.addEventListener('blur', checkFormValidity);
+  });
+  
+  checkFormValidity();
+</script>

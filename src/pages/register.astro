@@ -1,8 +1,8 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import MailchimpOriginalForm from "../components/widgets/MailchimpOriginalForm.astro";
 import {eventState} from "../common/constants";
 import {EventState} from "../common/types";
+import RegistrationForm from '~components/widgets/RegistrationForm.astro'
 
 const metadata = { title: 'Registration', ignoreTitleTemplate: false };
 
@@ -17,7 +17,7 @@ if (eventState !== EventState.REGISTRATION_OPEN) {
         <div class="max-w-6xl mx-auto space-y-10 pt-30 md:pt-35 pb-14 md:py-20">
             <h1 class="text-4xl md:text-4xl font-extrabold text-center uppercase">{metadata.title}</h1>
 
-            <MailchimpOriginalForm />
+            <RegistrationForm />
         </div>
     </div>
 
