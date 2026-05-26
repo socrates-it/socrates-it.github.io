@@ -233,7 +233,6 @@ import { Icon } from 'astro-icon/components'
           privacy: 'accepted',
           subject: 'New SoCraTes Italy Registration',
           botcheck: '',
-          ...(TURNSTILE_ENABLED && turnstileToken ? { 'cf-turnstile-response': turnstileToken } : {}),
         }),
       });
       
