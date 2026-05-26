@@ -239,12 +239,12 @@ import { Icon } from 'astro-icon/components'
       const result = await response.json();
       
       if (result.success) {
-        const googleFormUrl = new URL('https://forms.gle/BsWooYxTUhw4ybS96');
+        const googleFormUrl = new URL('https://docs.google.com/forms/d/e/1FAIpQLScytX0Px2UzTQJ1c0kHqF0fmjuI8B1n3ZbWVwxIUbX9qKqNQg/viewform');
         
         const params = new URLSearchParams({
-          // 'entry.XXXXXX': firstName,  // Replace XXXXXX with actual entry ID
-          // 'entry.YYYYYY': lastName,   // Replace YYYYYY with actual entry ID
-          // 'entry.ZZZZZZ': email,      // Replace ZZZZZZ with actual entry ID
+          'entry.2139089643': firstName,
+          'entry.2005620554': lastName,
+          'entry.1045781291': email,
         });
         
         if (params.toString()) {
