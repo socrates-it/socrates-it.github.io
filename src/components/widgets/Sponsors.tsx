@@ -10,7 +10,7 @@ const sponsors: Sponsor[] = [
   { name: 'Connexxo', image: '/images/sponsors/connexxo.png', alt: 'Connexxo', url: 'https://www.connexxo.com', type: 'rectangle' },
   { name: 'CodicePlastico', image: '/images/sponsors/codiceplastico.png', alt: 'CodicePlastico', url: 'https://codiceplastico.com/it/', type: 'rectangle' },
   { name: 'Dorian s.r.l.', image: '/images/sponsors/dorian.png', alt: 'Dorian s.r.l.', url: 'https://www.doriansrl.it/', type: 'rectangle' },
-  // { name: 'QMates', image: '/images/sponsors/qmates.jpg', alt: 'QMates', url: 'https://qmates.tech/', type: 'rectangle' },
+  { name: 'Talia s.r.l.', image: '/images/sponsors/talia.jpeg', alt: 'Talia s.r.l.', url: 'https://talia.cloud', type: 'rectangle' },
 ]
 const supporters: Sponsor[] = [
   {
