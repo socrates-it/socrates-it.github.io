@@ -41,7 +41,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Run npm run build and upload artifact through actions/upload-pages-artifact@v1
-        uses: withastro/action@v2
+        uses: withastro/action@b7d53628f8b666036b0238aadb0b984a2a489f26
         with:
           path: . # The root location of your Astro project inside the repository. (optional)
 
