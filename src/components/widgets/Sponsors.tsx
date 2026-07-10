@@ -11,6 +11,7 @@ const sponsors: Sponsor[] = [
   { name: 'CodicePlastico', image: '/images/sponsors/codiceplastico.png', alt: 'CodicePlastico', url: 'https://codiceplastico.com/it/', type: 'rectangle' },
   { name: 'Dorian s.r.l.', image: '/images/sponsors/dorian.png', alt: 'Dorian s.r.l.', url: 'https://www.doriansrl.it/', type: 'rectangle' },
   { name: 'Talia s.r.l.', image: '/images/sponsors/talia.jpeg', alt: 'Talia s.r.l.', url: 'https://talia.cloud', type: 'rectangle' },
+  { name: 'Adesso Italy', image: '/images/sponsors/adesso-italy.png', alt: 'Adesso Italy srl', url: 'https://www.adesso.it', type: 'rectangle' },
 ]
 const supporters: Sponsor[] = [
   {
@@ -27,13 +28,6 @@ const supporters: Sponsor[] = [
     url: 'https://www.coders51.com/',
     type: 'rectangle',
   },
-  // {
-  //   name: 'Intré',
-  //   image: '/images/sponsors/intre.png',
-  //   alt: 'Intré',
-  //   url: 'http://www.intre.it',
-  //   type: 'rectangle',
-  // },
 ]
 
 export default function Sponsors() {
