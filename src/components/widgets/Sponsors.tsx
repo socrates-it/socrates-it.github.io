@@ -12,6 +12,7 @@ const sponsors: Sponsor[] = [
   { name: 'Dorian s.r.l.', image: '/images/sponsors/dorian.png', alt: 'Dorian s.r.l.', url: 'https://www.doriansrl.it/', type: 'rectangle' },
   { name: 'Talia s.r.l.', image: '/images/sponsors/talia.jpeg', alt: 'Talia s.r.l.', url: 'https://talia.cloud', type: 'rectangle' },
   { name: 'Adesso Italy', image: '/images/sponsors/adesso-italy.png', alt: 'Adesso Italy srl', url: 'https://www.adesso.it', type: 'rectangle' },
+  { name: 'Adesso Schweiz', image: '/images/sponsors/adesso-ch.jpeg', alt: 'Adesso Schweiz AG', url: 'https://www.adesso.ch', type: 'rectangle' },
 ]
 const supporters: Sponsor[] = [
   {
