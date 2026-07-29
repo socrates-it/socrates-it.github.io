@@ -1,7 +1,7 @@
 import { EventState } from './types.ts'
 import type { MetaData } from '~/types'
 
-export const eventState: EventState = EventState.REGISTRATION_OPEN
+export const eventState: EventState = EventState.SOLD_OUT
 const startDate = new Date('2026-09-17')
 export const eventStartDate = startDate.toLocaleDateString('it-IT')
 export const eventEndDate = new Date('2026-09-19').toLocaleDateString('it-IT')
