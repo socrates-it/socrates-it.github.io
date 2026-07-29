@@ -22,21 +22,27 @@ const eventData: Record<
 > = {
   'September 17': [
     {
-      time: '3:00pm - 7:30pm',
-      title: 'Welcome in!',
-      description: 'We kick off SoCraTes Italy with a good beer and networking activities',
+      time: '2:30pm - 6:30pm',
+      title: 'Workshops',
+      description: 'This year we kick off SoCraTes Italy with three amazing workshops, offered by our sponsors',
       icon: <FluentMdl2WavingHand className="size-6" />,
     },
     {
-      time: '7:30pm - 9:00pm',
+      time: '7:00pm - 8:30pm',
+      title: 'Social aperitivo',
+      description: 'We kick things off with a nice aperitivo together',
+      icon: <FluentDrinkMargarita20Regular className="size-6" />,
+    },
+    {
+      time: '8:30pm - 9:30pm',
       title: 'Dinner time',
       description: 'We have a good dinner all together',
       icon: <FluentMdl2EatDrink className="size-6" />,
     },
     {
-      time: '9:00pm - open end',
+      time: '9:30pm - open end',
       title: 'After dinner',
-      description: 'We do a team-building game to know each others',
+      description: 'Free to enjoy the evening with your friends, colleagues and other attendees',
       icon: <FluentDrinkMargarita20Regular className="size-6" />,
     },
   ],
