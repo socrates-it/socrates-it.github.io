@@ -2,7 +2,7 @@ import React from 'react'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
 import { cn } from '~/common/css.ts'
 import PricingSection from '~components/widgets/PricingSection.tsx'
-import { prependBasePath } from '~/common/constants.ts'
+import { organizationEmail, prependBasePath } from '~/common/constants.ts'
 
 type Sponsor = { name: string; image: string; alt: string; url: string; type: 'square' | 'rectangle' }
 const sponsors: Sponsor[] = [
@@ -87,7 +87,7 @@ export default function Sponsors() {
           </p>
         </div>
         <div className="mt-10">
-          <a href="mailto:socrates-it@googlegroups.com">
+          <a href={`mailto:${organizationEmail}`}>
             <button className="btn-primary capitalize">become a sponsor</button>
           </a>
         </div>

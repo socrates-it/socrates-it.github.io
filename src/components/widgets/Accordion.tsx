@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import SectionIntro from '~components/ui/SectionIntro.tsx'
 import { cn } from '~/common/css.ts'
-import { eventLocation } from '~/common/constants.ts'
+import { eventLocation, organizationEmail } from '~/common/constants.ts'
 
 const accordionData = [
   { title: 'Where do we meet?', content: `We will meet at ${eventLocation.venue}. Address is ${eventLocation.address}` },
   { title: 'Who we are?', content: 'Connect with like-minded professionals and expand your network.' },
   {
     title: 'How can you contact us?',
-    content: 'If you have any questions or need assistance, feel free to reach out to us at socrates-it@googlegroups.com. We’re here to help!',
+    content: `If you have any questions or need assistance, feel free to reach out to us at ${organizationEmail}. We’re here to help!`,
   },
 ]
 

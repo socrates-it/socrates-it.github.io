@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-import { eventEndDate, eventLocation, eventStartDate, eventState, eventYear, prependBasePath } from '~/common/constants.ts'
+import { eventEndDate, eventLocation, eventStartDate, eventState, eventYear, organizationEmail, prependBasePath } from '~/common/constants.ts'
 import { EventState } from '~/common/types.ts'
 
 const images = [
@@ -77,7 +77,7 @@ const Carousel = () => {
                   <>
                     <div className="mx-auto py-4 sm:py-6 text-lg sm:text-2xl md:text-3xl lg:text-4xl uppercase">sold out</div>
                     <button className="uppercase btn-primary w-full y-4 sm:py-6 text-lg sm:text-2xl">
-                      <a href="mailto:socrates-it@googlegroups.com">{eventState}</a>
+                      <a href={`mailto:${organizationEmail}`}>{eventState}</a>
                     </button>
                   </>
                 )}

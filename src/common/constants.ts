@@ -44,3 +44,4 @@ export const filteredMenuItems = menuItems.filter(menuItem => {
 
 export const defaultTitle = 'SoCraTes Italy'
 export const defaultMetadata: MetaData = { title: defaultTitle, ignoreTitleTemplate: true }
+export const organizationEmail = 'socratesitalia@gmail.com'

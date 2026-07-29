@@ -1,6 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import { eventYear } from '~/common/constants.ts'
+import { eventYear, organizationEmail } from '~/common/constants.ts'
 
 const metadata = { title: 'Privacy Policy', ignoreTitleTemplate: false };
 
@@ -44,8 +44,7 @@ const metadata = { title: 'Privacy Policy', ignoreTitleTemplate: false };
                     </li>
                 </ul>
 
-                <p>Personal information processed in connection with the Services is controlled by us, you can contact us by e-mail (<a class="text-secondary" href="mailto:socrates-it@googlegroups.com"
-                >socrates-it@googlegroups.com</a>).
+                <p>Personal information processed in connection with the Services is controlled by us, you can contact us by e-mail (<a class="text-secondary" href={`mailto:${organizationEmail}`}>{organizationEmail}</a>).
                 </p>
             </div>
             <div class="space-y-6">
@@ -125,8 +124,7 @@ const metadata = { title: 'Privacy Policy', ignoreTitleTemplate: false };
                     <li class="space-y-xs">
                         <h3 class="text-xl md:text-2xl font-bold">Marketing
                         </h3>
-                        <p>If you opt-in to receiving marketing communications from us, we will use your personal information for outreach and marketing, such as to send you information about our future Conferences and to exhibit attending companies. You can opt-out of these communications by using the unsubscribe links in our communications. We may also use your information in order to market the Conferences. For example, we sometimes use your image in our published social media post of Conference attendees. If you want to object to this use, please contact us here at <a class="text-secondary" href="mailto:socrates-it@googlegroups.com"
-                        >socrates-it@googlegroups.com</a>.
+                        <p>If you opt-in to receiving marketing communications from us, we will use your personal information for outreach and marketing, such as to send you information about our future Conferences and to exhibit attending companies. You can opt-out of these communications by using the unsubscribe links in our communications. We may also use your information in order to market the Conferences. For example, we sometimes use your image in our published social media post of Conference attendees. If you want to object to this use, please contact us here at <a class="text-secondary" href={`mailto:${organizationEmail}`}>{organizationEmail}</a>.
                         </p>
                         <p>Please also review our cookie policy for your options to control how we use cookies and similar technologies for advertising.
                         </p>
@@ -179,8 +177,7 @@ const metadata = { title: 'Privacy Policy', ignoreTitleTemplate: false };
                         Provide, develop and improve the Services. We process your information as necessary to pursue our legitimate interests in improving the Conference and our other Services, such as our Conference websites. For example, we use your information in order to conduct access control and enforce security at the Conferences. We also use your information to conduct data analysis and analytics across our Services.
                     </li>
                     <li>
-                        Market the Services. We process your information in accordance with our legitimate interests of marketing the Conference and the Services to you. For example, we use your information to market future Conferences to you and to exhibit attending companies. We may also use your image in our marketing materials in order to highlight the attendees participating in the Conferences. We also use photos and audiovisual footage from past Conferences which may contain your image or voice. If you want to exercise your right to object to any of these uses please email us at <a class="text-secondary" href="mailto:socrates-it@googlegroups.com"
-                    >socrates-it@googlegroups.com</a>.
+                        Market the Services. We process your information in accordance with our legitimate interests of marketing the Conference and the Services to you. For example, we use your information to market future Conferences to you and to exhibit attending companies. We may also use your image in our marketing materials in order to highlight the attendees participating in the Conferences. We also use photos and audiovisual footage from past Conferences which may contain your image or voice. If you want to exercise your right to object to any of these uses please email us at <a class="text-secondary" href={`mailto:${organizationEmail}`}>{organizationEmail}</a>.
                     </li>
                 </ul>
             </div>
@@ -245,8 +242,7 @@ const metadata = { title: 'Privacy Policy', ignoreTitleTemplate: false };
                 <h3 class="text-xl md:text-2xl font-bold">
                     Rectify, Restrict, Delete
                 </h3>
-                <p>You can amend, update and delete some of your information by contact us at <a class="text-secondary" href="mailto:socrates-it@googlegroups.com"
-                >socrates-it@googlegroups.com</a>.
+                <p>You can amend, update and delete some of your information by contact us at <a class="text-secondary" href={`mailto:${organizationEmail}`}>{organizationEmail}</a>.
                 </p>
 
                 <h3 class="text-xl md:text-2xl font-bold">
@@ -291,8 +287,7 @@ const metadata = { title: 'Privacy Policy', ignoreTitleTemplate: false };
 
             <div class="space-y-6">
                 <h2 class="text-2xl md:text-4xl font-bold">Contact us</h2>
-                <p>If you have any questions or concerns about this Privacy Policy or our privacy practices generally, or if you would like to exercise your statutory rights, you can contact us at: <a class="text-secondary" href="mailto:socrates-it@googlegroups.com"
-                >socrates-it@googlegroups.com</a>.
+                <p>If you have any questions or concerns about this Privacy Policy or our privacy practices generally, or if you would like to exercise your statutory rights, you can contact us at: <a class="text-secondary" href={`mailto:${organizationEmail}`}>{organizationEmail}</a>.
                 </p>
             </div>
         </div>
